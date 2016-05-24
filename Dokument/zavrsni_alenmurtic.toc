@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{sigurnost}{5}
 \contentsline {subsection}{\numberline {2.1.4}Poznati sustavi}{5}
 \contentsline {subsection}{\numberline {2.1.5}Algotimi sustava za inteligentno u\IeC {\v c}enje}{5}
-\contentsline {chapter}{\numberline {3}TODO NASLOV: slojevi}{6}
+\contentsline {chapter}{\numberline {3} TODO NASLOV: slojevi}{6}
 \contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{8}
 \contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{8}
 \contentsline {section}{\numberline {4.2}ER dijagram}{8}

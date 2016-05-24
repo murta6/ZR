@@ -1,0 +1,53 @@
+KORISNIK
+sifraKorisnika: INT, username: nchar(20), password: nchar(20), ime: nchar(20), prezime (30)
+
+PREDMET
+sifraPredmeta: INT, naziv: nchar(20)
+
+ADMIN
+sifraAdmina: INT, username: nchar(20), password: nchar(20), ime: nchar(20), prezime: nchar(30)
+
+KONCEPT
+sifraKoncepta: INT, naziv: nchar(20), sifraPredmeta: INT
+
+GRANULAZNANJA
+sifraGranule: INT, naziv: nchar(20), sifraKoncepta: INT
+
+ODNOSZNANJA
+sifraOdnosa: INT, naziv: nchar(20)
+
+ODNOSKONCEPATA
+sifraNizegKoncepta: INT, sifraVisegKoncepta: INT, sifraOdnosa: INT
+
+ODNOSGRANULA
+sifraNizeGranule: INT, sifraViseGranule: INT, sifraOdnosa: INT
+
+SLOZENOST
+sifraSlozenosti: INT, naziv: nchar(20), slozenost: INT € [1, 5]
+
+ZADATAK
+sifraZadatka: INT, pitanje: nchar(2000), izraz: nchar(300), slika: BLOB, parametri: nchar(300), sifraSlozenosti: INT
+
+VRSTEZADATKA
+sifraVrsteZadatka: INT, naziv: nchar(20)
+
+ZADATAKVRSTAZADATKA
+sifraZadatka: INT, sifraVrsteZadatka: INT
+
+KORISNIKKONCEPT
+sifraKorisnika: INT, sifraKoncepta: INT, znanje: DECIMAL, ostvarenaOcjena: DECIMAL € [1, 5]
+
+KORISNIKPREDMET
+sifraKorisnika: INT, sifraPredmeta: INT, ocjena: INT, brojBodova: DECIMAL, ukupniBrojBodova: INT
+
+VRSTAPROVJERE
+sifraVrsteProvjere: INT, naziv: nchar(20)
+
+PROVJERA
+sifraProvjere: INT, sifraVrsteProvjere: INT, sifraKorisnika: INT, sifraPredmeta: INT, skaliraniUkupniBrBodova: INT
+
+PROVJERAZADATAK
+sifraProvjere: INT, sifraZadatka: INT, bodovi: INT, negativno: INT, odgovor: INT, tocno: BOOLEAN
+
+ZADATAKGRANULA
+sifraZadatka: INT, sifraGranule: INT, sadrzaj: INT € [1, 10]
