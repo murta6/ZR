@@ -8,7 +8,7 @@ using System.Linq;
 
 namespace Aplikacija.Model
 {
-    public class KorisniciAdmini
+    public static class KorisniciAdmini
     {
 
         #region Admin
