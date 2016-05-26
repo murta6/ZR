@@ -35,5 +35,13 @@ namespace Aplikacija.Model
                 return baza.Granula.Where(gr => gr.sifraKoncepta == sifraKoncepta).ToList();
             }
         }
+
+        public static List<int> vratiSifreGranulaKoncepta(int sifraKoncepta)
+        {
+            using (Baza baza = new Baza())
+            {
+                return baza.Granula.Where(gr => gr.sifraKoncepta == sifraKoncepta).Select(gr=> gr.sifraGranule).ToList();
+            }
+        }
     }
 }
