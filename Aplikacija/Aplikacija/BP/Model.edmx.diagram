@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="20cdaaede8ab4a878fc286b93459e52a" Name="Diagram1">
+        <EntityTypeShape EntityType="BazaModel.Admin" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.AdminPredmet" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Granula" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Koncept" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Korisnik" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.KorisnikKoncept" Width="1.5" PointX="5.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.KorisnikPredmet" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.OdnosGranula" Width="1.5" PointX="7.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.OdnosKoncepata" Width="1.5" PointX="5.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.OdnosZnanja" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Predmet" Width="1.5" PointX="0.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Provjera" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.ProvjeraZadatak" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Slozenost" Width="1.5" PointX="3.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.VrstaProvjere" Width="1.5" PointX="3.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.VrstaZadatka" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.Zadatak" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.ZadatakGranula" Width="1.5" PointX="7.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaModel.ZadatakVrstaZadatka" Width="1.5" PointX="8.25" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="BazaModel.FK_AdminPredmetAdmin" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_AdminPredmetPredmet" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_GranulaKoncept" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosGranulaNizaGranula" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosGranulaVisaGranula" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ZadatakGranulaGranula" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_KonceptPredmet" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_KorisnikKonceptKoncept" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosKoncepataNiziKoncept" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosKoncepataVisiKoncept" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_KorisnikKonceptKorisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_KorisnikPredmetKorisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ProvjeraKorisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_KorisnikPredmetPredmet" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosGranulaOdnos" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_OdnosKoncepataOdnos" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ProvjeraPredmet" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ProvjeraVrstaProvjere" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ProvjeraZadatakProvjera" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ProvjeraZadatakZadatak" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ZadatakSlozenost" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ZadatakVrstaZadatkaZadatak" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ZadatakGranulaZadatak" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaModel.FK_ZadatakVrstaZadatkaVrstaZadatka" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

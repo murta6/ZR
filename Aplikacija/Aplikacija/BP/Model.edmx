@@ -1,0 +1,1420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BazaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="sifraAdmina" />
+          </Key>
+          <Property Name="sifraAdmina" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="ime" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="prezime" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AdminPredmet">
+          <Key>
+            <PropertyRef Name="sifraAdminPredmet" />
+          </Key>
+          <Property Name="sifraAdminPredmet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraAdmina" Type="int" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Granula">
+          <Key>
+            <PropertyRef Name="sifraGranule" />
+          </Key>
+          <Property Name="sifraGranule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivGranule" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="sifraKoncepta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Koncept">
+          <Key>
+            <PropertyRef Name="sifraKoncepta" />
+          </Key>
+          <Property Name="sifraKoncepta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivKoncepta" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="sifraKorisnika" />
+          </Key>
+          <Property Name="sifraKorisnika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="ime" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="prezime" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KorisnikKoncept">
+          <Key>
+            <PropertyRef Name="sifraKorisnikKoncept" />
+          </Key>
+          <Property Name="sifraKorisnikKoncept" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="int" Nullable="false" />
+          <Property Name="sifraKoncepta" Type="int" Nullable="false" />
+          <Property Name="znanje" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KorisnikPredmet">
+          <Key>
+            <PropertyRef Name="sifraKorisnikPredmet" />
+          </Key>
+          <Property Name="sifraKorisnikPredmet" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="int" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="int" Nullable="false" />
+          <Property Name="ocjena" Type="int" />
+        </EntityType>
+        <EntityType Name="OdnosGranula">
+          <Key>
+            <PropertyRef Name="sifraOdnosaGranula" />
+          </Key>
+          <Property Name="sifraOdnosaGranula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraNizeGranule" Type="int" Nullable="false" />
+          <Property Name="sifraViseGranule" Type="int" Nullable="false" />
+          <Property Name="sifraOdnosa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OdnosKoncepata">
+          <Key>
+            <PropertyRef Name="sifraOdnosaKoncepata" />
+          </Key>
+          <Property Name="sifraOdnosaKoncepata" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraNizegKon" Type="int" Nullable="false" />
+          <Property Name="sifraVisegKon" Type="int" Nullable="false" />
+          <Property Name="sifraOdnosa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OdnosZnanja">
+          <Key>
+            <PropertyRef Name="sifraOdnosa" />
+          </Key>
+          <Property Name="sifraOdnosa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivOdnosa" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Predmet">
+          <Key>
+            <PropertyRef Name="sifraPredmeta" />
+          </Key>
+          <Property Name="sifraPredmeta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivPredmeta" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provjera">
+          <Key>
+            <PropertyRef Name="sifraProvjere" />
+          </Key>
+          <Property Name="sifraProvjere" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraVrsteProvjere" Type="int" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="int" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="int" Nullable="false" />
+          <Property Name="SkaliraniUkupniBrojBodova" Type="int" Nullable="false" />
+          <Property Name="ostvareniBrojBodova" Type="float" />
+        </EntityType>
+        <EntityType Name="ProvjeraZadatak">
+          <Key>
+            <PropertyRef Name="sifraProvjeraZadatak" />
+          </Key>
+          <Property Name="sifraProvjeraZadatak" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraProvjere" Type="int" Nullable="false" />
+          <Property Name="sifraZadatka" Type="int" Nullable="false" />
+          <Property Name="bodovi" Type="float" Nullable="false" />
+          <Property Name="negativno" Type="float" Nullable="false" />
+          <Property Name="odgovor" Type="float" Nullable="false" />
+          <Property Name="dobiveno" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Slozenost">
+          <Key>
+            <PropertyRef Name="sifraSlozenosti" />
+          </Key>
+          <Property Name="sifraSlozenosti" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivSlozenosti" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="brojSlozenosti" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VrstaProvjere">
+          <Key>
+            <PropertyRef Name="sifraVrsteProvjere" />
+          </Key>
+          <Property Name="sifraVrsteProvjere" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VrstaZadatka">
+          <Key>
+            <PropertyRef Name="sifraVrsteZadatka" />
+          </Key>
+          <Property Name="sifraVrsteZadatka" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazivVrsteZadatka" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zadatak">
+          <Key>
+            <PropertyRef Name="sifraZadatka" />
+          </Key>
+          <Property Name="sifraZadatka" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="pitanje" Type="nchar" MaxLength="2000" Nullable="false" />
+          <Property Name="izraz" Type="nchar" MaxLength="300" Nullable="false" />
+          <Property Name="slika" Type="image" />
+          <Property Name="parametri" Type="nchar" MaxLength="300" Nullable="false" />
+          <Property Name="sifraSlozenosti" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ZadatakGranula">
+          <Key>
+            <PropertyRef Name="sifraZadatakGranula" />
+          </Key>
+          <Property Name="sifraZadatakGranula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraZadatka" Type="int" Nullable="false" />
+          <Property Name="sifraGranule" Type="int" Nullable="false" />
+          <Property Name="sadrzaj" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ZadatakVrstaZadatka">
+          <Key>
+            <PropertyRef Name="sifraZadatakVrstaZadatka" />
+          </Key>
+          <Property Name="sifraZadatakVrstaZadatka" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sifraZadatka" Type="int" Nullable="false" />
+          <Property Name="sifraVrsteZadatka" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AdminPredmetAdmin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="1" />
+          <End Role="AdminPredmet" Type="Self.AdminPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="sifraAdmina" />
+            </Principal>
+            <Dependent Role="AdminPredmet">
+              <PropertyRef Name="sifraAdmina" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdminPredmetPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="AdminPredmet" Type="Self.AdminPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="AdminPredmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GranulaKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="Granula" Type="Self.Granula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="Granula">
+              <PropertyRef Name="sifraKoncepta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KonceptPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="Koncept">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikKonceptKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="KorisnikKoncept" Type="Self.KorisnikKoncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="KorisnikKoncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikKonceptKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikKoncept" Type="Self.KorisnikKoncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikKoncept">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikPredmetKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikPredmet" Type="Self.KorisnikPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikPredmet">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikPredmetPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="KorisnikPredmet" Type="Self.KorisnikPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="KorisnikPredmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaNizaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraNizeGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaOdnos">
+          <End Role="OdnosZnanja" Type="Self.OdnosZnanja" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OdnosZnanja">
+              <PropertyRef Name="sifraOdnosa" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraOdnosa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaVisaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraViseGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataNiziKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraNizegKon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataOdnos">
+          <End Role="OdnosZnanja" Type="Self.OdnosZnanja" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OdnosZnanja">
+              <PropertyRef Name="sifraOdnosa" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraOdnosa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataVisiKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraVisegKon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraVrstaProvjere">
+          <End Role="VrstaProvjere" Type="Self.VrstaProvjere" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaProvjere">
+              <PropertyRef Name="sifraVrsteProvjere" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraVrsteProvjere" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraZadatakProvjera">
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="1" />
+          <End Role="ProvjeraZadatak" Type="Self.ProvjeraZadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provjera">
+              <PropertyRef Name="sifraProvjere" />
+            </Principal>
+            <Dependent Role="ProvjeraZadatak">
+              <PropertyRef Name="sifraProvjere" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraZadatakZadatak">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ProvjeraZadatak" Type="Self.ProvjeraZadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ProvjeraZadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakGranulaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="ZadatakGranula">
+              <PropertyRef Name="sifraGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakGranulaZadatak">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakGranula">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakSlozenost">
+          <End Role="Slozenost" Type="Self.Slozenost" Multiplicity="1" />
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Slozenost">
+              <PropertyRef Name="sifraSlozenosti" />
+            </Principal>
+            <Dependent Role="Zadatak">
+              <PropertyRef Name="sifraSlozenosti" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakVrstaZadatkaVrstaZadatka">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ZadatakVrstaZadatka" Type="Self.ZadatakVrstaZadatka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakVrstaZadatka">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakVrstaZadatkaZadatak">
+          <End Role="VrstaZadatka" Type="Self.VrstaZadatka" Multiplicity="1" />
+          <End Role="ZadatakVrstaZadatka" Type="Self.ZadatakVrstaZadatka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaZadatka">
+              <PropertyRef Name="sifraVrsteZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakVrstaZadatka">
+              <PropertyRef Name="sifraVrsteZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BazaModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AdminPredmet" EntityType="Self.AdminPredmet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Granula" EntityType="Self.Granula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Koncept" EntityType="Self.Koncept" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KorisnikKoncept" EntityType="Self.KorisnikKoncept" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KorisnikPredmet" EntityType="Self.KorisnikPredmet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OdnosGranula" EntityType="Self.OdnosGranula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OdnosKoncepata" EntityType="Self.OdnosKoncepata" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OdnosZnanja" EntityType="Self.OdnosZnanja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Predmet" EntityType="Self.Predmet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provjera" EntityType="Self.Provjera" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvjeraZadatak" EntityType="Self.ProvjeraZadatak" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Slozenost" EntityType="Self.Slozenost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VrstaProvjere" EntityType="Self.VrstaProvjere" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VrstaZadatka" EntityType="Self.VrstaZadatka" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zadatak" EntityType="Self.Zadatak" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZadatakGranula" EntityType="Self.ZadatakGranula" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZadatakVrstaZadatka" EntityType="Self.ZadatakVrstaZadatka" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AdminPredmetAdmin" Association="Self.FK_AdminPredmetAdmin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="AdminPredmet" EntitySet="AdminPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdminPredmetPredmet" Association="Self.FK_AdminPredmetPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="AdminPredmet" EntitySet="AdminPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GranulaKoncept" Association="Self.FK_GranulaKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="Granula" EntitySet="Granula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KonceptPredmet" Association="Self.FK_KonceptPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="Koncept" EntitySet="Koncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikKonceptKoncept" Association="Self.FK_KorisnikKonceptKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="KorisnikKoncept" EntitySet="KorisnikKoncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikKonceptKorisnik" Association="Self.FK_KorisnikKonceptKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikKoncept" EntitySet="KorisnikKoncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikPredmetKorisnik" Association="Self.FK_KorisnikPredmetKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikPredmet" EntitySet="KorisnikPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikPredmetPredmet" Association="Self.FK_KorisnikPredmetPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="KorisnikPredmet" EntitySet="KorisnikPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaNizaGranula" Association="Self.FK_OdnosGranulaNizaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaOdnos" Association="Self.FK_OdnosGranulaOdnos">
+            <End Role="OdnosZnanja" EntitySet="OdnosZnanja" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaVisaGranula" Association="Self.FK_OdnosGranulaVisaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataNiziKoncept" Association="Self.FK_OdnosKoncepataNiziKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataOdnos" Association="Self.FK_OdnosKoncepataOdnos">
+            <End Role="OdnosZnanja" EntitySet="OdnosZnanja" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataVisiKoncept" Association="Self.FK_OdnosKoncepataVisiKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraKorisnik" Association="Self.FK_ProvjeraKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraPredmet" Association="Self.FK_ProvjeraPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraVrstaProvjere" Association="Self.FK_ProvjeraVrstaProvjere">
+            <End Role="VrstaProvjere" EntitySet="VrstaProvjere" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraZadatakProvjera" Association="Self.FK_ProvjeraZadatakProvjera">
+            <End Role="Provjera" EntitySet="Provjera" />
+            <End Role="ProvjeraZadatak" EntitySet="ProvjeraZadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraZadatakZadatak" Association="Self.FK_ProvjeraZadatakZadatak">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ProvjeraZadatak" EntitySet="ProvjeraZadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakGranulaGranula" Association="Self.FK_ZadatakGranulaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakGranulaZadatak" Association="Self.FK_ZadatakGranulaZadatak">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakSlozenost" Association="Self.FK_ZadatakSlozenost">
+            <End Role="Slozenost" EntitySet="Slozenost" />
+            <End Role="Zadatak" EntitySet="Zadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakVrstaZadatkaVrstaZadatka" Association="Self.FK_ZadatakVrstaZadatkaVrstaZadatka">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ZadatakVrstaZadatka" EntitySet="ZadatakVrstaZadatka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakVrstaZadatkaZadatak" Association="Self.FK_ZadatakVrstaZadatkaZadatak">
+            <End Role="VrstaZadatka" EntitySet="VrstaZadatka" />
+            <End Role="ZadatakVrstaZadatka" EntitySet="ZadatakVrstaZadatka" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BazaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="sifraAdmina" />
+          </Key>
+          <Property Name="sifraAdmina" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AdminPredmet" Relationship="Self.FK_AdminPredmetAdmin" FromRole="Admin" ToRole="AdminPredmet" />
+        </EntityType>
+        <EntityType Name="AdminPredmet">
+          <Key>
+            <PropertyRef Name="sifraAdminPredmet" />
+          </Key>
+          <Property Name="sifraAdminPredmet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraAdmina" Type="Int32" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Admin" Relationship="Self.FK_AdminPredmetAdmin" FromRole="AdminPredmet" ToRole="Admin" />
+          <NavigationProperty Name="Predmet" Relationship="Self.FK_AdminPredmetPredmet" FromRole="AdminPredmet" ToRole="Predmet" />
+        </EntityType>
+        <EntityType Name="Granula">
+          <Key>
+            <PropertyRef Name="sifraGranule" />
+          </Key>
+          <Property Name="sifraGranule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivGranule" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sifraKoncepta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Koncept" Relationship="Self.FK_GranulaKoncept" FromRole="Granula" ToRole="Koncept" />
+          <NavigationProperty Name="OdnosGranula" Relationship="Self.FK_OdnosGranulaNizaGranula" FromRole="Granula" ToRole="OdnosGranula" />
+          <NavigationProperty Name="OdnosGranula1" Relationship="Self.FK_OdnosGranulaVisaGranula" FromRole="Granula" ToRole="OdnosGranula" />
+          <NavigationProperty Name="ZadatakGranula" Relationship="Self.FK_ZadatakGranulaGranula" FromRole="Granula" ToRole="ZadatakGranula" />
+        </EntityType>
+        <EntityType Name="Koncept">
+          <Key>
+            <PropertyRef Name="sifraKoncepta" />
+          </Key>
+          <Property Name="sifraKoncepta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivKoncepta" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Granula" Relationship="Self.FK_GranulaKoncept" FromRole="Koncept" ToRole="Granula" />
+          <NavigationProperty Name="Predmet" Relationship="Self.FK_KonceptPredmet" FromRole="Koncept" ToRole="Predmet" />
+          <NavigationProperty Name="KorisnikKoncept" Relationship="Self.FK_KorisnikKonceptKoncept" FromRole="Koncept" ToRole="KorisnikKoncept" />
+          <NavigationProperty Name="OdnosKoncepata" Relationship="Self.FK_OdnosKoncepataNiziKoncept" FromRole="Koncept" ToRole="OdnosKoncepata" />
+          <NavigationProperty Name="OdnosKoncepata1" Relationship="Self.FK_OdnosKoncepataVisiKoncept" FromRole="Koncept" ToRole="OdnosKoncepata" />
+        </EntityType>
+        <EntityType Name="Korisnik">
+          <Key>
+            <PropertyRef Name="sifraKorisnika" />
+          </Key>
+          <Property Name="sifraKorisnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="KorisnikKoncept" Relationship="Self.FK_KorisnikKonceptKorisnik" FromRole="Korisnik" ToRole="KorisnikKoncept" />
+          <NavigationProperty Name="KorisnikPredmet" Relationship="Self.FK_KorisnikPredmetKorisnik" FromRole="Korisnik" ToRole="KorisnikPredmet" />
+          <NavigationProperty Name="Provjera" Relationship="Self.FK_ProvjeraKorisnik" FromRole="Korisnik" ToRole="Provjera" />
+        </EntityType>
+        <EntityType Name="KorisnikKoncept">
+          <Key>
+            <PropertyRef Name="sifraKorisnikKoncept" />
+          </Key>
+          <Property Name="sifraKorisnikKoncept" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraKorisnika" Type="Int32" Nullable="false" />
+          <Property Name="sifraKoncepta" Type="Int32" Nullable="false" />
+          <Property Name="znanje" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Koncept" Relationship="Self.FK_KorisnikKonceptKoncept" FromRole="KorisnikKoncept" ToRole="Koncept" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.FK_KorisnikKonceptKorisnik" FromRole="KorisnikKoncept" ToRole="Korisnik" />
+        </EntityType>
+        <EntityType Name="KorisnikPredmet">
+          <Key>
+            <PropertyRef Name="sifraKorisnikPredmet" />
+          </Key>
+          <Property Name="sifraKorisnikPredmet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraKorisnika" Type="Int32" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="Int32" Nullable="false" />
+          <Property Name="ocjena" Type="Int32" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.FK_KorisnikPredmetKorisnik" FromRole="KorisnikPredmet" ToRole="Korisnik" />
+          <NavigationProperty Name="Predmet" Relationship="Self.FK_KorisnikPredmetPredmet" FromRole="KorisnikPredmet" ToRole="Predmet" />
+        </EntityType>
+        <EntityType Name="OdnosGranula">
+          <Key>
+            <PropertyRef Name="sifraOdnosaGranula" />
+          </Key>
+          <Property Name="sifraOdnosaGranula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraNizeGranule" Type="Int32" Nullable="false" />
+          <Property Name="sifraViseGranule" Type="Int32" Nullable="false" />
+          <Property Name="sifraOdnosa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Granula" Relationship="Self.FK_OdnosGranulaNizaGranula" FromRole="OdnosGranula" ToRole="Granula" />
+          <NavigationProperty Name="Granula1" Relationship="Self.FK_OdnosGranulaVisaGranula" FromRole="OdnosGranula" ToRole="Granula" />
+          <NavigationProperty Name="OdnosZnanja" Relationship="Self.FK_OdnosGranulaOdnos" FromRole="OdnosGranula" ToRole="OdnosZnanja" />
+        </EntityType>
+        <EntityType Name="OdnosKoncepata">
+          <Key>
+            <PropertyRef Name="sifraOdnosaKoncepata" />
+          </Key>
+          <Property Name="sifraOdnosaKoncepata" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraNizegKon" Type="Int32" Nullable="false" />
+          <Property Name="sifraVisegKon" Type="Int32" Nullable="false" />
+          <Property Name="sifraOdnosa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Koncept" Relationship="Self.FK_OdnosKoncepataNiziKoncept" FromRole="OdnosKoncepata" ToRole="Koncept" />
+          <NavigationProperty Name="Koncept1" Relationship="Self.FK_OdnosKoncepataVisiKoncept" FromRole="OdnosKoncepata" ToRole="Koncept" />
+          <NavigationProperty Name="OdnosZnanja" Relationship="Self.FK_OdnosKoncepataOdnos" FromRole="OdnosKoncepata" ToRole="OdnosZnanja" />
+        </EntityType>
+        <EntityType Name="OdnosZnanja">
+          <Key>
+            <PropertyRef Name="sifraOdnosa" />
+          </Key>
+          <Property Name="sifraOdnosa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivOdnosa" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="OdnosGranula" Relationship="Self.FK_OdnosGranulaOdnos" FromRole="OdnosZnanja" ToRole="OdnosGranula" />
+          <NavigationProperty Name="OdnosKoncepata" Relationship="Self.FK_OdnosKoncepataOdnos" FromRole="OdnosZnanja" ToRole="OdnosKoncepata" />
+        </EntityType>
+        <EntityType Name="Predmet">
+          <Key>
+            <PropertyRef Name="sifraPredmeta" />
+          </Key>
+          <Property Name="sifraPredmeta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivPredmeta" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AdminPredmet" Relationship="Self.FK_AdminPredmetPredmet" FromRole="Predmet" ToRole="AdminPredmet" />
+          <NavigationProperty Name="Koncept" Relationship="Self.FK_KonceptPredmet" FromRole="Predmet" ToRole="Koncept" />
+          <NavigationProperty Name="KorisnikPredmet" Relationship="Self.FK_KorisnikPredmetPredmet" FromRole="Predmet" ToRole="KorisnikPredmet" />
+          <NavigationProperty Name="Provjera" Relationship="Self.FK_ProvjeraPredmet" FromRole="Predmet" ToRole="Provjera" />
+        </EntityType>
+        <EntityType Name="Provjera">
+          <Key>
+            <PropertyRef Name="sifraProvjere" />
+          </Key>
+          <Property Name="sifraProvjere" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraVrsteProvjere" Type="Int32" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="Int32" Nullable="false" />
+          <Property Name="sifraPredmeta" Type="Int32" Nullable="false" />
+          <Property Name="SkaliraniUkupniBrojBodova" Type="Int32" Nullable="false" />
+          <Property Name="ostvareniBrojBodova" Type="Double" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.FK_ProvjeraKorisnik" FromRole="Provjera" ToRole="Korisnik" />
+          <NavigationProperty Name="Predmet" Relationship="Self.FK_ProvjeraPredmet" FromRole="Provjera" ToRole="Predmet" />
+          <NavigationProperty Name="VrstaProvjere" Relationship="Self.FK_ProvjeraVrstaProvjere" FromRole="Provjera" ToRole="VrstaProvjere" />
+          <NavigationProperty Name="ProvjeraZadatak" Relationship="Self.FK_ProvjeraZadatakProvjera" FromRole="Provjera" ToRole="ProvjeraZadatak" />
+        </EntityType>
+        <EntityType Name="ProvjeraZadatak">
+          <Key>
+            <PropertyRef Name="sifraProvjeraZadatak" />
+          </Key>
+          <Property Name="sifraProvjeraZadatak" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraProvjere" Type="Int32" Nullable="false" />
+          <Property Name="sifraZadatka" Type="Int32" Nullable="false" />
+          <Property Name="bodovi" Type="Double" Nullable="false" />
+          <Property Name="negativno" Type="Double" Nullable="false" />
+          <Property Name="odgovor" Type="Double" Nullable="false" />
+          <Property Name="dobiveno" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Provjera" Relationship="Self.FK_ProvjeraZadatakProvjera" FromRole="ProvjeraZadatak" ToRole="Provjera" />
+          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ProvjeraZadatakZadatak" FromRole="ProvjeraZadatak" ToRole="Zadatak" />
+        </EntityType>
+        <EntityType Name="Slozenost">
+          <Key>
+            <PropertyRef Name="sifraSlozenosti" />
+          </Key>
+          <Property Name="sifraSlozenosti" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivSlozenosti" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="brojSlozenosti" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ZadatakSlozenost" FromRole="Slozenost" ToRole="Zadatak" />
+        </EntityType>
+        <EntityType Name="VrstaProvjere">
+          <Key>
+            <PropertyRef Name="sifraVrsteProvjere" />
+          </Key>
+          <Property Name="sifraVrsteProvjere" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Provjera" Relationship="Self.FK_ProvjeraVrstaProvjere" FromRole="VrstaProvjere" ToRole="Provjera" />
+        </EntityType>
+        <EntityType Name="VrstaZadatka">
+          <Key>
+            <PropertyRef Name="sifraVrsteZadatka" />
+          </Key>
+          <Property Name="sifraVrsteZadatka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazivVrsteZadatka" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ZadatakVrstaZadatka" Relationship="Self.FK_ZadatakVrstaZadatkaZadatak" FromRole="VrstaZadatka" ToRole="ZadatakVrstaZadatka" />
+        </EntityType>
+        <EntityType Name="Zadatak">
+          <Key>
+            <PropertyRef Name="sifraZadatka" />
+          </Key>
+          <Property Name="sifraZadatka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pitanje" Type="String" MaxLength="2000" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="izraz" Type="String" MaxLength="300" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="slika" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="parametri" Type="String" MaxLength="300" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="sifraSlozenosti" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProvjeraZadatak" Relationship="Self.FK_ProvjeraZadatakZadatak" FromRole="Zadatak" ToRole="ProvjeraZadatak" />
+          <NavigationProperty Name="Slozenost" Relationship="Self.FK_ZadatakSlozenost" FromRole="Zadatak" ToRole="Slozenost" />
+          <NavigationProperty Name="ZadatakGranula" Relationship="Self.FK_ZadatakGranulaZadatak" FromRole="Zadatak" ToRole="ZadatakGranula" />
+          <NavigationProperty Name="ZadatakVrstaZadatka" Relationship="Self.FK_ZadatakVrstaZadatkaVrstaZadatka" FromRole="Zadatak" ToRole="ZadatakVrstaZadatka" />
+        </EntityType>
+        <EntityType Name="ZadatakGranula">
+          <Key>
+            <PropertyRef Name="sifraZadatakGranula" />
+          </Key>
+          <Property Name="sifraZadatakGranula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraZadatka" Type="Int32" Nullable="false" />
+          <Property Name="sifraGranule" Type="Int32" Nullable="false" />
+          <Property Name="sadrzaj" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Granula" Relationship="Self.FK_ZadatakGranulaGranula" FromRole="ZadatakGranula" ToRole="Granula" />
+          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ZadatakGranulaZadatak" FromRole="ZadatakGranula" ToRole="Zadatak" />
+        </EntityType>
+        <EntityType Name="ZadatakVrstaZadatka">
+          <Key>
+            <PropertyRef Name="sifraZadatakVrstaZadatka" />
+          </Key>
+          <Property Name="sifraZadatakVrstaZadatka" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sifraZadatka" Type="Int32" Nullable="false" />
+          <Property Name="sifraVrsteZadatka" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="VrstaZadatka" Relationship="Self.FK_ZadatakVrstaZadatkaZadatak" FromRole="ZadatakVrstaZadatka" ToRole="VrstaZadatka" />
+          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ZadatakVrstaZadatkaVrstaZadatka" FromRole="ZadatakVrstaZadatka" ToRole="Zadatak" />
+        </EntityType>
+        <Association Name="FK_AdminPredmetAdmin">
+          <End Role="Admin" Type="Self.Admin" Multiplicity="1" />
+          <End Role="AdminPredmet" Type="Self.AdminPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Admin">
+              <PropertyRef Name="sifraAdmina" />
+            </Principal>
+            <Dependent Role="AdminPredmet">
+              <PropertyRef Name="sifraAdmina" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AdminPredmetPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="AdminPredmet" Type="Self.AdminPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="AdminPredmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GranulaKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="Granula" Type="Self.Granula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="Granula">
+              <PropertyRef Name="sifraKoncepta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaNizaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraNizeGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaVisaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraViseGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakGranulaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="ZadatakGranula">
+              <PropertyRef Name="sifraGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KonceptPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="Koncept">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikKonceptKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="KorisnikKoncept" Type="Self.KorisnikKoncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="KorisnikKoncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataNiziKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraNizegKon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataVisiKoncept">
+          <End Role="Koncept" Type="Self.Koncept" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Koncept">
+              <PropertyRef Name="sifraKoncepta" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraVisegKon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikKonceptKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikKoncept" Type="Self.KorisnikKoncept" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikKoncept">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikPredmetKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikPredmet" Type="Self.KorisnikPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikPredmet">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraKorisnika" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikPredmetPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="KorisnikPredmet" Type="Self.KorisnikPredmet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="KorisnikPredmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosGranulaOdnos">
+          <End Role="OdnosZnanja" Type="Self.OdnosZnanja" Multiplicity="1" />
+          <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OdnosZnanja">
+              <PropertyRef Name="sifraOdnosa" />
+            </Principal>
+            <Dependent Role="OdnosGranula">
+              <PropertyRef Name="sifraOdnosa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OdnosKoncepataOdnos">
+          <End Role="OdnosZnanja" Type="Self.OdnosZnanja" Multiplicity="1" />
+          <End Role="OdnosKoncepata" Type="Self.OdnosKoncepata" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OdnosZnanja">
+              <PropertyRef Name="sifraOdnosa" />
+            </Principal>
+            <Dependent Role="OdnosKoncepata">
+              <PropertyRef Name="sifraOdnosa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraPredmet">
+          <End Role="Predmet" Type="Self.Predmet" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Predmet">
+              <PropertyRef Name="sifraPredmeta" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraVrstaProvjere">
+          <End Role="VrstaProvjere" Type="Self.VrstaProvjere" Multiplicity="1" />
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaProvjere">
+              <PropertyRef Name="sifraVrsteProvjere" />
+            </Principal>
+            <Dependent Role="Provjera">
+              <PropertyRef Name="sifraVrsteProvjere" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraZadatakProvjera">
+          <End Role="Provjera" Type="Self.Provjera" Multiplicity="1" />
+          <End Role="ProvjeraZadatak" Type="Self.ProvjeraZadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Provjera">
+              <PropertyRef Name="sifraProvjere" />
+            </Principal>
+            <Dependent Role="ProvjeraZadatak">
+              <PropertyRef Name="sifraProvjere" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProvjeraZadatakZadatak">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ProvjeraZadatak" Type="Self.ProvjeraZadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ProvjeraZadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakSlozenost">
+          <End Role="Slozenost" Type="Self.Slozenost" Multiplicity="1" />
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Slozenost">
+              <PropertyRef Name="sifraSlozenosti" />
+            </Principal>
+            <Dependent Role="Zadatak">
+              <PropertyRef Name="sifraSlozenosti" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakVrstaZadatkaZadatak">
+          <End Role="VrstaZadatka" Type="Self.VrstaZadatka" Multiplicity="1" />
+          <End Role="ZadatakVrstaZadatka" Type="Self.ZadatakVrstaZadatka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VrstaZadatka">
+              <PropertyRef Name="sifraVrsteZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakVrstaZadatka">
+              <PropertyRef Name="sifraVrsteZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakGranulaZadatak">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakGranula">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ZadatakVrstaZadatkaVrstaZadatka">
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
+          <End Role="ZadatakVrstaZadatka" Type="Self.ZadatakVrstaZadatka" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zadatak">
+              <PropertyRef Name="sifraZadatka" />
+            </Principal>
+            <Dependent Role="ZadatakVrstaZadatka">
+              <PropertyRef Name="sifraZadatka" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Baza" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="AdminPredmet" EntityType="Self.AdminPredmet" />
+          <EntitySet Name="Granula" EntityType="Self.Granula" />
+          <EntitySet Name="Koncept" EntityType="Self.Koncept" />
+          <EntitySet Name="Korisnik" EntityType="Self.Korisnik" />
+          <EntitySet Name="KorisnikKoncept" EntityType="Self.KorisnikKoncept" />
+          <EntitySet Name="KorisnikPredmet" EntityType="Self.KorisnikPredmet" />
+          <EntitySet Name="OdnosGranula" EntityType="Self.OdnosGranula" />
+          <EntitySet Name="OdnosKoncepata" EntityType="Self.OdnosKoncepata" />
+          <EntitySet Name="OdnosZnanja" EntityType="Self.OdnosZnanja" />
+          <EntitySet Name="Predmet" EntityType="Self.Predmet" />
+          <EntitySet Name="Provjera" EntityType="Self.Provjera" />
+          <EntitySet Name="ProvjeraZadatak" EntityType="Self.ProvjeraZadatak" />
+          <EntitySet Name="Slozenost" EntityType="Self.Slozenost" />
+          <EntitySet Name="VrstaProvjere" EntityType="Self.VrstaProvjere" />
+          <EntitySet Name="VrstaZadatka" EntityType="Self.VrstaZadatka" />
+          <EntitySet Name="Zadatak" EntityType="Self.Zadatak" />
+          <EntitySet Name="ZadatakGranula" EntityType="Self.ZadatakGranula" />
+          <EntitySet Name="ZadatakVrstaZadatka" EntityType="Self.ZadatakVrstaZadatka" />
+          <AssociationSet Name="FK_AdminPredmetAdmin" Association="Self.FK_AdminPredmetAdmin">
+            <End Role="Admin" EntitySet="Admin" />
+            <End Role="AdminPredmet" EntitySet="AdminPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AdminPredmetPredmet" Association="Self.FK_AdminPredmetPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="AdminPredmet" EntitySet="AdminPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GranulaKoncept" Association="Self.FK_GranulaKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="Granula" EntitySet="Granula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaNizaGranula" Association="Self.FK_OdnosGranulaNizaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaVisaGranula" Association="Self.FK_OdnosGranulaVisaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakGranulaGranula" Association="Self.FK_ZadatakGranulaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KonceptPredmet" Association="Self.FK_KonceptPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="Koncept" EntitySet="Koncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikKonceptKoncept" Association="Self.FK_KorisnikKonceptKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="KorisnikKoncept" EntitySet="KorisnikKoncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataNiziKoncept" Association="Self.FK_OdnosKoncepataNiziKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataVisiKoncept" Association="Self.FK_OdnosKoncepataVisiKoncept">
+            <End Role="Koncept" EntitySet="Koncept" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikKonceptKorisnik" Association="Self.FK_KorisnikKonceptKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikKoncept" EntitySet="KorisnikKoncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikPredmetKorisnik" Association="Self.FK_KorisnikPredmetKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikPredmet" EntitySet="KorisnikPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraKorisnik" Association="Self.FK_ProvjeraKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikPredmetPredmet" Association="Self.FK_KorisnikPredmetPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="KorisnikPredmet" EntitySet="KorisnikPredmet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosGranulaOdnos" Association="Self.FK_OdnosGranulaOdnos">
+            <End Role="OdnosZnanja" EntitySet="OdnosZnanja" />
+            <End Role="OdnosGranula" EntitySet="OdnosGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OdnosKoncepataOdnos" Association="Self.FK_OdnosKoncepataOdnos">
+            <End Role="OdnosZnanja" EntitySet="OdnosZnanja" />
+            <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraPredmet" Association="Self.FK_ProvjeraPredmet">
+            <End Role="Predmet" EntitySet="Predmet" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraVrstaProvjere" Association="Self.FK_ProvjeraVrstaProvjere">
+            <End Role="VrstaProvjere" EntitySet="VrstaProvjere" />
+            <End Role="Provjera" EntitySet="Provjera" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraZadatakProvjera" Association="Self.FK_ProvjeraZadatakProvjera">
+            <End Role="Provjera" EntitySet="Provjera" />
+            <End Role="ProvjeraZadatak" EntitySet="ProvjeraZadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProvjeraZadatakZadatak" Association="Self.FK_ProvjeraZadatakZadatak">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ProvjeraZadatak" EntitySet="ProvjeraZadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakSlozenost" Association="Self.FK_ZadatakSlozenost">
+            <End Role="Slozenost" EntitySet="Slozenost" />
+            <End Role="Zadatak" EntitySet="Zadatak" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakVrstaZadatkaZadatak" Association="Self.FK_ZadatakVrstaZadatkaZadatak">
+            <End Role="VrstaZadatka" EntitySet="VrstaZadatka" />
+            <End Role="ZadatakVrstaZadatka" EntitySet="ZadatakVrstaZadatka" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakGranulaZadatak" Association="Self.FK_ZadatakGranulaZadatak">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ZadatakVrstaZadatkaVrstaZadatka" Association="Self.FK_ZadatakVrstaZadatkaVrstaZadatka">
+            <End Role="Zadatak" EntitySet="Zadatak" />
+            <End Role="ZadatakVrstaZadatka" EntitySet="ZadatakVrstaZadatka" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BazaModelStoreContainer" CdmEntityContainer="Baza">
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="BazaModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="sifraAdmina" ColumnName="sifraAdmina" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AdminPredmet">
+            <EntityTypeMapping TypeName="BazaModel.AdminPredmet">
+              <MappingFragment StoreEntitySet="AdminPredmet">
+                <ScalarProperty Name="sifraAdminPredmet" ColumnName="sifraAdminPredmet" />
+                <ScalarProperty Name="sifraAdmina" ColumnName="sifraAdmina" />
+                <ScalarProperty Name="sifraPredmeta" ColumnName="sifraPredmeta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Granula">
+            <EntityTypeMapping TypeName="BazaModel.Granula">
+              <MappingFragment StoreEntitySet="Granula">
+                <ScalarProperty Name="sifraGranule" ColumnName="sifraGranule" />
+                <ScalarProperty Name="nazivGranule" ColumnName="nazivGranule" />
+                <ScalarProperty Name="sifraKoncepta" ColumnName="sifraKoncepta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Koncept">
+            <EntityTypeMapping TypeName="BazaModel.Koncept">
+              <MappingFragment StoreEntitySet="Koncept">
+                <ScalarProperty Name="sifraKoncepta" ColumnName="sifraKoncepta" />
+                <ScalarProperty Name="nazivKoncepta" ColumnName="nazivKoncepta" />
+                <ScalarProperty Name="sifraPredmeta" ColumnName="sifraPredmeta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Korisnik">
+            <EntityTypeMapping TypeName="BazaModel.Korisnik">
+              <MappingFragment StoreEntitySet="Korisnik">
+                <ScalarProperty Name="sifraKorisnika" ColumnName="sifraKorisnika" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KorisnikKoncept">
+            <EntityTypeMapping TypeName="BazaModel.KorisnikKoncept">
+              <MappingFragment StoreEntitySet="KorisnikKoncept">
+                <ScalarProperty Name="sifraKorisnikKoncept" ColumnName="sifraKorisnikKoncept" />
+                <ScalarProperty Name="sifraKorisnika" ColumnName="sifraKorisnika" />
+                <ScalarProperty Name="sifraKoncepta" ColumnName="sifraKoncepta" />
+                <ScalarProperty Name="znanje" ColumnName="znanje" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KorisnikPredmet">
+            <EntityTypeMapping TypeName="BazaModel.KorisnikPredmet">
+              <MappingFragment StoreEntitySet="KorisnikPredmet">
+                <ScalarProperty Name="sifraKorisnikPredmet" ColumnName="sifraKorisnikPredmet" />
+                <ScalarProperty Name="sifraKorisnika" ColumnName="sifraKorisnika" />
+                <ScalarProperty Name="sifraPredmeta" ColumnName="sifraPredmeta" />
+                <ScalarProperty Name="ocjena" ColumnName="ocjena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OdnosGranula">
+            <EntityTypeMapping TypeName="BazaModel.OdnosGranula">
+              <MappingFragment StoreEntitySet="OdnosGranula">
+                <ScalarProperty Name="sifraOdnosaGranula" ColumnName="sifraOdnosaGranula" />
+                <ScalarProperty Name="sifraNizeGranule" ColumnName="sifraNizeGranule" />
+                <ScalarProperty Name="sifraViseGranule" ColumnName="sifraViseGranule" />
+                <ScalarProperty Name="sifraOdnosa" ColumnName="sifraOdnosa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OdnosKoncepata">
+            <EntityTypeMapping TypeName="BazaModel.OdnosKoncepata">
+              <MappingFragment StoreEntitySet="OdnosKoncepata">
+                <ScalarProperty Name="sifraOdnosaKoncepata" ColumnName="sifraOdnosaKoncepata" />
+                <ScalarProperty Name="sifraNizegKon" ColumnName="sifraNizegKon" />
+                <ScalarProperty Name="sifraVisegKon" ColumnName="sifraVisegKon" />
+                <ScalarProperty Name="sifraOdnosa" ColumnName="sifraOdnosa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OdnosZnanja">
+            <EntityTypeMapping TypeName="BazaModel.OdnosZnanja">
+              <MappingFragment StoreEntitySet="OdnosZnanja">
+                <ScalarProperty Name="sifraOdnosa" ColumnName="sifraOdnosa" />
+                <ScalarProperty Name="nazivOdnosa" ColumnName="nazivOdnosa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Predmet">
+            <EntityTypeMapping TypeName="BazaModel.Predmet">
+              <MappingFragment StoreEntitySet="Predmet">
+                <ScalarProperty Name="sifraPredmeta" ColumnName="sifraPredmeta" />
+                <ScalarProperty Name="nazivPredmeta" ColumnName="nazivPredmeta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provjera">
+            <EntityTypeMapping TypeName="BazaModel.Provjera">
+              <MappingFragment StoreEntitySet="Provjera">
+                <ScalarProperty Name="sifraProvjere" ColumnName="sifraProvjere" />
+                <ScalarProperty Name="sifraVrsteProvjere" ColumnName="sifraVrsteProvjere" />
+                <ScalarProperty Name="sifraKorisnika" ColumnName="sifraKorisnika" />
+                <ScalarProperty Name="sifraPredmeta" ColumnName="sifraPredmeta" />
+                <ScalarProperty Name="SkaliraniUkupniBrojBodova" ColumnName="SkaliraniUkupniBrojBodova" />
+                <ScalarProperty Name="ostvareniBrojBodova" ColumnName="ostvareniBrojBodova" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvjeraZadatak">
+            <EntityTypeMapping TypeName="BazaModel.ProvjeraZadatak">
+              <MappingFragment StoreEntitySet="ProvjeraZadatak">
+                <ScalarProperty Name="sifraProvjeraZadatak" ColumnName="sifraProvjeraZadatak" />
+                <ScalarProperty Name="sifraProvjere" ColumnName="sifraProvjere" />
+                <ScalarProperty Name="sifraZadatka" ColumnName="sifraZadatka" />
+                <ScalarProperty Name="bodovi" ColumnName="bodovi" />
+                <ScalarProperty Name="negativno" ColumnName="negativno" />
+                <ScalarProperty Name="odgovor" ColumnName="odgovor" />
+                <ScalarProperty Name="dobiveno" ColumnName="dobiveno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Slozenost">
+            <EntityTypeMapping TypeName="BazaModel.Slozenost">
+              <MappingFragment StoreEntitySet="Slozenost">
+                <ScalarProperty Name="sifraSlozenosti" ColumnName="sifraSlozenosti" />
+                <ScalarProperty Name="nazivSlozenosti" ColumnName="nazivSlozenosti" />
+                <ScalarProperty Name="brojSlozenosti" ColumnName="brojSlozenosti" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VrstaProvjere">
+            <EntityTypeMapping TypeName="BazaModel.VrstaProvjere">
+              <MappingFragment StoreEntitySet="VrstaProvjere">
+                <ScalarProperty Name="sifraVrsteProvjere" ColumnName="sifraVrsteProvjere" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VrstaZadatka">
+            <EntityTypeMapping TypeName="BazaModel.VrstaZadatka">
+              <MappingFragment StoreEntitySet="VrstaZadatka">
+                <ScalarProperty Name="sifraVrsteZadatka" ColumnName="sifraVrsteZadatka" />
+                <ScalarProperty Name="nazivVrsteZadatka" ColumnName="nazivVrsteZadatka" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zadatak">
+            <EntityTypeMapping TypeName="BazaModel.Zadatak">
+              <MappingFragment StoreEntitySet="Zadatak">
+                <ScalarProperty Name="sifraZadatka" ColumnName="sifraZadatka" />
+                <ScalarProperty Name="pitanje" ColumnName="pitanje" />
+                <ScalarProperty Name="izraz" ColumnName="izraz" />
+                <ScalarProperty Name="slika" ColumnName="slika" />
+                <ScalarProperty Name="parametri" ColumnName="parametri" />
+                <ScalarProperty Name="sifraSlozenosti" ColumnName="sifraSlozenosti" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZadatakGranula">
+            <EntityTypeMapping TypeName="BazaModel.ZadatakGranula">
+              <MappingFragment StoreEntitySet="ZadatakGranula">
+                <ScalarProperty Name="sifraZadatakGranula" ColumnName="sifraZadatakGranula" />
+                <ScalarProperty Name="sifraZadatka" ColumnName="sifraZadatka" />
+                <ScalarProperty Name="sifraGranule" ColumnName="sifraGranule" />
+                <ScalarProperty Name="sadrzaj" ColumnName="sadrzaj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZadatakVrstaZadatka">
+            <EntityTypeMapping TypeName="BazaModel.ZadatakVrstaZadatka">
+              <MappingFragment StoreEntitySet="ZadatakVrstaZadatka">
+                <ScalarProperty Name="sifraZadatakVrstaZadatka" ColumnName="sifraZadatakVrstaZadatka" />
+                <ScalarProperty Name="sifraZadatka" ColumnName="sifraZadatka" />
+                <ScalarProperty Name="sifraVrsteZadatka" ColumnName="sifraVrsteZadatka" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -51,3 +51,4 @@ sifraProvjere: INT, sifraZadatka: INT, bodovi: INT, negativno: INT, odgovor: INT
 
 ZADATAKGRANULA
 sifraZadatka: INT, sifraGranule: INT, sadrzaj: INT € [1, 10]
+
