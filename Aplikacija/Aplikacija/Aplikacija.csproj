@@ -126,7 +126,13 @@
     <Compile Include="BP\ZadatakVrstaZadatka.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logika\OdabirPitanja.cs" />
+    <Compile Include="Model\Granule.cs" />
+    <Compile Include="Model\Koncepti.cs" />
     <Compile Include="Model\KorisniciAdmini.cs" />
+    <Compile Include="Model\Odnosi.cs" />
+    <Compile Include="Model\Predmeti.cs" />
+    <Compile Include="Model\Zadaci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
