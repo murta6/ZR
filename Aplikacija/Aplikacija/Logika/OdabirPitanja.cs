@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aplikacija.BP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace Aplikacija.Logika
 {
     public static class OdabirPitanja
     {
+
+        public static Provjera generirajProvjeru(
 
     }
 }

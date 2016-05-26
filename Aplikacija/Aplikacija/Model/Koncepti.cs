@@ -35,5 +35,18 @@ namespace Aplikacija.Model
                 return baza.Koncept.Where(kcp => kcp.sifraPredmeta == sifraPredmeta).ToList();
             }
         }
+
+        public static List<Koncept> vratiSveKonceptePredmetaBezUvjeta(int sifraPredmeta, int sifraOdnosa)
+        {
+            using (Baza baza = new Baza())
+            {
+                //return baza.Koncept.Where(kcp => kcp.sifraPredmeta == sifraPredmeta).ToList();
+            }
+        }
+
+        public static Boolean dodajKorisnikaKonceptu(int sifraKorisnika, int sifraKoncepta, double? znanje = null)
+        {
+
+        }
     }
 }

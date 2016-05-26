@@ -75,6 +75,14 @@ namespace Aplikacija.Model
             return db.Korisnik.Where(k => k.username == username).Count() > 0;
         }
 
+        public static int sifraZaUsername(String username)
+        {
+            using (Baza db = new Baza())
+            {
+                return db.Korisnik.Where(k => k.username == username).First().sifraKorisnika;
+            }
+        }
+
         #endregion
 
         private static String hashPassword(String password)
