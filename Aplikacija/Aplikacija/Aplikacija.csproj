@@ -41,6 +41,9 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="mxparser">
+      <HintPath>..\lib\mxparser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -126,6 +129,7 @@
     <Compile Include="BP\ZadatakVrstaZadatka.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logika\Evaluator.cs" />
     <Compile Include="Logika\KonkretnaProvjera.cs" />
     <Compile Include="Logika\OdabirPitanja.cs" />
     <Compile Include="Logika\ZnanjeKorisnika.cs" />

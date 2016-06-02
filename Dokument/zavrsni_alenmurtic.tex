@@ -89,15 +89,20 @@ Korisnički model su uglavnom algoritmi koji analiziraju točnost odgovora (te m
 \subsubsection{Model učenja}
 Nakon postavljanja domenskog i korisničkog modela, ostatak aplikacijske logike sadržan je u modelu učenja. Upravo je model učenja najbitniji dio inteligentnog sustava za elektroničko učenje jer on zamjenjuje ljudskog učitelja. Ovoj komponenti pripadaju algoritmi koji na temelju rezultata prethodno navedenih evaluiraju znanje korisnika, algoritmi korisnikove navigacije sustavom te algoritmi posluživanja pitanja.
 \par
-Model učenja srž je ITS-a te mjesto 
+Svrha modela učenja je praćenje korisnikova napretka u pojedinim konceptima/predmetima. Iako je na prvi pogled to relativno jednostavan problem, on jest takav za ljudskog učitelja, ali za računalo nije. Takvi problemi umjetne inteligencije (UI) nazivaju se UI-potpuni. Nakon što algoritmi procijene znanje korisnika, ono se treba prikazati nekim vizualnim načinom da korisnik bolje razumije što ne zna i zašto mu sustav postavlja neka pitanja.
+\par
+Model učenja je srž ITS-a te glavni odraz kvalitete pojedinog sustava. Čest način implementacije modela učenja je logičkim produkcijama koje dovode do zaključka je li korisnik nešto naučio ili ne. Prednost takvog pristupa je formalna evaluacija korisnika i sustava samog, no nedostatak mu je nejasnost širem spektru administratora. Alternativni način je sustav bodovanja pojedinih pitanja, skupova pitanja i odnosa između koncepata koje korisnik treba savladati.
 
 \subsubsection{Korisničko sučelje}
-
+Korisničko sučelja je standardan element gotovo svake računalne aplikacije. Ono nužno ne mora biti grafičko, iako je takvo sigurno zanimljivije kranjem korisniku. Učenik treba vidjeti svoj trenutni napredak prikazan na jasan način, razumjeti na koji način sustav komunicira s njim i on sa sustavom te područje koje pitanja ispituju.
 
 \subsection{Karakteristike dobrih sustava}
-Nakon definiranja komponenata sustava za inteligentno učenje, potrebno je razmotriti ka
+Nakon definiranja komponenata sustava za inteligentno učenje, potrebno je razmotriti koje karakteristike imaju kvalitetni sustavi za inteligentno učenje.
 
-\subsubsection{Parametrizirana pitanja} parametrizirana pitanja
+\subsubsection{Kvalitetna razrađena podjela znanja}
+Iako se ovo čini kao očekivan uvjet iz  opisa domenskog modela, važno ga je ponoviti i u ovom dijelu. 
+
+\subsubsection{Parametrizirana pitanja}
 
 \subsubsection{Prilagođene reakcije}
 
@@ -114,6 +119,8 @@ umjesto praćenja fizičkih reakcija
 
 \subsection{Poznati sustavi}
 Coursera? Doulingo? Računalne igrice (zbog AI, Dishonored)? Urban Jungle
+
+\subsection{Nedostaci ITS-a}
 
 \chapter{ TODO NASLOV: slojevi}
 Sve kvalitetno oblikovane moderne aplikacije moraju sadržavati nekoliko slojeva rada. Slojevita arhitektura omogućuje sigurno zadržavanje dva najvažnija logička načela dobrog oblikovanja: nadogradnju bez promjene i načelo jedinstvene ovisnosti. Takav pristup također intervencije u kod aplikacije čini lakšim. Arhitektura koju koristim je MVC (Model - View - Controller). Prevedeno na hrvatski, model je podatkovni sloj, controller je aplikacijska logika, a view pogled. Najveća prednost ovakvog pristupa je jednostavna i intuitivna višeplatformska modularnost - podatkovni sloj je zajednički za sve platforme, aplikacijsku logiku može koristiti više različitih platformi (npr. kod pisan u Javi za Android i web aplikacije ili C\# za Windows 10 i web), a svaka platforma određuje svoje korisničko sučelje, tj. pogled.

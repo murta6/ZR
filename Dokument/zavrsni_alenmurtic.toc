@@ -11,15 +11,17 @@
 \contentsline {subsubsection}{Korisni\IeC {\v c}ki model}{6}
 \contentsline {subsubsection}{Model u\IeC {\v c}enja}{6}
 \contentsline {subsubsection}{Korisni\IeC {\v c}ko su\IeC {\v c}elje}{6}
-\contentsline {subsection}{\numberline {2.1.3}Karakteristike dobrih sustava}{6}
-\contentsline {subsubsection}{Parametrizirana pitanja}{6}
-\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{6}
-\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja}{6}
+\contentsline {subsection}{\numberline {2.1.3}Karakteristike dobrih sustava}{7}
+\contentsline {subsubsection}{Kvalitetna razra\IeC {\dj }ena podjela znanja}{7}
+\contentsline {subsubsection}{Parametrizirana pitanja}{7}
+\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{7}
+\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja}{7}
 \contentsline {subsubsection}{Sigurnost}{7}
 \contentsline {subsubsection}{Kvalitetni algoritmi}{7}
 \contentsline {subsubsection}{Principi dizajna}{7}
 \contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{7}
 \contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{7}
+\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{7}
 \contentsline {chapter}{\numberline {3} TODO NASLOV: slojevi}{8}
 \contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{10}
 \contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{10}
