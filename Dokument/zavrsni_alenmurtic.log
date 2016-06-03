@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  2 JUN 2016 22:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  4 JUN 2016 00:32
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -593,26 +593,32 @@ Overfull \hbox (40.99178pt too wide) in paragraph at lines 92--93
  po-je-di-nim kon-cep-tima/predmetima.
  []
 
-[6] [7]
-Poglavlje 3.
-[8
+[6]
+Overfull \hbox (2.01617pt too wide) in paragraph at lines 107--108
+[]\T1/ptm/m/n/12 Elegantno rje-²e-nje pro-blema je odre-ži-va-nje sred-nje ve-l
+i-kog broja gra-nu-la-cija (jasno,
+ []
 
-] [9]
+[7] [8] [9]
+Poglavlje 3.
+[10
+
+] [11]
 Poglavlje 4.
 
-Overfull \hbox (5.21965pt too wide) in paragraph at lines 143--145
+Overfull \hbox (5.21965pt too wide) in paragraph at lines 163--165
 []\T1/ptm/m/n/12 SQL, C#, Java, En-tity Fra-mework, SQL Ma-na-ge-ment Stu-dio, 
 Vi-sual Stu-dio, Eclipse,
  []
 
-[10
+[12
 
 ]
 Poglavlje 5.
 No file zavrsni_alenmurtic.bbl.
-[11
+[13
 
-] [12] (zavrsni_alenmurtic.aux) ) 
+] [14] (zavrsni_alenmurtic.aux) ) 
 Here is how much of TeX's memory you used:
  5490 strings out of 493698
  74638 string characters out of 3144815
@@ -628,9 +634,9 @@ D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/FER/Programs
 ts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/FE
 R/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (16 pages, 109147 bytes).
+Output written on zavrsni_alenmurtic.pdf (18 pages, 114689 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
