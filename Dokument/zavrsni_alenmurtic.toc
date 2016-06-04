@@ -21,14 +21,14 @@
 \contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{10}
 \contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{11}
 \contentsline {subsubsection}{Odabir pitanja}{11}
+\contentsline {subsubsection}{Generiranje parametara}{11}
 \contentsline {subsubsection}{Evaluacija odgovora}{11}
 \contentsline {subsubsection}{Procjena znanja}{11}
-\contentsline {subsubsection}{}{11}
 \contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{11}
 \contentsline {subsubsection}{Neinteligentni sustavi}{11}
-\contentsline {subsubsection}{Inteligentni sustavi}{11}
-\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{11}
-\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{11}
+\contentsline {subsubsection}{Inteligentni sustavi}{12}
+\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{12}
+\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{12}
 \contentsline {subsubsection}{Cijena izrade}{12}
 \contentsline {chapter}{\numberline {3}Slojevi aplikacija}{14}
 \contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{16}

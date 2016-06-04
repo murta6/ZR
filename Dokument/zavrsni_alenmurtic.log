@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  4 JUN 2016 23:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  4 JUN 2016 23:57
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -586,36 +586,36 @@ Poglavlje 2.
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 45.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
  <img/pressey.jpg, id=26, 188.20313pt x 188.20313pt>
 File: img/pressey.jpg Graphic file (type jpg)
  <use img/pressey.jpg>
-Package pdftex.def Info: img/pressey.jpg used on input line 57.
+Package pdftex.def Info: img/pressey.jpg used on input line 55.
 (pdftex.def)             Requested size: 188.20265pt x 188.20265pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 58.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
 
 [3 <./img/pressey.jpg>] <img/CAI_shema.jpg, id=31, 359.09157pt x 201.00093pt>
 File: img/CAI_shema.jpg Graphic file (type jpg)
 
 <use img/CAI_shema.jpg>
-Package pdftex.def Info: img/CAI_shema.jpg used on input line 69.
+Package pdftex.def Info: img/CAI_shema.jpg used on input line 67.
 (pdftex.def)             Requested size: 359.09068pt x 201.00043pt.
  [4 <./img/CAI_shema.jpg>]
 <img/ITS-components.jpg, id=36, 359.09157pt x 142.28156pt>
 File: img/ITS-components.jpg Graphic file (type jpg)
 
 <use img/ITS-components.jpg>
-Package pdftex.def Info: img/ITS-components.jpg used on input line 92.
+Package pdftex.def Info: img/ITS-components.jpg used on input line 90.
 (pdftex.def)             Requested size: 359.09068pt x 142.2812pt.
  [5] [6 <./img/ITS-components.jpg>]
-Overfull \hbox (40.99178pt too wide) in paragraph at lines 114--115
+Overfull \hbox (40.99178pt too wide) in paragraph at lines 112--113
 []\T1/ptm/m/n/12 Svrha mo-dela u£e-nja je pra-¢e-nje ko-ris-ni-kova na-pretka u
  po-je-di-nim kon-cep-tima/predmetima.
  []
 
 [7]
-Overfull \hbox (2.01617pt too wide) in paragraph at lines 129--130
+Overfull \hbox (2.01617pt too wide) in paragraph at lines 127--128
 []\T1/ptm/m/n/12 Elegantno rje-²e-nje pro-blema je odre-ži-va-nje sred-nje ve-l
 i-kog broja gra-nu-la-cija (jasno,
  []
@@ -623,29 +623,29 @@ i-kog broja gra-nu-la-cija (jasno,
 [8] [9] <img/security.jpg, id=53, 96.36pt x 63.8385pt>
 File: img/security.jpg Graphic file (type jpg)
  <use img/security.jpg>
-Package pdftex.def Info: img/security.jpg used on input line 157.
+Package pdftex.def Info: img/security.jpg used on input line 155.
 (pdftex.def)             Requested size: 96.35974pt x 63.83833pt.
 
-[10 <./img/security.jpg>] [11]
-<img/teamwork.jpg, id=60, 381.425pt x 193.72375pt>
+[10 <./img/security.jpg>] [11] [12]
+<img/teamwork.jpg, id=63, 381.425pt x 193.72375pt>
 File: img/teamwork.jpg Graphic file (type jpg)
  <use img/teamwork.jpg>
-Package pdftex.def Info: img/teamwork.jpg used on input line 205.
+Package pdftex.def Info: img/teamwork.jpg used on input line 207.
 (pdftex.def)             Requested size: 381.42406pt x 193.72327pt.
 
-[12] [13 <./img/teamwork.jpg>]
+[13 <./img/teamwork.jpg>]
 Poglavlje 3.
 <img/mvc.jpg, id=67, 301.125pt x 158.09062pt>
 File: img/mvc.jpg Graphic file (type jpg)
  <use img/mvc.jpg>
-Package pdftex.def Info: img/mvc.jpg used on input line 218.
+Package pdftex.def Info: img/mvc.jpg used on input line 220.
 (pdftex.def)             Requested size: 301.12425pt x 158.09023pt.
  [14
 
  <./img/mvc.jpg>] [15]
 Poglavlje 4.
 
-Overfull \hbox (5.21965pt too wide) in paragraph at lines 236--238
+Overfull \hbox (5.21965pt too wide) in paragraph at lines 238--240
 []\T1/ptm/m/n/12 SQL, C#, Java, En-tity Fra-mework, SQL Ma-na-ge-ment Stu-dio, 
 Vi-sual Stu-dio, Eclipse,
  []
@@ -673,7 +673,7 @@ D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/FER/Programs
 ts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/FE
 R/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (22 pages, 311066 bytes).
+Output written on zavrsni_alenmurtic.pdf (22 pages, 311980 bytes).
 PDF statistics:
  108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
