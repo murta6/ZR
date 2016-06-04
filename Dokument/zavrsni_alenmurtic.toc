@@ -4,33 +4,40 @@
 \contentsline {section}{\numberline {2.1}Inteligentni sustavi za elektroni\IeC {\v c}ko u\IeC {\v c}enje (ITS)}{3}
 \contentsline {subsection}{\numberline {2.1.1}Povijest ITS-a i zaklju\IeC {\v c}ci iz nje}{3}
 \contentsline {subsubsection}{Mehani\IeC {\v c}ki strojevi za u\IeC {\v c}enje}{3}
-\contentsline {subsubsection}{Po\IeC {\v c}etak elektroni\IeC {\v c}kih sustava za u\IeC {\v c}enje}{3}
-\contentsline {subsubsection}{ITS u doba interneta i analize podataka}{4}
+\contentsline {subsubsection}{Po\IeC {\v c}etak elektroni\IeC {\v c}kih sustava za u\IeC {\v c}enje}{4}
+\contentsline {subsubsection}{ITS u doba interneta i analize podataka}{5}
 \contentsline {subsection}{\numberline {2.1.2}Komponente ITS-a}{5}
-\contentsline {subsubsection}{Domenski model}{5}
-\contentsline {subsubsection}{Korisni\IeC {\v c}ki model}{6}
-\contentsline {subsubsection}{Model u\IeC {\v c}enja}{6}
-\contentsline {subsubsection}{Korisni\IeC {\v c}ko su\IeC {\v c}elje}{6}
-\contentsline {subsection}{\numberline {2.1.3}Karakteristike dobrih sustava}{7}
-\contentsline {subsubsection}{Razra\IeC {\dj }ena podjela znanja}{7}
-\contentsline {subsubsection}{Parametrizirana pitanja}{7}
-\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja i reakcija lica korisnika}{8}
-\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{8}
-\contentsline {subsubsection}{Sigurnost}{9}
-\contentsline {subsubsection}{Kvalitetni algoritmi}{9}
-\contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{9}
-\contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{10}
-\contentsline {subsubsection}{Principi ITS-a}{10}
-\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{10}
-\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{10}
-\contentsline {chapter}{\numberline {3} TODO NASLOV: slojevi}{11}
-\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{13}
-\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{13}
-\contentsline {section}{\numberline {4.2}ER dijagram}{13}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{13}
-\contentsline {subsection}{\numberline {4.3.1}Parametrizirana pitanja}{13}
-\contentsline {subsection}{\numberline {4.3.2}baza stanja, stablo znanja, whatever}{13}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{13}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{13}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{13}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{14}
+\contentsline {subsubsection}{Domenski model}{6}
+\contentsline {subsubsection}{Korisni\IeC {\v c}ki model}{7}
+\contentsline {subsubsection}{Model u\IeC {\v c}enja}{7}
+\contentsline {subsubsection}{Korisni\IeC {\v c}ko su\IeC {\v c}elje}{7}
+\contentsline {subsection}{\numberline {2.1.3}Karakteristike dobrih sustava}{8}
+\contentsline {subsubsection}{Razra\IeC {\dj }ena podjela znanja}{8}
+\contentsline {subsubsection}{Parametrizirana pitanja}{8}
+\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja i reakcija lica korisnika}{9}
+\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{9}
+\contentsline {subsubsection}{Sigurnost}{10}
+\contentsline {subsubsection}{Kvalitetni algoritmi}{10}
+\contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{10}
+\contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{11}
+\contentsline {subsubsection}{Odabir pitanja}{11}
+\contentsline {subsubsection}{Evaluacija odgovora}{11}
+\contentsline {subsubsection}{Procjena znanja}{11}
+\contentsline {subsubsection}{}{11}
+\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{11}
+\contentsline {subsubsection}{Neinteligentni sustavi}{11}
+\contentsline {subsubsection}{Inteligentni sustavi}{11}
+\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{11}
+\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{11}
+\contentsline {subsubsection}{Cijena izrade}{12}
+\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{14}
+\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{16}
+\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{16}
+\contentsline {section}{\numberline {4.2}ER dijagram}{16}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{16}
+\contentsline {subsection}{\numberline {4.3.1}Parametrizirana pitanja}{16}
+\contentsline {subsection}{\numberline {4.3.2}baza stanja, stablo znanja, whatever}{16}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{16}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{16}
+\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{16}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{17}
