@@ -21,23 +21,23 @@
 \contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{10}
 \contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{11}
 \contentsline {subsubsection}{Odabir pitanja}{11}
-\contentsline {subsubsection}{Generiranje parametara}{11}
-\contentsline {subsubsection}{Evaluacija odgovora}{11}
-\contentsline {subsubsection}{Procjena znanja}{11}
-\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{11}
-\contentsline {subsubsection}{Neinteligentni sustavi}{11}
-\contentsline {subsubsection}{Inteligentni sustavi}{12}
-\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{12}
-\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{12}
-\contentsline {subsubsection}{Cijena izrade}{12}
-\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{14}
-\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{16}
-\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{16}
-\contentsline {section}{\numberline {4.2}ER dijagram}{16}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{16}
-\contentsline {subsection}{\numberline {4.3.1}Parametrizirana pitanja}{16}
-\contentsline {subsection}{\numberline {4.3.2}baza stanja, stablo znanja, whatever}{16}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{16}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{16}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{16}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{17}
+\contentsline {subsubsection}{Generiranje parametara}{12}
+\contentsline {subsubsection}{Evaluacija odgovora}{12}
+\contentsline {subsubsection}{Procjena znanja}{12}
+\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{13}
+\contentsline {subsubsection}{Neinteligentni sustavi}{13}
+\contentsline {subsubsection}{Inteligentni sustavi}{13}
+\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{13}
+\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{13}
+\contentsline {subsubsection}{Cijena izrade}{14}
+\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{16}
+\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{18}
+\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{18}
+\contentsline {section}{\numberline {4.2}ER dijagram}{18}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{18}
+\contentsline {subsection}{\numberline {4.3.1}Parametrizirana pitanja}{18}
+\contentsline {subsection}{\numberline {4.3.2}baza stanja, stablo znanja, whatever}{18}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{18}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{18}
+\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{18}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{19}

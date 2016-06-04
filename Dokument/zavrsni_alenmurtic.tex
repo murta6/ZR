@@ -170,18 +170,40 @@ Korisničko sučelje ITS-a također bi se trebao držati nekih principa jedinstv
 
 \subsection{Algotimi sustava za inteligentno učenje}
 
+Najprije smo saznali koji su dijelovi inteligentnog sustava za elektroničko učenje te koje principe moramo slijediti prilikom implementacije jednog takvog sustava, no sljedeće je pitanje što sve treba implementirati da bi sustav bio inteligentan. Najbolji odgovor je odrediti koje sve algoritme ITS treba imati, tj. koje bi poslove njegovi najvažniji algoritmi trebali odrađivati.
+
 \subsubsection{Odabir pitanja}
 Vjerojatno najznačajniji algoritam sustava za inteligentno učenje je algoritam odabira pitanja. On može biti oblikovan na različite načine, no dva su najčešća: logičkim produkcijama koje nadopunjuju produkcije procjena korisnikova znanja ili samostalan programski odabir. Prednost logičkih produkcija je konzistentnost tehnologija koje sustav koristi, no značajni nedostaci su im ovisnost o apsolutnoj točnosti produkcija evaluacije znanja te potreba da autor pitanja sastavlja algoritam. Zato se često koristi druga metoda.
 \par
-Programski odabir pitanja definiran je na razini sustava, a radi na principu procjene korisnikova znanja pojedine granulacije i odnosa između njih te odabira podskupa pitanja iz skupa onih koja je moguće postaviti.
+Programski odabir pitanja definiran je na razini sustava, a radi na principu procjene korisnikova znanja pojedine granulacije i odnosa između njih te odabira podskupa pitanja iz skupa onih koja je moguće postaviti
+\par
+Pitanja se odabiru tako da se uračuna korisnikovo znanje, zahtijevnost i složenost pojedinog pitanja, što bi korisnik naučio ili dokazao točnim odgovorom na to pitanje te ukupna složenost provjere koja sadrži ta pitanja.
 
 \subsubsection{Generiranje parametara}
-Nakon što je sustav odabrao pitanja koja će postaviti, mora odrediti konkretne parametre svakog od njih. Algoritam generiranja parametara ih može generirati iz neke mape mogućih slučajeva ili nasumičnom generacijom uz određene uvjete.
+Nakon što je sustav odabrao pitanja koja će postaviti, mora odrediti konkretne parametre svakog od njih. Algoritam generiranja parametara ih može generirati iz neke mape mogućih slučajeva ili nasumičnom generacijom uz određene uvjete. Uvjeti generiranja parametara važan su element tog postupka kako se ne bi dogodilo da se nekom korisniku postavi pitanje u čijem je rješenju npr. greška dijeljenja s 0. Ukoliko se unutar sustava dobro definiraju ograničenja, generiranje parametara postaje posao poziva funkcija slučajnih brojeva dok se ne zadovolje ograničenja.
 
 \subsubsection{Evaluacija odgovora}
+U dobro projektiranom sustavu evaluacija odgovora svodi se na procjenu točnosti formule zapisane u bazi podataka za određene parametre. U formuli se parametri promijene u stvarne brojeve te ona prolazi provjeru jednakosti +/- n\% s korisnikovim rješenjem.
+
 \subsubsection{Procjena znanja}
+Algoritmi procjene znanja mogu se temeljiti na različitim pogledima na korisnikov odgovor. Neki od najzanimljivijih faktora je li ili nije korisnik nešto naučio su točnost pitanja koja pripadaju nekoj granulaciji, odnosi između znanja, složenost zadatka u odnosu na ostale zadatke koje je korisnik riješio, koliko je vremena prošlo od zadnjeg ispitivanja pojedine granulacije, težina tog pitanja drugim korisnicima koji su došli do njega i koliko je dugo korisnik rješavao to pitanje.
+\par
+U praksi je algoritam procjene znanja najkreativniji dio sustava za inteligentno učenje jer su mu jedina ograničenja da se mora izvesti u nekom razumnom vremenu i da, naravno, sustav pamti tražene vrijednosti.
+\par
+Algoritam procjene znanja također može biti zapisan logički ili programski, u njegovom slučaju je logički češća pojava. Takav algoritam na temelju zapisanih produkcija donosi odluke koliko neke granulacije je korisnik naučio. Za svaki njezin dio se izbacuje vrijednost 1 (naučeno) ili 0 (nenaučeno). Programska alternativa može raditi isti taj posao drukčijom tehnologijom, oslanjati se na praćenje korisnika za \textit{data mining} ili donositi odluke na nekom trećem principu. Prednost programskog nad logičkim izračunavanjem je što programski u pravilu može elegantije doći do neke ocjene i što ne mora ovisiti o konkretnim granulacijama.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/logic.jpg}
+	\caption{Općenita shema logičke evaluacije}
+	\label{fig:logic_eval}
+\end{figure}
+
+\pagebreak
 
 \subsection{Poznati sustavi}
+
+Znamo što sve treba napraviti prilikom dizajniranja sustava za inteligentno učenje, no nismo pogledali što su pametni ljudi prije nas radili u tom pogledu. A radili su puno, stoga bi bilo šteta propustiti izvući znanje i iskustva njihovih sustava u cilju dizajniranja jednog kvalitetnog ITS-a. Čak i neinteligentni sustavi mogu ponuditi korisne zaključke, možda čak i jasnije nego inteligentni. Zašto? Zato što su konceptualno relativno jednostavni te kod njih lakše možemo uočiti neke probleme.
 
 \subsubsection{Neinteligentni sustavi}
 Coursera? Doulingo? Računalne igrice (zbog AI, Dishonored)? Urban Jungle
