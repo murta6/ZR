@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  5 JUN 2016 01:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  5 JUN 2016 01:31
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -637,21 +637,21 @@ Package pdftex.def Info: img/logic.jpg used on input line 197.
 File: img/teamwork.jpg Graphic file (type jpg)
 
 <use img/teamwork.jpg>
-Package pdftex.def Info: img/teamwork.jpg used on input line 229.
+Package pdftex.def Info: img/teamwork.jpg used on input line 231.
 (pdftex.def)             Requested size: 381.42406pt x 193.72327pt.
  [14] [15 <./img/teamwork.jpg>]
 Poglavlje 3.
 <img/mvc.jpg, id=75, 301.125pt x 158.09062pt>
 File: img/mvc.jpg Graphic file (type jpg)
  <use img/mvc.jpg>
-Package pdftex.def Info: img/mvc.jpg used on input line 242.
+Package pdftex.def Info: img/mvc.jpg used on input line 244.
 (pdftex.def)             Requested size: 301.12425pt x 158.09023pt.
  [16
 
  <./img/mvc.jpg>] [17]
 Poglavlje 4.
 
-Overfull \hbox (5.21965pt too wide) in paragraph at lines 260--262
+Overfull \hbox (5.21965pt too wide) in paragraph at lines 262--264
 []\T1/ptm/m/n/12 SQL, C#, Java, En-tity Fra-mework, SQL Ma-na-ge-ment Stu-dio, 
 Vi-sual Stu-dio, Eclipse,
  []
@@ -667,7 +667,7 @@ No file zavrsni_alenmurtic.bbl.
 Here is how much of TeX's memory you used:
  5542 strings out of 493698
  75507 string characters out of 3144816
- 147434 words of memory out of 3000000
+ 148434 words of memory out of 3000000
  8741 multiletter control sequences out of 15000+200000
  58791 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -679,7 +679,7 @@ C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/FER/Programs
 ts/type1/urw/times/utmb8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/FE
 R/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (24 pages, 383511 bytes).
+Output written on zavrsni_alenmurtic.pdf (24 pages, 383772 bytes).
 PDF statistics:
  115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
