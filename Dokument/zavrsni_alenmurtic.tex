@@ -121,8 +121,11 @@ Praćenje izraza lica također je postalo moguće rastom brzine računala, njiho
 Oba dijela su dio najnaprednijih sustava s velikim budžetima za izradu zato što ih je složeno implementirati. 
 
 \subsubsection{Prilagođene reakcije}
-Neizostavna komponenta sustava za inteligentno učenje su reakcije (engl. feedback) temeljene na znanju korisnika. Jasno je da računalne aplikacije ipak ne mogu biti jedinstvene kao ljudski učitelji. Svejedno, reakcije sustava moraju biti kvalitetne i prilagođene pojedinom korisniku da bi ITS imao smisla. Postižu se 
-TODO
+Neizostavna komponenta sustava za inteligentno učenje su reakcije (engl. feedback) temeljene na znanju korisnika. Jasno je da računalne aplikacije ipak ne mogu biti jedinstvene kao ljudski učitelji. Svejedno, reakcije sustava moraju biti kvalitetne i prilagođene pojedinom korisniku da bi ITS imao smisla. Postižu se analizom odgovora korisnika i njegova načina odgovaranja (trajanjem računanja, brojem izmjena odgovora prije potvrde i sl.) te dobrim projektiranjem sustava (postojanjem reakcije za svaku kombinaciju razine znanja).
+\par
+Određivanje kada korisniku treba dati uputu (engl. hint) ako je zapeo na nekom zadatku je pitanje bez jednoznačnog odgovora, uostalom, kao i ljudskim učiteljima. S jedne strane učitelj mora znati detektirati kada je njegov učenik iscrpio sve mogućnosti, a s druge je jasno da otvoreno pitanje u sustavu za elektroničko učenje može značiti to da je korisnik jednostavno otišao od svojeg računala. Dva rješenja koja se nameću su pamćenje mogućih pogrešnih kombinacija parametara i broja pokušaja te dopuštanje korisniku da zatraži uputu ako sam shvaća da nema ideju. Nedostatak prvog rješenja je moguća prevelika nepotrebna složenost, a drugog to što umorni korisnici ponekad odustaju prerano.
+\par
+Alternativni način rješavanja reakcija je jednostavno pustiti korisnika da odgovori krivo i dati mu uputu nakon što završi provjeru.
 
 \subsubsection{Sigurnost}
 Sigurnost je jako važan element svakog sustava, a to se ističe u dva aspekta: zaštita osobnih podataka i sprječavanje lažnog predstavljanja. Iako osobni podaci u ITS-u gotovo sigurno ne bi trebali sadržavati osjetljive informacije, važno ih je zaštiti nekim sustavom lozinki.
@@ -132,12 +135,17 @@ Sprječavanje lažnog predstavljanja je puno zanimljiviji problem. Ukoliko susta
 \subsubsection{Kvalitetni algoritmi}
 Kvalitetni algoritmi su nešto što se gotovo podrazumijeva ukoliko želimo kvalitetan sustav. Sljedeća lekcija govori više o algoritmima sustava za elektroničko učenje, no bilo ih je važno navesti i u ovoj.
 
-\subsubsection{Principi dizajna}
-Posljednja, ali ne i najmanje važna karakteristika ITS-a je dizajn grafičkog korisničkog sučelja.
-
-lakoća upravljanja, intuitivnost, mogućnost traženja odgovora/objašnjenja, prikladan prikaz
+\subsubsection{Dizajn sučelja}
+Posljednja, ali ne i najmanje važna karakteristika ITS-a je dizajn grafičkog korisničkog sučelja. To nije važno samo za ITS, nego i za svaku drugu računalnu aplikaciju jer loše sučelje odbija korisnike više nego bilo što drugo. Prilično je teško definirati što je točno kvalitetno grafičko korisničko sučelje, no ono bi sigurno moralo imati sljedeće karakteristike: intuitivnost rasporeda kontrola, lakoća upravljanja (brzina, dosljednost, dozvole promjena kontrola), ugodan izgled (boje, fontovi, izbjegavanje neugodnih efekata promjena boja") te prikladan prikaz informacija.
+\par
+Korisničko sučelje ITS-a također bi se trebao držati nekih principa jedinstvenih za to područje. Tri najvažnija su: mogućnost traženja upute (također su opcije gumb za odustajanje ili ispis odgovora), konzistentnost znakovlja (npr. cos ili csin za kosinus, točka ili zarez kao decimalna oznaka) te prikaz napretka u pojedinoj granulaciji znanja.
 
 \subsection{Algotimi sustava za inteligentno učenje}
+
+\subsubsection{Principi ITS-a}
+\begin{enumerate}
+	\item 
+\end{enumerate}
 
 \subsection{Poznati sustavi}
 Coursera? Doulingo? Računalne igrice (zbog AI, Dishonored)? Urban Jungle
