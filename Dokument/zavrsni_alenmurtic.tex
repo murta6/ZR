@@ -126,6 +126,9 @@ Granulacija podjele znanja je pitanje bez jednoznačnog odgovora, a s puno rizik
 \par
 Elegantno rješenje problema je određivanje srednje velikog broja granulacija (jasno, što je srednji broj ovisi o opsegu domene za koju se ITS projektira), a onda između pojedinih granula uspostaviti različiti broj odnosa. Na taj način sam i ja riješio problem u svojoj implementaciji.
 
+\subsubsection{Materijali za učenje}
+Svaki sustav čiji je cilj biti samostalan trebao bi sadržavati materijale za učenje poput e-knjiga ili uputa koju bi literaturu korisnik morao proučiti prije odgovaranja. Samo takav pristup sa sigurnošću korisniku omogućuje točnost znanja ili, ako se kasnije utvrdi pogreška u materijalima, referencu na pogrešku. Ukoliko sustav korisniku nudi samo provjeru znanja s objašnjenjima za pojedino pitanje, postoji velik rizik da korisnik neće dovoljno dobro razumjeti povezanost činjenica koje sustav ispituje.
+
 \subsubsection{Parametrizirana pitanja}
 Zamislite slučaj u kojem ITS služi za formalnu provjeru znanja na fakultetu čiji studenti imaju organizirane forume na kojima dijele zadatke. Nerealno je očekivati da može postojati više od 20 pitanja neke domene, a postoji preko 500 studenata u generaciji. Kako osigurati adekvatnost provjere? Odgovor je jednostavan: parametrizacijom pitanja.
 \par
@@ -199,18 +202,71 @@ Algoritam procjene znanja također može biti zapisan logički ili programski, u
 	\label{fig:logic_eval}
 \end{figure}
 
-\pagebreak
-
 \subsection{Poznati sustavi}
 
 Znamo što sve treba napraviti prilikom dizajniranja sustava za inteligentno učenje, no nismo pogledali što su pametni ljudi prije nas radili u tom pogledu. A radili su puno, stoga bi bilo šteta propustiti izvući znanje i iskustva njihovih sustava u cilju dizajniranja jednog kvalitetnog ITS-a. Čak i neinteligentni sustavi mogu ponuditi korisne zaključke, možda čak i jasnije nego inteligentni. Zašto? Zato što su konceptualno relativno jednostavni te kod njih lakše možemo uočiti neke probleme.
 \par
-Bitno je naglasiti da nisu svi sustavi u ovom dijelu samo pitalice, već on sadrži neke slobodnije poglede na učenje jer različiti ljudi uče na različite načine. Neki uče igrom, neki ponavljanjem, neki rješavanjem zadataka, gradnjom rješenja bla bla bla
+Bitno je naglasiti da nisu svi sustavi u ovom dijelu samo pitalice, već on sadrži neke slobodnije poglede na učenje jer različiti ljudi uče na različite načine. Učiti se može vizualnom tehnikom, slušanjem, igrom, ponavljanjem / čitanjem naglas, rješavanjem zadataka, gradnjom rješenja itd. Zato bi bilo kontraproduktivno da svaki sustav za učenje ima oblik pitalice.
 
 \subsubsection{Neinteligentni sustavi}
-Coursera? Doulingo? Računalne igrice (zbog AI, Dishonored)? Urban Jungle
+
+Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnici. Princip rada Duolinga je da korisnik odabere svoj materinji (ili dobro poznati jezik) te dobije ponudu jezika za koje postoji "tečaj" uz pomoć njegova materinjeg jezika. Pitanja mogu biti dopunjavanje, prevođenje ili pitanje s odabirom od ponuđenih odgovora. Sustav je neinteligentan osim u dva pogleda: znanje nekog područja zastarjeva ukoliko korisnik nije dugo odgovarao pitanja iz tog kategorije te sustav odabire područje s najmanjom vrijednosti znanja ukoliko korisnik odabrere opciju "pojačavanja znanja" (engl. strengthen skills).
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/duolingo.jpg}
+	\caption{Inteligentni aspekt sustava Duolingo: prepoznavanje "tipfelera"}
+	\label{fig:duolingo}
+\end{figure}
+
+\par
+Coursera je internetska stranica koja sadržava kolegije najpoznatijih svjetskih sveučilišta s ciljem smanjivanja ovisnosti fizičke pozicije ljudi i njihovih mogućnosti učenja. Sadrži besplatne i plaćene tečajeve čije materijale korisnik može (i mora) proučavati, odgovarati na pitanja te na kraju dobije potvrdu svojeg znanja. Jasno je da položiti neki tečaj na Courseri nije jednakovrijedno kao završiti kolegij na fakultetu, no ukoliko korisnik ima stvarnu volju za učenjem, količina stečenog znanja može biti jednaka. Iako su materijali velikog broja fakulteta (pogotovo tehničkih) javno dostupni, Coursera eliminira potrebu za iscrpnom pretragom materijala i stavlja fokus na učenje.
+\par
+Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih informatičara Rijeka da bi mladima olakšali polaganje vozačkog ispita. Korisnik  može voziti virtualni automobil kao i u sličnim računalnim igrama, no Urban Jungle ima edukativnu svrhu jer za uspješno "igranje" korisnik mora paziti na stvarna prometna pravila. Odličan je primjer da računalni sustav namijenjen za učenje ne mora nužno biti samo niz pitanja i odgovora.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/urbjng.jpg}
+	\caption{Slika ekrana prilikom vožnje u Urban Jungle edukativnoj igri}
+	\label{fig:urbjng}
+\end{figure}
+
+\par
+Moodle je vrlo popularan akademski sustav za učenje koji omogućuje neke koncepte ITS-a (parametrizirana pitanja, interaktivno sučelje), no nije ITS jer ne sadrži inteligentno odlučivanje. Sustav Moodle gotovo uvijek funkcionira kao podrška formalnom sustavu učenja zato što omogućuje planere, kalendare, obavijesti korisnicima i sl. Moodle može biti osnova za izgradnju drugog sustava za učenje, kao što je slučaj s CARNet-ovim sustavom Merlin. Moodle je aplikacija otvorenog koda te ju je zato vrlo lako moguće prilagođavati. Sustav Ferko razvijen na Fakultetu elektrotehnike i računarstva ima sličnu domenu primjene kao Moodle.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/moodle.jpg}
+	\caption{Logo sustava Moodle}
+	\label{fig:moodle}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/merlin.jpg}
+	\caption{Logo sustava Merlin temeljenog na Moodleu}
+	\label{fig:merlin}
+\end{figure}
 
 \subsubsection{Inteligentni sustavi}
+Postoje mnogi sustavi za inteligentno učenje koji rade na principu pitalica te sam zato odabrao najzanimljivije primjere ITS-a koji možda i ne slijede dosad navedeni obrazac, no svejedno pripadaju skupini sustava za inteligentno učenje.
+\par
+Why2-Atlas je ITS koji uči korisnika koncepte kvalitativne fizike tako da traži od njega da napiše nekoliko rečenica od određenom pojmu te abduktivnom sintaktičkom analizom pokušava dokučiti znanje korisnika. Takav proces može se odvijati u nekoliko iteracija dok sustav ne odredi znanje korisnika te ga uputi na točno rješenje ukoliko je u krivu.
+\par
+AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučilištu koji razgovara s korisnikom prirodnim jezikom. Princip rada AutoTutora je parsiranje govora na sličan način na koji se prevode programski jezici.
+\par
+ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno učenje. To je sustav za podučavanje dodatno matematike u školama ili učenje na daljinu. ActiveMath je internetska stranica na kojoj pored sustava za učenje postoje i materijali koji pokrivaju gradivo. Kvaliteta ActiveMath ITS-a je u tome što ga autori prilagođavaju s obzirom na empirijske rezultate kako su korisnici učili.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/activemath.jpg}
+	\caption{Slika ekrana ActiveMath sustava}
+	\label{fig:activemath}
+\end{figure}
+
+
+\par
+Igre s prilagodljivom umjetnom inteligencijom (adaptive AI) nisu namijenjene za učenje, no svejedno imaju mnogo dodirnih točaka sa sustavima za inteligentno učenje. Ideja takvih igara je uočiti najčešće igračeve obrasce ponašanja te nove protivnike stvoriti takvima da igrač mora odabrati drukčiju strategiju. Mnogo računalnih igara tvrde da imaju prilagodljivu UI, no zasad taj koncept nije stvarno baš dobro implementiran. Nogometne simulacije i strateške igre u stvarnom vremenu (engl. RTS) najviše reklamiraju takvu UI, no iskustva korisnika kažu da je UI u njima lošija nego prije desetak godina.
 
 \subsection{Nedostaci ITS-a}
 
