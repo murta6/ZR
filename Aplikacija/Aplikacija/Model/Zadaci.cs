@@ -9,6 +9,8 @@ namespace Aplikacija.Model
 {
     public static class Zadaci
     {
+        private static Dictionary<int, int> slozenost = null;
+
         public static List<ZadatakGranula> vratiSveZadatkeKoncepta(int sifraKoncepta)
         {
             using(Baza baza = new Baza())
@@ -54,6 +56,21 @@ namespace Aplikacija.Model
             {
                 return baza.ZadatakGranula.Where(zad => zad.sifraZadatka == sifraZadatka).ToList();
             }
+        }
+
+        public static int vratiBrojSlozenosti(int sifraSlozenosti)
+        {
+            if(slozenost == null)
+            {
+                using (Baza baza = new Baza())
+                {
+                    foreach(var sl in baza.Slozenost.ToList())
+                    {
+                        slozenost.Add(sl.sifraSlozenosti, sl.brojSlozenosti);
+                    }
+                }
+            }
+            return slozenost[sifraSlozenosti];
         }
     }
 }

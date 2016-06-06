@@ -14,20 +14,23 @@ namespace Aplikacija.Logika
         public List<KonkretanZadatak> zadaci;
         public double brojBodova { get; }
         public double ostvareniBrojBodova { get; set; }
+        public int sifraKorisnika { get; }
 
-        private KonkretnaProvjera(double brojBodova)
+        private KonkretnaProvjera(double brojBodova, int sifraKorisnika)
         {
             this.brojBodova = brojBodova;
             zadaci = new List<KonkretanZadatak>();
         }
 
-        public static KonkretnaProvjera generirajProvjeru(List<int> rbrZadataka, double brojBodova)
+        public static KonkretnaProvjera generirajProvjeru(List<int> rbrZadataka, double brojBodova, int sifraKorisnika, int kolicinaSlozenosti)
         {
-            KonkretnaProvjera provjera = new KonkretnaProvjera(brojBodova);
+            KonkretnaProvjera provjera = new KonkretnaProvjera(brojBodova, sifraKorisnika);
             foreach(var rbrZad in rbrZadataka)
             {
                 var zad = Zadaci.vratiZadatak(rbrZad);
-                KonkretanZadatak zadatak = new KonkretanZadatak(zad.pitanje, zad.izraz, zad.parametri, zad.slika, zad.sifraSlozenosti);
+                int brojSlozenostiZadatka = Zadaci.vratiBrojSlozenosti(zad.sifraSlozenosti);
+                var brojBodovaZadatka = brojBodova / kolicinaSlozenosti * brojSlozenostiZadatka;
+                KonkretanZadatak zadatak = new KonkretanZadatak(zad.pitanje, zad.izraz, zad.parametri, zad.slika, zad.sifraSlozenosti, brojBodovaZadatka);
                 provjera.zadaci.Add(zadatak);
             }
             return provjera;
@@ -67,18 +70,20 @@ namespace Aplikacija.Logika
         public byte[] slika { get; }
         public int sifraSlozenosti { get; }
         public Boolean tocno { get; set; }
-        public int brojBodova { get; }
+        public double brojBodova { get; }
         public double negativni { get; }
         public String izraz { get; }
         public double korisnikovOdgovor { get; set; }
 
-        public KonkretanZadatak(String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti)
+        public KonkretanZadatak(String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti, double brojBodova)
         {
             this.pitanje = pitanje;
             this.parametri = generirajParametre(parametri);
             this.slika = slika;
             this.sifraSlozenosti = sifraSlozenosti;
             this.izraz = izraz;
+            this.brojBodova = brojBodova;
+            this.negativni = brojBodova / 4;
             odgovor = izracunajOdgovor();
         }
 

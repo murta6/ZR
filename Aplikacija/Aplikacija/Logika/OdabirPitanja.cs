@@ -10,7 +10,15 @@ namespace Aplikacija.Logika
     public static class OdabirPitanja
     {
 
-        public static Provjera generirajProvjeru(
+        public static List<int> odabirPitanja(int sifraKorisnika)
+        {
+
+        }
+
+        public static KonkretnaProvjera generirajProvjeru(double brojBodova, int sifraKorisnika)
+        {
+            return KonkretnaProvjera.generirajProvjeru(odabirPitanja(sifraKorisnika), brojBodova, sifraKorisnika);
+        }
 
     }
 }

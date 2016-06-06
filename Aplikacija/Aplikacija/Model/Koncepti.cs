@@ -46,7 +46,9 @@ namespace Aplikacija.Model
 
         public static Boolean dodajKorisnikaKonceptu(int sifraKorisnika, int sifraKoncepta, double? znanje = null)
         {
-
+            using (Baza baza = new Baza())
+            {
+            }
         }
     }
 }
