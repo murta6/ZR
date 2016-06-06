@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  5 JUN 2016 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  5 JUN 2016 20:18
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -601,21 +601,21 @@ File: img/CAI_shema.jpg Graphic file (type jpg)
 <use img/CAI_shema.jpg>
 Package pdftex.def Info: img/CAI_shema.jpg used on input line 67.
 (pdftex.def)             Requested size: 359.09068pt x 201.00043pt.
- [4 <./img/CAI_shema.jpg>]
-<img/ITS-components.jpg, id=36, 359.09157pt x 142.28156pt>
+ [4 <./img/CAI_shema.jpg>] [5]
+<img/ITS-components.jpg, id=39, 359.09157pt x 142.28156pt>
 File: img/ITS-components.jpg Graphic file (type jpg)
 
 <use img/ITS-components.jpg>
-Package pdftex.def Info: img/ITS-components.jpg used on input line 90.
+Package pdftex.def Info: img/ITS-components.jpg used on input line 92.
 (pdftex.def)             Requested size: 359.09068pt x 142.2812pt.
- [5] [6 <./img/ITS-components.jpg>]
-Overfull \hbox (40.99178pt too wide) in paragraph at lines 112--113
+ [6 <./img/ITS-components.jpg>]
+Overfull \hbox (40.99178pt too wide) in paragraph at lines 114--115
 []\T1/ptm/m/n/12 Svrha mo-dela u£e-nja je pra-¢e-nje ko-ris-ni-kova na-pretka u
  po-je-di-nim kon-cep-tima/predmetima.
  []
 
 [7]
-Overfull \hbox (2.01617pt too wide) in paragraph at lines 127--128
+Overfull \hbox (2.01617pt too wide) in paragraph at lines 129--130
 []\T1/ptm/m/n/12 Elegantno rje-²e-nje pro-blema je odre-ži-va-nje sred-nje ve-l
 i-kog broja gra-nu-la-cija (jasno,
  []
@@ -623,80 +623,81 @@ i-kog broja gra-nu-la-cija (jasno,
 [8] [9] <img/security.jpg, id=53, 96.36pt x 63.8385pt>
 File: img/security.jpg Graphic file (type jpg)
  <use img/security.jpg>
-Package pdftex.def Info: img/security.jpg used on input line 158.
+Package pdftex.def Info: img/security.jpg used on input line 160.
 (pdftex.def)             Requested size: 96.35974pt x 63.83833pt.
 
 [10 <./img/security.jpg>] [11] [12]
 <img/logic.jpg, id=63, 338.76563pt x 197.23688pt>
 File: img/logic.jpg Graphic file (type jpg)
  <use img/logic.jpg>
-Package pdftex.def Info: img/logic.jpg used on input line 200.
+Package pdftex.def Info: img/logic.jpg used on input line 202.
 (pdftex.def)             Requested size: 338.76479pt x 197.23637pt.
  [13 <./img/logic.jpg>] <img/duolingo.jpg, id=67, 338.76563pt x 180.675pt>
 File: img/duolingo.jpg Graphic file (type jpg)
 
 <use img/duolingo.jpg>
-Package pdftex.def Info: img/duolingo.jpg used on input line 217.
+Package pdftex.def Info: img/duolingo.jpg used on input line 219.
 (pdftex.def)             Requested size: 338.76479pt x 180.67455pt.
  <img/urbjng.jpg, id=68, 316.18124pt x 237.13594pt>
 File: img/urbjng.jpg Graphic file (type jpg)
 
 <use img/urbjng.jpg>
-Package pdftex.def Info: img/urbjng.jpg used on input line 229.
+Package pdftex.def Info: img/urbjng.jpg used on input line 231.
 (pdftex.def)             Requested size: 316.18047pt x 237.13535pt.
  [14 <./img/duolingo.jpg>]
 <img/moodle.jpg, id=72, 316.18124pt x 94.85437pt>
 File: img/moodle.jpg Graphic file (type jpg)
  <use img/moodle.jpg>
-Package pdftex.def Info: img/moodle.jpg used on input line 239.
+Package pdftex.def Info: img/moodle.jpg used on input line 241.
 (pdftex.def)             Requested size: 316.18047pt x 94.85413pt.
 
 <img/merlin.jpg, id=73, 165.61874pt x 50.43843pt>
 File: img/merlin.jpg Graphic file (type jpg)
  <use img/merlin.jpg>
-Package pdftex.def Info: img/merlin.jpg used on input line 246.
+Package pdftex.def Info: img/merlin.jpg used on input line 248.
 (pdftex.def)             Requested size: 165.61833pt x 50.4383pt.
- [15 <./img/urbjng.jpg> <./img/moodle.jpg> <./img/merlin.jpg>]
+ [15 <./img/urbjng.jpg> <./img/moodle.jpg>]
 <img/autotutor.jpg, id=78, 451.6875pt x 317.185pt>
 File: img/autotutor.jpg Graphic file (type jpg)
  <use img/autotutor.jpg>
-Package pdftex.def Info: img/autotutor.jpg used on input line 260.
+Package pdftex.def Info: img/autotutor.jpg used on input line 262.
 (pdftex.def)             Requested size: 451.68639pt x 317.1842pt.
 
-Overfull \hbox (39.12141pt too wide) in paragraph at lines 260--261
+Overfull \hbox (39.12141pt too wide) in paragraph at lines 262--263
  [][] 
  []
 
-<img/activemath.jpg, id=79, 461.725pt x 250.9375pt>
+[16 <./img/merlin.jpg> <./img/autotutor.jpg>]
+<img/activemath.jpg, id=82, 461.725pt x 250.9375pt>
 File: img/activemath.jpg Graphic file (type jpg)
  <use img/activemath.jpg>
-Package pdftex.def Info: img/activemath.jpg used on input line 270.
+Package pdftex.def Info: img/activemath.jpg used on input line 272.
 (pdftex.def)             Requested size: 461.72388pt x 250.93687pt.
 
-Overfull \hbox (49.1589pt too wide) in paragraph at lines 270--271
+Overfull \hbox (49.1589pt too wide) in paragraph at lines 272--273
  [][] 
  []
 
-[16 <./img/autotutor.jpg>] [17 <./img/activemath.jpg>]
-<img/teamwork.jpg, id=86, 381.425pt x 193.72375pt>
+[17 <./img/activemath.jpg>] [18]
+<img/teamwork.jpg, id=89, 381.425pt x 193.72375pt>
 File: img/teamwork.jpg Graphic file (type jpg)
  <use img/teamwork.jpg>
-Package pdftex.def Info: img/teamwork.jpg used on input line 295.
+Package pdftex.def Info: img/teamwork.jpg used on input line 299.
 (pdftex.def)             Requested size: 381.42406pt x 193.72327pt.
 
-[18] [19 <./img/teamwork.jpg>]
+[19 <./img/teamwork.jpg>]
 Poglavlje 3.
 <img/mvc.jpg, id=93, 301.125pt x 158.09062pt>
 File: img/mvc.jpg Graphic file (type jpg)
  <use img/mvc.jpg>
-Package pdftex.def Info: img/mvc.jpg used on input line 308.
+Package pdftex.def Info: img/mvc.jpg used on input line 312.
 (pdftex.def)             Requested size: 301.12425pt x 158.09023pt.
  [20
 
  <./img/mvc.jpg>] [21]
 Poglavlje 4.
 
-Overfull \hbox (5.21965pt too wide) in paragraph at lines 326--328
+Overfull \hbox (5.21965pt too wide) in paragraph at lines 330--332
 []\T1/ptm/m/n/12 SQL, C#, Java, En-tity Fra-mework, SQL Ma-na-ge-ment Stu-dio, 
 Vi-sual Stu-dio, Eclipse,
  []
@@ -712,7 +713,7 @@ No file zavrsni_alenmurtic.bbl.
 Here is how much of TeX's memory you used:
  5578 strings out of 493698
  76143 string characters out of 3144816
- 147503 words of memory out of 3000000
+ 148503 words of memory out of 3000000
  8771 multiletter control sequences out of 15000+200000
  58791 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -724,7 +725,7 @@ C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/FER/Programs
 ts/type1/urw/times/utmb8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/FE
 R/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (28 pages, 609608 bytes).
+Output written on zavrsni_alenmurtic.pdf (28 pages, 609803 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
