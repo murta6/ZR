@@ -327,22 +327,102 @@ Uspoređujući slojeve inteligentnog sustava za elektroničko učenje i MVC viš
 Opis rješenja
 
 \section{Korištene tehnologije}
-SQL, C\#, Java, Entity Framework,
-SQL Management Studio, Visual Studio, Eclipse, Android Studio
+
+Budući da je zadatak ovog završnog rada sadržavao izradu baze podataka i aplikacijske logike za sustav inteligentnog učenja, u izradi programskog rješenja potrebno je bilo koristiti nekoliko različitih tehnologija. One su:
+\par
+Deklarativni programski jezik \textbf{SQL} i programsko okruženje \textbf{Microsoft SQL Management Studio} za izradu i kontrolu relacijske baze podataka te popunjavanje iste konkretnim podacima.
+\par
+Programski jezik \textbf{C\#} i razvojno okruženje \textbf{Microsoft Visual Studio} za izradu aplikacijske logike.
+\par
+Skup tehnologija \textbf{Entity Framework} za dvosmjerno preslikavanje entiteta iz baze podataka i objekata iz aplikacije.
+\par
+Biblioteka \textbf{mXparser} za izračunavanje parametriziranih matematičkih izraza.
+\par
+TODO: \textbf{dijagrami}
 
 \section{ER dijagram}
 ER
 
+\pagebreak
+\subsection{Slika ER dijagrama i entiteta u bazi}
+
+\pagebreak
 \section{Mogućnosti sustava}
 mogućnosti
 
-\subsection{Parametrizirana pitanja}
-
 \subsection{baza stanja, stablo znanja, whatever}
+Drugo poglavlje završnog rada između ostaloga iznosi tezu o kvalitetnoj granulaciji znanja u sustavu za inteligentno učenje. Stoga je njoj bio posvećen velik dio planiranja izvedbene arhitekture sustava. 
+
+\subsubsection{Granulacije znanja}
+Znanje se u ovom ITS-u dijeli na 3 kategorije: predmet, koncept i granula znanja.
+\par 
+Predmet je najveća kategorija te reprezentira sličnu količinu znanja kao jedan fakultetski kolegij, iako to nije nužno ukoliko se sustav ne koristi u svrhu formalne provjere. Entitet predmet je logičan početak zbog činjenice da sustav može biti korišten u svrhu različitih domena primjena s računskom osnovom te zbog toga da je jednostavno prirodan kao početna točka razmišljanja. Svaki predmet može imati svoje administratore koji mogu pregledavati rezultate, generirati testove i sl.
+\par
+Entitet predmet sadrži pripadne koncepte, a oni mogu pripadati samo jednom predmetu (1..N). Koncept je veća cjelina unutar predmeta koja se u dobro strukturiranim fakultetskim kolegijima može definirati kao jedan tjedan predavanja. Jedan predmet bi trebao sadržavati najmanje tri, a najviše 10-tak koncepata. Ne postoji konkretna preporučena brojka zato što svaki od predmeta može biti drukčije logički strukturiran.
+\par
+Svaki od koncepata sadrži granule znanja, najmanje granulacije ovog sustava. Granule znanja namijenjene su prikazivati neke specifične postupke, manje dijelove većih pojmova ili bilo koje druge nedjeljive cjeline čije se značenje pojavljuje u pojedinim zadacima. Također su vezane 1..N vezom, eksplicitno s konceptom, a time implicitno i s predmetom.
+\par
+Primjer koji neće biti odrađen u ovom završnom radu, a mogao bi pomoći razumijevanju predviđene strukture podjele:
+\begin{enumerate}
+	\item Predmet: Umjetna inteligencija
+	\begin{enumerate}
+		\item Koncept: Pretraživanje prostora stanja
+		\begin{enumerate}
+			\item Granula znanja: Pretraživanje u dubinu
+			\item Granula znanja: Pretraživanje u širinu
+			\item Granula znanja: A-zvjezdica pretraživanje
+		\end{enumerate}
+		\item Koncept: Igranje igara
+			\begin{enumerate}
+				\item Granula znanja: Minimax algoritam
+				\item Granula znanja: Minimax s podrezivanjem
+			\end{enumerate}
+	\end{enumerate}
+	\item Predmet: Osnove elektrotehnike
+	\begin{enumerate}
+		\item Koncept: Magnetizam
+		\begin{enumerate}
+			\item Granula znanja: Coulonova jednadžba
+			\item Granula znanja: Naboji u prostoru
+			\item Granula znanja: Dielektrici
+		\end{enumerate}
+		\item Koncept: Istosmjerna struja
+		\begin{enumerate}
+			\item Granula znanja: Strujni i naponski izvori
+			\item Granula znanja: Kirchhoffovi zakoni
+			\item Granula znanja: Načelo superpozicije
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+
+\subsubsection{Odnosi između granulacija}
+
+
+\subsection{Parametrizirani zadaci}
+
+\subsubsection{Zapis u bazi podataka}
+Svako pitanje u baz
+
+\subsubsection{Izračun parametara}
 
 \subsection{Mogućnosti administratora}
+U sustavu postoje (zasad) predodređeni administratori pojedinih predmeta
+samo na svojem predmetu
+
+\subsubsection{Dodavanje pitanja}
+
+\subsubsection{Generiranje ispita}
+
+\subsubsection{Pregled rezultata}
 
 \subsection{Mogućnosti korisnika}
+
+\subsubsection{Registracija}
+posoljeni
+
+\subsubsection{Inteligentno učenje}
+
+\subsubsection{Pregled rezultata}
 
 \section{Logika posluživanja pitanja}
 logika

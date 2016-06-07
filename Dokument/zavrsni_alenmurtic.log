@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  6 JUN 2016 18:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  7 JUN 2016 23:56
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -6,9 +6,9 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
 (fer.cls
 Document Class: fer 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,22 +24,22 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -55,20 +55,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -218,7 +218,7 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -249,7 +249,7 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -273,51 +273,51 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.sty"
 Package: babel 2014/09/25 3.9l The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel-croatian\croatian.ldf"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel-croatian\croatian.ldf"
 Language: croatian 2014/03/31 v1.3m Croatian support from the babel system
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.def"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.def"
 File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count91
 \U@D=\dimen111
 )))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
@@ -325,10 +325,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
@@ -336,24 +336,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen114
 ))
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen115
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
@@ -394,16 +394,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2014/09/29 v1.1s fixes to LaTeX
 LaTeX Info: Redefining \em on input line 430.
 LaTeX Info: The control sequence `\[' is already robust on input line 481.
 LaTeX Info: The control sequence `\]' is already robust on input line 482.
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen123
@@ -416,14 +416,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count105
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip46
 \enit@outerparindent=\dimen130
@@ -431,17 +431,17 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box28
 \enitdp@description=\count106
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip47
 \bibsep=\skip48
@@ -450,7 +450,7 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 \listindentation=\dimen131
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen132
 \lightrulewidth=\dimen133
@@ -470,7 +470,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count111
 \@thisrulewidth=\dimen144
 )
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (zavrsni_alenmurtic.aux)
@@ -487,7 +487,7 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 5.
- ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+ ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -524,7 +524,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\FER\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("D:\FER\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen145
@@ -541,7 +541,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 16.
- ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+ ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
@@ -554,19 +554,19 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 16.
 LaTeX Font Info:    Try loading font information for U+msa on input line 16.
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 19.
 
-("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [1] [3]
 (zavrsni_alenmurtic.toc
@@ -696,38 +696,32 @@ Package pdftex.def Info: img/mvc.jpg used on input line 312.
 
  <./img/mvc.jpg>] [21]
 Poglavlje 4.
-
-Overfull \hbox (5.21965pt too wide) in paragraph at lines 330--332
-[]\T1/ptm/m/n/12 SQL, C#, Java, En-tity Fra-mework, SQL Ma-na-ge-ment Stu-dio, 
-Vi-sual Stu-dio, Eclipse,
- []
-
 [22
 
-]
+] [23] [24] [25] [26]
 Poglavlje 5.
 No file zavrsni_alenmurtic.bbl.
-[23
+[27
 
-] [24] (zavrsni_alenmurtic.aux) ) 
+] [28] (zavrsni_alenmurtic.aux) ) 
 Here is how much of TeX's memory you used:
- 5578 strings out of 493698
- 76143 string characters out of 3144816
+ 5588 strings out of 493698
+ 76281 string characters out of 3144815
  148503 words of memory out of 3000000
- 8771 multiletter control sequences out of 15000+200000
+ 8781 multiletter control sequences out of 15000+200000
  58791 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,6n,40p,912b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/fo
-ntname/8r.enc}<C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><
-C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/FER/Programs
-/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/FER/Programs/MiKTeX 2.9/fon
-ts/type1/urw/times/utmb8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
-/utmr8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/FE
+ 43i,6n,40p,912b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/fo
+ntname/8r.enc}<D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><
+D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/FER/Programs
+/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fon
+ts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times
+/utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/FE
 R/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (28 pages, 609803 bytes).
+Output written on zavrsni_alenmurtic.pdf (32 pages, 616182 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

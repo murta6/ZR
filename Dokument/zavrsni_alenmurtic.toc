@@ -35,10 +35,21 @@
 \contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{22}
 \contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{22}
 \contentsline {section}{\numberline {4.2}ER dijagram}{22}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{22}
-\contentsline {subsection}{\numberline {4.3.1}Parametrizirana pitanja}{22}
-\contentsline {subsection}{\numberline {4.3.2}baza stanja, stablo znanja, whatever}{22}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{22}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{22}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{22}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{23}
+\contentsline {subsection}{\numberline {4.2.1}Slika ER dijagrama i entiteta u bazi}{23}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{24}
+\contentsline {subsection}{\numberline {4.3.1}baza stanja, stablo znanja, whatever}{24}
+\contentsline {subsubsection}{Granulacije znanja}{24}
+\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{25}
+\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{25}
+\contentsline {subsubsection}{Zapis u bazi podataka}{25}
+\contentsline {subsubsection}{Izra\IeC {\v c}un parametara}{25}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{25}
+\contentsline {subsubsection}{Dodavanje pitanja}{25}
+\contentsline {subsubsection}{Generiranje ispita}{25}
+\contentsline {subsubsection}{Pregled rezultata}{25}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{25}
+\contentsline {subsubsection}{Registracija}{25}
+\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{26}
+\contentsline {subsubsection}{Pregled rezultata}{26}
+\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{26}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{27}
