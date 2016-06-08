@@ -94,10 +94,40 @@ namespace Aplikacija.Logika
             for (int i = 0; i < par.Length; i++)
             {
                 String[] param = par[i].Split(':');
-                var br = rand.NextDouble() * 40;
+                Boolean uvjet = false;
+                while (uvjet != true)
+                {
+                    var br = rand.NextDouble() * 1000;
+                    uvjet = izracunajUvjet(param[1], br);
+                }
+                
                 par[i] = param[0] + ":" + br.ToString();
             }
             return par;
+        }
+
+        private Boolean izracunajUvjet(string uvjet, double br)
+        {
+            if(uvjet == "none")
+            {
+                return true;
+            }
+            Boolean povratna = true;
+            string[] uvjeti = uvjet.Split('&');
+            foreach(var uvj in uvjeti)
+            {
+                double par = Double.Parse(uvj.Substring(1));
+                if (uvj[0] == '>')
+                {
+                    povratna = povratna && br > par;
+                }
+                else if(uvj[0] == '<')
+                {
+                    povratna = povratna && br < par;
+                }
+            }
+            return povratna;
+
         }
 
         private double izracunajOdgovor()

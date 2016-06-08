@@ -351,7 +351,9 @@ ER
 mogućnosti
 
 \subsection{baza stanja, stablo znanja, whatever}
-Drugo poglavlje završnog rada između ostaloga iznosi tezu o kvalitetnoj granulaciji znanja u sustavu za inteligentno učenje. Stoga je njoj bio posvećen velik dio planiranja izvedbene arhitekture sustava. 
+Drugo poglavlje završnog rada između ostaloga iznosi tezu o kvalitetnoj granulaciji znanja u sustavu za inteligentno učenje. Stoga je njoj bio posvećen velik dio planiranja implementacije sustava. 
+
+TODO: PRIHATLJIVA RAZINA ZNANJA
 
 \subsubsection{Granulacije znanja}
 Znanje se u ovom ITS-u dijeli na 3 kategorije: predmet, koncept i granula znanja.
@@ -363,45 +365,57 @@ Entitet predmet sadrži pripadne koncepte, a oni mogu pripadati samo jednom pred
 Svaki od koncepata sadrži granule znanja, najmanje granulacije ovog sustava. Granule znanja namijenjene su prikazivati neke specifične postupke, manje dijelove većih pojmova ili bilo koje druge nedjeljive cjeline čije se značenje pojavljuje u pojedinim zadacima. Također su vezane 1..N vezom, eksplicitno s konceptom, a time implicitno i s predmetom.
 \par
 Primjer koji neće biti odrađen u ovom završnom radu, a mogao bi pomoći razumijevanju predviđene strukture podjele:
-\begin{enumerate}
+\begin{itemize}
 	\item Predmet: Umjetna inteligencija
-	\begin{enumerate}
+	\begin{itemize}
 		\item Koncept: Pretraživanje prostora stanja
-		\begin{enumerate}
+		\begin{itemize}
 			\item Granula znanja: Pretraživanje u dubinu
 			\item Granula znanja: Pretraživanje u širinu
 			\item Granula znanja: A-zvjezdica pretraživanje
-		\end{enumerate}
+		\end{itemize}
 		\item Koncept: Igranje igara
-			\begin{enumerate}
+			\begin{itemize}
 				\item Granula znanja: Minimax algoritam
 				\item Granula znanja: Minimax s podrezivanjem
-			\end{enumerate}
-	\end{enumerate}
+			\end{itemize}
+	\end{itemize}
 	\item Predmet: Osnove elektrotehnike
-	\begin{enumerate}
+	\begin{itemize}
 		\item Koncept: Magnetizam
-		\begin{enumerate}
+		\begin{itemize}
 			\item Granula znanja: Coulonova jednadžba
 			\item Granula znanja: Naboji u prostoru
 			\item Granula znanja: Dielektrici
-		\end{enumerate}
+		\end{itemize}
 		\item Koncept: Istosmjerna struja
-		\begin{enumerate}
+		\begin{itemize}
 			\item Granula znanja: Strujni i naponski izvori
 			\item Granula znanja: Kirchhoffovi zakoni
 			\item Granula znanja: Načelo superpozicije
-		\end{enumerate}
-	\end{enumerate}
-\end{enumerate}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
 
 \subsubsection{Odnosi između granulacija}
+Prilično je očito da samo tri granulacije znanja nisu dovoljne za opis svih mogućih situacija u znanju. Ukoliko dva različita predmeta imaju povezane koncepte (npr. Fouriereova transformacija u MAT3 i SIS koji su dio 2. godine FER2 programa) želimo omogućiti da administratori predmeta mogu zabilježiti prethodno korisnikovo znanje. Ili unutar jednog predmeta, ponekad nema smisla korisnika dvaput ispitivati analogne stvari (npr. osnove Theveninovog teorema za izmjeničnu i istosmjernu struju). Ili jednostavno želimo korisniku onemogućiti da otvara neke nove koncepte prije dokazivanja prihvatljive razine znanja u prethodnima (npr. korisnika koji ne poznaje kombinatoriku nema smisla ispitivati pitanja iz diskretne vjerojatnosti). Stoga ovaj sustav donosi dodatnu mogućnost modeliranja znanja: odnose između granulacija.
+\par
+Odnosi mogu biti definirani samo između dvije granulacije jendake vrste i to samo za koncepte i granule znanja. Definicija na razini predmeta nije potrebna zato što je predmet "sačinjen" od koncepata, a nema ograničenja u pogledu odnosa koncepata dvaju različitih predmeta. U sustavu su definirani sljedeći odnosi:
 
+\begin{itemize}
+\item \textbf{Preduvjet} Ovaj odnos definira nemogućnost otvaranja sljedeće granulacije prije postizanja prihvatljive razine znanja u baznoj.
+\item \textbf{Podskup (nadskup)} Odnos između dvije granulacije u kojom je jedna u potpunosti sačinjena od druge. Podrazumijeva se da je niža granulacija pravi podskup jer semantički nema smisla imati dvije identične granulacije, iako to sustav nigdje eksplicitno ne provjerava.
+\item \textbf{Korištenje} Ukoliko je znanje definirano nekom granulacijom uvijek nužno koristiti u drugoj, nema potrebe za stalnim eksplicitnim povezivanjem zadatka i te granulacije nego administrator može zadati odnos korištenja.
+\item \textbf{Analogno} U situacijama u kojima postoji jasna povezanost između dvaju pojmova, takva da znanjem jednog postoji razumijevanje drugog, može se definirati ovaj odnos. U takvom slučaju korisniku se dodaju male količine znanja analognog pojma te postoji mogućnost za manjim brojem elementarnih pitanja u početku ispitivanja novog pojma.
+\item \textbf{Paralelno} Postoji mogućnost da dvije granulacije opisuju istu situaciju na različite načine (npr. pristupi umjetnoj inteligenciji - logički, kognitivni, itd.) te zapravo korisnik uči više različitih pogleda. Za logiku sustava i model učenja paralelnost granulacija znanja nema nikakvog utjecaja te je ona tu samo da korisnik bolje razumije što i kako uči. 
+\end{itemize}
+
+Niti jedan od odnosa ne isključuje korištenje bilo koje drugog, no preporuka autoru pitanja je da ne pretjeruje s kombiniranjem više od dva-tri odnosa po jedinki granulacije da sustav ne bi zapetljao tako da eliminira inteligentno posluživanje pitanja.
 
 \subsection{Parametrizirani zadaci}
 
 \subsubsection{Zapis u bazi podataka}
-Svako pitanje u baz
+Svako pitanje u bazi predstavljeno je entitetom zadatak koji sadrži tekstualno pitanje, matematički izraz koji treba izračunati, eventualno sliku te parametre. Parametri trebaju biti tekstualnom obliku
 
 \subsubsection{Izračun parametara}
 
