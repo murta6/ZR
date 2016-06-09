@@ -36,20 +36,21 @@
 \contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{22}
 \contentsline {section}{\numberline {4.2}ER dijagram}{22}
 \contentsline {subsection}{\numberline {4.2.1}Slika ER dijagrama i entiteta u bazi}{23}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{24}
-\contentsline {subsection}{\numberline {4.3.1}baza stanja, stablo znanja, whatever}{24}
-\contentsline {subsubsection}{Granulacije znanja}{24}
-\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{25}
-\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{26}
-\contentsline {subsubsection}{Zapis u bazi podataka}{26}
-\contentsline {subsubsection}{Izra\IeC {\v c}un parametara}{26}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{26}
-\contentsline {subsubsection}{Dodavanje pitanja}{27}
-\contentsline {subsubsection}{Generiranje ispita}{27}
-\contentsline {subsubsection}{Pregled rezultata}{27}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{27}
-\contentsline {subsubsection}{Registracija}{27}
-\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{27}
-\contentsline {subsubsection}{Pregled rezultata}{27}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{27}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{28}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{25}
+\contentsline {subsection}{\numberline {4.3.1}Reprezentacija znanja}{25}
+\contentsline {subsubsection}{Granulacije znanja}{25}
+\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{26}
+\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{27}
+\contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{27}
+\contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{28}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{28}
+\contentsline {subsubsection}{Dodavanje pitanja}{28}
+\contentsline {subsubsection}{Registracija korisnika na predmet}{28}
+\contentsline {subsubsection}{Generiranje ispita}{28}
+\contentsline {subsubsection}{Pregled rezultata}{29}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{29}
+\contentsline {subsubsection}{Registracija}{29}
+\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{29}
+\contentsline {subsubsection}{Pregled rezultata}{29}
+\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{29}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{30}

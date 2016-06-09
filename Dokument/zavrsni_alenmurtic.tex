@@ -319,12 +319,12 @@ Podatkovni sloj je sloj pohrane, dohvata i ažuriranja podataka, gotovo uvijek i
 \par
 Aplikacijska logika je sloj upravljanja korisničkim zahtjevima, a radi kao poveznica između prikaza i podatkovnog sloja. Aplikacijska logika prima naredbe koje je korisnik zadao na pogledu, zatim provodi neke operacije nad modelom, uzima podatke iz modela te ih u \textit{display-neutral} obliku šalje pogledu. Ona je uglavnom implementirana kao nekoliko slojeva različitih poslova, npr. \textit{utlity} sloj rada s bazom, sloj koji prima podatke od pogleda te algoritamski sloj koji provodi operacije. U ovom završnom radu aplikacijska logika će upravo raditi na taj način: statičke klase rada s bazom, klase algoritama odabira pitanja te klase koje primaju pozive operacija s korisničkog sučelja.
 \par
-Pogled, tj. korisničko sučelje je način na koji se aplikacija prezentira kranjem korisniku te način na koji je on koristi. Njegov je cilj rada obraditi podatke tako da ih može lijepo i kvalitetno prikazati korisniku te slati zahtjeve korisnika aplikacijskoj logici. Budući da zadatak ovog ZR nije implementirati taj sloj aplikacije, jedino korisničko sučelje koje će se koristiti je ono za administratora koji mora moći dodavati nova pitanja, generirati testove i slično.
+Pogled, tj. korisničko sučelje je način na koji se aplikacija prezentira kranjem korisniku te način na koji je on koristi. Njegov je cilj rada obraditi podatke tako da ih može lijepo i kvalitetno prikazati korisniku te slati zahtjeve korisnika aplikacijskoj logici. Budući da zadatak ovog završnog rada nije implementirati taj sloj aplikacije, korisničko sučelje bit će opisano samo na način komunikacije između sustava i korisnika.
 \par
 Uspoređujući slojeve inteligentnog sustava za elektroničko učenje i MVC višeslojne aplikacije, vidimo jasnu povezanost izemđu domenskog modela i modela kao dio MVC-a, controllera te korisničkog modela i modela znanja te grafičkog sučelja i pogleda. Upravo to je smisao MVC pristupa, jednostavno je logičan za ogromnu količinu situacija. Zašto onda ovaj završni rad navodi oba? Zato što je MVC tehnološki presjek, a slojevi ITS-a logički. Njihovo poklapanje je potvrda da je aplikacija projektirana na ispravan način. Filozofskiji odgovor bi bio da je MVC pogled programskog inženjerstva na aplikaciju, a slojevi ITS-a računarske znanosti.
 
 \chapter{Opis implementiranog rješenja}
-Opis rješenja
+Zadatak ovog završnog rada osim dokumenta je implementirati konkretan sustav za inteligentno učenje koji sadrži većinu opisanih elemenata ITS-a. Njega čine baza znanja predstavljenog različitim granulacijama, parametrizirana pitanja, reprezentacija usvojenosti pojedinog korisnika, aplikacijska logika posluživanja pitanja te logika slaganja ispita.
 
 \section{Korištene tehnologije}
 
@@ -341,19 +341,22 @@ Biblioteka \textbf{mXparser} za izračunavanje parametriziranih matematičkih iz
 TODO: \textbf{dijagrami}
 
 \section{ER dijagram}
-ER
+Dijagram entiteta i relacija temeljni je opis svake relacijske baze podataka. Njegova važnost nije samo bolje razumijevanje značenja baze i njezinih entiteta, nego i činjenica da dobro organizirani ER dijagram za jednostavnije baze gotovo uvijek znači da su one u trećoj normalnoj formi.
 
 \pagebreak
 \subsection{Slika ER dijagrama i entiteta u bazi}
+slika ER dijagrama
+
+\pagebreak
+
+slika entiteta s atributima
 
 \pagebreak
 \section{Mogućnosti sustava}
-mogućnosti
+Mogućnosti sustava podijeljene su na one administratora, korisnika koji uči i zajedničke mogućnosti. Za obje vrste korisnika važne su granulacije znanja i način parametrizacije zadataka, za administratora je važno kako će dodavati pitanja u sustav, generirati ispite korisnicima te pregledavati njihove rezultate, a za korisnika koji uči registracija na sustav, način inteligentnog učenja te pregled vlastitih rezultata.
 
-\subsection{baza stanja, stablo znanja, whatever}
-Drugo poglavlje završnog rada između ostaloga iznosi tezu o kvalitetnoj granulaciji znanja u sustavu za inteligentno učenje. Stoga je njoj bio posvećen velik dio planiranja implementacije sustava. 
-
-TODO: PRIHATLJIVA RAZINA ZNANJA
+\subsection{Reprezentacija znanja}
+Drugo poglavlje ovog završnog rada između ostaloga iznosi tezu o važnosti kvalitetne granulacije znanja u sustavu za inteligentno učenje. Stoga je njoj bio posvećen velik dio planiranja implementacije sustava. 
 
 \subsubsection{Granulacije znanja}
 Znanje se u ovom ITS-u dijeli na 3 kategorije: predmet, koncept i granula znanja.
@@ -363,6 +366,7 @@ Predmet je najveća kategorija te reprezentira sličnu količinu znanja kao jeda
 Entitet predmet sadrži pripadne koncepte, a oni mogu pripadati samo jednom predmetu (1..N). Koncept je veća cjelina unutar predmeta koja se u dobro strukturiranim fakultetskim kolegijima može definirati kao jedan tjedan predavanja. Jedan predmet bi trebao sadržavati najmanje tri, a najviše 10-tak koncepata. Ne postoji konkretna preporučena brojka zato što svaki od predmeta može biti drukčije logički strukturiran.
 \par
 Svaki od koncepata sadrži granule znanja, najmanje granulacije ovog sustava. Granule znanja namijenjene su prikazivati neke specifične postupke, manje dijelove većih pojmova ili bilo koje druge nedjeljive cjeline čije se značenje pojavljuje u pojedinim zadacima. Također su vezane 1..N vezom, eksplicitno s konceptom, a time implicitno i s predmetom.
+\pagebreak
 \par
 Primjer koji neće biti odrađen u ovom završnom radu, a mogao bi pomoći razumijevanju predviđene strukture podjele:
 \begin{itemize}
@@ -403,7 +407,8 @@ Prilično je očito da samo tri granulacije znanja nisu dovoljne za opis svih mo
 Odnosi mogu biti definirani samo između dvije granulacije jendake vrste i to samo za koncepte i granule znanja. Definicija na razini predmeta nije potrebna zato što je predmet "sačinjen" od koncepata, a nema ograničenja u pogledu odnosa koncepata dvaju različitih predmeta. U sustavu su definirani sljedeći odnosi:
 
 \begin{itemize}
-\item \textbf{Preduvjet} Ovaj odnos definira nemogućnost otvaranja sljedeće granulacije prije postizanja prihvatljive razine znanja u baznoj.
+\item \textbf{Preduvjet} Ovaj odnos definira nemogućnost otvaranja sljedeće granulacije prije postizanja prihvatljive razine znanja u baznoj. Privatljiva razina znanja ekvivalent je ocjene dovoljan na pojedinoj granulaciji.
+
 \item \textbf{Podskup (nadskup)} Odnos između dvije granulacije u kojom je jedna u potpunosti sačinjena od druge. Podrazumijeva se da je niža granulacija pravi podskup jer semantički nema smisla imati dvije identične granulacije, iako to sustav nigdje eksplicitno ne provjerava.
 \item \textbf{Korištenje} Ukoliko je znanje definirano nekom granulacijom uvijek nužno koristiti u drugoj, nema potrebe za stalnim eksplicitnim povezivanjem zadatka i te granulacije nego administrator može zadati odnos korištenja.
 \item \textbf{Analogno} U situacijama u kojima postoji jasna povezanost između dvaju pojmova, takva da znanjem jednog postoji razumijevanje drugog, može se definirati ovaj odnos. U takvom slučaju korisniku se dodaju male količine znanja analognog pojma te postoji mogućnost za manjim brojem elementarnih pitanja u početku ispitivanja novog pojma.
@@ -413,23 +418,37 @@ Odnosi mogu biti definirani samo između dvije granulacije jendake vrste i to sa
 Niti jedan od odnosa ne isključuje korištenje bilo koje drugog, no preporuka autoru pitanja je da ne pretjeruje s kombiniranjem više od dva-tri odnosa po jedinki granulacije da sustav ne bi zapetljao tako da eliminira inteligentno posluživanje pitanja.
 
 \subsection{Parametrizirani zadaci}
+Jedan od zadataka ovog završnog rada je parametrizacija pitanja koja se poslužuju korisniku. Ona je izvedena na razinama baze podataka i aplikacijske logike. Izrazi su zapisani u bazi podataka, a konkretne parametre generira aplikacijska logika.
 
-\subsubsection{Zapis u bazi podataka}
-Svako pitanje u bazi predstavljeno je entitetom zadatak koji sadrži tekstualno pitanje, matematički izraz koji treba izračunati, eventualno sliku te parametre. Parametri trebaju biti tekstualnom obliku
+\subsubsection{Zapis u bazi podataka i generiranje}
+Svako pitanje u bazi predstavljeno je entitetom zadatak koji sadrži tekstualno pitanje, matematički izraz koji treba izračunati, eventualno sliku te parametre. Parametri trebaju biti zapisani u standardnom tekstualnom obliku: "parametar:uvjet parametar:uvjet", itd. Član parametar predstavlja samo ime tog parametra, a uvjet činjenicu da mora biti veći ili manji od nekog broja. Standardan zapis uvjeta je: >broj1\&<broj2. Ukoliko parametar nema uvjeta, zapisuje se "none". Vrijednosti parametara koje se zadaju pojedinom korisniku generira sustav i one mogu biti isključivo decimalne.
+\par
+Parametre uz poštovanje uvjeta generira aplikacijska logika. Parametri su decimalni brojevi predodređenog raspona između -1000 i 1000 uz mogućnost manjeg skupa temeljem uvjeta.
 
-\subsubsection{Izračun parametara}
+\subsubsection{Izračun rezultata}
+Nakon što je korisniku predstavljena vrijednost parametara i on odgovori na pitanje, na temelju tih vrijednosti sustav izračuna predviđeni odgovor te s tolerancijom od 5 posto uspoređuje njegov i predviđeni odgovor. Izračun se izvodi uz pomoć mXparser biblioteke.
 
 \subsection{Mogućnosti administratora}
-U sustavu postoje (zasad) predodređeni administratori pojedinih predmeta
-samo na svojem predmetu
+U sustavu postoji veza između predmeta i administratora koja znači da samo na određenom predmetu sljedeće operacije mogu raditi samo oni administratori koji imaju ovlasti. To je logično kod svakog većeg sustava, no ipak je važno i eksplicitno napomenuti.
 
 \subsubsection{Dodavanje pitanja}
+TODO
+
+\subsubsection{Registracija korisnika na predmet}
+Prilikom registracije korisnika u sustav, on nije povezan s predmetima, već ga administrator mora dodati na predmet kojim upravlja. On ne može izbrisati korisnika sa predmeta, tj. učiniti kao da nikada nije postojao, već mu samo dati negativnu zaključnu ocjenu.
 
 \subsubsection{Generiranje ispita}
+Administrator na svojem predmetu ima mogućnost generiranja ispita za zadane korisnike. Ispitu se zadaje broj bodova, broj zadataka i faktor složenosti između 1 i 5. Faktor složenosti određuje prosječnu složenost zadataka na ispitu. Moguće je zadati i maksimalnu/minimalnu složenost pojedinog zadatka na ispitu s ciljem 
+Ukoliko sustav nema dovoljno pitanja s takvim parametrima o tome obavještava administratora te čeka ili dozvolu generiranja ispita manjeg broja zadataka ili unos novih parametara za generiranje.
+Administrator nema mogućnost određivanja bodovanja pojedinog zadatka zbog inteligencije sustava koja sama određuje najbolje bodovanje. Na to administrator može utjecati samo prilikom zapisivanja pitanja u bazu biranjem njegove složenosti.
+Ispit mora biti generiran za određene korisnike sudionike na pojedinom predmetu. Ukoliko sustav shvati da korisnicima ne bi smjela biti ponuđena pitanja s parametrima koje je odredio administrator (tj. neki od korisnika nisu zadovoljili preduvjete), sustav nudi mogućnost poništenja generacije ispita ili nastavak. Pretpostavka je da je administrator možda pogriješio ili da korisnik nije bio dovoljno odgovoran u rješavanju zadataka.
 
 \subsubsection{Pregled rezultata}
+Administrator može vidjeti rezultate korisnika na svome predmetu, a oni uključuju: pregled korisnikova znanja na pojedinoj provjeri, korisnikovo znanje na pojedinom konceptu tog predmeta te preporučenu konačnu ocjenu za navedeni predmet.
+Ukoliko administrator odluči potvrditi tu ocjenu, korisniku se zaključava navedeni predmet i u sustav zapisuje konačna ocjena.
 
 \subsection{Mogućnosti korisnika}
+Sljedeće mogućnosti korisnici mogu odgovarati samo na pitanja iz predmeta kojima pripadaju, baš kao i administratori.
 
 \subsubsection{Registracija}
 posoljeni
@@ -448,17 +467,17 @@ Zaključak.
 \bibliographystyle{fer}
 
 \begin{sazetak}
-Sažetak na hrvatskom jeziku.
+Ovaj završni rad opisuje modernizaciju procesa učenja sustavom za inteligentno učenje. Rad počinje uvodom u edukacijske procese, zatim prikazuje povijest ideje automatizacije učenja te suvremeni model sustava za inteligentno učenje (ITS). ITS je opisan svojim komponentama, očekivanim karakteristikama i algoritmima uz kritički pogled na nedostatke ITS-a. Slijedi opis slojeva aplikacije koje je potrebno implementirati te opis implementiranog rješenja. On sadrži popis korištenih tehnologija, ER dijagram baze te mogućnosti koje sustav nudi korisniku koji uči te administratoru. Opis završava logikom posluživanja pitanja. Posljednje poglavlje rada je zaključak o prethodno iznesenim idejama. 
 
-\kljucnerijeci{Ključne riječi, odvojene zarezima.}
+\kljucnerijeci{Učenje, inteligentno učenje, informacijski sustav, ITS, znanje, prikaz znanja, parametrizacija, posluživanje pitanja, podatkovni sloj, aplikacijski sloj}
 \end{sazetak}
 
-% TODO: Navedite naslov na engleskom jeziku.
+
 \engtitle{Application logic and data layer development for an e-learning system}
 \begin{abstract}
-Abstract.
+This paper describes modernization of the learning processes using intelligent tutoring system. It begins with introduction  to educational processes, it then describes the history of automazied learning and contemporary model of an intelligent tutoring system (ITS). The paper then describes layers of the application to be implemented and the implemented solution. This description contains a list of used technologies, ER diagram of the database and all options the system offers to both learning user and an administrator. It is followed by the description of the logic of serving questions. The last chapter is a conclusion about aformentioned ideas.
 
-\keywords{Keywords.}
+\keywords{Learning, intelligent learning, information system, ITS, knowledge, knowledge representation, parametrization,  question serving, data layer, application logic}
 \end{abstract}
 
 \end{document}
