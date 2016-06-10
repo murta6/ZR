@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  9 JUN 2016 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.2)  10 JUN 2016 02:02
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -6,9 +6,9 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 68 languages loaded.
 (fer.cls
 Document Class: fer 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,22 +24,22 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -55,20 +55,20 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -218,7 +218,7 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -249,7 +249,7 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -273,51 +273,51 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.sty"
 Package: babel 2014/09/25 3.9l The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel-croatian\croatian.ldf"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel-croatian\croatian.ldf"
 Language: croatian 2014/03/31 v1.3m Croatian support from the babel system
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.def"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\babel\babel.def"
 File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count91
 \U@D=\dimen111
 )))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count92
@@ -325,10 +325,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks18
 \symAMSa=\mathgroup4
@@ -336,24 +336,24 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen114
 ))
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen115
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count93
@@ -394,16 +394,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2014/09/29 v1.1s fixes to LaTeX
 LaTeX Info: Redefining \em on input line 430.
 LaTeX Info: The control sequence `\[' is already robust on input line 481.
 LaTeX Info: The control sequence `\]' is already robust on input line 482.
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen123
@@ -416,14 +416,14 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count105
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip46
 \enit@outerparindent=\dimen130
@@ -431,17 +431,17 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box28
 \enitdp@description=\count106
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
 
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+) ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip47
 \bibsep=\skip48
@@ -450,7 +450,7 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 \listindentation=\dimen131
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen132
 \lightrulewidth=\dimen133
@@ -470,24 +470,24 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count111
 \@thisrulewidth=\dimen144
 )
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (zavrsni_alenmurtic.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 5.
- ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 11.
+ ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -524,7 +524,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("D:\FER\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\FER\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen145
@@ -540,33 +540,33 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 16.
- ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+LaTeX Font Info:    Try loading font information for T1+phv on input line 22.
+ ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 16.
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 22.
+LaTeX Font Info:    Try loading font information for U+msa on input line 22.
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 22.
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 19.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 25.
 
-("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [1] [3]
 (zavrsni_alenmurtic.toc
@@ -586,163 +586,164 @@ Poglavlje 2.
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 49.
  <img/pressey.jpg, id=26, 188.20313pt x 188.20313pt>
 File: img/pressey.jpg Graphic file (type jpg)
  <use img/pressey.jpg>
-Package pdftex.def Info: img/pressey.jpg used on input line 55.
+Package pdftex.def Info: img/pressey.jpg used on input line 61.
 (pdftex.def)             Requested size: 188.20265pt x 188.20265pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 62.
 
-[3 <./img/pressey.jpg>] <img/CAI_shema.jpg, id=31, 359.09157pt x 201.00093pt>
+[3] <img/CAI_shema.jpg, id=31, 359.09157pt x 201.00093pt>
 File: img/CAI_shema.jpg Graphic file (type jpg)
 
 <use img/CAI_shema.jpg>
-Package pdftex.def Info: img/CAI_shema.jpg used on input line 67.
+Package pdftex.def Info: img/CAI_shema.jpg used on input line 73.
 (pdftex.def)             Requested size: 359.09068pt x 201.00043pt.
- [4 <./img/CAI_shema.jpg>] [5]
-<img/ITS-components.jpg, id=39, 359.09157pt x 142.28156pt>
+ [4 <./img/pressey.jpg> <./img/CAI_shema.jpg>]
+<img/internet.jpg, id=36, 338.76563pt x 225.84375pt>
+File: img/internet.jpg Graphic file (type jpg)
+ <use img/internet.jpg>
+Package pdftex.def Info: img/internet.jpg used on input line 88.
+(pdftex.def)             Requested size: 338.76479pt x 225.84319pt.
+
+[5 <./img/internet.jpg>]
+<img/ITS-components.jpg, id=40, 359.09157pt x 142.28156pt>
 File: img/ITS-components.jpg Graphic file (type jpg)
 
 <use img/ITS-components.jpg>
-Package pdftex.def Info: img/ITS-components.jpg used on input line 92.
+Package pdftex.def Info: img/ITS-components.jpg used on input line 103.
 (pdftex.def)             Requested size: 359.09068pt x 142.2812pt.
- [6 <./img/ITS-components.jpg>]
-Overfull \hbox (40.99178pt too wide) in paragraph at lines 114--115
-[]\T1/ptm/m/n/12 Svrha mo-dela u£e-nja je pra-¢e-nje ko-ris-ni-kova na-pretka u
- po-je-di-nim kon-cep-tima/predmetima.
+ [6 <./img/ITS-components.jpg>] [7] [8]
+<img/drvo.jpg, id=50, 421.575pt x 317.185pt>
+File: img/drvo.jpg Graphic file (type jpg)
+ <use img/drvo.jpg>
+Package pdftex.def Info: img/drvo.jpg used on input line 144.
+(pdftex.def)             Requested size: 421.57396pt x 317.1842pt.
+
+Overfull \hbox (9.00899pt too wide) in paragraph at lines 144--145
+ [][] 
  []
 
-[7]
-Overfull \hbox (2.01617pt too wide) in paragraph at lines 129--130
-[]\T1/ptm/m/n/12 Elegantno rje-²e-nje pro-blema je odre-ži-va-nje sred-nje ve-l
-i-kog broja gra-nu-la-cija (jasno,
- []
-
-[8] [9] <img/security.jpg, id=53, 96.36pt x 63.8385pt>
+[9 <./img/drvo.jpg>] [10] <img/security.jpg, id=58, 96.36pt x 63.8385pt>
 File: img/security.jpg Graphic file (type jpg)
- <use img/security.jpg>
-Package pdftex.def Info: img/security.jpg used on input line 160.
-(pdftex.def)             Requested size: 96.35974pt x 63.83833pt.
 
-[10 <./img/security.jpg>] [11] [12]
-<img/logic.jpg, id=63, 338.76563pt x 197.23688pt>
+<use img/security.jpg>
+Package pdftex.def Info: img/security.jpg used on input line 178.
+(pdftex.def)             Requested size: 96.35974pt x 63.83833pt.
+ [11 <./img/security.jpg>] [12] [13]
+<img/logic.jpg, id=68, 338.76563pt x 197.23688pt>
 File: img/logic.jpg Graphic file (type jpg)
  <use img/logic.jpg>
-Package pdftex.def Info: img/logic.jpg used on input line 202.
+Package pdftex.def Info: img/logic.jpg used on input line 220.
 (pdftex.def)             Requested size: 338.76479pt x 197.23637pt.
- [13 <./img/logic.jpg>] <img/duolingo.jpg, id=67, 338.76563pt x 180.675pt>
+ [14 <./img/logic.jpg>] <img/duolingo.jpg, id=72, 338.76563pt x 180.675pt>
 File: img/duolingo.jpg Graphic file (type jpg)
 
 <use img/duolingo.jpg>
-Package pdftex.def Info: img/duolingo.jpg used on input line 219.
+Package pdftex.def Info: img/duolingo.jpg used on input line 237.
 (pdftex.def)             Requested size: 338.76479pt x 180.67455pt.
- <img/urbjng.jpg, id=68, 316.18124pt x 237.13594pt>
+ [15 <./img/duolingo.jpg>]
+<img/urbjng.jpg, id=77, 316.18124pt x 237.13594pt>
 File: img/urbjng.jpg Graphic file (type jpg)
-
-<use img/urbjng.jpg>
-Package pdftex.def Info: img/urbjng.jpg used on input line 231.
+ <use img/urbjng.jpg>
+Package pdftex.def Info: img/urbjng.jpg used on input line 249.
 (pdftex.def)             Requested size: 316.18047pt x 237.13535pt.
- [14 <./img/duolingo.jpg>]
-<img/moodle.jpg, id=72, 316.18124pt x 94.85437pt>
+
+<img/moodle.jpg, id=78, 316.18124pt x 94.85437pt>
 File: img/moodle.jpg Graphic file (type jpg)
  <use img/moodle.jpg>
-Package pdftex.def Info: img/moodle.jpg used on input line 241.
+Package pdftex.def Info: img/moodle.jpg used on input line 259.
 (pdftex.def)             Requested size: 316.18047pt x 94.85413pt.
 
-<img/merlin.jpg, id=73, 165.61874pt x 50.43843pt>
+<img/merlin.jpg, id=79, 165.61874pt x 50.43843pt>
 File: img/merlin.jpg Graphic file (type jpg)
  <use img/merlin.jpg>
-Package pdftex.def Info: img/merlin.jpg used on input line 248.
+Package pdftex.def Info: img/merlin.jpg used on input line 266.
 (pdftex.def)             Requested size: 165.61833pt x 50.4383pt.
- [15 <./img/urbjng.jpg> <./img/moodle.jpg>]
-<img/autotutor.jpg, id=78, 451.6875pt x 317.185pt>
+ [16 <./img/urbjng.jpg> <./img/moodle.jpg>]
+<img/autotutor.jpg, id=83, 451.6875pt x 317.185pt>
 File: img/autotutor.jpg Graphic file (type jpg)
  <use img/autotutor.jpg>
-Package pdftex.def Info: img/autotutor.jpg used on input line 262.
+Package pdftex.def Info: img/autotutor.jpg used on input line 280.
 (pdftex.def)             Requested size: 451.68639pt x 317.1842pt.
 
-Overfull \hbox (39.12141pt too wide) in paragraph at lines 262--263
+Overfull \hbox (39.12141pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
-[16 <./img/merlin.jpg> <./img/autotutor.jpg>]
-<img/activemath.jpg, id=82, 461.725pt x 250.9375pt>
+<img/activemath.jpg, id=84, 461.725pt x 250.9375pt>
 File: img/activemath.jpg Graphic file (type jpg)
  <use img/activemath.jpg>
-Package pdftex.def Info: img/activemath.jpg used on input line 272.
+Package pdftex.def Info: img/activemath.jpg used on input line 290.
 (pdftex.def)             Requested size: 461.72388pt x 250.93687pt.
 
-Overfull \hbox (49.1589pt too wide) in paragraph at lines 272--273
+Overfull \hbox (49.1589pt too wide) in paragraph at lines 290--291
  [][] 
  []
 
-[17 <./img/activemath.jpg>] [18]
-<img/teamwork.jpg, id=89, 381.425pt x 193.72375pt>
+[17 <./img/merlin.jpg>] [18 <./img/autotutor.jpg>] [19 <./img/activemath.jpg>]
+<img/teamwork.jpg, id=94, 381.425pt x 193.72375pt>
 File: img/teamwork.jpg Graphic file (type jpg)
  <use img/teamwork.jpg>
-Package pdftex.def Info: img/teamwork.jpg used on input line 299.
+Package pdftex.def Info: img/teamwork.jpg used on input line 317.
 (pdftex.def)             Requested size: 381.42406pt x 193.72327pt.
 
-[19 <./img/teamwork.jpg>]
+[20 <./img/teamwork.jpg>]
 Poglavlje 3.
-<img/mvc.jpg, id=93, 301.125pt x 158.09062pt>
+<img/mvc.jpg, id=98, 301.125pt x 158.09062pt>
 File: img/mvc.jpg Graphic file (type jpg)
  <use img/mvc.jpg>
-Package pdftex.def Info: img/mvc.jpg used on input line 312.
+Package pdftex.def Info: img/mvc.jpg used on input line 330.
 (pdftex.def)             Requested size: 301.12425pt x 158.09023pt.
- [20
+ [21
 
- <./img/mvc.jpg>] [21]
+ <./img/mvc.jpg>] [22]
 Poglavlje 4.
-[22
+[23
 
-] [23] [24] [25]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 375.
+] [24] [25] [26]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 393.
 
- ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+ ("C:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 375.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
 
-Overfull \hbox (2.01672pt too wide) in paragraph at lines 410--411
-[]\T1/ptm/b/n/12 Preduvjet \T1/ptm/m/n/12 Ovaj od-nos de-fi-nira ne-mo-gu¢-nost
- otva-ra-nja slje-de¢e gra-nu-la-cije prije
- []
+[27] [28] <img/admin.jpg, id=126, 211.54031pt x 183.68625pt>
+File: img/admin.jpg Graphic file (type jpg)
 
-[26] [27] [28] [29]
+<use img/admin.jpg>
+Package pdftex.def Info: img/admin.jpg used on input line 454.
+(pdftex.def)             Requested size: 211.53978pt x 183.68578pt.
+ [29] [30 <./img/admin.jpg>] [31] [32]
 Poglavlje 5.
-No file zavrsni_alenmurtic.bbl.
-[30
+[33
 
 ]
-Overfull \hbox (21.92702pt too wide) in paragraph at lines 480--482
-\T1/ptm/b/n/12 Keywords: \T1/ptm/m/n/12 Le-ar-ning, in-tel-li-gent le-ar-ning, 
-in-for-ma-tion sys-tem, ITS, knowledge, knowledge
- []
-
-[31] (zavrsni_alenmurtic.aux) ) 
+No file zavrsni_alenmurtic.bbl.
+[34] [35] (zavrsni_alenmurtic.aux) ) 
 Here is how much of TeX's memory you used:
- 5596 strings out of 493698
- 76451 string characters out of 3144815
- 148503 words of memory out of 3000000
- 8786 multiletter control sequences out of 15000+200000
+ 5614 strings out of 493698
+ 76736 string characters out of 3144816
+ 149536 words of memory out of 3000000
+ 8801 multiletter control sequences out of 15000+200000
  58791 words of font info for 77 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,6n,40p,912b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/font
-name/8r.enc}<D:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><D:/FER/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/FER/Programs/MiKTeX 2.9
-/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
-><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/FER/Programs/
-MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (35 pages, 634030 bytes).
+{C:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips
+/fontname/8r.enc}<C:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y10.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/FER
+/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/FER/Programs/MiKTe
+X 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/typ
+e1/urw/times/utmb8a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8
+a.pfb><C:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/FER/Prog
+rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on zavrsni_alenmurtic.pdf (39 pages, 865000 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,12 @@
 \usepackage{booktabs}
 \usepackage{indentfirst}
 
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
 \begin{document}
 
 % TODO: Navedite broj rada.
@@ -76,13 +82,18 @@ Početkom 1980. umjetna inteligencija se pomiče k neuronskim mrežama i kogniti
 
 \subsubsection{ITS u doba interneta i analize podataka}
 Najvažniji korak za veću primjenu elektroničkog učenja je početak masovnog korištenja interneta. Internet je konačno omogućio neovisnost fizičkih pozicija korisnika sustava i kvalitete znanja koju mu sustav može pružiti. Slabost prijašnjih rješenja je bila u neadekvatnoj aktualizaciji sustava zbog činjenice da su se morali distribuirati na prijenosnim medijima. Nije slučajno da su svi sustavi koje sam na početku nabrojao internetske stranice.
-\par  TODO nekakva slika internet connecting world
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/internet.jpg}
+	\caption{Najvažniji internetski centri u svijetu}
+	\label{fig:internet}
+\end{figure}
+
 \par
 Analiza podataka, \textit{data mining}, \textit{big data} i \textit{data science} je najveći korak u razvoju inteligencije ITS-a. Iako su principi analize podataka bili matematički postavljeni i prije 1990.-ih, rastom brzine računala, popularizacijom SQL-a i internet tražilica, analiza podataka doživjela je pravi \textit{boom} zadnjih 20-tak godina. Razlog tolike važnosti analize podataka u inteligenciji ITS-a je što kompleksnost procesa učenja (čime se bavi kognitivna psihologija), "udaljnost" sustava i potreba za prilagođenim (personaliziranim) sadržajem korisniku. Ti faktori se jednostavno ne mogu opisati malim brojem varijabli. Svaki učitelj kroz godine upoznaje nove učenike te nadopunjuje svoje znanje i tehniku, baš kao što bi ITS bio spreman za nadogradnju temeljem iskustva korištenja.
 \par
 Za razliku od UI čije rezultate velike tvrtke sigurno mogu naplatiti, razvoj sustava za inteligentno učenje je donedavno bio guran od strane akademske zajednice. Nove velike tehnološke tvrtke imaju potrebu educirati velik broj zaposlenika pa sustavi za učenje u današnje vrijeme konačno dobivaju zamah za napredak kao koncept, ali i u realizaciji.
-
-\pagebreak
 
 \subsection{Komponente ITS-a}
 Većina modernih ITS-ova dijeli se na 4 komponente rada: domenski i korisnički model, model učenja te korisničko sučelje. Tri prvonavedene komponente se nazivaju modeli zato što su pojednostavljena reprezentacija stvarnih pojava, koncepata i sl. One nemaju nužno veze s modelom kao aplikacijskim slojem, iako se uglavnom oslanjaju na njega.
@@ -127,6 +138,13 @@ Iako se ovo čini kao očekivan uvjet iz  opisa domenskog modela, važno ga je p
 Granulacija podjele znanja je pitanje bez jednoznačnog odgovora, a s puno rizika. Ukoliko sustav ima premalo razina podjele, postoji rizik od nedovoljno dobrog praćenja korisnikova znanja, a sustav s previše razina podjele zahtijeva ogroman broj različitih pitanja da svaka od razina ima reprezentativni uzorak ocjene korisnika.
 \par
 Elegantno rješenje problema je određivanje srednje velikog broja granulacija (jasno, što je srednji broj ovisi o opsegu domene za koju se ITS projektira), a onda između pojedinih granula uspostaviti različiti broj odnosa. Na taj način sam i ja riješio problem u svojoj implementaciji.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/drvo.jpg}
+	\caption{Ilustracija: drvo znanja}
+	\label{fig:drvo}
+\end{figure}
 
 \subsubsection{Materijali za učenje}
 Svaki sustav čiji je cilj biti samostalan trebao bi sadržavati materijale za učenje poput e-knjiga ili uputa koju bi literaturu korisnik morao proučiti prije odgovaranja. Samo takav pristup sa sigurnošću korisniku omogućuje točnost znanja ili, ako se kasnije utvrdi pogreška u materijalima, referencu na pogrešku. Ukoliko sustav korisniku nudi samo provjeru znanja s objašnjenjima za pojedino pitanje, postoji velik rizik da korisnik neće dovoljno dobro razumjeti povezanost činjenica koje sustav ispituje.
@@ -431,6 +449,13 @@ Nakon što je korisniku predstavljena vrijednost parametara i on odgovori na pit
 \subsection{Mogućnosti administratora}
 U sustavu postoji veza između predmeta i administratora koja znači da samo na određenom predmetu sljedeće operacije mogu raditi samo oni administratori koji imaju ovlasti. To je logično kod svakog većeg sustava, no ipak je važno i eksplicitno napomenuti.
 
+\begin{figure}[htb]
+	\centering
+	\includegraphics[]{img/admin.jpg}
+	\caption{Ilustracija: administrator nadzire svoj sustav}
+	\label{fig:admin}
+\end{figure}
+
 \subsubsection{Dodavanje pitanja}
 TODO
 
@@ -451,17 +476,39 @@ Ukoliko administrator odluči potvrditi tu ocjenu, korisniku se zaključava nave
 Sljedeće mogućnosti korisnici mogu odgovarati samo na pitanja iz predmeta kojima pripadaju, baš kao i administratori. Za registraciju na pojedini predmet korisnici koji uče moraju čekati odobrenje administratora.
 
 \subsubsection{Registracija}
-posoljeni
+Novi korisnici koji žele učiti mogu se registrirati na sustav te od administratora predmeta zatražiti pristupanje nekom predmetu. Nakon uspješne registracije korisnika i dodavanja predmeta, korisnik odmah može započeti proces učenja. Lozinku korisnika sustav sprema na siguran način posoljenim hash SHA256 algoritmom, kao što se očekuje od svakog ozbiljnog ITS-a.
 
 \subsubsection{Inteligentno učenje}
+Svi korisnici učenje počinju od samog početka što znači da ne postoji mogućnost prenošenja rezultata iz nekog drugog ITS-a. Korisniku se nudi inteligentno učenje na pojedinom predmetu, tj. mogu se generirati samo ona pitanja čije su granule znanja povezane s konceptima točno određenog predmeta. No, odgovaranje na pitanja jednog predmeta može dovesti i do promjene stanja na drugom predmetu u slučaju da je baza znanja koncipirana tako da su koncepti ili granule znanja jednog predmeta u odnosu s onima drugog.
+\par
+Bit inteligentnog učenja je u praćenju korisnikova znanja i odabiru pitanja što se ponajprije očituje u tome da korisniku sustav ne smije postavljati pitanja na koja još ni u kojem slučaju ne može  znati odgovor. Zbog toga su vrlo važni složenost pitanja i odnos preduvjeta. No, o konkretnom načinu posluživanja pitanja bit će riječi u sljedećem poglavlju.
+\par
+Korisnici mogu pisati dvije vrste provjere: vježbe i ispite. Vježbe su provjere kojima se ostvaruje napredak u sustavu na kojima korisnik može više puta griješiti bez dugoročnih posljedica po konačnu ocjenu iz predmeta. Od korisnika se očekuje da stalno otvara vježbe, uspješno napreduje te kad se osjeća sigurnim, zatraži generiranje ispita za određeni predmet. Prvi ispit ne znači završavanje ili padanje predmeta, znači samo to da se njegovi bodovi pamte. Sam sustav određuje koja su pitanja najprikladnija za nekog korisnika na pojedinom predmetu. 
+\par
+Ispiti su formalne provjere kojima se polažu predmeti. Generiranje ispita zadaje administator ili traži korisnik. Korisnik sve teoretski može polagati putem ispita, no to nema previše smisla zato što u reprezentaciji znanja nema veće koristi u rješavanju ispita, oni su tu samo za formalno određivanje ocjene. Ispiti koje traži korisnik također se generiraju putem algoritma za inteligentno učenje. Za reprezentaciju korisnikova znanja nema razlike u odgovaranju na isto pitanje u vježbi i ispitu.
 
 \subsubsection{Pregled rezultata}
+U svakom trenutku izvan odgovaranja na provjeru, korisnik može pogledati svoje rezultate na nekom predmetu. Mogu mu se ispisati detalji provjera kojima je pristupio (ne i konkretna pitanja koja je na njima vidio), trenutna predviđena ocjena na tom predmetu i prikaz znanja po konceptima tog predmeta.
+\par
+Osim svojih rezultata korisnik može vidjeti i sve granule znanja pojedinog koncepta na predmetu te veze koje taj koncept ima.
 
 \section{Logika posluživanja pitanja}
 logika
 
 \chapter{Zaključak}
-Zaključak.
+Edukacijski procesi značajan su i vrlo složen element ljudske civilizacije, a razvojem tehnologije i otklonom od manualnih djelatnosti, njihova važnost još više raste. Stoga je neizbježna potreba za unaprijeđenjem, olakšanjem i poboljšanjem procesa učenja, pogotovo u modernom svijetu u kojem je vrijeme pažnje čovjeka sve kraće.
+\par
+Sustavi za inteligentno učenje (ITS) nameću se kao logično moguće rješenje novih izazova, a također istovremeno smanjuju povezanost fizičke pozicije ljudi i njihovog znanja. Internet je danas dostupan gotovo svuda te su sustavi za inteligentno učenje konačno dobili platformu širenja.
+\par 
+No, da bi sustav za učenje bio kvalitetan mora imati razrađenu podjelu znanja u manje granulacije i praćenje korisnikova znanja, pitanja u njemu moraju biti parametrizirana, mora biti (relativno) siguran za korištenje te biti izrađen kao skup tipičnih komponenti. Te komponente su domenski model, korisnički model, model učenja i korisničko sučelje. Jedini od modela koji može nedostajati je korisnički model, ako je njegova funkcionalnost rastavljena u domenski i model učenja. Kako bi taj sustav još bio i inteligentan, nužno je da ima iznimno dobro razrađeno praćenja korisnikova znanja te algoritme posluživanja pitanja. Pravi  komercijalni inteligentni sustavi još mogu i pratiti tipkanje i facijalne reakcije korisnika te imati prilagođene upute za korisnika koji ih zatraži.
+\par
+Iako sustavi za učenje na prvi pogled djeluju kao isključivo pitalice s odgovorima, to u praksi nije baš tako, dapače, svaki sustav koji ima edukacijsku svrhu, a nema oblik pitalice je korak unaprijed za proces učenja. Neki od takvih sustava su edukativna igra Urban Jungle, sustav koji vokalno razgovara s korisnikov AutoTutor te Why2-Atlas koji komunikaciju izvodi tekstualno.
+\par
+ITS je sigurno kvalitetan i zanimljiv koncept, no i on sadrži neke nedostatke, ponajprije inteligenciju ograničenu znanjem autora, nužnost kvalitetne interdisciplinarne suradnje te visoku cijenu izrade.
+\par
+Posljednji dio ovog završnog rada prikazao je dizajn jednog vlastitog sustava za inteligentno učenje s parametriziranim pitanjima, reprezentacijom znanja različitim granulacijama, inteligentnim posluživanjem pitanja, ali i administatorskim nadzorom. Takva implementacija relativno je jednostavna u odnosu na komercijalne sustave, no ona je ITS.
+\par
+Nakon podužeg vremena zapostavljanja sustava za (inteligentno) učenje u odnosu na ostale primjene umjetne inteligencije, sada se sa sigurnošću može tvrditi da oni konačno imaju veliku mogućnost razvoja te mnoge stvarne primjene.
 
 \bibliography{literatura}
 \bibliographystyle{fer}

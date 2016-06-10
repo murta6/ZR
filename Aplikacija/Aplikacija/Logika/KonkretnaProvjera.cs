@@ -97,7 +97,7 @@ namespace Aplikacija.Logika
                 Boolean uvjet = false;
                 while (uvjet != true)
                 {
-                    var br = rand.NextDouble() * 1000;
+                    var br = rand.NextDouble() * 2000 - 1000;
                     uvjet = izracunajUvjet(param[1], br);
                 }
                 

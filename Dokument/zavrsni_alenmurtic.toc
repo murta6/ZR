@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}Inteligentni sustavi za elektroni\IeC {\v c}ko u\IeC {\v c}enje (ITS)}{3}
 \contentsline {subsection}{\numberline {2.1.1}Povijest ITS-a i zaklju\IeC {\v c}ci iz nje}{3}
 \contentsline {subsubsection}{Mehani\IeC {\v c}ki strojevi za u\IeC {\v c}enje}{3}
-\contentsline {subsubsection}{Po\IeC {\v c}etak elektroni\IeC {\v c}kih sustava za u\IeC {\v c}enje}{4}
+\contentsline {subsubsection}{Po\IeC {\v c}etak elektroni\IeC {\v c}kih sustava za u\IeC {\v c}enje}{3}
 \contentsline {subsubsection}{ITS u doba interneta i analize podataka}{5}
 \contentsline {subsection}{\numberline {2.1.2}Komponente ITS-a}{6}
 \contentsline {subsubsection}{Domenski model}{6}
@@ -13,44 +13,44 @@
 \contentsline {subsubsection}{Korisni\IeC {\v c}ko su\IeC {\v c}elje}{8}
 \contentsline {subsection}{\numberline {2.1.3}Karakteristike dobrih sustava}{8}
 \contentsline {subsubsection}{Razra\IeC {\dj }ena podjela znanja}{8}
-\contentsline {subsubsection}{Materijali za u\IeC {\v c}enje}{8}
-\contentsline {subsubsection}{Parametrizirana pitanja}{9}
-\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja i reakcija lica korisnika}{9}
-\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{10}
-\contentsline {subsubsection}{Sigurnost}{10}
-\contentsline {subsubsection}{Kvalitetni algoritmi}{11}
-\contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{11}
-\contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{11}
-\contentsline {subsubsection}{Odabir pitanja}{11}
-\contentsline {subsubsection}{Generiranje parametara}{12}
-\contentsline {subsubsection}{Evaluacija odgovora}{12}
-\contentsline {subsubsection}{Procjena znanja}{12}
-\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{13}
-\contentsline {subsubsection}{Neinteligentni sustavi}{14}
-\contentsline {subsubsection}{Inteligentni sustavi}{15}
+\contentsline {subsubsection}{Materijali za u\IeC {\v c}enje}{9}
+\contentsline {subsubsection}{Parametrizirana pitanja}{10}
+\contentsline {subsubsection}{Pra\IeC {\'c}enje tipkanja i reakcija lica korisnika}{10}
+\contentsline {subsubsection}{Prilago\IeC {\dj }ene reakcije}{11}
+\contentsline {subsubsection}{Sigurnost}{11}
+\contentsline {subsubsection}{Kvalitetni algoritmi}{12}
+\contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{12}
+\contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{12}
+\contentsline {subsubsection}{Odabir pitanja}{12}
+\contentsline {subsubsection}{Generiranje parametara}{13}
+\contentsline {subsubsection}{Evaluacija odgovora}{13}
+\contentsline {subsubsection}{Procjena znanja}{13}
+\contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{14}
+\contentsline {subsubsection}{Neinteligentni sustavi}{15}
+\contentsline {subsubsection}{Inteligentni sustavi}{17}
 \contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{18}
 \contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{18}
-\contentsline {subsubsection}{Cijena izrade}{18}
-\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{20}
-\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{22}
-\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{22}
-\contentsline {section}{\numberline {4.2}ER dijagram}{22}
-\contentsline {subsection}{\numberline {4.2.1}Slika ER dijagrama i entiteta u bazi}{23}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{25}
-\contentsline {subsection}{\numberline {4.3.1}Reprezentacija znanja}{25}
-\contentsline {subsubsection}{Granulacije znanja}{25}
-\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{26}
-\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{27}
-\contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{27}
-\contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{28}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{28}
-\contentsline {subsubsection}{Dodavanje pitanja}{28}
-\contentsline {subsubsection}{Registracija korisnika na predmet}{28}
-\contentsline {subsubsection}{Generiranje ispita}{28}
-\contentsline {subsubsection}{Pregled rezultata}{29}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{29}
-\contentsline {subsubsection}{Registracija}{29}
-\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{29}
-\contentsline {subsubsection}{Pregled rezultata}{29}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{29}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{30}
+\contentsline {subsubsection}{Cijena izrade}{19}
+\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{21}
+\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{23}
+\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{23}
+\contentsline {section}{\numberline {4.2}ER dijagram}{23}
+\contentsline {subsection}{\numberline {4.2.1}Slika ER dijagrama i entiteta u bazi}{24}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{26}
+\contentsline {subsection}{\numberline {4.3.1}Reprezentacija znanja}{26}
+\contentsline {subsubsection}{Granulacije znanja}{26}
+\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{27}
+\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{28}
+\contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{29}
+\contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{29}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{29}
+\contentsline {subsubsection}{Dodavanje pitanja}{29}
+\contentsline {subsubsection}{Registracija korisnika na predmet}{29}
+\contentsline {subsubsection}{Generiranje ispita}{30}
+\contentsline {subsubsection}{Pregled rezultata}{30}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{31}
+\contentsline {subsubsection}{Registracija}{31}
+\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{31}
+\contentsline {subsubsection}{Pregled rezultata}{32}
+\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{32}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{33}
