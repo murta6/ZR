@@ -72,5 +72,18 @@ namespace Aplikacija.Model
             }
             return slozenost[sifraSlozenosti];
         }
+
+        public static List<Zadatak> vratiZadatkeKoncepta(int sifraKoncepta, List<Granula> granuleKorisnika)
+        {
+            using(Baza baza = new Baza())
+            {
+                var rez = from zadGran in baza.ZadatakGranula
+                          join gran in granuleKorisnika
+                          on zadGran.sifraGranule equals gran.sifraGranule
+                          select zadGran;
+                return rez.ToList();
+            }
+        }
+            
     }
 }

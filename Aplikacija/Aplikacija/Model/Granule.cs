@@ -43,5 +43,21 @@ namespace Aplikacija.Model
                 return baza.Granula.Where(gr => gr.sifraKoncepta == sifraKoncepta).Select(gr=> gr.sifraGranule).ToList();
             }
         }
+
+        public static List<KorisnikGranula> vratiGranuleKorisnika(int sifraKorisnika)
+        {
+            using (Baza baza = new Baza())
+            {
+                return baza.KorisnikGranula.Where(korgr => korgr.sifraKorisnika == sifraKorisnika).ToList();
+            }
+        }
+
+        public static List<Granula> vratiOtkljucaneGranuleKorisnika(int sifraKorisnika)
+        {
+            using(Baza baza = new Baza())
+            {
+                var rez = from 
+            }
+        }
     }
 }
