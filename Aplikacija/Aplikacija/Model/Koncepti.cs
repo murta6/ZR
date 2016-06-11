@@ -50,5 +50,41 @@ namespace Aplikacija.Model
             {
             }
         }
+
+        public static List<Koncept> vratiOtkljucaneKoncepteKorisnika(int sifraPredmeta, int sifraKorisnika)
+        {
+            using (Baza baza = new Baza())
+            {
+                List<Koncept> list = new List<Koncept>();
+                var konceptiKorisnika = baza.KorisnikKoncept.Where(kor => kor.sifraKorisnika == sifraKorisnika);
+                foreach(var kon in konceptiKorisnika)
+                {
+                    if(zadovoljenUvjet(kon.sifraKorisnika, kon.sifraKoncepta, baza))
+                    {
+                        list.Add(kon.Koncept);
+                    }
+                }
+                return list;
+            }
+        }
+
+        private static Boolean zadovoljenUvjet(int sifraKorisnika, int sifraKoncepta, Baza baza)
+        {
+            var preduvjeti = baza.OdnosKoncepata.
+                Where(kon => kon.sifraVisegKon == sifraKoncepta && kon.sifraOdnosa == 1).ToList();
+            foreach(var uvjet in preduvjeti)
+            {
+                if(!preko50(sifraKorisnika, sifraKoncepta, baza))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static Boolean preko50(int sifraKorisnika, int sifraKoncepta, Baza baza)
+        {
+            return baza.KorisnikKoncept.Where(korkon => korkon.sifraKoncepta == sifraKoncepta && korkon.sifraKorisnika == sifraKorisnika).First().znanje > 0.5;
+        }
     }
 }
