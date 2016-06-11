@@ -44,9 +44,8 @@
 \contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{29}
 \contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{29}
 \contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{29}
-\contentsline {subsubsection}{Dodavanje pitanja}{29}
 \contentsline {subsubsection}{Registracija korisnika na predmet}{29}
-\contentsline {subsubsection}{Generiranje ispita}{30}
+\contentsline {subsubsection}{Generiranje ispita}{29}
 \contentsline {subsubsection}{Pregled rezultata}{30}
 \contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{31}
 \contentsline {subsubsection}{Registracija}{31}
