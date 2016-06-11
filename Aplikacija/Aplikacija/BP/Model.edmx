@@ -164,15 +164,7 @@
           <Property Name="slika" Type="image" />
           <Property Name="parametri" Type="nchar" MaxLength="300" Nullable="false" />
           <Property Name="sifraSlozenosti" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="ZadatakGranula">
-          <Key>
-            <PropertyRef Name="sifraZadatakGranula" />
-          </Key>
-          <Property Name="sifraZadatakGranula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="sifraZadatka" Type="int" Nullable="false" />
           <Property Name="sifraGranule" Type="int" Nullable="false" />
-          <Property Name="sadrzaj" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ZadatakVrstaZadatka">
           <Key>
@@ -434,27 +426,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ZadatakGranulaGranula">
+        <Association Name="FK_ZadatakGranula">
           <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
-          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Granula">
               <PropertyRef Name="sifraGranule" />
             </Principal>
-            <Dependent Role="ZadatakGranula">
+            <Dependent Role="Zadatak">
               <PropertyRef Name="sifraGranule" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ZadatakGranulaZadatak">
-          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
-          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Zadatak">
-              <PropertyRef Name="sifraZadatka" />
-            </Principal>
-            <Dependent Role="ZadatakGranula">
-              <PropertyRef Name="sifraZadatka" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -513,7 +493,6 @@
           <EntitySet Name="VrstaProvjere" EntityType="Self.VrstaProvjere" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VrstaZadatka" EntityType="Self.VrstaZadatka" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Zadatak" EntityType="Self.Zadatak" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ZadatakGranula" EntityType="Self.ZadatakGranula" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ZadatakVrstaZadatka" EntityType="Self.ZadatakVrstaZadatka" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_AdminPredmetAdmin" Association="Self.FK_AdminPredmetAdmin">
             <End Role="Admin" EntitySet="Admin" />
@@ -599,13 +578,9 @@
             <End Role="Zadatak" EntitySet="Zadatak" />
             <End Role="ProvjeraZadatak" EntitySet="ProvjeraZadatak" />
           </AssociationSet>
-          <AssociationSet Name="FK_ZadatakGranulaGranula" Association="Self.FK_ZadatakGranulaGranula">
+          <AssociationSet Name="FK_ZadatakGranula" Association="Self.FK_ZadatakGranula">
             <End Role="Granula" EntitySet="Granula" />
-            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ZadatakGranulaZadatak" Association="Self.FK_ZadatakGranulaZadatak">
             <End Role="Zadatak" EntitySet="Zadatak" />
-            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
           </AssociationSet>
           <AssociationSet Name="FK_ZadatakSlozenost" Association="Self.FK_ZadatakSlozenost">
             <End Role="Slozenost" EntitySet="Slozenost" />
@@ -658,7 +633,7 @@
           <NavigationProperty Name="KorisnikGranula" Relationship="Self.FK_KorisnikGranulaGranula" FromRole="Granula" ToRole="KorisnikGranula" />
           <NavigationProperty Name="OdnosGranula" Relationship="Self.FK_OdnosGranulaNizaGranula" FromRole="Granula" ToRole="OdnosGranula" />
           <NavigationProperty Name="OdnosGranula1" Relationship="Self.FK_OdnosGranulaVisaGranula" FromRole="Granula" ToRole="OdnosGranula" />
-          <NavigationProperty Name="ZadatakGranula" Relationship="Self.FK_ZadatakGranulaGranula" FromRole="Granula" ToRole="ZadatakGranula" />
+          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ZadatakGranula" FromRole="Granula" ToRole="Zadatak" />
         </EntityType>
         <EntityType Name="Koncept">
           <Key>
@@ -828,21 +803,11 @@
           <Property Name="slika" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="parametri" Type="String" MaxLength="300" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sifraSlozenosti" Type="Int32" Nullable="false" />
+          <Property Name="sifraGranule" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Granula" Relationship="Self.FK_ZadatakGranula" FromRole="Zadatak" ToRole="Granula" />
           <NavigationProperty Name="ProvjeraZadatak" Relationship="Self.FK_ProvjeraZadatakZadatak" FromRole="Zadatak" ToRole="ProvjeraZadatak" />
           <NavigationProperty Name="Slozenost" Relationship="Self.FK_ZadatakSlozenost" FromRole="Zadatak" ToRole="Slozenost" />
-          <NavigationProperty Name="ZadatakGranula" Relationship="Self.FK_ZadatakGranulaZadatak" FromRole="Zadatak" ToRole="ZadatakGranula" />
           <NavigationProperty Name="ZadatakVrstaZadatka" Relationship="Self.FK_ZadatakVrstaZadatkaVrstaZadatka" FromRole="Zadatak" ToRole="ZadatakVrstaZadatka" />
-        </EntityType>
-        <EntityType Name="ZadatakGranula">
-          <Key>
-            <PropertyRef Name="sifraZadatakGranula" />
-          </Key>
-          <Property Name="sifraZadatakGranula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sifraZadatka" Type="Int32" Nullable="false" />
-          <Property Name="sifraGranule" Type="Int32" Nullable="false" />
-          <Property Name="sadrzaj" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Granula" Relationship="Self.FK_ZadatakGranulaGranula" FromRole="ZadatakGranula" ToRole="Granula" />
-          <NavigationProperty Name="Zadatak" Relationship="Self.FK_ZadatakGranulaZadatak" FromRole="ZadatakGranula" ToRole="Zadatak" />
         </EntityType>
         <EntityType Name="ZadatakVrstaZadatka">
           <Key>
@@ -926,14 +891,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ZadatakGranulaGranula">
+        <Association Name="FK_ZadatakGranula">
           <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
-          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
+          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Granula">
               <PropertyRef Name="sifraGranule" />
             </Principal>
-            <Dependent Role="ZadatakGranula">
+            <Dependent Role="Zadatak">
               <PropertyRef Name="sifraGranule" />
             </Dependent>
           </ReferentialConstraint>
@@ -1142,18 +1107,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ZadatakGranulaZadatak">
-          <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
-          <End Role="ZadatakGranula" Type="Self.ZadatakGranula" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Zadatak">
-              <PropertyRef Name="sifraZadatka" />
-            </Principal>
-            <Dependent Role="ZadatakGranula">
-              <PropertyRef Name="sifraZadatka" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ZadatakVrstaZadatkaVrstaZadatka">
           <End Role="Zadatak" Type="Self.Zadatak" Multiplicity="1" />
           <End Role="ZadatakVrstaZadatka" Type="Self.ZadatakVrstaZadatka" Multiplicity="*" />
@@ -1185,7 +1138,6 @@
           <EntitySet Name="VrstaProvjere" EntityType="Self.VrstaProvjere" />
           <EntitySet Name="VrstaZadatka" EntityType="Self.VrstaZadatka" />
           <EntitySet Name="Zadatak" EntityType="Self.Zadatak" />
-          <EntitySet Name="ZadatakGranula" EntityType="Self.ZadatakGranula" />
           <EntitySet Name="ZadatakVrstaZadatka" EntityType="Self.ZadatakVrstaZadatka" />
           <AssociationSet Name="FK_AdminPredmetAdmin" Association="Self.FK_AdminPredmetAdmin">
             <End Role="Admin" EntitySet="Admin" />
@@ -1211,9 +1163,9 @@
             <End Role="Granula" EntitySet="Granula" />
             <End Role="OdnosGranula" EntitySet="OdnosGranula" />
           </AssociationSet>
-          <AssociationSet Name="FK_ZadatakGranulaGranula" Association="Self.FK_ZadatakGranulaGranula">
+          <AssociationSet Name="FK_ZadatakGranula" Association="Self.FK_ZadatakGranula">
             <End Role="Granula" EntitySet="Granula" />
-            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
+            <End Role="Zadatak" EntitySet="Zadatak" />
           </AssociationSet>
           <AssociationSet Name="FK_KonceptPredmet" Association="Self.FK_KonceptPredmet">
             <End Role="Predmet" EntitySet="Predmet" />
@@ -1282,10 +1234,6 @@
           <AssociationSet Name="FK_ZadatakVrstaZadatkaZadatak" Association="Self.FK_ZadatakVrstaZadatkaZadatak">
             <End Role="VrstaZadatka" EntitySet="VrstaZadatka" />
             <End Role="ZadatakVrstaZadatka" EntitySet="ZadatakVrstaZadatka" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ZadatakGranulaZadatak" Association="Self.FK_ZadatakGranulaZadatak">
-            <End Role="Zadatak" EntitySet="Zadatak" />
-            <End Role="ZadatakGranula" EntitySet="ZadatakGranula" />
           </AssociationSet>
           <AssociationSet Name="FK_ZadatakVrstaZadatkaVrstaZadatka" Association="Self.FK_ZadatakVrstaZadatkaVrstaZadatka">
             <End Role="Zadatak" EntitySet="Zadatak" />
@@ -1473,16 +1421,7 @@
                 <ScalarProperty Name="slika" ColumnName="slika" />
                 <ScalarProperty Name="parametri" ColumnName="parametri" />
                 <ScalarProperty Name="sifraSlozenosti" ColumnName="sifraSlozenosti" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ZadatakGranula">
-            <EntityTypeMapping TypeName="BazaModel.ZadatakGranula">
-              <MappingFragment StoreEntitySet="ZadatakGranula">
-                <ScalarProperty Name="sifraZadatakGranula" ColumnName="sifraZadatakGranula" />
-                <ScalarProperty Name="sifraZadatka" ColumnName="sifraZadatka" />
                 <ScalarProperty Name="sifraGranule" ColumnName="sifraGranule" />
-                <ScalarProperty Name="sadrzaj" ColumnName="sadrzaj" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

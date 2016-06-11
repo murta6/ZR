@@ -20,7 +20,7 @@ namespace Aplikacija.BP
             this.KorisnikGranula = new HashSet<KorisnikGranula>();
             this.OdnosGranula = new HashSet<OdnosGranula>();
             this.OdnosGranula1 = new HashSet<OdnosGranula>();
-            this.ZadatakGranula = new HashSet<ZadatakGranula>();
+            this.Zadatak = new HashSet<Zadatak>();
         }
     
         public int sifraGranule { get; set; }
@@ -36,6 +36,6 @@ namespace Aplikacija.BP
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OdnosGranula> OdnosGranula1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ZadatakGranula> ZadatakGranula { get; set; }
+        public virtual ICollection<Zadatak> Zadatak { get; set; }
     }
 }

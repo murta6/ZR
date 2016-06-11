@@ -43,7 +43,6 @@ namespace Aplikacija.BP
         public virtual DbSet<VrstaProvjere> VrstaProvjere { get; set; }
         public virtual DbSet<VrstaZadatka> VrstaZadatka { get; set; }
         public virtual DbSet<Zadatak> Zadatak { get; set; }
-        public virtual DbSet<ZadatakGranula> ZadatakGranula { get; set; }
         public virtual DbSet<ZadatakVrstaZadatka> ZadatakVrstaZadatka { get; set; }
     }
 }

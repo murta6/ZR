@@ -126,9 +126,6 @@
     <Compile Include="BP\Zadatak.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="BP\ZadatakGranula.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="BP\ZadatakVrstaZadatka.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

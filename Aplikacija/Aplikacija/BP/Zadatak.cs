@@ -18,7 +18,6 @@ namespace Aplikacija.BP
         public Zadatak()
         {
             this.ProvjeraZadatak = new HashSet<ProvjeraZadatak>();
-            this.ZadatakGranula = new HashSet<ZadatakGranula>();
             this.ZadatakVrstaZadatka = new HashSet<ZadatakVrstaZadatka>();
         }
     
@@ -28,12 +27,12 @@ namespace Aplikacija.BP
         public byte[] slika { get; set; }
         public string parametri { get; set; }
         public int sifraSlozenosti { get; set; }
+        public int sifraGranule { get; set; }
     
+        public virtual Granula Granula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProvjeraZadatak> ProvjeraZadatak { get; set; }
         public virtual Slozenost Slozenost { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ZadatakGranula> ZadatakGranula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ZadatakVrstaZadatka> ZadatakVrstaZadatka { get; set; }
     }
