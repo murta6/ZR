@@ -30,6 +30,7 @@
           <Property Name="sifraGranule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nazivGranule" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="sifraKoncepta" Type="int" Nullable="false" />
+          <Property Name="ukupnaSlozenost" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Koncept">
           <Key>
@@ -48,6 +49,15 @@
           <Property Name="password" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="ime" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="prezime" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KorisnikGranula">
+          <Key>
+            <PropertyRef Name="sifraKorisnikGranula" />
+          </Key>
+          <Property Name="sifraKorisnikGranula" Type="int" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="int" Nullable="false" />
+          <Property Name="sifraGranule" Type="int" Nullable="false" />
+          <Property Name="znanje" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="KorisnikKoncept">
           <Key>
@@ -217,6 +227,30 @@
             </Principal>
             <Dependent Role="Koncept">
               <PropertyRef Name="sifraPredmeta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikGranulaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="KorisnikGranula" Type="Self.KorisnikGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="KorisnikGranula">
+              <PropertyRef Name="sifraGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikGranulaKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikGranula" Type="Self.KorisnikGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikGranula">
+              <PropertyRef Name="sifraKorisnika" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -466,6 +500,7 @@
           <EntitySet Name="Granula" EntityType="Self.Granula" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Koncept" EntityType="Self.Koncept" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KorisnikGranula" EntityType="Self.KorisnikGranula" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KorisnikKoncept" EntityType="Self.KorisnikKoncept" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KorisnikPredmet" EntityType="Self.KorisnikPredmet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OdnosGranula" EntityType="Self.OdnosGranula" Schema="dbo" store:Type="Tables" />
@@ -495,6 +530,14 @@
           <AssociationSet Name="FK_KonceptPredmet" Association="Self.FK_KonceptPredmet">
             <End Role="Predmet" EntitySet="Predmet" />
             <End Role="Koncept" EntitySet="Koncept" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikGranulaGranula" Association="Self.FK_KorisnikGranulaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="KorisnikGranula" EntitySet="KorisnikGranula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikGranulaKorisnik" Association="Self.FK_KorisnikGranulaKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikGranula" EntitySet="KorisnikGranula" />
           </AssociationSet>
           <AssociationSet Name="FK_KorisnikKonceptKoncept" Association="Self.FK_KorisnikKonceptKoncept">
             <End Role="Koncept" EntitySet="Koncept" />
@@ -610,7 +653,9 @@
           <Property Name="sifraGranule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nazivGranule" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sifraKoncepta" Type="Int32" Nullable="false" />
+          <Property Name="ukupnaSlozenost" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Koncept" Relationship="Self.FK_GranulaKoncept" FromRole="Granula" ToRole="Koncept" />
+          <NavigationProperty Name="KorisnikGranula" Relationship="Self.FK_KorisnikGranulaGranula" FromRole="Granula" ToRole="KorisnikGranula" />
           <NavigationProperty Name="OdnosGranula" Relationship="Self.FK_OdnosGranulaNizaGranula" FromRole="Granula" ToRole="OdnosGranula" />
           <NavigationProperty Name="OdnosGranula1" Relationship="Self.FK_OdnosGranulaVisaGranula" FromRole="Granula" ToRole="OdnosGranula" />
           <NavigationProperty Name="ZadatakGranula" Relationship="Self.FK_ZadatakGranulaGranula" FromRole="Granula" ToRole="ZadatakGranula" />
@@ -637,9 +682,21 @@
           <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="KorisnikGranula" Relationship="Self.FK_KorisnikGranulaKorisnik" FromRole="Korisnik" ToRole="KorisnikGranula" />
           <NavigationProperty Name="KorisnikKoncept" Relationship="Self.FK_KorisnikKonceptKorisnik" FromRole="Korisnik" ToRole="KorisnikKoncept" />
           <NavigationProperty Name="KorisnikPredmet" Relationship="Self.FK_KorisnikPredmetKorisnik" FromRole="Korisnik" ToRole="KorisnikPredmet" />
           <NavigationProperty Name="Provjera" Relationship="Self.FK_ProvjeraKorisnik" FromRole="Korisnik" ToRole="Provjera" />
+        </EntityType>
+        <EntityType Name="KorisnikGranula">
+          <Key>
+            <PropertyRef Name="sifraKorisnikGranula" />
+          </Key>
+          <Property Name="sifraKorisnikGranula" Type="Int32" Nullable="false" />
+          <Property Name="sifraKorisnika" Type="Int32" Nullable="false" />
+          <Property Name="sifraGranule" Type="Int32" Nullable="false" />
+          <Property Name="znanje" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Granula" Relationship="Self.FK_KorisnikGranulaGranula" FromRole="KorisnikGranula" ToRole="Granula" />
+          <NavigationProperty Name="Korisnik" Relationship="Self.FK_KorisnikGranulaKorisnik" FromRole="KorisnikGranula" ToRole="Korisnik" />
         </EntityType>
         <EntityType Name="KorisnikKoncept">
           <Key>
@@ -833,6 +890,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_KorisnikGranulaGranula">
+          <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
+          <End Role="KorisnikGranula" Type="Self.KorisnikGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Granula">
+              <PropertyRef Name="sifraGranule" />
+            </Principal>
+            <Dependent Role="KorisnikGranula">
+              <PropertyRef Name="sifraGranule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_OdnosGranulaNizaGranula">
           <End Role="Granula" Type="Self.Granula" Multiplicity="1" />
           <End Role="OdnosGranula" Type="Self.OdnosGranula" Multiplicity="*" />
@@ -914,6 +983,18 @@
             </Principal>
             <Dependent Role="OdnosKoncepata">
               <PropertyRef Name="sifraVisegKon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KorisnikGranulaKorisnik">
+          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
+          <End Role="KorisnikGranula" Type="Self.KorisnikGranula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Korisnik">
+              <PropertyRef Name="sifraKorisnika" />
+            </Principal>
+            <Dependent Role="KorisnikGranula">
+              <PropertyRef Name="sifraKorisnika" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1091,6 +1172,7 @@
           <EntitySet Name="Granula" EntityType="Self.Granula" />
           <EntitySet Name="Koncept" EntityType="Self.Koncept" />
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" />
+          <EntitySet Name="KorisnikGranula" EntityType="Self.KorisnikGranula" />
           <EntitySet Name="KorisnikKoncept" EntityType="Self.KorisnikKoncept" />
           <EntitySet Name="KorisnikPredmet" EntityType="Self.KorisnikPredmet" />
           <EntitySet Name="OdnosGranula" EntityType="Self.OdnosGranula" />
@@ -1116,6 +1198,10 @@
           <AssociationSet Name="FK_GranulaKoncept" Association="Self.FK_GranulaKoncept">
             <End Role="Koncept" EntitySet="Koncept" />
             <End Role="Granula" EntitySet="Granula" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikGranulaGranula" Association="Self.FK_KorisnikGranulaGranula">
+            <End Role="Granula" EntitySet="Granula" />
+            <End Role="KorisnikGranula" EntitySet="KorisnikGranula" />
           </AssociationSet>
           <AssociationSet Name="FK_OdnosGranulaNizaGranula" Association="Self.FK_OdnosGranulaNizaGranula">
             <End Role="Granula" EntitySet="Granula" />
@@ -1144,6 +1230,10 @@
           <AssociationSet Name="FK_OdnosKoncepataVisiKoncept" Association="Self.FK_OdnosKoncepataVisiKoncept">
             <End Role="Koncept" EntitySet="Koncept" />
             <End Role="OdnosKoncepata" EntitySet="OdnosKoncepata" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KorisnikGranulaKorisnik" Association="Self.FK_KorisnikGranulaKorisnik">
+            <End Role="Korisnik" EntitySet="Korisnik" />
+            <End Role="KorisnikGranula" EntitySet="KorisnikGranula" />
           </AssociationSet>
           <AssociationSet Name="FK_KorisnikKonceptKorisnik" Association="Self.FK_KorisnikKonceptKorisnik">
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -1234,6 +1324,7 @@
                 <ScalarProperty Name="sifraGranule" ColumnName="sifraGranule" />
                 <ScalarProperty Name="nazivGranule" ColumnName="nazivGranule" />
                 <ScalarProperty Name="sifraKoncepta" ColumnName="sifraKoncepta" />
+                <ScalarProperty Name="ukupnaSlozenost" ColumnName="ukupnaSlozenost" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1254,6 +1345,16 @@
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="ime" ColumnName="ime" />
                 <ScalarProperty Name="prezime" ColumnName="prezime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KorisnikGranula">
+            <EntityTypeMapping TypeName="BazaModel.KorisnikGranula">
+              <MappingFragment StoreEntitySet="KorisnikGranula">
+                <ScalarProperty Name="sifraKorisnikGranula" ColumnName="sifraKorisnikGranula" />
+                <ScalarProperty Name="sifraKorisnika" ColumnName="sifraKorisnika" />
+                <ScalarProperty Name="sifraGranule" ColumnName="sifraGranule" />
+                <ScalarProperty Name="znanje" ColumnName="znanje" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

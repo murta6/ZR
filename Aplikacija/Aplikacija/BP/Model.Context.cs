@@ -30,6 +30,7 @@ namespace Aplikacija.BP
         public virtual DbSet<Granula> Granula { get; set; }
         public virtual DbSet<Koncept> Koncept { get; set; }
         public virtual DbSet<Korisnik> Korisnik { get; set; }
+        public virtual DbSet<KorisnikGranula> KorisnikGranula { get; set; }
         public virtual DbSet<KorisnikKoncept> KorisnikKoncept { get; set; }
         public virtual DbSet<KorisnikPredmet> KorisnikPredmet { get; set; }
         public virtual DbSet<OdnosGranula> OdnosGranula { get; set; }

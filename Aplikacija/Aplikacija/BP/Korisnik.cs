@@ -17,6 +17,7 @@ namespace Aplikacija.BP
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Korisnik()
         {
+            this.KorisnikGranula = new HashSet<KorisnikGranula>();
             this.KorisnikKoncept = new HashSet<KorisnikKoncept>();
             this.KorisnikPredmet = new HashSet<KorisnikPredmet>();
             this.Provjera = new HashSet<Provjera>();
@@ -28,6 +29,8 @@ namespace Aplikacija.BP
         public string ime { get; set; }
         public string prezime { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KorisnikGranula> KorisnikGranula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<KorisnikKoncept> KorisnikKoncept { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

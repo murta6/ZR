@@ -95,9 +95,10 @@ namespace Aplikacija.Logika
             {
                 String[] param = par[i].Split(':');
                 Boolean uvjet = false;
+                double br = 0;
                 while (uvjet != true)
                 {
-                    var br = rand.NextDouble() * 2000 - 1000;
+                    br = rand.NextDouble() * 2000 - 1000;
                     uvjet = izracunajUvjet(param[1], br);
                 }
                 

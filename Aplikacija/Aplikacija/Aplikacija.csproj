@@ -72,6 +72,9 @@
     <Compile Include="BP\Korisnik.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="BP\KorisnikGranula.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="BP\KorisnikKoncept.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

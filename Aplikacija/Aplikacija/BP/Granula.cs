@@ -17,6 +17,7 @@ namespace Aplikacija.BP
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Granula()
         {
+            this.KorisnikGranula = new HashSet<KorisnikGranula>();
             this.OdnosGranula = new HashSet<OdnosGranula>();
             this.OdnosGranula1 = new HashSet<OdnosGranula>();
             this.ZadatakGranula = new HashSet<ZadatakGranula>();
@@ -25,8 +26,11 @@ namespace Aplikacija.BP
         public int sifraGranule { get; set; }
         public string nazivGranule { get; set; }
         public int sifraKoncepta { get; set; }
+        public int ukupnaSlozenost { get; set; }
     
         public virtual Koncept Koncept { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KorisnikGranula> KorisnikGranula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OdnosGranula> OdnosGranula { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
