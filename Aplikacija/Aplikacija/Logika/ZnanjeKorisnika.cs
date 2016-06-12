@@ -13,7 +13,7 @@ namespace Aplikacija.Logika
         public static readonly int sifraPreduvjeta = 1;
 
 
-        public static Boolean dodajNovogKorisnika(String username, String password, String ime, String prezime)
+        /*public static Boolean dodajNovogKorisnika(String username, String password, String ime, String prezime)
         {
             Boolean dodan = KorisniciAdmini.dodajKorisnika(username, password, ime, prezime);
             if (!dodan)
@@ -53,6 +53,6 @@ namespace Aplikacija.Logika
             {
                 return false;
             }
-        }
+        }*/
     }
 }

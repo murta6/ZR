@@ -36,21 +36,6 @@ namespace Aplikacija.Model
             }
         }
 
-        public static List<Koncept> vratiSveKonceptePredmetaBezUvjeta(int sifraPredmeta, int sifraOdnosa)
-        {
-            using (Baza baza = new Baza())
-            {
-                //return baza.Koncept.Where(kcp => kcp.sifraPredmeta == sifraPredmeta).ToList();
-            }
-        }
-
-        public static Boolean dodajKorisnikaKonceptu(int sifraKorisnika, int sifraKoncepta, double? znanje = null)
-        {
-            using (Baza baza = new Baza())
-            {
-            }
-        }
-
         public static List<Koncept> vratiOtkljucaneKoncepteKorisnika(int sifraPredmeta, int sifraKorisnika)
         {
             using (Baza baza = new Baza())
@@ -86,5 +71,10 @@ namespace Aplikacija.Model
         {
             return baza.KorisnikKoncept.Where(korkon => korkon.sifraKoncepta == sifraKoncepta && korkon.sifraKorisnika == sifraKorisnika).First().znanje > 0.5;
         }
+
+        //public static Boolean dodajKorisnikKoncept(int sifraKoncepta, int sifraKorisnika)
+        //{
+            
+        //}
     }
 }

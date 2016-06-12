@@ -98,6 +98,14 @@ namespace Aplikacija.Model
             return dodajKorisnikPredmet(sifraPredmeta, sifraKorisnika, null);
         }
 
+        public static Boolean postojiKorisnikPredmet(int sifraPredmeta, int sifraKorisnika)
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.KorisnikPredmet.Where(kpr => kpr.sifraKorisnika == sifraKorisnika && kpr.sifraPredmeta == sifraPredmeta).Count() > 0;
+            }
+        }
+
         public static Boolean urediKorisnikPredmet(int sifraPredmeta, int sifraKorisnika, int ocjena)
         {
             using (Baza baza = new Baza())

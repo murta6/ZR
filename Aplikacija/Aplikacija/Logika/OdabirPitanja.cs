@@ -15,14 +15,35 @@ namespace Aplikacija.Logika
             public List<int> pitanja { get; set; }
             public int kolicinaSlozenosti { get; set; }
         }
-        private static OdabranaPitanja odabirPitanja(int sifraPredmeta, int sifraKorisnika)
+        private static OdabranaPitanja odabirPitanja(int sifraPredmeta, int sifraKorisnika, int brojPitanja = 10)
         {
             var otkljucaniKoncepti = Koncepti.vratiOtkljucaneKoncepteKorisnika(sifraPredmeta, sifraKorisnika);
-            var granuleKorisnika = Granule.vratiGranuleKorisnika(sifraKorisnika);
-            
-            List<int> list = new List<int>();
+            var granuleKorisnika = Granule.vratiOtkljucaneGranuleKorisnika(sifraKorisnika, otkljucaniKoncepti, sifraPredmeta);
+            HashSet<Zadatak> zadaci = new HashSet<Zadatak>();
+            int brojZadataka = zadaci.Count;
+            while (zadaci.Count < brojPitanja)
+            {
+                foreach (var granula in granuleKorisnika)
+                {
+                    zadaci = Granule.prikladniZadaciGranule(sifraKorisnika, granula.sifraGranule,
+                        granula.ukupnaSlozenost, 1, zadaci);
+                }
+                if(brojZadataka == zadaci.Count)
+                {
+                    break;
+                }
+                else
+                {
+                    brojZadataka = zadaci.Count;
+                }
+            }
             int kolicinaSlozenosti = 0;
-
+            List<int> list = new List<int>();
+            foreach(var zad in zadaci)
+            {
+                list.Add(zad.sifraZadatka);
+                kolicinaSlozenosti += zad.Slozenost.brojSlozenosti;
+            }
             return new OdabranaPitanja() { pitanja = list, kolicinaSlozenosti = kolicinaSlozenosti};
         }
 

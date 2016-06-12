@@ -129,6 +129,7 @@
     <Compile Include="BP\ZadatakVrstaZadatka.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logika\Admin.cs" />
     <Compile Include="Logika\KonkretnaProvjera.cs" />
     <Compile Include="Logika\OdabirPitanja.cs" />
     <Compile Include="Logika\ZnanjeKorisnika.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Model\KorisniciAdmini.cs" />
     <Compile Include="Model\Odnosi.cs" />
     <Compile Include="Model\Predmeti.cs" />
+    <Compile Include="Model\Provjere.cs" />
     <Compile Include="Model\Zadaci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,20 +11,20 @@ namespace Aplikacija.Model
     {
         private static Dictionary<int, int> slozenost = null;
 
-        public static List<ZadatakGranula> vratiSveZadatkeKoncepta(int sifraKoncepta)
+        public static List<Zadatak> vratiSveZadatkeKoncepta(int sifraKoncepta)
         {
             using(Baza baza = new Baza())
             {
                 var granule = Granule.vratiSifreGranulaKoncepta(sifraKoncepta);
-                return baza.ZadatakGranula.Where(zadGran => granule.Contains(zadGran.sifraGranule)).ToList();
+                return baza.Zadatak.Where(zadGran => granule.Contains(zadGran.sifraGranule)).ToList();
             }
         }
 
-        public static List<ZadatakGranula> vratiSveZadatkeGranule(int sifraGranule)
+        public static List<Zadatak> vratiSveZadatkeGranule(int sifraGranule)
         {
             using (Baza baza = new Baza())
             {
-                return baza.ZadatakGranula.Where(zadGran => zadGran.sifraGranule == sifraGranule).ToList();
+                return baza.Zadatak.Where(zadGran => zadGran.sifraGranule == sifraGranule).ToList();
             }
         }
 
@@ -36,7 +36,7 @@ namespace Aplikacija.Model
             }
         }
 
-        public static Boolean urediZadatak(int sifraZadatka, String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti)
+        public static Boolean urediZadatak(int sifraZadatka, String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti, int sifraGranule)
         {
             using (Baza baza = new Baza())
             {
@@ -46,15 +46,8 @@ namespace Aplikacija.Model
                 zadatak.parametri = parametri;
                 zadatak.slika = slika;
                 zadatak.sifraSlozenosti = sifraSlozenosti;
+                zadatak.sifraGranule = sifraGranule;
                 return true;
-            }
-        }
-
-        public static List<ZadatakGranula> vratiGranuleZadatka(int sifraZadatka)
-        {
-            using (Baza baza = new Baza())
-            {
-                return baza.ZadatakGranula.Where(zad => zad.sifraZadatka == sifraZadatka).ToList();
             }
         }
 
@@ -77,7 +70,7 @@ namespace Aplikacija.Model
         {
             using(Baza baza = new Baza())
             {
-                var rez = from zadGran in baza.ZadatakGranula
+                var rez = from zadGran in baza.Zadatak
                           join gran in granuleKorisnika
                           on zadGran.sifraGranule equals gran.sifraGranule
                           select zadGran;
