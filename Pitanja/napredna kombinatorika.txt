@@ -6,5 +6,7 @@ Odgovor: (5#4)*(10#(n-4))*n!+(5#5)*(10#(n-5))*n!, Složenost: 5
 3. Koliko ima kvadrata na šahovskoj ploèi n*n koji se mogu sastaviti od osnovnih?
 Odgovor: n*(n+1)*(2n+1)/6, Složenost: 5
 4. Na koliko se naèina m jabuka može podijeliti na n djece tako da barem 1 dijete ne dobije niti jednu jabuku?
-Odgovor: (m+n-1)#m-(m-n-1)#m
-5. 
+Odgovor: (m+n-1)#m-(m-n-1)#m, Složenost: 5
+5. Na koji naèin iz špila od 52 karte možemo odabrati n karata da meðu njima bude bar 1 crvena?
+Odgovor: 52#n - 26#n, Složenost: 3
+6. 
