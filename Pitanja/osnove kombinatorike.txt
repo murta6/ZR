@@ -1,0 +1,39 @@
+- skupovi
+1. Koliko cijelih brojeva ima izmeðu brojeva m i n?
+Odgovor: n-m+1, složenost: 1
+2. Koliki je kardinalitet kartezijeva produkta nepraznih konaènih skupova A i B? |A|=n, |B|=m.
+Odgovor: n*m, složenost: 1
+3. Ako su A i B konaèni skupovi, |A|=n, |B|=m. Koliko ima funkcija f:A->B (ne nužno injekcija)?
+Odgovor: m^n, složenost: 2
+4. Koliki je broj poredanih n-teraca sastavljenih od 0 i 1?
+Odgovor: 2^n, složenost: 2
+5. Koliko ima cjelobrojnih višekratnika od k izemðu m i n ukljuèivo, m <= n?
+Odgovor: [n/k]-[(m-1)/k], složenost: 3
+6. Koliko ima partitivnih skupova na skupu od n elemenata?
+Odgovor: 2^n, složenost: 2
+
+- produktno pravilo
+7. Koliko se tablica za Dubrovnik i Vukovar može sastaviti ako one moraju imati n brojki i m slova hrvatske abecede?
+Odgovor: 10^n*30^m, složenost: 2
+8. Koliko dijagonala ima konveksni n-terokut u ravnini?
+Odgovor: n*(n-3)/2, Složenost: 3
+9. Koliko prirodnih brojeva ima izmeðu 1 i 10^n koji sadrže bar jednu znamenku m (m>0, m<10)?
+Odgovor: 10^n-9^n, Složenost: 3
+10. Koliko ima n-tero znamenkastih brojeva s barem jednom parnom znamenkom?
+Odgovor: 9*10^(n-1)-5^n, Složenost: 2
+11. Koliko ima n-tero znamenkastih brojeva s najviše jednom neparnom znamenkom?
+Odgovor: 5^(n-1)*(5*n+4), Složenost: 4
+12. Koliko ima n-tero znamenkastih brojeva s toèno jednom parnom znamenkom?
+Odgovor: 5^(n-1)*(4*n+1), Složenost: 4
+
+- permutacije
+13. Na koliko naèina možemo rasporediti n razlièitih vilica u n razlièitih posuda ako u svaku stane po 1?
+Odgovor: n!, Složenost: 1
+14. Na koliko razlièitih redoslijeda èovjek može pojesti n razlièitih kolaèa ako želi pojesti sve?
+Odgovor: n!, Složenost: 1
+
+- permutacije s ponavljanjem
+15. Koliko se rijeèi može napisati od m slova A, n slova B i k slova C (ne moraju imati smisla)?
+Odgovor: (m+n+k)!/m!/n!/k!, Složenost: 3
+16. Koliko ima stepenastih ulaza u ravnini od toèke (0,0) do toèke (m, n)?
+Odgovor: (m+n)!/n!/m!, Složenost: 2

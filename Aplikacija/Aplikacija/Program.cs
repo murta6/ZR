@@ -13,8 +13,9 @@ namespace Aplikacija
         static void Main(string[] args)
         {
             //KorisniciAdmini.dodajAdmina("murta", "pass", "Alen", "Murtic");
-            Expression e = new Expression("5^(n-1)*(5*n-1)");
+            Expression e = new Expression("binomCoeff(n, m)");
             e.addArguments(new Argument("n", 3));
+            e.addArguments(new Argument("m", 10));
             //e.addArguments(new Ar)
             Console.WriteLine(e.calculate());
             Console.ReadLine();

@@ -1,0 +1,27 @@
+Predmet = diskretna matematika
+
+- koncept = osnove kombinatorike
+-----------------------------------------
+* granula = skupovi
+* granula = produktno pravilo - korištenje: skupovi
+* granula = permutacije
+
+- koncept = varijacije - korištenje osnova kombinatorije, meðusobno iskljuèiv: kombinacije
+-----------------------------------------
+* granula = varijacije s ponavljanjem
+* granula = varijacije bez ponavljanja
+
+- koncept = kombinacije - korištenje osnova kombinatorije, meðusobno iskljuèiv: varijacije
+-----------------------------------------
+* granula = kombinacije s ponavljanjem
+* granula = kombinacije bez ponavljanja
+
+- koncept = napredna kombinatorika - nadskup: varijacije, kombinacije, osnove kombinatorike
+-----------------------------------------
+* granula = kombinatorika
+
+- koncept = osnove vjerojatnosti - preduvjet: osnove kombinatorike, 
+----------------------------------------
+*granula = klasièni vjerojatnosni prostor
+*granula = beskonaèni vjerojatnosni prostor
+*granula = geometrijske vjerojatnost
