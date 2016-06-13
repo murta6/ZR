@@ -19,21 +19,37 @@ namespace Aplikacija
             e.addArguments(new Argument("m", 5));
             //e.addArguments(new Ar)
             Console.WriteLine(e.calculate());
-            //foreach(var kon in Koncepti.vratiSveKonceptePredmeta(1))
-            //{
-            //    foreach (var zadatak in Zadaci.vratiSveZadatkeKoncepta(kon.sifraKoncepta))
-            //    {
-            //        KonkretanZadatak zad = new KonkretanZadatak(zadatak.pitanje, zadatak.izraz, zadatak.parametri, null, 1, 3);
-            //        Console.WriteLine(zadatak.sifraZadatka + ": " + zad.odgovor);
-            //    }
-            //}
-            KonkretanZadatak zad = new KonkretanZadatak("fddf", "round(n/k, 0)-round((m-1)/k, 0)", "m:>15&<70 n:>70 k:>5&<12", null, 1, 3);
-            foreach(var par in zad.parametri)
+            int i = 0;
+            while(i < 1000)
             {
-                Console.WriteLine(par);
+                foreach (var kon in Koncepti.vratiSveKonceptePredmeta(1))
+                {
+                    foreach (var zadatak in Zadaci.vratiSveZadatkeKoncepta(kon.sifraKoncepta))
+                    {
+                        KonkretanZadatak zad = new KonkretanZadatak(zadatak.pitanje, zadatak.izraz, zadatak.parametri, null, 1, 3);
+                        //Console.WriteLine(zadatak.sifraZadatka + ": " + zad.odgovor);
+                        if(zad.odgovor == Double.NaN)
+                        {
+                            Console.WriteLine(zadatak.sifraZadatka);
+                            foreach (var par in zad.parametri)
+                            {
+                                Console.WriteLine(par);
+                            }
+                            Console.WriteLine(zad.izraz);   
+                        }
+                    }
+                }
+                i++;
+                if (i % 50 == 0) Console.WriteLine(i);
             }
-            Console.WriteLine(zad.izraz);
-            Console.WriteLine(zad.odgovor);
+            Console.WriteLine("Done");
+            //KonkretanZadatak zad = new KonkretanZadatak("fddf", "round(n/k, 0)-round((m-1)/k, 0)", "m:>15&<70 n:>70 k:>5&<12", null, 1, 3);
+            //foreach(var par in zad.parametri)
+            //{
+            //    Console.WriteLine(par);
+            //}
+            //Console.WriteLine(zad.izraz);
+            //Console.WriteLine(zad.odgovor);
             Console.ReadLine();
         }
     }
