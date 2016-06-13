@@ -1,0 +1,180 @@
+\begin{thebibliography}{27}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[activemath.org()]{activemath}
+activemath.org.
+\newblock Activemath web - software.
+\newblock \url{http://www.activemath.org/Software}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Andrina~Granić(2002)]{interface}
+Vlado~Glavinić Andrina~Granić.
+\newblock User interface specification issues for computerized educational
+  systems.
+\newblock \emph{Journal of Computing and Information Technology}, 3, 2002.
+
+\bibitem[autora(2002)]{why2atlas}
+Grupa autora.
+\newblock The architecture of why2-atlas: A coach for qualitative physics essay
+  writing.
+\newblock \emph{Lecture Notes in Computer Science}, 2363, 2002.
+
+\bibitem[Chew()]{pascal}
+Julia Chew.
+\newblock Blaise pascal.
+\newblock \url{https://math.berkeley.edu/~robin/Pascal/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Colton(2005)]{sematicknowledge}
+Simon Colton.
+\newblock Knowledge representation.
+\newblock
+  \url{http://www.doc.ic.ac.uk/~sgc/teaching/pre2012/v231/lecture4.html}, 2005.
+
+\bibitem[coursera.org()]{coursera}
+coursera.org.
+\newblock About | coursera.
+\newblock \url{https://www.coursera.org/about/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[developer.apple.com /~Mac Developer~Library()]{mvc}
+developer.apple.com /~Mac Developer~Library.
+\newblock Model-view-controller.
+\newblock
+  \url{https://developer.apple.com/library/mac/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[duolingo.com()]{duolingo}
+duolingo.com.
+\newblock About us - duolingo.
+\newblock \url{https://www.duolingo.com/info}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[eLearningNC.gov()]{eLearningNC}
+eLearningNC.gov.
+\newblock Methods of elearning | elearningnc.gov.
+\newblock
+  \url{http://www.elearningnc.gov/about_elearning/methods_of_elearning/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[ferko.fer.hr()]{ferko}
+ferko.fer.hr.
+\newblock Početna stranica - ferko.
+\newblock \url{http://ferko.fer.hr/ferko/About.action}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[for Educational~Communications i Technology(2001)]{aect}
+The~Association for Educational~Communications i Technology.
+\newblock 19.3 intelligent tutoring systems defined.
+\newblock \url{http://www.aect.org/edtech/ed1/19/19-03.html}, 2001.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Grubišić(2006)]{grubisic2006}
+Ani Grubišić.
+\newblock Vrednovanje učinka inteligentnih sustava e-učenja.
+\newblock Magistarski rad, Sveučilište u zagrebu, Fakultet elektrotehnike i
+  računarstva, 2006.
+
+\bibitem[http://ace.autotutor.org()]{autotutor}
+http://ace.autotutor.org.
+\newblock Autotutor.
+\newblock \url{http://ace.autotutor.org/IISAutotutor/index.html}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[http://faculty.coe.uh.edu()]{pressey}
+http://faculty.coe.uh.edu.
+\newblock Sidney pressey.
+\newblock
+  \url{http://faculty.coe.uh.edu/smcneil/cuin6373/idhistory/pressey.html}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[moodle.org()]{moodle}
+moodle.org.
+\newblock About moodle - moodledocs.
+\newblock \url{https://docs.moodle.org/31/en/About_Moodle}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Peters(2013)]{peters}
+Dorian Peters.
+\newblock \emph{Interface Design for Learning: Design Strategies for Learning
+  Experiences}.
+\newblock New Riders, 2013.
+\newblock str. 21-22.
+
+\bibitem[philosophyfaculty.ucsd.edu()]{leibniz}
+philosophyfaculty.ucsd.edu.
+\newblock G.w. leibniz: Texts and translations.
+\newblock \url{http://philosophyfaculty.ucsd.edu/faculty/rutherford/Leibniz/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Pieter~Spronck()]{adaptiveai}
+Jaap van den~Herik Pieter~Spronck.
+\newblock Game artificial intelligence that adapts to the human player.
+\newblock \url{http://www.ercim.eu/publication/Ercim_News/enw57/spronck.html}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Prof. Sweta G.~Phegade(2014)]{security}
+Prof. Kalyani~Neve Prof. Sweta G.~Phegade, Prof. Tejal H.~Oza.
+\newblock Secure access of intelligent tutorial system on cloud using rsa
+  algorithm.
+\newblock \emph{IBMRD's Journal of Management and Research}, 3, 2014.
+
+\bibitem[Randall~Davis(1993)]{knowledgerep}
+Peter~Szolovits Randall~Davis, Howard~Shrobe.
+\newblock What is a knowledge representation?
+\newblock \url{http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html}, 1993.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Sebastian~Gross()]{feedback}
+Barbara Hammer Niels~Pinkwart Sebastian~Gross, Bassam~Mokbel.
+\newblock Learning feedback in intelligent tutoring systems.
+\newblock
+  \url{https://cses.informatik.hu-berlin.de/pubs/2015/fit/learning_feedback_in_intelligent_tutoring_systems.pdf}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Shelby~Budd()]{limitations}
+Tracey~Best Shelby~Budd.
+\newblock 2008.
+\newblock
+  \url{http://etec.ctlt.ubc.ca/510wiki/Educational_Benefits_and_Limitations}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Stockley()]{derekstock}
+Derek Stockley.
+\newblock E-learning definition (elearning, online training, online learning).
+\newblock \url{http://www.derekstockley.com.au/elearning-definition.html}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Urban-Lurain()]{markurban}
+Mark Urban-Lurain.
+\newblock Intelligent tutoring systems: An historic review in the context of
+  the development of artificial intelligence and educational psychology.
+\newblock \url{http://www.cse.msu.edu/rgroups/cse101/ITS/its.htm}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[urbanjungle.dir.hr/()]{urbanjungle}
+urbanjungle.dir.hr/.
+\newblock Urban jungle.
+\newblock \url{http://urbanjungle.dir.hr/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Woolf(2011)]{itspastpresentfuture}
+Beverly~Park Woolf.
+\newblock Intelligent tutors: Past, present and future.
+\newblock
+  \url{http://www.adlnet.gov/wp-content/uploads/2011/08/woolf_intelligent_systems_part1_iFest2011.pdf},
+  2011.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Zhai(2015)]{zhenzhai}
+Zhen Zhai.
+\newblock Intelligent tutoring system overview.
+\newblock
+  \url{https://cseweb.ucsd.edu/~zzhai/blog/intelligent-tutoring-system-overview.html},
+  2015.
+
+\end{thebibliography}

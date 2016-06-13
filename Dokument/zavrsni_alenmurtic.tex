@@ -1,7 +1,6 @@
-\documentclass[times, utf8, zavrsni]{fer}
+\documentclass[times, utf8, zavrsni, numeric]{fer}
 \usepackage{booktabs}
 \usepackage{indentfirst}
-
 
 \tolerance=1
 \emergencystretch=\maxdimen
@@ -37,24 +36,26 @@ Moderni svijet donosi golemu količinu dostupnih informacija što je dovelo do t
 Shvativši da je znanje i prenošenje znanja izuzetno bitno te da je moderni svijet stvorio nove izazove učenju, postavlja se pitanje kako poboljšati njegovu kvalitetu? Odgovor je relativno jednostavan: pretvoriti učenje u nešto zanimljivo i jednostavno za korištenje, ali ipak izazovno i korisno - specijalizirane aplikacije, tj. sustave za elektroničko učenje.
 \par
 Ovaj završni rad opisat će što su sustavi za elektroničko učenje, što znači da je takav sustav inteligentan, neke od algoritama inteligencije, kako trebaju izgledati podatkovni i aplikacijski slojevi takvog sustava te objasniti što su oni uopće. U konačnici, temeljem principa navedenih u teoretskom dijelu, opisat će podatkovni i aplikacijski sloj sustava koji sam implementirao.
-
+\par
+Implementirani sustav je izgrađen za korištenje u edukacijske svrhe vezane uz predmete s matematičkom pozadinom (kao npr. Osnove elektrotehnike, Fizika, Matematika). Trenutno je ispunjen pitanjima iz područja diskretne matematike (skupovi, kombinatorika, osnove diskretne vjerojatnosti), no implementacija je skalabilna te ne postoji prepreka dodavanju novog znanja. Svrha implementacije je edukacija autora ovog završnog rada i demonstracija primjene teoretski opisanih elemenata u konkretnom sustavu za inteligentno učenje.
 
 \chapter{Sustavi za elektroničko učenje}
-Ideja sustava za elektroničko učenje je ujediniti postupak prenošenja informacija, upijanja novih činjenica i provjere znanja, baš kao na akademskim institucijama. No, prednosti sustava za elektroničko učenje nad tradicionalnim akademskim institucijama su veća prostorna dostupnost (praktički jedini uvjet sudjelovanja je internetska povezanost) te brže ažuriranje gradiva novim informacijama u odnosu na spori obrazovni sustav.
+Elektroničko učenje (e-učenje, \textit{e-learning}) je prijenos znanja ili obrazovnog programa putem elektroničkih uređaja poput računala ili mobitela. E-učenje može prenositi informacije i materijale, provjeravati znanje te biti korišteno za postupno upijanje novih činjenica baš kao na akademskim institucijama.\citep{derekstock} No, prednosti sustava za elektroničko učenje nad tradicionalnim akademskim institucijama su veća prostorna dostupnost (praktički jedini uvjet sudjelovanja je internetska povezanost) te brže ažuriranje gradiva novim informacijama u odnosu na spori obrazovni sustav.
+\citep{eLearningNC}
 \par
-Sustavi za elektroničko učenje mogu biti dio nekog formalnog obrazovnog sustava ili samostalni. Moodle je primjer sustava za elektroničko učenje čiji je cilj obavljati samo dio obrazovanja, uglavnom provjere znanja i prenošenja informacija (materijala za učenje). Od korisnika se očekuje da sam proučava te materijale ili pohađa predavanja predmeta unesenog na sustav Moodle. Samostalni sustavi za elektroničko učenje trebali bi imati dostupne sve elemente učenja jer samo tako mogu osigurati kvalitetu. Eventualno može nedostajati formalna provjera znanja ako je sustav dizajniran tako da je postupak upijanja novih činjenica rigorozan u korištenju da ga korisnik ni u kojem slučaju ne može preskočiti ili ignorirati. 
+Sustavi za elektroničko učenje mogu biti dio nekog formalnog obrazovnog sustava ili samostalni. Moodle je primjer sustava za elektroničko učenje čiji je cilj obavljati samo dio obrazovanja, uglavnom provjere znanja i prenošenja informacija (materijala za učenje). Od korisnika se očekuje da sam proučava te materijale ili pohađa predavanja predmeta unesenog na sustav Moodle.\citep{moodle} Samostalni sustavi za elektroničko učenje trebali bi imati dostupne sve elemente učenja jer samo tako mogu osigurati kvalitetu. Eventualno može nedostajati formalna provjera znanja ako je sustav dizajniran tako da je postupak upijanja novih činjenica rigorozan u korištenju da ga korisnik ni u kojem slučaju ne može preskočiti ili ignorirati. 
 \par
-Neki od popularnih i besplatnih sustava za elektroničko učenje su Codeacademy, Doulingo i Coursera. Coursera je zanimljiv koncept učenja koji na internet stranicu prenosi predmete stvarnih sveučilišta. Ona je za kranjeg korisnika samostalna, no stvaranje njezinog sadržaja nije. Duolingo Najpoznatiji akamdemski sustav za učenje je Moodle, a na FER-u se također koriste Ahyco i Ferko.
+Neki od popularnih i besplatnih sustava za elektroničko učenje su Codeacademy, Doulingo i Coursera. Coursera je zanimljiv koncept učenja koji na internet stranicu prenosi predmete stvarnih sveučilišta. Ona je za kranjeg korisnika samostalna, no stvaranje njezinog sadržaja nije.\cite{coursera} Duolingo je besplatan sustav za učenje stranih jezika u čijem održavanju uz zaposlenike sudjeluje i zajednica korisnika.\cite{duolingo} Na FER-u se uz Moodle također koriste Ahyco i Ferko.\cite{ferko}
 \pagebreak
 \section{Inteligentni sustavi za elektroničko učenje (ITS)}
-Inteligentni sustavi za elektroničko učenje posebna su vrsta sustava za elektroničko učenje koja korisniku pruža reakcije ili upute prilagođene isključivo njemu. Cilj svakog ITS je smanjiti ovisnost korisnika sustava o ljudskim učiteljima. Za razliku od ljudi, elektronički sustavi se ne umaraju, ne stare, gotovo uvijek imaju vremena za učenika. Naravno, inteligentni sustavi za elektroničko učenje također imaju svoje limite: kvalitetni su koliko je kvalitetan dizajner sustava, ne mogu pratiti fizičke reakcije korisnika i iskustveno zaključivati iz njih te, ipak, ne mogu biti potpuno individualni jer bi u tom slučaju količina praćenih podataka morala biti enormna. 
+Inteligentni sustavi za elektroničko učenje posebna su vrsta sustava za elektroničko učenje koja korisniku pruža reakcije ili upute prilagođene isključivo njemu. Cilj svakog ITS je smanjiti ovisnost korisnika sustava o ljudskim učiteljima. Za razliku od ljudi, elektronički sustavi se ne umaraju, ne stare, gotovo uvijek imaju vremena za učenika. Inteligentni sustavu za elektroničko učenje sadrže 3 glavne komponente: domenski model, korisnički model i model učenja te korisničko sučelje.\cite{aect}\cite{markurban} Naravno, inteligentni sustavi za elektroničko učenje također imaju svoje limite: kvalitetni su koliko je kvalitetan dizajner sustava, ne mogu pratiti fizičke reakcije korisnika i iskustveno zaključivati iz njih te, ipak, ne mogu biti potpuno individualni jer bi u tom slučaju količina praćenih podataka morala biti enormna.\cite{grubisic2006}
 
-\subsection{Povijest ITS-a i zaključci iz nje}
+\subsection{Povijest ITS-a}
 
 \subsubsection{Mehanički strojevi za učenje}
-Ideja inteligentnih sustava za učenje nije nastala tek u 21. stoljeću, dapače, već u 17. st. dvojica od najvećih europskih matematičara, Blaise Pascal i Gottfried Wilhelm Leibniz razmatrali su koncepte zaključivanja uz pomoć strojeva. Pravi zamah elektroničko učenje dobiva u 20.
+Ideja inteligentnih sustava za učenje nije nastala tek u 21. stoljeću, dapače, već u 17. st. dvojica od najvećih europskih matematičara, Blaise Pascal i Gottfried Wilhelm Leibniz razmatrali su koncepte zaključivanja uz pomoć strojeva.\cite{leibniz}\cite{pascal} Pravi zamah elektroničko učenje dobiva u 20. stoljeću.
 \par
-Prvi značajan korak prema učenju uz pomoć strojeva je napravio Sidney Leavitt Presley, profesor na Sveučilištu Ohio, koji je izumio stroj za samoocjenjivanje. Korisnik je odgovarao na pitanja s višestrukim izborom, stroj bi spremao odgovore te na kraju seta pitanja dao povratnu poruku o točnosti odgovora. Taj pristup koristi se i danas u većini akademskih sustava za ocjenivanje, sva tri, Moodle, Ferko i Ahyco ga koriste.
+Prvi značajan korak prema učenju uz pomoć strojeva je napravio Sidney Leavitt Presley, profesor na Sveučilištu Ohio, koji je izumio stroj za samoocjenjivanje.\cite{pressey} Korisnik je odgovarao na pitanja s višestrukim izborom, stroj bi spremao odgovore te na kraju seta pitanja dao povratnu poruku o točnosti odgovora. Taj pristup koristi se i danas u većini akademskih sustava za ocjenivanje jer je jednostavno prirodna opcija. Slika 2.1 prikazuje stroj za ocjenjivanje s gumbima za odabir točnog odgovora između ponuđenih.
 
 \begin{figure}[htb]
 	\centering
@@ -66,7 +67,7 @@ Prvi značajan korak prema učenju uz pomoć strojeva je napravio Sidney Leavitt
 Iako su mehanički strojevi pružili kvalitetan početak ideje, jasno je da zbog neefleksibilnosti i skupoće izrade nikada nisu mogli prijeći fazu demonstracije. No, računalne aplikacije je lako umnožavati i mijenjati. Zato su one pogodne za razvoj sustava za učenje, ovog puta elektroničkih.
 
 \subsubsection{Početak elektroničkih sustava za učenje}
-U ranim godinama razvoja računala i računarstva napravljeni su mnogi koncepti bliskih tematika, npr. Turingov test, ideja umjetne inteligencije i strojnog učenja, no sustavi za učenje kao koncept kakav danas postoji je relativno zanemaren. Jedini važan napredak su definiranja gramatika u računarstvu, kao jednog od budućih načina parsiranja korisnikovih odgovora. No, dolaskom računala u širu upotrebu, u američkim školama se stvaraju CAI (\textit{Computer-Assisted instruction}) projekti s ciljem učenja programiranja. CAI sustav je takav da se korisniku prezentira neki materijal s uputom korištenja, nakon čega on na \textit{input-output} principu komunicira s računalom. Najbolji primjer nečega sličnog CAI sustavu u današnje vrijeme je Codeacademy. U početku se CAI koristio u učionicama, a ne individualno, ali na sličnom principu korištenja.
+U ranim godinama razvoja računala i računarstva napravljeni su mnogi koncepti bliskih tematika, npr. Turingov test, ideja umjetne inteligencije i strojnog učenja, no sustavi za učenje kao koncept kakav danas postoji je relativno zanemaren. Jedini važan napredak su definiranja gramatika u računarstvu, kao jednog od budućih načina parsiranja korisnikovih odgovora. No, dolaskom računala u širu upotrebu, u američkim školama se stvaraju CAI (\textit{Computer-Assisted instruction}) projekti s ciljem učenja programiranja. CAI sustav je takav da se korisniku prezentira neki materijal s uputom korištenja, nakon čega on na \textit{input-output} principu komunicira s računalom. Najbolji primjer nečega sličnog CAI sustavu u današnje vrijeme je Codeacademy. U početku se CAI koristio u učionicama, a ne individualno, ali na sličnom principu korištenja.\cite{markurban} Na slici 2.2 nalazi se predviđena shema rada prilikom korištenja CAI sustava.
 
 \begin{figure}[htb]
 	\centering
@@ -76,12 +77,12 @@ U ranim godinama razvoja računala i računarstva napravljeni su mnogi koncepti 
 \end{figure}
 
 \par
-Velik korak za stvaranje ITS-a napravio je Jaime Carbonell koji je 1970. postavio tezu da "sustavi za učenje ne moraju biti samo alat, nego i učitelj". U 1970.-ima je najpopularnije novo područje bila umjetna inteligencija temeljena na znanju. Najpoznatiji primjer takvog sustava je \textit{Dendral}, sustav zaključivanja o kemijskim strukturama korištenim u organskoj kemiji. Izgradnja složenijih sustava je bila lakša zbog poboljšanja brzine računala što je fokus rada konačno maknulo s tehnologije na tehniku. 
+Velik korak za stvaranje ITS-a napravio je Jaime Carbonell koji je 1970. postavio tezu da "sustavi za učenje ne moraju biti samo alat, nego i učitelj".\cite{peters} U 1970.-ima je najpopularnije novo područje bila umjetna inteligencija temeljena na znanju. Najpoznatiji primjer takvog sustava je \textit{Dendral}, sustav zaključivanja o kemijskim strukturama korištenim u organskoj kemiji. Izgradnja složenijih sustava je bila lakša zbog poboljšanja brzine računala što je fokus rada konačno maknulo s tehnologije na tehniku. 
 \par
-Početkom 1980. umjetna inteligencija se pomiče k neuronskim mrežama i kognitivnoj psihologiji što otvara prostor razvoju sustava za elektroničko učenje zbog sličnih područja interesa. To dovodi do stvaranja koncepta ICAI-ja (\textit{Intelligent Computer Assisted Instruction}), vrste CAI sustava koji bi radio na principu prilagođenog posluživanja instrukcija. ICAI je jako blizu modernom konceptu ITS-a, jedina razlika između njih je što ICAI ne pokušava modelirati znanje korisnika.
+Početkom 1980. umjetna inteligencija se pomiče k neuronskim mrežama i kognitivnoj psihologiji što otvara prostor razvoju sustava za elektroničko učenje zbog sličnih područja interesa. To dovodi do stvaranja koncepta ICAI-ja (\textit{Intelligent Computer Assisted Instruction}), vrste CAI sustava koji bi radio na principu prilagođenog posluživanja instrukcija. ICAI je jako blizu modernom konceptu ITS-a, jedina razlika između njih je što ICAI ne pokušava modelirati znanje korisnika.\cite{markurban}
 
 \subsubsection{ITS u doba interneta i analize podataka}
-Najvažniji korak za veću primjenu elektroničkog učenja je početak masovnog korištenja interneta. Internet je konačno omogućio neovisnost fizičkih pozicija korisnika sustava i kvalitete znanja koju mu sustav može pružiti. Slabost prijašnjih rješenja je bila u neadekvatnoj aktualizaciji sustava zbog činjenice da su se morali distribuirati na prijenosnim medijima. Nije slučajno da su svi sustavi koje sam na početku nabrojao internetske stranice.
+Najvažniji korak za veću primjenu elektroničkog učenja je početak masovnog korištenja interneta. Internet je konačno omogućio neovisnost fizičkih pozicija korisnika sustava i kvalitete znanja koju mu sustav može pružiti. Slika 2.3 prikazuje najvažnije internetske centre u svijetu s ciljem podržavanja dojma sveprisutnosti interneta. Slabost prijašnjih rješenja je bila u neadekvatnoj aktualizaciji sustava zbog činjenice da su se morali distribuirati na prijenosnim medijima. Nije slučajno da su svi sustavi koje sam na početku nabrojao internetske stranice.
 
 \begin{figure}[htb]
 	\centering
@@ -91,12 +92,12 @@ Najvažniji korak za veću primjenu elektroničkog učenja je početak masovnog 
 \end{figure}
 
 \par
-Analiza podataka, \textit{data mining}, \textit{big data} i \textit{data science} je najveći korak u razvoju inteligencije ITS-a. Iako su principi analize podataka bili matematički postavljeni i prije 1990.-ih, rastom brzine računala, popularizacijom SQL-a i internet tražilica, analiza podataka doživjela je pravi \textit{boom} zadnjih 20-tak godina. Razlog tolike važnosti analize podataka u inteligenciji ITS-a je što kompleksnost procesa učenja (čime se bavi kognitivna psihologija), "udaljnost" sustava i potreba za prilagođenim (personaliziranim) sadržajem korisniku. Ti faktori se jednostavno ne mogu opisati malim brojem varijabli. Svaki učitelj kroz godine upoznaje nove učenike te nadopunjuje svoje znanje i tehniku, baš kao što bi ITS bio spreman za nadogradnju temeljem iskustva korištenja.
+Analiza podataka, je najveći korak u razvoju inteligencije ITS-a. Iako su principi analize podataka bili matematički postavljeni i prije 1990.-ih, rastom brzine računala, popularizacijom SQL-a i internet tražilica, analiza podataka doživjela je pravi \textit{boom} zadnjih 20-tak godina. Razlog tolike važnosti analize podataka u inteligenciji ITS-a je što kompleksnost procesa učenja (čime se bavi kognitivna psihologija), "udaljnost" sustava i potreba za prilagođenim (personaliziranim) sadržajem korisniku. Ti faktori se jednostavno ne mogu opisati malim brojem varijabli. Svaki učitelj kroz godine upoznaje nove učenike te nadopunjuje svoje znanje i tehniku, baš kao što bi ITS bio spreman za nadogradnju temeljem iskustva korištenja.
 \par
-Za razliku od UI čije rezultate velike tvrtke sigurno mogu naplatiti, razvoj sustava za inteligentno učenje je donedavno bio guran od strane akademske zajednice. Nove velike tehnološke tvrtke imaju potrebu educirati velik broj zaposlenika pa sustavi za učenje u današnje vrijeme konačno dobivaju zamah za napredak kao koncept, ali i u realizaciji.
+Za razliku od UI čije rezultate velike tvrtke sigurno mogu naplatiti, razvoj sustava za inteligentno učenje je donedavno bio guran od strane akademske zajednice. Nove velike tehnološke tvrtke imaju potrebu educirati velik broj zaposlenika pa sustavi za učenje u današnje vrijeme konačno dobivaju zamah za napredak kao koncept, ali i u realizaciji.\cite{itspastpresentfuture}
 
 \subsection{Komponente ITS-a}
-Većina modernih ITS-ova dijeli se na 4 komponente rada: domenski i korisnički model, model učenja te korisničko sučelje. Tri prvonavedene komponente se nazivaju modeli zato što su pojednostavljena reprezentacija stvarnih pojava, koncepata i sl. One nemaju nužno veze s modelom kao aplikacijskim slojem, iako se uglavnom oslanjaju na njega.
+Većina modernih ITS-ova dijeli se na 4 komponente rada: domenski i korisnički model, model učenja te korisničko sučelje. Tri prvonavedene komponente se nazivaju modeli zato što su pojednostavljena reprezentacija stvarnih pojava, koncepata i sl.\cite{aect} One nemaju nužno veze s modelom kao aplikacijskim slojem, iako se uglavnom oslanjaju na njega. Tri najvažnije komponente ITS-a i njihovo značenje mogu se vidjeti na slici 2.4.
 
 \begin{figure}[htb]
 	\centering
@@ -106,7 +107,7 @@ Većina modernih ITS-ova dijeli se na 4 komponente rada: domenski i korisnički 
 \end{figure}
 
 \subsubsection{Domenski model}
-Domenski model je dio sustava čiji je smisao organizirati znanje u jedinice spremne za pohranu u bazu podataka. Svaki sustav osmišljava vlastitu podjelu znanja s obzirom na različitu širinu podjele i broj razina. U pravilu je neizbježna podjela na predmete u složenim sustavima i koncepte unutar predmeta, a na autorima i administatorima sustava je definirati više ili niže razine u odnosu na koncepte. Granulacija znanja je zato prilično kompliciran posao većoj količini autora, no budući da je kreiranje domenskog modela kreativan posao, u procesu zamišljanja treba sudjelovati što veći broj ljudi.
+Domenski model je dio sustava čiji je smisao organizirati znanje u jedinice spremne za pohranu u bazu podataka.\cite{markurban} Svaki sustav osmišljava vlastitu podjelu znanja s obzirom na različitu širinu podjele i broj razina. U pravilu je neizbježna podjela na predmete u složenim sustavima i koncepte unutar predmeta, a na autorima i administratorima sustava je definirati više ili niže razine u odnosu na koncepte. Granulacija znanja je zato prilično kompliciran posao većoj količini autora, no budući da je kreiranje domenskog modela kreativan posao, u procesu zamišljanja treba sudjelovati što veći broj ljudi.
 \par
 Domenski model ne uključuje samo podjelu znanja, nego i pravila te strategije koje treba naučiti. Oni se mogu prikazati eksplicitno formulama i materijalima za učenje ili implicitno redoslijedom prikaza pitanja ili slično. Implicitno zadavanje pravila i strategija tipično je za formalne školske sustave zato što postoji određen redoslijed predavanja te nastavnici očekuju da učenici/studenti poznaju gradiva prethodnih predavanja. U sustavima za elektroničko učenje takav je pristup teže izvesti te se pravila i strategije najčešće zadaju eksplicitno u obliku najniže razine podjele u bazi podataka, iako korisnik uglavnom tu eksplicitnost ne vidi.
 \par
@@ -117,14 +118,16 @@ Tipični domenski model je kvalitetno organizirana baza podataka te pravilno une
 \subsubsection{Korisnički model}
 Učenički, studentski ili jednostavno korisnički model je komponenta sustava čija se svrha većim dijelom preklapa s domenskom komponentom i modelom učenja. Razlog odvajanja korisničkog modela je bolja analiza znanja pojedinog korisnika. 
 \par
-Korisnički model su uglavnom algoritmi koji analiziraju točnost odgovora (te možda daju dodatne savjete korisniku) i algoritmi koji omogućuju prikaz analize odgovora korak po korak. Zbog relativno male opsežnosti, neki izvori zanemaruju korisnički model cijepajući njegove dijelove u domenski i model učenja.
+Korisnički model su uglavnom algoritmi koji analiziraju točnost odgovora (te možda daju dodatne savjete korisniku) i algoritmi koji omogućuju prikaz analize odgovora korak po korak.\cite{markurban} Zbog relativno male opsežnosti, neki izvori zanemaruju korisnički model cijepajući njegove dijelove u domenski i model učenja. Algoritmi korisničkog modela opisani su u zasebnom poglavlju.
 
 \subsubsection{Model učenja}
-Nakon postavljanja domenskog i korisničkog modela, ostatak aplikacijske logike sadržan je u modelu učenja. Upravo je model učenja najbitniji dio inteligentnog sustava za elektroničko učenje jer on zamjenjuje ljudskog učitelja. Ovoj komponenti pripadaju algoritmi koji na temelju rezultata prethodno navedenih evaluiraju znanje korisnika, algoritmi korisnikove navigacije sustavom te algoritmi posluživanja pitanja.
+Nakon postavljanja domenskog i korisničkog modela, ostatak aplikacijske logike sadržan je u modelu učenja. Upravo je model učenja najbitniji dio inteligentnog sustava za elektroničko učenje jer on zamjenjuje ljudskog učitelja. Model učenja mora prikupljati podatke o korisniku, znati procijeniti znanje korisnika te isto prikazivati nekom opisnom ili grafičkom metodom.\cite{markurban}
+\par
+Ovoj komponenti pripadaju algoritmi koji na temelju rezultata prethodno navedenih evaluiraju znanje korisnika, algoritmi korisnikove navigacije sustavom te algoritmi posluživanja pitanja.
 \par
 Svrha modela učenja je praćenje korisnikova napretka u pojedinim konceptima/predmetima. Iako je na prvi pogled to relativno jednostavan problem, on jest takav za ljudskog učitelja, ali za računalo nije. Takvi problemi umjetne inteligencije (UI) nazivaju se UI-potpuni. Nakon što algoritmi procijene znanje korisnika, ono se treba prikazati nekim vizualnim načinom da korisnik bolje razumije što ne zna i zašto mu sustav postavlja neka pitanja.
 \par
-Model učenja je srž ITS-a te glavni odraz kvalitete pojedinog sustava. Čest način implementacije modela učenja je logičkim produkcijama koje dovode do zaključka je li korisnik nešto naučio ili ne. Prednost takvog pristupa je formalna evaluacija korisnika i sustava samog, no nedostatak mu je nejasnost širem spektru administratora. Alternativni način je sustav bodovanja pojedinih pitanja, skupova pitanja i odnosa između koncepata koje korisnik treba savladati.
+Model učenja je srž ITS-a te glavni odraz kvalitete pojedinog sustava. Čest način implementacije modela učenja je logičkim produkcijama koje dovode do zaključka je li korisnik nešto naučio ili ne.\cite{zhenzhai} Prednost takvog pristupa je formalna evaluacija korisnika i sustava samog, no nedostatak mu je nejasnost širem spektru administratora. Alternativni način je sustav bodovanja pojedinih pitanja, skupova pitanja i odnosa između koncepata koje korisnik treba savladati.
 
 \subsubsection{Korisničko sučelje}
 Korisničko sučelja je standardan element gotovo svake računalne aplikacije. Ono nužno ne mora biti grafičko, iako je takvo sigurno zanimljivije kranjem korisniku. Učenik treba vidjeti svoj trenutni napredak prikazan na jasan način, razumjeti na koji način sustav komunicira s njim i on sa sustavom te područje koje pitanja ispituju.
@@ -133,11 +136,11 @@ Korisničko sučelja je standardan element gotovo svake računalne aplikacije. O
 Nakon definiranja komponenata sustava za inteligentno učenje, potrebno je razmotriti koje karakteristike imaju kvalitetni sustavi za inteligentno učenje. Većina su obvezni dijelovi ITS-a te ih je baš zato važno navesti.
 
 \subsubsection{Razrađena podjela znanja}
-Iako se ovo čini kao očekivan uvjet iz  opisa domenskog modela, važno ga je ponoviti i u ovom dijelu. Ispravna podjela znanja omogućuje lakše i kvalitetnije projektiranje algoritama procjene korisnika. Postoje dvije razine razrade podjele znanja: projektiranje sustava - odabir mogućih granula, povezanosti između njih i načina evaluacije znanja te projektiranje pitanja - punjenje sustava pitanjima i formulama za evaluaciju u skladu s dogovorenom podjelom.
+Iako se ovo čini kao očekivan uvjet iz  opisa domenskog modela, važno ga je ponoviti i u ovom dijelu. Ispravna podjela znanja omogućuje lakše i kvalitetnije projektiranje algoritama procjene korisnika.\cite{knowledgerep} Postoje dvije razine razrade podjele znanja: projektiranje sustava - odabir mogućih granula, povezanosti između njih i načina evaluacije znanja te projektiranje pitanja - punjenje sustava pitanjima i formulama za evaluaciju u skladu s dogovorenom podjelom.
 \par
 Granulacija podjele znanja je pitanje bez jednoznačnog odgovora, a s puno rizika. Ukoliko sustav ima premalo razina podjele, postoji rizik od nedovoljno dobrog praćenja korisnikova znanja, a sustav s previše razina podjele zahtijeva ogroman broj različitih pitanja da svaka od razina ima reprezentativni uzorak ocjene korisnika.
 \par
-Elegantno rješenje problema je određivanje srednje velikog broja granulacija (jasno, što je srednji broj ovisi o opsegu domene za koju se ITS projektira), a onda između pojedinih granula uspostaviti različiti broj odnosa. Na taj način sam i ja riješio problem u svojoj implementaciji.
+Elegantno rješenje problema je određivanje srednje velikog broja granulacija (jasno, što je srednji broj ovisi o opsegu domene za koju se ITS projektira), a onda između pojedinih granula uspostaviti različiti broj odnosa.\cite{sematicknowledge} Na taj način sam i ja riješio problem u svojoj implementaciji. Slika 2.5 ilustrira podjelu ljudskog znanja.
 
 \begin{figure}[htb]
 	\centering
@@ -152,26 +155,26 @@ Svaki sustav čiji je cilj biti samostalan trebao bi sadržavati materijale za u
 \subsubsection{Parametrizirana pitanja}
 Zamislite slučaj u kojem ITS služi za formalnu provjeru znanja na fakultetu čiji studenti imaju organizirane forume na kojima dijele zadatke. Nerealno je očekivati da može postojati više od 20 pitanja neke domene, a postoji preko 500 studenata u generaciji. Kako osigurati adekvatnost provjere? Odgovor je jednostavan: parametrizacijom pitanja.
 \par
-Parametriziranje pitanja je postupak kojim se numerička (moguće i na tekstualnim, ali teže) pitanja u ITS zapisuju u obliku formula za evaluaciju. Korisnicima se prikazuju njihove vlastite vrijednosti pojedinih parametara, a točnost odgovora evaluira se formulom. Takav pristup ne samo da omogućuje jedinstvene vrijednosti različitim korisnicima, nego i različite vrijednosti istim korisnicima. Ukoliko neki korisnik želi ili mora više puta rješavati pitanja nekog koncepta, mogu mu se servirati jedinstvene vrijednosti parametara svaki put kada otvara to pitanje. Jedan od načina ostvarivanja parametrizacije pitanja je spremanje formule kao odgovora te popisivanja vrijednosti parametara i njihovih ograničenja (npr. imaginarni dio broja mora biti != 0, apsolutna vrijednost mora biti > 0 i sl.).
+Parametriziranje pitanja je postupak kojim se numerička (moguće i na tekstualnim, ali teže) pitanja u ITS zapisuju u obliku formula za evaluaciju. Korisnicima se prikazuju njihove vlastite vrijednosti pojedinih parametara, a točnost odgovora evaluira se formulom. Takav pristup ne samo da omogućuje jedinstvene vrijednosti različitim korisnicima, nego i različite vrijednosti istim korisnicima. Ukoliko neki korisnik želi ili mora više puta rješavati pitanja nekog koncepta, mogu mu se servirati jedinstvene vrijednosti parametara svaki put kada otvara to pitanje. Jedan od načina ostvarivanja parametrizacije pitanja je spremanje formule kao odgovora te popisivanja vrijednosti parametara i njihovih ograničenja (npr. imaginarni dio broja mora biti različit od 0, apsolutna vrijednost mora biti > 0 i sl.).
 
 \subsubsection{Praćenje tipkanja i reakcija lica korisnika}
 Jedna od najvažnijih karakteristika dobrog učitelja je uočavanje učenikovih reakcija, čitanje fizičkih znakova te zaključivanje iz toga. Najveći nedostatak sustava za učenje, kao i svake druge vrste udaljenog učenja, je fizička udaljenost učenika i učitelja. Stoga, elektronički sustavi za učenje moraju naći drukčije načine praćenja reakcija korisnika.
 \par
-Dva najpoznatija načina su praćenje tipkanja i izraza lica. Rastom količine prostora na tvrdim diskovima i brzine računala, stvorila se mogućnost praćenja naizgled trivijalnih detalja kao što je obrazac tipkanja pojedine osobe. Neki izvori kažu da svaka osoba ima jedinstven obrazac tipkanja, baš kao otisak prsta. Zato bi bilo važno pratiti u kojim je situacijama korisnik ubrzan, o kojim pitanjima dulje razmišlja te je li mijenjao neki odgovor.
+Dva najrazvijenija načina su praćenje tipkanja i izraza lica. Rastom količine prostora na tvrdim diskovima i brzine računala, stvorila se mogućnost praćenja naizgled trivijalnih detalja kao što je obrazac tipkanja pojedine osobe. Neki izvori kažu da svaka osoba ima jedinstven obrazac tipkanja, baš kao otisak prsta. Zato bi bilo važno pratiti u kojim je situacijama korisnik ubrzan, o kojim pitanjima dulje razmišlja te je li mijenjao neki odgovor.
 \par
 Praćenje izraza lica također je postalo moguće rastom brzine računala, njihove procesorske i grafičke snage te razvojem računalnog vida kao područja računarstva. Ideja takvog pristupa je aproksimirati ljudskog učitelja, no to je vrlo složen i težak posao. Nedostatak takvog pristupa je što svaki korisnik mora imati neki oblik web kamere.
 \par
 Oba dijela su dio najnaprednijih sustava s velikim budžetima za izradu zato što ih je složeno implementirati. 
 
 \subsubsection{Prilagođene reakcije}
-Neizostavna komponenta sustava za inteligentno učenje su reakcije (engl. feedback) temeljene na znanju korisnika. Jasno je da računalne aplikacije ipak ne mogu biti jedinstvene kao ljudski učitelji. Svejedno, reakcije sustava moraju biti kvalitetne i prilagođene pojedinom korisniku da bi ITS imao smisla. Postižu se analizom odgovora korisnika i njegova načina odgovaranja (trajanjem računanja, brojem izmjena odgovora prije potvrde i sl.) te dobrim projektiranjem sustava (postojanjem reakcije za svaku kombinaciju razine znanja).
+Neizostavna komponenta sustava za inteligentno učenje su reakcije (engl. feedback) temeljene na znanju korisnika.\cite{feedback} Jasno je da računalne aplikacije ipak ne mogu biti jedinstvene kao ljudski učitelji. Svejedno, reakcije sustava moraju biti kvalitetne i prilagođene pojedinom korisniku da bi ITS imao smisla. Postižu se analizom odgovora korisnika i njegova načina odgovaranja (trajanjem računanja, brojem izmjena odgovora prije potvrde i sl.) te dobrim projektiranjem sustava (postojanjem reakcije za svaku kombinaciju razine znanja).\cite{aect}
 \par
 Određivanje kada korisniku treba dati uputu (engl. hint) ako je zapeo na nekom zadatku je pitanje bez jednoznačnog odgovora, uostalom, kao i ljudskim učiteljima. S jedne strane učitelj mora znati detektirati kada je njegov učenik iscrpio sve mogućnosti, a s druge je jasno da otvoreno pitanje u sustavu za elektroničko učenje može značiti to da je korisnik jednostavno otišao od svojeg računala. Dva rješenja koja se nameću su pamćenje mogućih pogrešnih kombinacija parametara i broja pokušaja te dopuštanje korisniku da zatraži uputu ako sam shvaća da nema ideju. Nedostatak prvog rješenja je moguća prevelika nepotrebna složenost, a drugog to što umorni korisnici ponekad odustaju prerano.
 \par
 Alternativni način rješavanja reakcija je jednostavno pustiti korisnika da odgovori krivo i dati mu uputu nakon što završi provjeru.
 
 \subsubsection{Sigurnost}
-Sigurnost je jako važan element svakog sustava, a to se ističe u dva aspekta: zaštita osobnih podataka i sprječavanje lažnog predstavljanja. Iako osobni podaci u ITS-u gotovo sigurno ne bi trebali sadržavati osjetljive informacije, važno ih je zaštiti nekim sustavom lozinki.
+Sigurnost je jako važan element svakog sustava, a to se ističe u dva aspekta: zaštita osobnih podataka i sprječavanje lažnog predstavljanja. Iako osobni podaci u ITS-u gotovo sigurno ne bi trebali sadržavati osjetljive informacije, važno ih je zaštiti nekim sustavom lozinki.\cite{security}
 
 \begin{figure}[htb]
 	\centering
@@ -189,18 +192,16 @@ Kvalitetni algoritmi su nešto što se gotovo podrazumijeva ukoliko želimo kval
 \subsubsection{Dizajn sučelja}
 Posljednja, ali ne i najmanje važna karakteristika ITS-a je dizajn grafičkog korisničkog sučelja. To nije važno samo za ITS, nego i za svaku drugu računalnu aplikaciju jer loše sučelje odbija korisnike više nego bilo što drugo. Prilično je teško definirati što je točno kvalitetno grafičko korisničko sučelje, no ono bi sigurno moralo imati sljedeće karakteristike: intuitivnost rasporeda kontrola, lakoća upravljanja (brzina, dosljednost, dozvole promjena kontrola), ugodan izgled (boje, fontovi, izbjegavanje neugodnih efekata promjena boja") te prikladan prikaz informacija.
 \par
-Korisničko sučelje ITS-a također bi se trebao držati nekih principa jedinstvenih za to područje. Tri najvažnija su: mogućnost traženja upute (također su opcije gumb za odustajanje ili ispis odgovora), konzistentnost znakovlja (npr. cos ili csin za kosinus, točka ili zarez kao decimalna oznaka) te prikaz napretka u pojedinoj granulaciji znanja.
+Korisničko sučelje ITS-a također bi se trebao držati nekih principa jedinstvenih za to područje. Tri najvažnija su: mogućnost traženja upute (također su opcije gumb za odustajanje ili ispis odgovora), konzistentnost znakovlja (npr. cos ili csin za kosinus, točka ili zarez kao decimalna oznaka) te prikaz napretka u pojedinoj granulaciji znanja.\cite{interface}
 
 \subsection{Algotimi sustava za inteligentno učenje}
 
 Najprije smo saznali koji su dijelovi inteligentnog sustava za elektroničko učenje te koje principe moramo slijediti prilikom implementacije jednog takvog sustava, no sljedeće je pitanje što sve treba implementirati da bi sustav bio inteligentan. Najbolji odgovor je odrediti koje sve algoritme ITS treba imati, tj. koje bi poslove njegovi najvažniji algoritmi trebali odrađivati.
 
 \subsubsection{Odabir pitanja}
-Vjerojatno najznačajniji algoritam sustava za inteligentno učenje je algoritam odabira pitanja. On može biti oblikovan na različite načine, no dva su najčešća: logičkim produkcijama koje nadopunjuju produkcije procjena korisnikova znanja ili samostalan programski odabir. Prednost logičkih produkcija je konzistentnost tehnologija koje sustav koristi, no značajni nedostaci su im ovisnost o apsolutnoj točnosti produkcija evaluacije znanja te potreba da autor pitanja sastavlja algoritam. Zato se često koristi druga metoda.
+Vjerojatno najznačajniji algoritam sustava za inteligentno učenje je algoritam odabira pitanja. Upravo je on najvažniji element umjetne inteligencije ITS-a.\cite{aect} Može biti oblikovan na različite načine, no dva su najčešća: logičkim produkcijama koje nadopunjuju produkcije procjena korisnikova znanja ili samostalan programski odabir. Prednost logičkih produkcija je konzistentnost tehnologija koje sustav koristi, no značajni nedostaci su im ovisnost o apsolutnoj točnosti produkcija evaluacije znanja te potreba da autor pitanja sastavlja algoritam. Zato se često koristi druga metoda.
 \par
-Programski odabir pitanja definiran je na razini sustava, a radi na principu procjene korisnikova znanja pojedine granulacije i odnosa između njih te odabira podskupa pitanja iz skupa onih koja je moguće postaviti
-\par
-Pitanja se odabiru tako da se uračuna korisnikovo znanje, zahtijevnost i složenost pojedinog pitanja, što bi korisnik naučio ili dokazao točnim odgovorom na to pitanje te ukupna složenost provjere koja sadrži ta pitanja.
+Programski odabir pitanja definiran je na razini sustava, a radi na principu procjene korisnikova znanja pojedine granulacije i odnosa između njih te odabira podskupa pitanja iz skupa onih koja je moguće postaviti. Pitanja se odabiru tako da se uračuna korisnikovo znanje, zahtijevnost i složenost pojedinog pitanja, što bi korisnik naučio ili dokazao točnim odgovorom na to pitanje te ukupna složenost provjere koja sadrži ta pitanja.
 
 \subsubsection{Generiranje parametara}
 Nakon što je sustav odabrao pitanja koja će postaviti, mora odrediti konkretne parametre svakog od njih. Algoritam generiranja parametara ih može generirati iz neke mape mogućih slučajeva ili nasumičnom generacijom uz određene uvjete. Uvjeti generiranja parametara važan su element tog postupka kako se ne bi dogodilo da se nekom korisniku postavi pitanje u čijem je rješenju npr. greška dijeljenja s 0. Ukoliko se unutar sustava dobro definiraju ograničenja, generiranje parametara postaje posao poziva funkcija slučajnih brojeva dok se ne zadovolje ograničenja.
@@ -213,7 +214,7 @@ Algoritmi procjene znanja mogu se temeljiti na različitim pogledima na korisnik
 \par
 U praksi je algoritam procjene znanja najkreativniji dio sustava za inteligentno učenje jer su mu jedina ograničenja da se mora izvesti u nekom razumnom vremenu i da, naravno, sustav pamti tražene vrijednosti.
 \par
-Algoritam procjene znanja također može biti zapisan logički ili programski, u njegovom slučaju je logički češća pojava. Takav algoritam na temelju zapisanih produkcija donosi odluke koliko neke granulacije je korisnik naučio. Za svaki njezin dio se izbacuje vrijednost 1 (naučeno) ili 0 (nenaučeno). Programska alternativa može raditi isti taj posao drukčijom tehnologijom, oslanjati se na praćenje korisnika za \textit{data mining} ili donositi odluke na nekom trećem principu. Prednost programskog nad logičkim izračunavanjem je što programski u pravilu može elegantije doći do neke ocjene i što ne mora ovisiti o konkretnim granulacijama.
+Algoritam procjene znanja također može biti zapisan logički ili programski, u njegovom slučaju je logički češća pojava. Takav algoritam na temelju zapisanih produkcija donosi odluke koliko neke granulacije je korisnik naučio. Za svaki njezin dio se izbacuje vrijednost 1 (naučeno) ili 0 (nenaučeno). Programska alternativa može raditi isti taj posao drukčijom tehnologijom, oslanjati se na praćenje korisnika za \textit{data mining} ili donositi odluke na nekom trećem principu. Prednost programskog nad logičkim izračunavanjem je što programski u pravilu može elegantije doći do neke ocjene i što ne mora ovisiti o konkretnim granulacijama. Slika 3.1 prikazuje dijagram komunikacija u MVC modelu.
 
 \begin{figure}[htb]
 	\centering
@@ -230,7 +231,7 @@ Bitno je naglasiti da nisu svi sustavi u ovom dijelu samo pitalice, već on sadr
 
 \subsubsection{Neinteligentni sustavi}
 
-Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnici. Princip rada Duolinga je da korisnik odabere svoj materinji (ili dobro poznati jezik) te dobije ponudu jezika za koje postoji "tečaj" uz pomoć njegova materinjeg jezika. Pitanja mogu biti dopunjavanje, prevođenje ili pitanje s odabirom od ponuđenih odgovora. Sustav je neinteligentan osim u dva pogleda: znanje nekog područja zastarjeva ukoliko korisnik nije dugo odgovarao pitanja iz tog kategorije te sustav odabire područje s najmanjom vrijednosti znanja ukoliko korisnik odabrere opciju "pojačavanja znanja" (engl. strengthen skills).
+Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnici. Princip rada Duolinga je da korisnik odabere svoj materinji (ili dobro poznati jezik) te dobije ponudu jezika za koje postoji "tečaj" uz pomoć njegova materinjeg jezika.\cite{duolingo} Pitanja mogu biti dopunjavanje, prevođenje ili pitanje s odabirom od ponuđenih odgovora. Sustav je neinteligentan osim u dva pogleda: znanje nekog područja zastarjeva ukoliko korisnik nije dugo odgovarao pitanja iz tog kategorije te sustav odabire područje s najmanjom vrijednosti znanja ukoliko korisnik odabrere opciju "pojačavanja znanja" (engl. strengthen skills).
 
 \begin{figure}[htb]
 	\centering
@@ -240,9 +241,9 @@ Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnic
 \end{figure}
 
 \par
-Coursera je internetska stranica koja sadržava kolegije najpoznatijih svjetskih sveučilišta s ciljem smanjivanja ovisnosti fizičke pozicije ljudi i njihovih mogućnosti učenja. Sadrži besplatne i plaćene tečajeve čije materijale korisnik može (i mora) proučavati, odgovarati na pitanja te na kraju dobije potvrdu svojeg znanja. Jasno je da položiti neki tečaj na Courseri nije jednakovrijedno kao završiti kolegij na fakultetu, no ukoliko korisnik ima stvarnu volju za učenjem, količina stečenog znanja može biti jednaka. Iako su materijali velikog broja fakulteta (pogotovo tehničkih) javno dostupni, Coursera eliminira potrebu za iscrpnom pretragom materijala i stavlja fokus na učenje.
+Coursera je internetska stranica koja sadržava kolegije najpoznatijih svjetskih sveučilišta s ciljem smanjivanja ovisnosti fizičke pozicije ljudi i njihovih mogućnosti učenja. Sadrži besplatne i plaćene tečajeve čije materijale korisnik može (i mora) proučavati, odgovarati na pitanja te na kraju dobije potvrdu svojeg znanja.\cite{coursera} Jasno je da položiti neki tečaj na Courseri nije jednakovrijedno kao završiti kolegij na fakultetu, no ukoliko korisnik ima stvarnu volju za učenjem, količina stečenog znanja može biti jednaka. Iako su materijali velikog broja fakulteta (pogotovo tehničkih) javno dostupni, Coursera eliminira potrebu za iscrpnom pretragom materijala i stavlja fokus na učenje.
 \par
-Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih informatičara Rijeka da bi mladima olakšali polaganje vozačkog ispita. Korisnik  može voziti virtualni automobil kao i u sličnim računalnim igrama, no Urban Jungle ima edukativnu svrhu jer za uspješno "igranje" korisnik mora paziti na stvarna prometna pravila. Odličan je primjer da računalni sustav namijenjen za učenje ne mora nužno biti samo niz pitanja i odgovora.
+Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih informatičara Rijeka da bi mladima olakšali polaganje vozačkog ispita.\cite{urbanjungle} Korisnik  može voziti virtualni automobil kao i u sličnim računalnim igrama, no Urban Jungle ima edukativnu svrhu jer za uspješno "igranje" korisnik mora paziti na stvarna prometna pravila. Odličan je primjer da računalni sustav namijenjen za učenje ne mora nužno biti samo niz pitanja i odgovora.
 
 \begin{figure}[htb]
 	\centering
@@ -252,7 +253,7 @@ Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih 
 \end{figure}
 
 \par
-Moodle je vrlo popularan akademski sustav za učenje koji omogućuje neke koncepte ITS-a (parametrizirana pitanja, interaktivno sučelje), no nije ITS jer ne sadrži inteligentno odlučivanje. Sustav Moodle gotovo uvijek funkcionira kao podrška formalnom sustavu učenja zato što omogućuje planere, kalendare, obavijesti korisnicima i sl. Moodle može biti osnova za izgradnju drugog sustava za učenje, kao što je slučaj s CARNet-ovim sustavom Merlin. Moodle je aplikacija otvorenog koda te ju je zato vrlo lako moguće prilagođavati. Sustav Ferko razvijen na Fakultetu elektrotehnike i računarstva ima sličnu domenu primjene kao Moodle.
+Moodle je vrlo popularan akademski sustav za učenje koji omogućuje neke koncepte ITS-a (parametrizirana pitanja, interaktivno sučelje), no nije ITS jer ne sadrži inteligentno odlučivanje.\cite{moodle} Sustav Moodle gotovo uvijek funkcionira kao podrška formalnom sustavu učenja zato što omogućuje planere, kalendare, obavijesti korisnicima i sl. Moodle može biti osnova za izgradnju drugog sustava za učenje, kao što je slučaj s CARNet-ovim sustavom Merlin. Moodle je aplikacija otvorenog koda te ju je zato vrlo lako moguće prilagođavati. Sustav Ferko razvijen na Fakultetu elektrotehnike i računarstva ima sličnu domenu primjene kao Moodle.
 
 \begin{figure}[htb]
 	\centering
@@ -271,9 +272,9 @@ Moodle je vrlo popularan akademski sustav za učenje koji omogućuje neke koncep
 \subsubsection{Inteligentni sustavi}
 Postoje mnogi sustavi za inteligentno učenje koji rade na principu pitalica te sam zato odabrao najzanimljivije primjere ITS-a koji možda i ne slijede dosad navedeni obrazac, no svejedno pripadaju skupini sustava za inteligentno učenje.
 \par
-Why2-Atlas je ITS koji uči korisnika koncepte kvalitativne fizike tako da traži od njega da napiše nekoliko rečenica od određenom pojmu te abduktivnom sintaktičkom analizom pokušava dokučiti znanje korisnika. Takav proces može se odvijati u nekoliko iteracija dok sustav ne odredi znanje korisnika te ga uputi na točno rješenje ukoliko je u krivu.
+Why2-Atlas je ITS koji uči korisnika koncepte kvalitativne fizike tako da traži od njega da napiše nekoliko rečenica od određenom pojmu te abduktivnom sintaktičkom analizom pokušava dokučiti znanje korisnika. Takav proces može se odvijati u nekoliko iteracija dok sustav ne odredi znanje korisnika te ga uputi na točno rješenje ukoliko je u krivu.\cite{why2atlas}
 \par
-AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučilištu koji razgovara s korisnikom prirodnim jezikom. Princip rada AutoTutora je parsiranje govora na sličan način na koji se prevode programski jezici.
+AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučilištu koji razgovara s korisnikom prirodnim jezikom. Princip rada AutoTutora je parsiranje govora na sličan način na koji se prevode programski jezici.\cite{autotutor}
 
 \begin{figure}[htb]
 	\centering
@@ -283,7 +284,7 @@ AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučili�
 \end{figure}
 
 \par
-ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno učenje. To je sustav za podučavanje dodatno matematike u školama ili učenje na daljinu. ActiveMath je internetska stranica na kojoj pored sustava za učenje postoje i materijali koji pokrivaju gradivo. Kvaliteta ActiveMath ITS-a je u tome što ga autori prilagođavaju s obzirom na empirijske rezultate kako su korisnici učili.
+ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno učenje. To je sustav za podučavanje dodatno matematike u školama ili učenje na daljinu. ActiveMath je internetska stranica na kojoj pored sustava za učenje postoje i materijali koji pokrivaju gradivo. Kvaliteta ActiveMath ITS-a je u tome što ga autori prilagođavaju s obzirom na empirijske rezultate kako su korisnici učili.\cite{activemath}
 
 \begin{figure}[htb]
 	\centering
@@ -294,7 +295,7 @@ ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno u
 
 
 \par
-Igre s prilagodljivom umjetnom inteligencijom (adaptive AI) nisu namijenjene za učenje, no svejedno imaju mnogo dodirnih točaka sa sustavima za inteligentno učenje. Ideja takvih igara je uočiti najčešće igračeve obrasce ponašanja te nove protivnike stvoriti takvima da igrač mora odabrati drukčiju strategiju. Mnogo računalnih igara tvrde da imaju prilagodljivu UI, no zasad taj koncept nije stvarno baš dobro implementiran. Nogometne simulacije i strateške igre u stvarnom vremenu (engl. RTS) najviše reklamiraju takvu UI, no iskustva korisnika kažu da je UI u njima lošija nego prije desetak godina.
+Igre s prilagodljivom umjetnom inteligencijom (adaptive AI) nisu namijenjene za učenje, no svejedno imaju mnogo dodirnih točaka sa sustavima za inteligentno učenje. Ideja takvih igara je uočiti najčešće igračeve obrasce ponašanja te nove protivnike stvoriti takvima da igrač mora odabrati drukčiju strategiju. Mnogo računalnih igara tvrde da imaju prilagodljivu UI, no zasad taj koncept nije stvarno baš dobro implementiran. Nogometne simulacije i strateške igre u stvarnom vremenu (engl. RTS) najviše reklamiraju takvu UI, no iskustva korisnika kažu da je UI u njima lošija nego prije desetak godina.\cite{adaptiveai}
 
 \pagebreak
 
@@ -305,7 +306,7 @@ Metode uspješnog podučavanja su očito najveći izazov svakog elektroničkog s
 \par
 Ponajveći problem metoda podučavanja i inteligencije ITS-a je što (zasad) nemaju pitanja "zašto?", "kako?" na korisnikov odgovor te kao takvi ne mogu dovoljno dobro procijeniti je li korisnik samo naučio "kuharicu", tj. formule za rješavanje zadataka. Jasno da sustav može pitati ta pitanja, no ona su svejedno organizirana po nekom predviđenom obrascu. Možda je nekada uputno pitati korisnika neka pitanja koja navodno zna kako bi bili sigurni da nešto stvarno razumije. Tu do izražaja dolazi intuicija učitelja koju sustavi (zasad) nemaju. Intuiciju donosi umjetna inteligencija temeljena na potpornom učenju, a ona je prilično različita od produkcijske umjetne inteligencije koju ITS koristi za definiranje je li korisnik nešto naučio.
 \par
-Drugi problem podučavanja je koliko korisniku sustav treba pomagati u rješavanju zadataka. Teza takve kritike je da korisnik jednostavno ne nauči dovoljno ukoliko mu sustav ponudi rješenje, da je takvo učenje previše površno. Osobno se slažem s tim pogledom i mislim da bi korisniku bilo korisnije prikazati bitnije upute tek nakon završene provjere, a onda ga manje kažnjavati (u dugoročnom pogledu) za krive odgovore.
+Drugi problem podučavanja je koliko korisniku sustav treba pomagati u rješavanju zadataka. Teza takve kritike je da korisnik jednostavno ne nauči dovoljno ukoliko mu sustav ponudi rješenje, da je takvo učenje previše površno. Osobno se slažem s tim pogledom i mislim da bi korisniku bilo korisnije prikazati bitnije upute tek nakon završene provjere, a onda ga manje kažnjavati (u dugoročnom pogledu) za krive odgovore.\cite{limitations}
 \par
 Naravno da je i problem ITS-a što autori pitanja jednostavno moraju odlično razumijevati tehničku pozadinu sustava (smisao pojedine granulacije, veze između granula) te ako ne razumiju ili sustav nije dovoljno dobro projektiran, u sustavu bi moglo doći do problema u definiranju korisnikova znanja ili otvaranju pitanja. Rizik površnog učenja je u takvim situacijama značajno veći.
 
@@ -321,9 +322,11 @@ Nadam se da je čitatelju jasno iz prethodnog dijela završnog rada da je izrada
 
 \par
 Drugi problem kod cijene izrade je kompleksnost sustava. Sustav za učenje jednostavno mora biti efikasan i brz, a sustav koji prati sve faktore to jednostavno ne može biti. Inženjeri koji ga projektiraju moraju napraviti \textit{trade-off} između brzine i kvalitete sustava.
+\par
+Cijena izrade zapravo i nije nedostatak, njezin problem je što se mora platiti prije nego što sustav počne s radom. Dugoročno je ITS jeftiniji nego financiranje prostora, profesora, opreme učenika i sl. elemenata tradicionalnog edukacijskog procesa.\cite{limitations}
 
 \chapter{Slojevi aplikacija}
-Sve kvalitetno oblikovane moderne aplikacije moraju sadržavati nekoliko slojeva rada. Slojevita arhitektura omogućuje sigurno zadržavanje dva najvažnija logička načela dobrog oblikovanja: nadogradnju bez promjene i načelo jedinstvene ovisnosti. Takav pristup također intervencije u kod aplikacije čini lakšim. Arhitektura koju koristim je MVC (Model - View - Controller). Prevedeno na hrvatski, model je podatkovni sloj, controller je aplikacijska logika, a view pogled. Najveća prednost ovakvog pristupa je jednostavna i intuitivna višeplatformska modularnost - podatkovni sloj je zajednički za sve platforme, aplikacijsku logiku može koristiti više različitih platformi (npr. kod pisan u Javi za Android i web aplikacije ili C\# za Windows 10 i web), a svaka platforma određuje svoje korisničko sučelje, tj. pogled.
+Sve kvalitetno oblikovane moderne aplikacije moraju sadržavati nekoliko slojeva rada. Slojevita arhitektura omogućuje sigurno zadržavanje dva najvažnija logička načela dobrog oblikovanja: nadogradnju bez promjene i načelo jedinstvene ovisnosti. Takav pristup također intervencije u kod aplikacije čini lakšim. Arhitektura koju koristim je MVC (Model - View - Controller). Prevedeno na hrvatski, model je podatkovni sloj, controller je aplikacijska logika, a view pogled. Najveća prednost ovakvog pristupa je jednostavna i intuitivna višeplatformska modularnost - podatkovni sloj je zajednički za sve platforme, aplikacijsku logiku može koristiti više različitih platformi (npr. kod pisan u Javi za Android i web aplikacije ili C\# za Windows 10 i web), a svaka platforma određuje svoje korisničko sučelje, tj. pogled.\cite{mvc}
 
 \begin{figure}[htb]
 	\centering
@@ -511,6 +514,51 @@ b) nađi pitanje s najbližom složenošću koje nije već uzeto za  ovu provjer
 7. Nakon završetka odabira pitanja, generiraj konkretnu provjeru sa konkretnim pitanjima.
 
 \subsection{Ocjenjivanje korisnika}
+<<<<<<< HEAD
+
+\pagebreak
+\section{Konkretna pitanja u sustavu}
+Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cjelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Tekstualni opis pitanja preuzet je iz udžbenika 1, 2, 3, no ona sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
+
+\subsection{Znanje u sustavu}
+\begin{itemize}
+	\item Predmet: Diskretna matematika
+	\begin{itemize}
+		\item Koncept: Osnove kombinatorike
+		\begin{itemize}
+			\item Granula znanja: Skupovi
+			\item Granula znanja: Produktno pravilo
+			\newline - nadskup: skupovi
+			\item Granula znanja: Permutacije
+		\end{itemize}
+		\item Koncept: Varijacije - paralelno: kombinacije
+		\begin{itemize}
+			\item Granula znanja: Varijacije s ponavljanjem
+			\item Granula znanja: Varijacije bez ponavljanja
+		\end{itemize}
+		\item Koncept: Kombinacije - paralelno: varijacije
+		\begin{itemize}
+			\item Granula znanja: Kombinacije s ponavljanjem
+			\item Granula znanja: Kombinacije bez ponavljanja
+		\end{itemize}
+		\item Koncept: Napredna kombinatorika
+		\newline - nadskup i preduvjet: osnove komb., varijacije, kombinacije
+		\begin{itemize}
+			\item Granula znanja: Mještovita kombinatorika
+			\item Granula znanja: Teorija grafova
+		\end{itemize}
+		\item Koncept: Osnove diskretne vjerojatnosti
+		\newline - preduvjet: osnove kombinatorike
+		\begin{itemize}
+			\item Granula znanja: Klasični vjerojatnosni prostor
+			\item Granula znanja: Beskonačni vjerojatnosni prostor
+			\item Granula znanja: Geometrijske vjerojatnosti
+			\newline - analogno: produktno pravilo
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+=======
+>>>>>>> origin/master
 
 \pagebreak
 \section{Konkretna pitanja u sustavu}

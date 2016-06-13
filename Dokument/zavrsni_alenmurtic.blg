@@ -1,0 +1,98 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: zavrsni_alenmurtic.aux
+The style file: fer.bst
+Database file #1: literatura.bib
+Warning--entry type for "derekstock" isn't style-file defined
+--line 9 of file literatura.bib
+Warning--entry type for "moodle" isn't style-file defined
+--line 16 of file literatura.bib
+Warning--entry type for "eLearningNC" isn't style-file defined
+--line 24 of file literatura.bib
+Warning--entry type for "coursera" isn't style-file defined
+--line 31 of file literatura.bib
+Warning--entry type for "duolingo" isn't style-file defined
+--line 38 of file literatura.bib
+Warning--entry type for "ferko" isn't style-file defined
+--line 45 of file literatura.bib
+Warning--entry type for "aect" isn't style-file defined
+--line 52 of file literatura.bib
+Warning--entry type for "markurban" isn't style-file defined
+--line 60 of file literatura.bib
+Warning--entry type for "leibniz" isn't style-file defined
+--line 67 of file literatura.bib
+Warning--entry type for "pascal" isn't style-file defined
+--line 74 of file literatura.bib
+Warning--entry type for "pressey" isn't style-file defined
+--line 81 of file literatura.bib
+Warning--entry type for "itspastpresentfuture" isn't style-file defined
+--line 96 of file literatura.bib
+Warning--entry type for "zhenzhai" isn't style-file defined
+--line 104 of file literatura.bib
+I was expecting a `,' or a `}'---line 111 of file literatura.bib
+ :  
+ :  note = {Preuzeto: 13. 6. 2016.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "knowledgerep" isn't style-file defined
+--line 114 of file literatura.bib
+Warning--entry type for "sematicknowledge" isn't style-file defined
+--line 122 of file literatura.bib
+I was expecting a `,' or a `}'---line 127 of file literatura.bib
+ :  
+ :  note = {Preuzeto: 13. 6. 2016.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "feedback" isn't style-file defined
+--line 129 of file literatura.bib
+I was expecting a `,' or a `}'---line 142 of file literatura.bib
+ :  
+ :  note = {Preuzeto: 13. 6. 2016.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 151 of file literatura.bib
+ :  
+ :  note = {Preuzeto: 13. 6. 2016.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "urbanjungle" isn't style-file defined
+--line 154 of file literatura.bib
+I was expecting a `,' or a `}'---line 167 of file literatura.bib
+ :  
+ :  note = {Preuzeto: 13. 6. 2016.}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "autotutor" isn't style-file defined
+--line 170 of file literatura.bib
+Warning--entry type for "activemath" isn't style-file defined
+--line 177 of file literatura.bib
+Warning--entry type for "adaptiveai" isn't style-file defined
+--line 184 of file literatura.bib
+Warning--entry type for "limitations" isn't style-file defined
+--line 191 of file literatura.bib
+Warning--entry type for "mvc" isn't style-file defined
+--line 197 of file literatura.bib
+Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
+while executing---line 1325 of file fer.bst
+Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
+while executing---line 1325 of file fer.bst
+Warning--empty year in activemath
+Warning--empty year in pascal
+Warning--empty year in coursera
+Warning--empty year in mvc
+Warning--empty year in duolingo
+Warning--empty year in eLearningNC
+Warning--empty year in ferko
+Warning--empty year in autotutor
+Warning--empty year in pressey
+Warning--empty year in moodle
+Warning--empty year in leibniz
+Warning--empty year in adaptiveai
+Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
+while executing---line 1407 of file fer.bst
+Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
+while executing---line 1407 of file fer.bst
+Warning--empty year in feedback
+Warning--empty year in limitations
+Warning--empty year in derekstock
+Warning--empty year in markurban
+Warning--empty year in urbanjungle
+(There were 9 error messages)
