@@ -92,7 +92,7 @@ Najvažniji korak za veću primjenu elektroničkog učenja je početak masovnog 
 \end{figure}
 
 \par
-Analiza podataka, je najveći korak u razvoju inteligencije ITS-a. Iako su principi analize podataka bili matematički postavljeni i prije 1990.-ih, rastom brzine računala, popularizacijom SQL-a i internet tražilica, analiza podataka doživjela je pravi \textit{boom} zadnjih 20-tak godina. Razlog tolike važnosti analize podataka u inteligenciji ITS-a je što kompleksnost procesa učenja (čime se bavi kognitivna psihologija), "udaljnost" sustava i potreba za prilagođenim (personaliziranim) sadržajem korisniku. Ti faktori se jednostavno ne mogu opisati malim brojem varijabli. Svaki učitelj kroz godine upoznaje nove učenike te nadopunjuje svoje znanje i tehniku, baš kao što bi ITS bio spreman za nadogradnju temeljem iskustva korištenja.
+Analiza podataka, je najveći korak u razvoju inteligencije ITS-a. Iako su principi analize podataka bili matematički postavljeni i prije 1990.-ih, rastom brzine računala, popularizacijom SQL-a i internet tražilica, analiza podataka doživjela je pravi \textit{boom} zadnjih 20-tak godina. Razlog tolike važnosti analize podataka u inteligenciji ITS-a je što kompleksnost procesa učenja (čime se bavi kognitivna psihologija), udaljenost sustava i potreba za prilagođenim (personaliziranim) sadržajem korisniku. Ti faktori se jednostavno ne mogu opisati malim brojem varijabli. Svaki učitelj kroz godine upoznaje nove učenike te nadopunjuje svoje znanje i tehniku, baš kao što bi ITS bio spreman za nadogradnju temeljem iskustva korištenja.
 \par
 Za razliku od UI čije rezultate velike tvrtke sigurno mogu naplatiti, razvoj sustava za inteligentno učenje je donedavno bio guran od strane akademske zajednice. Nove velike tehnološke tvrtke imaju potrebu educirati velik broj zaposlenika pa sustavi za učenje u današnje vrijeme konačno dobivaju zamah za napredak kao koncept, ali i u realizaciji.\cite{itspastpresentfuture}
 
@@ -444,7 +444,7 @@ Jedan od zadataka ovog završnog rada je parametrizacija pitanja koja se posluž
 \subsubsection{Zapis u bazi podataka i generiranje}
 Svako pitanje u bazi predstavljeno je entitetom zadatak koji sadrži tekstualno pitanje, matematički izraz koji treba izračunati, eventualno sliku te parametre. Parametri trebaju biti zapisani u standardnom tekstualnom obliku: "parametar:uvjet parametar:uvjet", itd. Član parametar predstavlja samo ime tog parametra, a uvjet činjenicu da mora biti veći ili manji od nekog broja. Standardan zapis uvjeta je: >broj1\&<broj2. Ukoliko parametar nema uvjeta, zapisuje se "none". Vrijednosti parametara koje se zadaju pojedinom korisniku generira sustav i one mogu biti isključivo decimalne.
 \par
-Parametre uz poštovanje uvjeta generira aplikacijska logika. Parametri su decimalni brojevi predodređenog raspona između -1000 i 1000 uz mogućnost manjeg skupa temeljem uvjeta.
+Parametre uz poštovanje uvjeta generira aplikacijska logika. Parametri su decimalni brojevi predodređenog raspona između atributa minParametar i maxParametar koji su trenutno postavljeni na 0 i 120. Svaki parametar može odrediti svoju domenu uvjetima, a niti jedan od parametara trenutno sadržanih zadataka ne nalazi se izvan tog skupa. Jedina svrha tih dvaju atributa je optimizacija jer nema smisla generirati parametre koji nikada neće zadovoljavati uvjete pitanja.
 
 \subsubsection{Izračun rezultata}
 Nakon što je korisniku predstavljena vrijednost parametara i on odgovori na pitanje, na temelju tih vrijednosti sustav izračuna predviđeni odgovor te s tolerancijom od 5 posto uspoređuje njegov i predviđeni odgovor. Izračun se izvodi uz pomoć mXparser biblioteke.
@@ -485,7 +485,7 @@ Bit inteligentnog učenja je u praćenju korisnikova znanja i odabiru pitanja š
 \par
 Korisnici mogu pisati dvije vrste provjere: vježbe i ispite. Vježbe su provjere kojima se ostvaruje napredak u sustavu na kojima korisnik može više puta griješiti bez dugoročnih posljedica po konačnu ocjenu iz predmeta. Od korisnika se očekuje da stalno otvara vježbe, uspješno napreduje te kad se osjeća sigurnim, zatraži generiranje ispita za određeni predmet. Prvi ispit ne znači završavanje ili padanje predmeta, znači samo to da se njegovi bodovi pamte. Sam sustav određuje koja su pitanja najprikladnija za nekog korisnika na pojedinom predmetu. 
 \par
-Ispiti su formalne provjere kojima se polažu predmeti. Generiranje ispita zadaje administator ili traži korisnik. Korisnik sve teoretski može polagati putem ispita, no to nema previše smisla zato što u reprezentaciji znanja nema veće koristi u rješavanju ispita, oni su tu samo za formalno određivanje ocjene. Ispiti koje traži korisnik također se generiraju putem algoritma za inteligentno učenje. Za reprezentaciju korisnikova znanja nema razlike u odgovaranju na isto pitanje u vježbi i ispitu.
+Ispiti su formalne provjere kojima se polažu predmeti. Generiranje ispita zadaje administrator ili traži korisnik. Korisnik sve teoretski može polagati putem ispita, no to nema previše smisla zato što u reprezentaciji znanja nema veće koristi u rješavanju ispita, oni su tu samo za formalno određivanje ocjene. Ispiti koje traži korisnik također se generiraju putem algoritma za inteligentno učenje. Za reprezentaciju korisnikova znanja nema razlike u odgovaranju na isto pitanje u vježbi i ispitu.
 
 \subsubsection{Pregled rezultata}
 U svakom trenutku izvan odgovaranja na provjeru, korisnik može pogledati svoje rezultate na nekom predmetu. Mogu mu se ispisati detalji provjera kojima je pristupio (ne i konkretna pitanja koja je na njima vidio), trenutna predviđena ocjena na tom predmetu i prikaz znanja po konceptima tog predmeta.
@@ -514,7 +514,6 @@ b) nađi pitanje s najbližom složenošću koje nije već uzeto za  ovu provjer
 7. Nakon završetka odabira pitanja, generiraj konkretnu provjeru sa konkretnim pitanjima.
 
 \subsection{Ocjenjivanje korisnika}
-<<<<<<< HEAD
 
 \pagebreak
 \section{Konkretna pitanja u sustavu}
@@ -557,50 +556,10 @@ Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matem
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
-=======
->>>>>>> origin/master
 
-\pagebreak
-\section{Konkretna pitanja u sustavu}
-Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cjelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Tekstualni opis pitanja preuzet je iz udžbenika 1, 2, 3, no ona sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
+\subsection{opis kvalitete}
+Generiranje parametara i računanje rezultata testirano je na 10.000 različitih kombinacija parametara te ta mogućnost i dalje postoji u sustavu. Tu se izuzetno korisnim pokazalo svojstvo mXparsera da svaku pogrešku u svom radu vraća kao NaN (nepostojeći broj) umjesto da baca grešku. Sve uočene pogreške riješene su te bi sustav generiranja parametara trebao raditi u potpunosti.
 
-\subsection{Znanje u sustavu}
-\begin{itemize}
-	\item Predmet: Diskretna matematika
-	\begin{itemize}
-		\item Koncept: Osnove kombinatorike
-		\begin{itemize}
-			\item Granula znanja: Skupovi
-			\item Granula znanja: Produktno pravilo
-			\newline - nadskup: skupovi
-			\item Granula znanja: Permutacije
-		\end{itemize}
-		\item Koncept: Varijacije - paralelno: kombinacije
-		\begin{itemize}
-			\item Granula znanja: Varijacije s ponavljanjem
-			\item Granula znanja: Varijacije bez ponavljanja
-		\end{itemize}
-		\item Koncept: Kombinacije - paralelno: varijacije
-		\begin{itemize}
-			\item Granula znanja: Kombinacije s ponavljanjem
-			\item Granula znanja: Kombinacije bez ponavljanja
-		\end{itemize}
-		\item Koncept: Napredna kombinatorika
-		\newline - nadskup i preduvjet: osnove komb., varijacije, kombinacije
-		\begin{itemize}
-			\item Granula znanja: Mještovita kombinatorika
-			\item Granula znanja: Teorija grafova
-		\end{itemize}
-		\item Koncept: Osnove diskretne vjerojatnosti
-		\newline - preduvjet: osnove kombinatorike
-		\begin{itemize}
-			\item Granula znanja: Klasični vjerojatnosni prostor
-			\item Granula znanja: Beskonačni vjerojatnosni prostor
-			\item Granula znanja: Geometrijske vjerojatnosti
-			\newline - analogno: produktno pravilo
-		\end{itemize}
-	\end{itemize}
-\end{itemize}
 \chapter{Zaključak}
 Edukacijski procesi značajan su i vrlo složen element ljudske civilizacije, a razvojem tehnologije i otklonom od manualnih djelatnosti, njihova važnost još više raste. Stoga je neizbježna potreba za unaprijeđenjem, olakšanjem i poboljšanjem procesa učenja, pogotovo u modernom svijetu u kojem je vrijeme pažnje čovjeka sve kraće.
 \par

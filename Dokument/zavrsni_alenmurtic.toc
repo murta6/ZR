@@ -45,9 +45,8 @@
 \contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{31}
 \contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{31}
 \contentsline {subsubsection}{Registracija korisnika na predmet}{31}
-\contentsline {subsubsection}{Generiranje ispita}{31}
+\contentsline {subsubsection}{Generiranje ispita}{32}
 \contentsline {subsubsection}{Pregled rezultata}{32}
-<<<<<<< HEAD
 \contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{33}
 \contentsline {subsubsection}{Registracija}{33}
 \contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{33}
@@ -56,12 +55,6 @@
 \contentsline {subsection}{\numberline {4.4.1}Ocjenjivanje korisnika}{34}
 \contentsline {section}{\numberline {4.5}Konkretna pitanja u sustavu}{35}
 \contentsline {subsection}{\numberline {4.5.1}Znanje u sustavu}{35}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{36}
-\contentsline {chapter}{Literatura}{38}
-=======
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{32}
-\contentsline {subsection}{\numberline {4.4.1}Ocjenjivanje korisnika}{32}
-\contentsline {section}{\numberline {4.5}Konkretna pitanja u sustavu}{33}
-\contentsline {subsection}{\numberline {4.5.1}Znanje u sustavu}{33}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{34}
->>>>>>> origin/master
+\contentsline {subsection}{\numberline {4.5.2}opis kvalitete}{36}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{37}
+\contentsline {chapter}{Literatura}{39}
