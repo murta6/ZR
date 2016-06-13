@@ -478,6 +478,8 @@ U svakom trenutku izvan odgovaranja na provjeru, korisnik može pogledati svoje 
 Osim svojih rezultata korisnik može vidjeti i sve granule znanja pojedinog koncepta na predmetu te veze koje taj koncept ima.
 
 \section{Logika posluživanja pitanja}
+
+\subsection{Logika posluživanja pitanja}
 Logika posluživanja pitanja unutar ovog sustava zapravo je vrlo jednostavna i prikazana je sljedećim algoritmom:
 \newline
 1. Dohvati sve koncepte unutar predmeta koje korisnik može odgovarati (zadovoljio je preduvjete ili preduvjeti ne postoje).
@@ -500,6 +502,7 @@ b) nađi pitanje s najbližom složenošću koje nije već uzeto za  ovu provjer
 
 \subsection{Ocjenjivanje korisnika}
 
+\subsection{title}
 
 \section{Konkretna pitanja u sustavu}
 Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cijelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Tekstualni opis pitanja preuzet je iz udžbenika 1, 2, 3, no ona sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
@@ -542,7 +545,7 @@ Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matem
 	\end{itemize}
 \end{itemize}
 
-\subsection{opis kvalitete}
+\subsection{Test točnosti parametrizacije}
 Generiranje parametara i računanje rezultata testirano je na 10.000 različitih kombinacija parametara te ta mogućnost i dalje postoji u sustavu. Tu se izuzetno korisnim pokazalo svojstvo mXparsera da svaku pogrešku u svom radu vraća kao NaN (nepostojeći broj) umjesto da baca grešku. Sve uočene pogreške riješene su te bi sustav generiranja parametara trebao raditi u potpunosti.
 
 \chapter{Zaključak}

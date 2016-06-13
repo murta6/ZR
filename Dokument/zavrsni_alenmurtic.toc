@@ -20,7 +20,7 @@
 \contentsline {subsubsection}{Sigurnost}{12}
 \contentsline {subsubsection}{Kvalitetni algoritmi}{13}
 \contentsline {subsubsection}{Dizajn su\IeC {\v c}elja}{13}
-\contentsline {subsection}{\numberline {2.1.4}Algotimi sustava za inteligentno u\IeC {\v c}enje}{13}
+\contentsline {subsection}{\numberline {2.1.4}Algoritmi sustava za inteligentno u\IeC {\v c}enje}{13}
 \contentsline {subsubsection}{Odabir pitanja}{13}
 \contentsline {subsubsection}{Generiranje parametara}{14}
 \contentsline {subsubsection}{Evaluacija odgovora}{14}
@@ -52,9 +52,11 @@
 \contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{32}
 \contentsline {subsubsection}{Pregled rezultata}{32}
 \contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{33}
-\contentsline {subsection}{\numberline {4.4.1}Ocjenjivanje korisnika}{33}
+\contentsline {subsection}{\numberline {4.4.1}Logika poslu\IeC {\v z}ivanja pitanja}{33}
+\contentsline {subsection}{\numberline {4.4.2}Ocjenjivanje korisnika}{33}
+\contentsline {subsection}{\numberline {4.4.3}title}{33}
 \contentsline {section}{\numberline {4.5}Konkretna pitanja u sustavu}{33}
 \contentsline {subsection}{\numberline {4.5.1}Znanje u sustavu}{34}
-\contentsline {subsection}{\numberline {4.5.2}opis kvalitete}{34}
+\contentsline {subsection}{\numberline {4.5.2}Test to\IeC {\v c}nosti}{34}
 \contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{35}
 \contentsline {chapter}{Literatura}{37}
