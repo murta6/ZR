@@ -63,6 +63,8 @@ namespace Aplikacija.Logika
     {
 
         public static readonly double tolereancija = 5.0;
+        public static readonly int maxParametar = 120;
+        public static readonly int minParametar = 1;
 
         public String pitanje { get; }
         public String[] parametri { get; }
@@ -89,6 +91,7 @@ namespace Aplikacija.Logika
 
         private String[] generirajParametre(String parametri)
         {
+            parametri = parametri.Trim();
             String[] par = parametri.Split(' ');
             Random rand = new Random();
             for (int i = 0; i < par.Length; i++)
@@ -98,7 +101,7 @@ namespace Aplikacija.Logika
                 double br = 0;
                 while (uvjet != true)
                 {
-                    br = rand.NextDouble() * 2000 - 1000;
+                    br = (int)(rand.NextDouble() * maxParametar + minParametar);
                     uvjet = izracunajUvjet(param[1], br);
                 }
                 

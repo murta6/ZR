@@ -52,4 +52,7 @@
 \contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{31}
 \contentsline {subsubsection}{Pregled rezultata}{32}
 \contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{32}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{33}
+\contentsline {subsection}{\numberline {4.4.1}Ocjenjivanje korisnika}{32}
+\contentsline {section}{\numberline {4.5}Konkretna pitanja u sustavu}{33}
+\contentsline {subsection}{\numberline {4.5.1}Znanje u sustavu}{33}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{34}

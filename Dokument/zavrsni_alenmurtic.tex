@@ -490,8 +490,69 @@ U svakom trenutku izvan odgovaranja na provjeru, korisnik može pogledati svoje 
 Osim svojih rezultata korisnik može vidjeti i sve granule znanja pojedinog koncepta na predmetu te veze koje taj koncept ima.
 
 \section{Logika posluživanja pitanja}
-logika
+Logika posluživanja pitanja unutar ovog sustava zapravo je vrlo jednostavna i prikazana je sljedećim algoritmom:
+\newline
+1. Dohvati sve koncepte unutar predmeta koje korisnik može odgovarati (zadovoljio je preduvjete ili preduvjeti ne postoje).
+\newline
+2. Za svaki od koncepata uzmi dostupne granule, permutiraj listu svih granula.
+\newline
+3. Za svaki od granula uzmi po jedno pitanje prema 6. koraku.
+\newline
+4. Ponavljaj 3. korak dok ne ispuniš broj pitanja. Ako nema dovoljno pitanja, uzimaj po dva pitanja za svaku od granula.
+\newline
+5. Ponavljaj 4. korak dok se ne ispuni uvjet prekida povećavajući broj pitanja koji se uzima za jedan. Ako su sve kombinacije pitanja iskorištene, prekini traženje i ponudi manji broj pitanja unutar provjere.
+\newline
+6. Pitanja uzimaj po principu:
+\newline
+a) aproksimiraj prosječnu složenost znanja korisnika za neku granulu.
+\newline
+b) nađi pitanje s najbližom složenošću koje nije već uzeto za  ovu provjeru.
+\newline
+7. Nakon završetka odabira pitanja, generiraj konkretnu provjeru sa konkretnim pitanjima.
 
+\subsection{Ocjenjivanje korisnika}
+
+\pagebreak
+\section{Konkretna pitanja u sustavu}
+Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cjelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Tekstualni opis pitanja preuzet je iz udžbenika 1, 2, 3, no ona sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
+
+\subsection{Znanje u sustavu}
+\begin{itemize}
+	\item Predmet: Diskretna matematika
+	\begin{itemize}
+		\item Koncept: Osnove kombinatorike
+		\begin{itemize}
+			\item Granula znanja: Skupovi
+			\item Granula znanja: Produktno pravilo
+			\newline - nadskup: skupovi
+			\item Granula znanja: Permutacije
+		\end{itemize}
+		\item Koncept: Varijacije - paralelno: kombinacije
+		\begin{itemize}
+			\item Granula znanja: Varijacije s ponavljanjem
+			\item Granula znanja: Varijacije bez ponavljanja
+		\end{itemize}
+		\item Koncept: Kombinacije - paralelno: varijacije
+		\begin{itemize}
+			\item Granula znanja: Kombinacije s ponavljanjem
+			\item Granula znanja: Kombinacije bez ponavljanja
+		\end{itemize}
+		\item Koncept: Napredna kombinatorika
+		\newline - nadskup i preduvjet: osnove komb., varijacije, kombinacije
+		\begin{itemize}
+			\item Granula znanja: Mještovita kombinatorika
+			\item Granula znanja: Teorija grafova
+		\end{itemize}
+		\item Koncept: Osnove diskretne vjerojatnosti
+		\newline - preduvjet: osnove kombinatorike
+		\begin{itemize}
+			\item Granula znanja: Klasični vjerojatnosni prostor
+			\item Granula znanja: Beskonačni vjerojatnosni prostor
+			\item Granula znanja: Geometrijske vjerojatnosti
+			\newline - analogno: produktno pravilo
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
 \chapter{Zaključak}
 Edukacijski procesi značajan su i vrlo složen element ljudske civilizacije, a razvojem tehnologije i otklonom od manualnih djelatnosti, njihova važnost još više raste. Stoga je neizbježna potreba za unaprijeđenjem, olakšanjem i poboljšanjem procesa učenja, pogotovo u modernom svijetu u kojem je vrijeme pažnje čovjeka sve kraće.
 \par

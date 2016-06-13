@@ -19,6 +19,7 @@ namespace Aplikacija.Logika
         {
             var otkljucaniKoncepti = Koncepti.vratiOtkljucaneKoncepteKorisnika(sifraPredmeta, sifraKorisnika);
             var granuleKorisnika = Granule.vratiOtkljucaneGranuleKorisnika(sifraKorisnika, otkljucaniKoncepti, sifraPredmeta);
+            granuleKorisnika.Permutate();
             HashSet<Zadatak> zadaci = new HashSet<Zadatak>();
             int brojZadataka = zadaci.Count;
             while (zadaci.Count < brojPitanja)

@@ -9,4 +9,13 @@ Odgovor: n*(n+1)*(2n+1)/6, Složenost: 5
 Odgovor: (m+n-1)#m-(m-n-1)#m, Složenost: 5
 5. Na koji naèin iz špila od 52 karte možemo odabrati n karata da meðu njima bude bar 1 crvena?
 Odgovor: 52#n - 26#n, Složenost: 3
-6. 
+
+- dirichlet
+1. Izmedu n ljudi za koliko možemo sa sigurnošcu reci da moraju biti rodeni u istom mjesecu?
+Odgovor: round((n-1)/12)+1, Složenost: 2
+2. Ako u nekoj državi ima n milijuna stanovnika, a ljudi imaju najviše 300 000 dlaka na glavi, koliko minimalno ljudi ima s jednakim brojem dlaka na glavi?
+Odgovor: round((n-1)*1000000/300001)+1, Složenost: 3
+3. U gradu ima n zgrada s minimalno u njima živi m milijuna stanovnika. Koliko minimalno ljudi mora živjeti u jednoj od zgrada?
+Odgovor: round((m-1)*1000000/n)+1, Složenost: 2
+4. Koliko je minimalno ljudi rodeno u istom tjednu izmedu njih n tisuca?
+Odgovor: round((n-1)/7)+1, Složenost: 2

@@ -31,8 +31,6 @@ Odgovor: 5^(n-1)*(4*n+1), Složenost: 4
 Odgovor: n!, Složenost: 1
 14. Na koliko razlièitih redoslijeda èovjek može pojesti n razlièitih kolaèa ako želi pojesti sve?
 Odgovor: n!, Složenost: 1
-
-- permutacije s ponavljanjem
 15. Koliko se rijeèi može napisati od m slova A, n slova B i k slova C (ne moraju imati smisla)?
 Odgovor: (m+n+k)!/m!/n!/k!, Složenost: 3
 16. Koliko ima stepenastih ulaza u ravnini od toèke (0,0) do toèke (m, n)?
