@@ -1,9 +1,57 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[act()]{activemathpic}
+\url{http://www.activemath.org/Software/Screenshots}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[aut()]{autotutorpic}
+\url{https://upload.wikimedia.org/wikipedia/commons/c/cd/AutoTutor.png}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[cai()]{caipic}
+\url{http://userpages.umbc.edu/~rada/cv/pubs/hypertextbook/img/fig89.jpg}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[drv()]{drvoznanja}
+\url{https://theethicalskeptic.files.wordpress.com/2014/11/tree-of-knowledge-obfuscation2.png}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[its()]{itscomponents}
+\url{https://cdn3.vox-cdn.com/assets/4463827/2000px-MobileBroadbandInternetPenetrationWorldMap.svg.png}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[log()]{logicalevalpic}
+\url{http://toolkit.pellinstitute.org/wp-content/uploads/2010/06/Reading-a-Logic-Model.png}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[mer()]{merlinpic}
+\url{http://moodle.srce.hr/2014-2015/theme/image.php/srce_access/theme/1465693202/logo}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[moo()]{moodlelogopic}
+\url{https://moodle.org/logo/moodle-logo.png}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[mvc()]{mvccommpic}
+\url{http://www.moock.org/lectures/mvc/images/mvc-02.jpg}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[pre()]{presseymachinepic}
+\url{https://resources.instructure.com/courses/7/pages/sidney-pressey}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[tea()]{teamwork}
+\url{http://www.strategies.com/blog/wp-content/uploads/2014/07/teamwork3.jpg}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[urb()]{urbanjungpic}
+\url{http://urbanjungle.dir.hr/galerija.php}.
+\newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[activemath.org()]{activemath}
 activemath.org.

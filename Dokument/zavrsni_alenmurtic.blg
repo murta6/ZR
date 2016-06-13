@@ -70,10 +70,63 @@ Warning--entry type for "limitations" isn't style-file defined
 --line 191 of file literatura.bib
 Warning--entry type for "mvc" isn't style-file defined
 --line 197 of file literatura.bib
+Warning--entry type for "presseymachinepic" isn't style-file defined
+--line 204 of file literatura.bib
+Warning--entry type for "caipic" isn't style-file defined
+--line 209 of file literatura.bib
+Repeated entry---line 214 of file literatura.bib
+ : @online{caipic
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "itscomponents" isn't style-file defined
+--line 219 of file literatura.bib
+Warning--entry type for "drvoznanja" isn't style-file defined
+--line 223 of file literatura.bib
+Warning--entry type for "logicalevalpic" isn't style-file defined
+--line 228 of file literatura.bib
+Warning--entry type for "urbanjungpic" isn't style-file defined
+--line 233 of file literatura.bib
+Warning--entry type for "moodlelogopic" isn't style-file defined
+--line 238 of file literatura.bib
+Warning--entry type for "merlinpic" isn't style-file defined
+--line 242 of file literatura.bib
+Warning--entry type for "autotutorpic" isn't style-file defined
+--line 247 of file literatura.bib
+Warning--entry type for "activemathpic" isn't style-file defined
+--line 252 of file literatura.bib
+Warning--entry type for "teamwork" isn't style-file defined
+--line 257 of file literatura.bib
+Warning--entry type for "mvccommpic" isn't style-file defined
+--line 261 of file literatura.bib
+Warning--I didn't find a database entry for "mobilenet"
+Warning--to sort, need author or key in presseymachinepic
+Warning--to sort, need author or key in caipic
+Warning--to sort, need author or key in itscomponents
+Warning--to sort, need author or key in drvoznanja
 Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
 while executing---line 1325 of file fer.bst
 Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
 while executing---line 1325 of file fer.bst
+Warning--to sort, need author or key in logicalevalpic
+Warning--to sort, need author or key in urbanjungpic
+Warning--to sort, need author or key in moodlelogopic
+Warning--to sort, need author or key in merlinpic
+Warning--to sort, need author or key in autotutorpic
+Warning--to sort, need author or key in activemathpic
+Warning--to sort, need author or key in teamwork
+Warning--to sort, need author or key in mvccommpic
+Warning--empty year in activemathpic
+Warning--empty year in autotutorpic
+Warning--empty year in caipic
+Warning--empty year in drvoznanja
+Warning--empty year in itscomponents
+Warning--empty year in logicalevalpic
+Warning--empty year in merlinpic
+Warning--empty year in moodlelogopic
+Warning--empty year in mvccommpic
+Warning--empty year in presseymachinepic
+Warning--empty year in teamwork
+Warning--empty year in urbanjungpic
 Warning--empty year in activemath
 Warning--empty year in pascal
 Warning--empty year in coursera
@@ -95,4 +148,4 @@ Warning--empty year in limitations
 Warning--empty year in derekstock
 Warning--empty year in markurban
 Warning--empty year in urbanjungle
-(There were 9 error messages)
+(There were 10 error messages)
