@@ -497,7 +497,7 @@ Razlozi za ovakav pristup procjeni znanja granula su: trajnost znanja, inkrement
 \par
 Trajnost znanja očituje se u tome da jedna pogreška u sustavu znači manje nego višestruki broj točnih odgovora, no istovremeno znači da se korisnika koji ne zna odgovoriti na teža pitanja, vraća na lakša. Znanje korisnika mapira se od minimalnog do maksimalnog \textit{double} broja.
 \par
-Inkrementalni pristup očituje se u algoritmu odabira pitanja koji procjenuje složenost trenutnog znanja korisnika te na temelju nje poslužuje pitanja najbliže složenosti. Nakon što korisnik odgovori na ta pitanja, točni odgovori povećavaju njegovo znanje te se nude pitanja više složenosti, a netočni odgovori ga vraćaju na nižu razinu (uz uvjet da je odgovorio na dovoljan broj pitanja jedne granule).
+Inkrementalni pristup očituje se u algoritmu odabira pitanja koji procjenjuje složenost trenutnog znanja korisnika te na temelju nje poslužuje pitanja najbliže složenosti. Nakon što korisnik odgovori na ta pitanja, točni odgovori povećavaju njegovo znanje te se nude pitanja više složenosti, a netočni odgovori ga vraćaju na nižu razinu (uz uvjet da je odgovorio na dovoljan broj pitanja jedne granule).
 \par
 Brzina izračuna nije bila presudni faktor projektiranja baš ovakvog algoritma, no ipak je izuzetno važno da sustavu ne treba previše vremena za aktualizaciju pa je ona ugodna nuspojava ovog pristupa.
 
@@ -521,7 +521,7 @@ Procjena znanja za koncepte slijedi tek nakon procjene znanja granula. Ona se ra
 \end{enumerate}
 
 \subsubsection{Prednosti ovakvog pristupa}
-Dvije najbitnije prednosti ovakvog pristupa su razumljivost prikaza i sigurnost točnog izračuna. Razumljivost prikaza napretka korisnika samom korisniku vrlo je značajna za točnu predstavku o vlastitome znanju. Postotni prikaz razumiju gotovo svi te je relevatniji od možda nepreglednih dijagrama. Težinskim prosjekom korisnik je lišen razmišljanja o implementacijskim detaljima odnosa koncepata u prikazu njegova znanja, no on te odnose može vidjeti ako želi.
+Dvije najbitnije prednosti ovakvog pristupa su razumljivost prikaza i sigurnost točnog izračuna. Razumljivost prikaza napretka korisnika samom korisniku vrlo je značajna za točnu predstavku o vlastitome znanju. Postotni prikaz razumiju gotovo svi te je relevantniji od možda nepreglednih dijagrama. Težinskim prosjekom korisnik je lišen razmišljanja o implementacijskim detaljima odnosa koncepata u prikazu njegova znanja, no on te odnose može vidjeti ako želi.
 Sigurnost točnog izračuna postiže se izračunom znanja iz granula, a ne prijašnjih rezultata koncepata. Kada bi se znanje računalo i na razini granula znanja i na razini koncepata, postoji mogućnost previše međuovisnosti i pogrešnog izračuna.
 
 \subsection{Ocjena za predmete}
@@ -577,35 +577,33 @@ Generiranje parametara i računanje rezultata testirao sam na 10.000 različitih
 		\begin{itemize}
 			\item Granula znanja: Skupovi
 			\item Granula znanja: Produktno pravilo
-			\newline - nadskup: skupovi
+			\newline - Korištenje: Skupovi
 			\item Granula znanja: Permutacije
 		\end{itemize}
-		\item Koncept: Varijacije - paralelno: kombinacije
-		\begin{itemize}
-			\item Granula znanja: Varijacije s ponavljanjem
-			\item Granula znanja: Varijacije bez ponavljanja
-		\end{itemize}
-		\item Koncept: Kombinacije - paralelno: varijacije
-		\begin{itemize}
-			\item Granula znanja: Kombinacije s ponavljanjem
-			\item Granula znanja: Kombinacije bez ponavljanja
+		\item Koncept: Varijacije i kombinacije
+		\newline - Korištenje: Osnove kombinatorike
+			\begin{itemize}
+				\item Granula znanja: Varijacije
+				\newline - Paralelno: Kombinacije
+				\item Granula znanja: Kombinacije
+				\newline - Paralelno: Varijacije
+			\end{itemize}
 		\end{itemize}
 		\item Koncept: Napredna kombinatorika
-		\newline - nadskup i preduvjet: osnove komb., varijacije, kombinacije
+		\newline - Nadskup: Varijacije i kombinacije, Osnove kombinatorike
 		\begin{itemize}
 			\item Granula znanja: Mješovita kombinatorika
-			\item Granula znanja: Teorija grafova
+			\newline - Korištenje: Varijacije
+			\newline - Korištenje: Kombinacije
+			\item Granula znanja: Dirichletovo načelo
+			\newline - Analogno: Skupovi
 		\end{itemize}
-		\item Koncept: Osnove diskretne vjerojatnosti
-		\newline - preduvjet: osnove kombinatorike
+		\item Koncept: Osnove vjerojatnosti
+		\newline - Preduvjet: Osnove kombinatorike
 		\begin{itemize}
-			\item Granula znanja: Klasični vjerojatnosni prostor
-			\item Granula znanja: Beskonačni vjerojatnosni prostor
-			\item Granula znanja: Geometrijske vjerojatnosti
-			\newline - analogno: produktno pravilo
+			\item Granula znanja: Osnove vjerojatnosti
 		\end{itemize}
 	\end{itemize}
-\end{itemize}
 
 \chapter{Zaključak}
 Edukacijski procesi značajan su i vrlo složen element ljudske civilizacije, a razvojem tehnologije i otklonom od manualnih djelatnosti, njihova važnost još više raste. Stoga je neizbježna potreba za unaprjeđenjem, olakšanjem i poboljšanjem procesa učenja, pogotovo u modernom svijetu u kojem je vrijeme pažnje čovjeka sve kraće.
