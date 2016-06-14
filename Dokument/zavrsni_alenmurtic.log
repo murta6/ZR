@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  14 JUN 2016 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  15 JUN 2016 00:26
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -608,14 +608,6 @@ File: img/internet.jpg Graphic file (type jpg)
 Package pdftex.def Info: img/internet.jpg used on input line 89.
 (pdftex.def)             Requested size: 316.18047pt x 162.6071pt.
 
-
-Package natbib Warning: Citation `mobilenet' on page 6 undefined on input line 
-90.
-
-
-Package natbib Warning: Citation `mobilenet' on page 6 undefined on input line 
-90.
-
 [6 <./img/internet.jpg>]
 <img/ITS-components.jpg, id=46, 359.09157pt x 142.28156pt>
 File: img/ITS-components.jpg Graphic file (type jpg)
@@ -690,84 +682,81 @@ g/activemath.jpg>] <img/teamwork.jpg, id=100, 381.425pt x 193.72375pt>
 File: img/teamwork.jpg Graphic file (type jpg)
 
 <use img/teamwork.jpg>
-Package pdftex.def Info: img/teamwork.jpg used on input line 310.
+Package pdftex.def Info: img/teamwork.jpg used on input line 308.
 (pdftex.def)             Requested size: 381.42406pt x 193.72327pt.
- [21 <./img/teamwork.jpg>] [22]
+ [21 <./img/teamwork.jpg>]
 Poglavlje 3.
-<img/mvc.jpg, id=107, 301.125pt x 158.09062pt>
+<img/mvc.jpg, id=104, 301.125pt x 158.09062pt>
 File: img/mvc.jpg Graphic file (type jpg)
  <use img/mvc.jpg>
-Package pdftex.def Info: img/mvc.jpg used on input line 325.
+Package pdftex.def Info: img/mvc.jpg used on input line 323.
 (pdftex.def)             Requested size: 301.12425pt x 158.09023pt.
- [23
+ [22
 
- <./img/mvc.jpg>] [24]
+ <./img/mvc.jpg>] [23]
 Poglavlje 4.
-<img/ER.jpg, id=114, 989.94844pt x 1561.33313pt>
+[24
+
+] <img/ER.jpg, id=114, 989.94844pt x 1561.33313pt>
 File: img/ER.jpg Graphic file (type jpg)
  <use img/ER.jpg>
-Package pdftex.def Info: img/ER.jpg used on input line 362.
+Package pdftex.def Info: img/ER.jpg used on input line 357.
 (pdftex.def)             Requested size: 412.55806pt x 650.68094pt.
 
 
-LaTeX Warning: Float too large for page by 4.03064pt on input line 365.
+LaTeX Warning: Float too large for page by 4.03064pt on input line 360.
 
 <img/dijagramEntiteta.jpg, id=115, 989.94844pt x 1561.33313pt>
 File: img/dijagramEntiteta.jpg Graphic file (type jpg)
 
 <use img/dijagramEntiteta.jpg>
-Package pdftex.def Info: img/dijagramEntiteta.jpg used on input line 368.
+Package pdftex.def Info: img/dijagramEntiteta.jpg used on input line 363.
 (pdftex.def)             Requested size: 412.55806pt x 650.68094pt.
 
 
-LaTeX Warning: Float too large for page by 4.03064pt on input line 371.
+LaTeX Warning: Float too large for page by 4.03064pt on input line 366.
 
-[25
-
-] [26]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 393.
+[25]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 388.
 
  ("D:\FER\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 393.
- [27]
-[28] [29] [30] [31] [32] [33] [34] [35] [36] [37 <./img/ER.jpg>] [38 <./img/dij
-agramEntiteta.jpg>]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 388.
+ [26] [27]
+[28] [29] [30] [31] [32] [33] [34] [35] [36 <./img/ER.jpg>] [37 <./img/dijagram
+Entiteta.jpg>]
 Poglavlje 5.
-[39
+[38
 
-] (zavrsni_alenmurtic.bbl [40] [41
+] (zavrsni_alenmurtic.bbl [39] [40
 
-] [42] [43]) [44]
-
-Package natbib Warning: There were undefined citations.
-
-[45] (zavrsni_alenmurtic.aux) ) 
+] [41] [42]) [43] [44]
+(zavrsni_alenmurtic.aux) ) 
 Here is how much of TeX's memory you used:
- 5748 strings out of 493698
- 79059 string characters out of 3144815
- 150724 words of memory out of 3000000
- 8929 multiletter control sequences out of 15000+200000
+ 5757 strings out of 493698
+ 79202 string characters out of 3144815
+ 150743 words of memory out of 3000000
+ 8938 multiletter control sequences out of 15000+200000
  62134 words of font info for 81 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,6n,40p,1008b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/font
-name/8r.enc}<D:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
-fb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/FE
-R/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/FER/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/FER/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/ty
-pe1/urw/courier/ucrr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/
-ucrro8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:
-/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/FER/Programs/M
-iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/ty
-pe1/urw/times/utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr
-8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (50 pages, 1344007 bytes).
+ 43i,6n,40p,1005b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/
+8r.enc}<D:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D
+:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/FER/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/FER/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/FER/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/u
+rw/courier/ucrr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrro
+8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/FER/
+Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/FER/Programs/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/u
+rw/times/utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
+b><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on zavrsni_alenmurtic.pdf (49 pages, 1343004 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
+ 230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

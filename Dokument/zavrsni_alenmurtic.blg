@@ -94,13 +94,15 @@ Warning--entry type for "autotutorpic" isn't style-file defined
 --line 247 of file literatura.bib
 Warning--entry type for "activemathpic" isn't style-file defined
 --line 252 of file literatura.bib
-Warning--entry type for "teamwork" isn't style-file defined
+Warning--entry type for "mobilenet" isn't style-file defined
 --line 257 of file literatura.bib
+Warning--entry type for "teamwork" isn't style-file defined
+--line 262 of file literatura.bib
 Warning--entry type for "mvccommpic" isn't style-file defined
---line 261 of file literatura.bib
-Warning--I didn't find a database entry for "mobilenet"
+--line 266 of file literatura.bib
 Warning--to sort, need author or key in presseymachinepic
 Warning--to sort, need author or key in caipic
+Warning--to sort, need author or key in mobilenet
 Warning--to sort, need author or key in itscomponents
 Warning--to sort, need author or key in drvoznanja
 Too many commas in name 1 of "Sebastian Gross, Bassam Mokbel, Barbara Hammer, Niels Pinkwart" for entry feedback
@@ -122,6 +124,7 @@ Warning--empty year in drvoznanja
 Warning--empty year in itscomponents
 Warning--empty year in logicalevalpic
 Warning--empty year in merlinpic
+Warning--empty year in mobilenet
 Warning--empty year in moodlelogopic
 Warning--empty year in mvccommpic
 Warning--empty year in presseymachinepic

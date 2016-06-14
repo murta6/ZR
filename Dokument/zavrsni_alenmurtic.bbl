@@ -1,4 +1,4 @@
-\begin{thebibliography}{41}
+\begin{thebibliography}{42}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -31,6 +31,10 @@
 
 \bibitem[mer()]{merlinpic}
 \url{http://moodle.srce.hr/2014-2015/theme/image.php/srce_access/theme/1465693202/logo}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[mob()]{mobilenet}
+\url{https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/MobileBroadbandInternetPenetrationWorldMap.svg/2000px-MobileBroadbandInternetPenetrationWorldMap.svg.png}.
 \newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[moo()]{moodlelogopic}
