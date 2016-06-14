@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  15 JUN 2016 00:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  15 JUN 2016 00:41
 entering extended mode
 **zavrsni_alenmurtic.tex
 (zavrsni_alenmurtic.tex
@@ -735,13 +735,13 @@ Poglavlje 5.
 ] [41] [42]) [43] [44]
 (zavrsni_alenmurtic.aux) ) 
 Here is how much of TeX's memory you used:
- 5757 strings out of 493698
- 79202 string characters out of 3144815
- 150743 words of memory out of 3000000
- 8938 multiletter control sequences out of 15000+200000
+ 5766 strings out of 493698
+ 79421 string characters out of 3144815
+ 150880 words of memory out of 3000000
+ 8947 multiletter control sequences out of 15000+200000
  62134 words of font info for 81 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 43i,6n,40p,1005b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,6n,40p,1005b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/FER/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/
 8r.enc}<D:/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D
 :/FER/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/FER/Pro
@@ -754,7 +754,7 @@ Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/FER/Programs/MiKTeX
  2.9/fonts/type1/urw/times/utmb8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/u
 rw/times/utmr8a.pfb><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pf
 b><D:/FER/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on zavrsni_alenmurtic.pdf (49 pages, 1343004 bytes).
+Output written on zavrsni_alenmurtic.pdf (49 pages, 1343576 bytes).
 PDF statistics:
  230 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

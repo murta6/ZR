@@ -1,4 +1,4 @@
-\begin{thebibliography}{42}
+\begin{thebibliography}{45}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -75,6 +75,13 @@ Grupa autora.
   writing.
 \newblock \emph{Lecture Notes in Computer Science}, 2363, 2002.
 
+\bibitem[biometric solutions.com()]{keystroke}
+biometric solutions.com.
+\newblock Keystroke dynamics.
+\newblock
+  \url{http://www.biometric-solutions.com//solutions/index.php?story=keystroke_dynamics}.
+\newblock Preuzeto: 14. 6. 2016.
+
 \bibitem[Chew()]{pascal}
 Julia Chew.
 \newblock Blaise pascal.
@@ -86,6 +93,12 @@ Simon Colton.
 \newblock Knowledge representation.
 \newblock
   \url{http://www.doc.ic.ac.uk/~sgc/teaching/pre2012/v231/lecture4.html}, 2005.
+
+\bibitem[Copeland()]{dendral}
+B.J. Copeland.
+\newblock Dendral expert system.
+\newblock \url{http://www.britannica.com/technology/DENDRAL}.
+\newblock Preuzeto: 14. 6. 2016.
 
 \bibitem[coursera.org()]{coursera}
 coursera.org.
@@ -199,6 +212,11 @@ Tracey~Best Shelby~Budd.
 \newblock
   \url{http://etec.ctlt.ubc.ca/510wiki/Educational_Benefits_and_Limitations}.
 \newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Sosnovsky et~al.(2003)Sosnovsky, Shcherbinina, i
+  Brusilovsky]{Sosnovsky03web-basedparameterized}
+Sergey Sosnovsky, Olena Shcherbinina, i Peter Brusilovsky.
+\newblock Web-based parameterized questions as a tool for learning, 2003.
 
 \bibitem[Stockley()]{derekstock}
 Derek Stockley.
