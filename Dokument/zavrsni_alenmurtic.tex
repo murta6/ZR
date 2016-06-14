@@ -182,7 +182,7 @@ Sprječavanje lažnog predstavljanja je puno zanimljiviji problem. Ukoliko susta
 Kvalitetni algoritmi su nešto što se gotovo podrazumijeva ukoliko želimo kvalitetan sustav. Sljedeća lekcija govori više o algoritmima sustava za elektroničko učenje, no bilo ih je važno navesti i u ovoj.
 
 \subsubsection{Dizajn sučelja}
-Posljednja, ali ne i najmanje važna karakteristika ITS-a je dizajn grafičkog korisničkog sučelja. To nije važno samo za ITS, nego i za svaku drugu računalnu aplikaciju jer loše sučelje odbija korisnike više nego bilo što drugo. Prilično je teško točno definirati što je kvalitetno grafičko korisničko sučelje, no ono bi sigurno moralo imati slijedeće karakteristike: intuitivnost rasporeda kontrola, lakoća upravljanja (brzina, dosljednost, dozvole promjena kontrola), ugodan izgled (boje, fontovi, izbjegavanje neugodnih efekata i promjena boja) te prikladan prikaz informacija.
+Posljednja, ali ne i najmanje važna karakteristika ITS-a je dizajn grafičkog korisničkog sučelja. To nije važno samo za ITS, nego i za svaku drugu računalnu aplikaciju jer loše sučelje odbija korisnike više nego bilo što drugo. Prilično je teško točno definirati što je kvalitetno grafičko korisničko sučelje, no ono bi sigurno moralo imati sljedeće karakteristike: intuitivnost rasporeda kontrola, lakoća upravljanja (brzina, dosljednost, dozvole promjena kontrola), ugodan izgled (boje, fontovi, izbjegavanje neugodnih efekata i promjena boja) te prikladan prikaz informacija.
 \par
 Korisničko sučelje ITS-a također bi se trebao držati nekih principa jedinstvenih za to područje. Tri najvažnija principa su: mogućnost traženja upute (također su opcije gumb za odustajanje ili ispis odgovora), konzistentnost znakovlja (npr. cos ili csin za kosinus, točka ili zarez kao decimalna oznaka) te prikaz napretka u pojedinoj granulaciji znanja.\cite{interface}
 
@@ -223,7 +223,7 @@ Bitno je naglasiti da nisu svi sustavi u ovom dijelu samo pitalice, već sadrže
 
 \subsubsection{Neinteligentni sustavi}
 
-Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnici. Princip rada Duolinga je da korisnik odabere svoj materinji (ili dobro poznati jezik) te dobije ponudu jezika za koje postoji "tečaj" uz pomoć njegova materinjeg jezika.\cite{duolingo} Pitanja mogu biti dopunjavanje, prevođenje ili pitanje s odabirom od ponuđenih odgovora. Sustav je neinteligentan osim u dva pogleda: znanje nekog područja zastarjeva ukoliko korisnik nije dugo odgovarao na pitanja tog područja te sustav odabire područje s najmanjom vrijednosti znanja ukoliko korisnik odabere opciju "pojačavanja znanja" (engl. strengthen skills).
+Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnici. Princip rada Duolinga je da korisnik odabere svoj materinji (ili dobro poznati jezik) te dobije ponudu jezika za koje postoji "tečaj" uz pomoć njegova materinjeg jezika.\cite{duolingo} Pitanja mogu biti dopunjavanje, prevođenje ili pitanje s odabirom od ponuđenih odgovora. Sustav je neinteligentan osim u dva pogleda: znanje nekog područja zastarjeva ukoliko korisnik nije dugo odgovarao na pitanja tog područja te sustav odabire područje s najmanjom vrijednosti znanja ukoliko korisnik odabere opciju "pojačavanja znanja" (engl. strengthen skills). Na slici 2.7 može se vidjeti prepoznavanje pogreške tipkanja u sustavu Duolingo.
 
 \begin{figure}[htb]
 	\centering
@@ -235,7 +235,7 @@ Duolingo je sustav za učenje jezika u čijoj izradi mogu sudjelovati i korisnic
 \par
 Coursera je internetska stranica koja sadržava kolegije najpoznatijih svjetskih sveučilišta s ciljem smanjivanja ovisnosti fizičke pozicije ljudi i njihovih mogućnosti učenja. Sadrži besplatne i plaćene tečajeve čije materijale korisnik može (i mora) proučavati, odgovarati na pitanja te na kraju dobiti potvrdu svojeg znanja.\cite{coursera} Jasno je da položiti neki tečaj na Courseri nije jednakovrijedno kao završiti kolegij na fakultetu, no ukoliko korisnik ima stvarnu volju za učenjem, količina stečenog znanja može biti jednaka. Iako su materijali velikog broja fakulteta (pogotovo tehničkih) javno dostupni, Coursera eliminira potrebu za iscrpnom pretragom materijala i stavlja fokus na učenje.
 \par
-Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih informatičara Rijeka da bi mladima olakšali polaganje vozačkog ispita.\cite{urbanjungle} Korisnik  može voziti virtualni automobil kao i u sličnim računalnim igrama, no Urban Jungle ima edukativnu svrhu jer za uspješno "igranje" korisnik mora paziti na stvarna prometna pravila. Odličan je primjer da računalni sustav namijenjen za učenje ne mora nužno biti samo niz pitanja i odgovora.
+Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih informatičara Rijeka da bi mladima olakšali polaganje vozačkog ispita.\cite{urbanjungle} Korisnik  može voziti virtualni automobil kao i u sličnim računalnim igrama, no Urban Jungle ima edukativnu svrhu jer za uspješno "igranje" korisnik mora paziti na stvarna prometna pravila. Odličan je primjer da računalni sustav namijenjen za učenje ne mora nužno biti samo niz pitanja i odgovora. Slika 2.8 prikazuje ekran tijekom simulacije vožnje u aplikaciji Urban Jungle. 
 
 \begin{figure}[htb]
 	\centering
@@ -245,7 +245,7 @@ Urban Jungle je simulacija vožnje koju su izradili Autoklub i Udruga darovitih 
 \end{figure}
 
 \par
-Moodle je vrlo popularan akademski sustav za učenje koji omogućava neke koncepte ITS-a (parametrizirana pitanja, interaktivno sučelje), no nije ITS jer ne sadrži inteligentno odlučivanje.\cite{moodle} Sustav Moodle gotovo uvijek funkcionira kao podrška formalnom sustavu učenja zato što omogućava planere, kalendare, obavijesti korisnicima i sl. Moodle može biti osnova za izgradnju drugog sustava za učenje, kao što je slučaj s CARNet-ovim sustavom Merlin. Moodle je aplikacija otvorenog koda te ju je zato moguće lako prilagođavati. Sustav Ferko razvijen na Fakultetu elektrotehnike i računarstva ima sličnu domenu primjene kao Moodle.
+Moodle je vrlo popularan akademski sustav za učenje koji omogućava neke koncepte ITS-a (parametrizirana pitanja, interaktivno sučelje), no nije ITS jer ne sadrži inteligentno odlučivanje.\cite{moodle} Sustav Moodle gotovo uvijek funkcionira kao podrška formalnom sustavu učenja zato što omogućava planere, kalendare, obavijesti korisnicima i sl. Moodle može biti osnova za izgradnju drugog sustava za učenje, kao što je slučaj s CARNet-ovim sustavom Merlin. Moodle je aplikacija otvorenog koda te ju je zato moguće lako prilagođavati. Sustav Ferko razvijen na Fakultetu elektrotehnike i računarstva ima sličnu domenu primjene kao Moodle. Slika 2.9 prikazuje logo sustava Moodle, a slika 2.10 sustava Merlin.
 
 \begin{figure}[htb]
 	\centering
@@ -266,7 +266,7 @@ Postoje mnogi sustavi za inteligentno učenje koji rade na principu pitalica te 
 \par
 Why2-Atlas je ITS koji uči korisnika koncepte kvalitativne fizike tako da traži od njega da napiše nekoliko rečenica o određenom pojmu te abduktivnom sintaktičkom analizom pokušava dokučiti znanje korisnika. Takav proces može se odvijati u nekoliko iteracija dok sustav ne odredi znanje korisnika te ga uputi na točno rješenje ukoliko je u krivu.\cite{why2atlas}
 \par
-AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučilištu koji razgovara s korisnikom prirodnim jezikom. Princip rada AutoTutora je parsiranje govora na sličan način na koji se prevode programski jezici.\cite{autotutor}
+AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučilištu koji razgovara s korisnikom prirodnim jezikom. Princip rada AutoTutora je parsiranje govora na sličan način na koji se prevode programski jezici.\cite{autotutor} Prikaz sučelja sustava AutoTutor nalazi se na slici 2.11.
 
 \begin{figure}[htb]
 	\centering
@@ -276,7 +276,7 @@ AutoTutor je sustav za inteligentno učenje razvijen na Arizona State sveučili�
 \end{figure}
 
 \par
-ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno učenje. To je sustav za dodatno podučavanje matematike u školama ili učenje na daljinu. ActiveMath je internetska stranica na kojoj pored sustava za učenje postoje i materijali koji pokrivaju gradivo. Kvaliteta ActiveMath ITS-a je u tome što ga autori prilagođavaju s obzirom na empirijske rezultate kako su korisnici učili.\cite{activemath}
+ActiveMath je ITS vrlo sličan prototipskom pogledu na sustave za inteligentno učenje. To je sustav za dodatno podučavanje matematike u školama ili učenje na daljinu. ActiveMath je internetska stranica na kojoj pored sustava za učenje postoje i materijali koji pokrivaju gradivo. Kvaliteta ActiveMath ITS-a je u tome što ga autori prilagođavaju s obzirom na empirijske rezultate kako su korisnici učili.\cite{activemath} Slika 2.12 prikazuje korisničko sučelje sustava ActiveMath.
 
 \begin{figure}[htb]
 	\centering
@@ -303,7 +303,7 @@ Drugi problem podučavanja je koliko korisniku sustav treba pomagati u rješavan
 Naravno da je i problem ITS-a što autori pitanja jednostavno moraju odlično razumijevati tehničku pozadinu sustava (smisao pojedine granulacije, veze između granula) te ako ne razumiju ili sustav nije dovoljno dobro projektiran, u sustavu bi moglo doći do problema u definiranju korisnikova znanja ili otvaranju pitanja. Rizik površnog učenja je u takvim situacijama značajno veći.
 
 \subsubsection{Cijena izrade}
-Nadam se da je čitatelju jasno iz prethodnog dijela završnog rada da je izrada kvalitetnog ITS-a vrlo složen posao. Čak ne niti toliko težak, koliko opsežan. Problem izrade ITS-a je nužna bliska suradnja između računalnih stručnjaka i učitelja domene primjene. Velik broj ljudi koji moraju raditi istovremeno znači da je potreban velik broj radnih sati, što znači da ih treba platiti. Ukoliko vlasnik sustava ne očekuje da će mu ITS značajno povećati broj korisnika, logično je postaviti pitanje opravdanosti investicije. Pogotovo imajući u vidu cijenu održavanja sustava i rizik pogreške u sustavu. Zato je dosad ITS-ove uglavnom razvijala akademska zajednica.
+Nadam se da je čitatelju jasno iz prethodnog dijela završnog rada da je izrada kvalitetnog ITS-a vrlo složen posao. Čak ne niti toliko težak, koliko opsežan. Problem izrade ITS-a je nužna bliska suradnja između računalnih stručnjaka i učitelja domene primjene. Velik broj ljudi koji moraju raditi istovremeno znači da je potreban velik broj radnih sati, što znači da ih treba platiti. Ukoliko vlasnik sustava ne očekuje da će mu ITS značajno povećati broj korisnika, logično je postaviti pitanje opravdanosti investicije. Pogotovo imajući u vidu cijenu održavanja sustava i rizik pogreške u sustavu. Zato je dosad ITS-ove uglavnom razvijala akademska zajednica. Na slici 2.13 može se vidjeti ilustracija timskog rada potrebnog za projektiranje kvalitetnog sustava za učenje.
 
 \begin{figure}[htb]
 	\centering
@@ -315,7 +315,7 @@ Nadam se da je čitatelju jasno iz prethodnog dijela završnog rada da je izrada
 \par
 Drugi problem kod cijene izrade je kompleksnost sustava. Sustav za učenje jednostavno mora biti efikasan i brz, a sustav koji prati sve faktore to jednostavno ne može biti. Inženjeri koji ga projektiraju moraju napraviti \textit{trade-off} između brzine i kvalitete sustava.
 \par
-Cijena izrade zapravo i nije nedostatak, njezin problem je što se mora platiti prije nego što sustav počne s radom. Dugoročno je ITS jeftiniji nego financiranje prostora, profesora, opreme učenika i sl. elemenata tradicionalnog edukacijskog procesa.\cite{limitations}
+Cijena izrade zapravo i nije nedostatak, njezin problem je što se mora platiti prije nego što sustav počne s radom. Dugoročno je ITS jeftiniji nego financiranje prostora, profesora, opreme učenika i sličnih elemenata tradicionalnog edukacijskog procesa.\cite{limitations}
 
 \chapter{Slojevi aplikacija}
 Sve kvalitetno oblikovane moderne aplikacije moraju sadržavati nekoliko slojeva rada. Slojevita arhitektura omogućuje sigurno zadržavanje dva najvažnija logička načela dobrog oblikovanja: nadogradnju bez promjene i načelo jedinstvene ovisnosti. Takav pristup intervencije u kod aplikacije čini lakšim. Arhitektura koju koristim je MVC (Model - View - Controller). Prevedeno na hrvatski, model je podatkovni sloj, controller je aplikacijska logika, a view pogled. Najveća prednost ovakvog pristupa je jednostavna i intuitivna višeplatformska modularnost - podatkovni sloj je zajednički za sve platforme, aplikacijsku logiku može koristiti više različitih platformi (npr. kod pisan u Javi za Android i web aplikacije ili C\# za Windows 10 i web), a svaka platforma određuje svoje korisničko sučelje, tj. pogled.\cite{mvc} Slika 3.1 prikazuje dijagram komunikacija u MVC modelu.
@@ -337,7 +337,8 @@ Pogled, tj. korisničko sučelje je način na koji se aplikacija prezentira kran
 Uspoređujući slojeve inteligentnog sustava za elektroničko učenje i MVC višeslojne aplikacije, vidimo jasnu povezanost između domenskog modela i modela kao dio MVC-a, controllera te korisničkog modela i modela znanja te grafičkog sučelja i pogleda. Upravo to je smisao MVC pristupa, jednostavno je logičan za ogromnu količinu situacija. Zašto onda ovaj završni rad navodi oba? Zato što je MVC tehnološki presjek, a slojevi ITS-a logički. Njihovo poklapanje je potvrda da je aplikacija projektirana na ispravan način. Filozofskiji odgovor bi bio da je MVC pogled programskog inženjerstva na aplikaciju, a slojevi ITS-a računarske znanosti.
 
 \chapter{Opis implementiranog rješenja}
-Zadatak ovog završnog rada osim dokumenta je implementirati konkretan sustav za inteligentno učenje koji sadrži većinu opisanih elemenata ITS-a. Njega čine baza znanja predstavljenog različitim granulacijama, parametrizirana pitanja, reprezentacija usvojenosti pojedinog korisnika, aplikacijska logika posluživanja pitanja te logika slaganja ispita.
+
+Zadatak ovog završnog rada osim dokumenta je implementirati konkretan sustav za inteligentno učenje koji sadrži većinu opisanih elemenata ITS-a. Njega čine baza znanja predstavljenog različitim granulacijama, parametrizirana pitanja, reprezentacija usvojenosti pojedinog korisnika, aplikacijska logika posluživanja pitanja te logika slaganja ispita. U ovom poglavlju opisani su svi navedeni elementi 
 
 \section{Korištene tehnologije}
 
@@ -347,23 +348,27 @@ Deklarativni programski jezik \textbf{SQL} i programsko okruženje \textbf{Micro
 \par
 Programski jezik \textbf{C\#} i razvojno okruženje \textbf{Microsoft Visual Studio} za izradu aplikacijske logike.
 \par
-Skup tehnologija \textbf{Entity Framework} za dvosmjerno preslikavanje entiteta iz baze podataka i objekata iz aplikacije.
+Skup tehnologija \textbf{Entity Framework} za dvosmjerno preslikavanje entiteta iz baze podataka i objekata iz aplikacije te generiranje dijagrama entiteta.
 \par
 Biblioteka \textbf{mXparser} za izračunavanje parametriziranih matematičkih izraza.
 \par
-TODO: \textbf{dijagrami}
+ER dijagram napravljen je korištenjem programa \textbf{SmartDraw}.
 
 \section{ER dijagram}
-Dijagram entiteta i relacija temeljni je opis svake relacijske baze podataka. Njegova važnost nije samo bolje razumijevanje značenja baze i njezinih entiteta, nego i činjenica da dobro organizirani ER dijagram za jednostavnije baze gotovo uvijek znači da su one u trećoj normalnoj formi.
-
+Dijagram entiteta i relacija temeljni je opis svake relacijske baze podataka. Njegova važnost nije samo bolje razumijevanje značenja baze i njezinih entiteta, nego i činjenica da dobro organizirani ER dijagram za jednostavnije baze gotovo uvijek znači da su one u trećoj normalnoj formi. ER dijagram prikazan je na slici 4.1, a dijagram entiteta na slici 4.2. na kraju ovog poglavlja.
 \pagebreak
-\subsection{Slika ER dijagrama i entiteta u bazi}
-slika ER dijagrama
-
-\pagebreak
-
-slika entiteta s atributima
-
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/ER.jpg}
+	\caption{ER dijagram baze}
+	\label{fig:ER}
+\end{figure}
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{img/dijagramEntiteta.jpg}
+	\caption{Dijagram entiteta u bazi}
+	\label{fig:dijagramentiteta}
+\end{figure}
 \pagebreak
 \section{Mogućnosti sustava}
 Mogućnosti sustava podijeljene su na one administratora, korisnika koji uči i zajedničke mogućnosti. Za obje vrste korisnika važne su granulacije znanja i način parametrizacije zadataka, za administratora je važno kako će dodavati pitanja u sustav, generirati ispite korisnicima te pregledavati njihove rezultate, a za korisnika koji uči registracija na sustav, način inteligentnog učenja te pregled vlastitih rezultata.
@@ -420,12 +425,12 @@ Prilično je očito da samo tri granulacije znanja nisu dovoljne za opis svih mo
 Odnosi mogu biti definirani samo između dvije granulacije jednake vrste i to samo za koncepte i granule znanja. Definicija na razini predmeta nije potrebna zato što je predmet "sačinjen" od koncepata, a nema ograničenja u pogledu odnosa koncepata dvaju različitih predmeta. U sustavu su definirani sljedeći odnosi:
 
 \begin{itemize}
-	\item \textbf{Preduvjet} Ovaj odnos definira nemogućnost otvaranja sljedeće granulacije prije postizanja prihvatljive razine znanja u baznoj. Prihvatljiva razina znanja ekvivalent je ocjene dovoljan na pojedinoj granulaciji.
-	
-	\item \textbf{Podskup (nadskup)} Odnos između dvije granulacije u kojom je jedna u potpunosti sačinjena od druge. Podrazumijeva se da je niža granulacija pravi podskup jer semantički nema smisla imati dvije identične granulacije, iako to sustav nigdje eksplicitno ne provjerava.
-	\item \textbf{Korištenje} Ukoliko je znanje definirano nekom granulacijom uvijek nužno koristiti u drugoj, nema potrebe za stalnim eksplicitnim povezivanjem zadatka i te granulacije nego administrator može zadati odnos korištenja.
-	\item \textbf{Analogno} U situacijama u kojima postoji jasna povezanost između dvaju pojmova, takva da znanjem jednog postoji razumijevanje drugog, može se definirati ovaj odnos. U takvom slučaju korisniku se dodaju male količine znanja analognog pojma te postoji mogućnost za manjim brojem elementarnih pitanja u početku ispitivanja novog pojma.
-	\item \textbf{Paralelno} Postoji mogućnost da dvije granulacije opisuju istu situaciju na različite načine (npr. pristupi umjetnoj inteligenciji - logički, kognitivni, itd.) te zapravo korisnik uči više različitih pogleda. Za logiku sustava i model učenja paralelnost granulacija znanja nema nikakvog utjecaja te je ona tu samo da korisnik bolje razumije što i kako uči. 
+\item \textbf{Preduvjet} Ovaj odnos definira nemogućnost otvaranja sljedeće granulacije prije postizanja prihvatljive razine znanja u baznoj. Prihvatljiva razina znanja ekvivalent je ocjene dovoljan na pojedinoj granulaciji.
+
+\item \textbf{Podskup (nadskup)} Odnos između dvije granulacije u kojom je jedna u potpunosti sačinjena od druge. Podrazumijeva se da je niža granulacija pravi podskup jer semantički nema smisla imati dvije identične granulacije, iako to sustav nigdje eksplicitno ne provjerava.
+\item \textbf{Korištenje} Ukoliko je znanje definirano nekom granulacijom uvijek nužno koristiti u drugoj, nema potrebe za stalnim eksplicitnim povezivanjem zadatka i te granulacije nego administrator može zadati odnos korištenja.
+\item \textbf{Analogno} U situacijama u kojima postoji jasna povezanost između dvaju pojmova, takva da znanjem jednog postoji razumijevanje drugog, može se definirati ovaj odnos. U takvom slučaju korisniku se dodaju male količine znanja analognog pojma te postoji mogućnost za manjim brojem elementarnih pitanja u početku ispitivanja novog pojma.
+\item \textbf{Paralelno} Postoji mogućnost da dvije granulacije opisuju istu situaciju na različite načine (npr. pristupi umjetnoj inteligenciji - logički, kognitivni, itd.) te zapravo korisnik uči više različitih pogleda. Za logiku sustava i model učenja paralelnost granulacija znanja nema nikakvog utjecaja te je ona tu samo da korisnik bolje razumije što i kako uči. 
 \end{itemize}
 
 Niti jedan od odnosa ne isključuje korištenje bilo koje drugog, no preporuka autoru pitanja je da ne pretjeruje s kombiniranjem više od dva-tri odnosa po jedinki granulacije da sustav ne bi zapetljao tako da eliminira inteligentno posluživanje pitanja.
@@ -448,7 +453,7 @@ U sustavu postoji veza između predmeta i administratora koja znači da samo na 
 Prilikom registracije korisnika u sustav, on nije povezan s predmetima, već ga administrator mora dodati na predmet kojim upravlja. On ne može izbrisati korisnika sa predmeta, tj. učiniti kao da nikada nije postojao, već mu samo dati negativnu zaključnu ocjenu.
 
 \subsubsection{Generiranje ispita}
-Administrator na svojem predmetu ima mogućnost generiranja ispita za zadane korisnike. Ispitu se zadaje broj bodova, broj zadataka i faktor složenosti između 1 i 5. Faktor složenosti određuje prosječnu složenost zadataka na ispitu. Moguće je zadati i maksimalnu/minimalnu složenost pojedinog zadatka na ispitu s ciljem 
+Administrator na svojem predmetu ima mogućnost generiranja ispita za zadane korisnike. Ispitu se zadaje broj bodova, broj zadataka i faktor složenosti između 1 i 5. Faktor složenosti određuje prosječnu složenost zadataka na ispitu. Moguće je zadati i maksimalnu/minimalnu složenost zadataka na ispitu ako administrator želi imati veću kontrolu nad generiranjem ispita.
 Ukoliko sustav nema dovoljno pitanja s takvim parametrima o tome obavještava administratora te čeka ili dozvolu generiranja ispita manjeg broja zadataka ili unos novih parametara za generiranje.
 Administrator nema mogućnost određivanja bodovanja pojedinog zadatka zbog inteligencije sustava koja sama određuje najbolje bodovanje. Na to administrator može utjecati samo prilikom zapisivanja pitanja u bazu biranjem njegove složenosti.
 Ispit mora biti generiran za određene korisnike sudionike na pojedinom predmetu. Ukoliko sustav shvati da korisnicima ne bi smjela biti ponuđena pitanja s parametrima koje je odredio administrator (tj. neki od korisnika nisu zadovoljili preduvjete), sustav nudi mogućnost poništenja generacije ispita ili nastavak. Pretpostavka je da je administrator možda pogriješio ili da korisnik nije bio dovoljno odgovoran u rješavanju zadataka.
@@ -477,16 +482,74 @@ U svakom trenutku izvan odgovaranja na provjeru, korisnik može pogledati svoje 
 \par
 Osim svojih rezultata korisnik može vidjeti i sve granule znanja pojedinog koncepta na predmetu te veze koje taj koncept ima.
 
-\section{Logika posluživanja pitanja}
+\section{Procjena znanja korisnika}
+Algoritam procjene znanja radi u dva koraka, najprije procjenjuje znanje pojedinih granula, a zatim na temelju te procjene procjenjuje znanje koncepata. Algoritam se aktivira nakon što korisnik završi rješavanje provjere. Ako se tijekom vježbe ili ispita dogodi neočekivani prekid rada aplikacije, korisnikovo znanje granula i koncepata ostaje isto kao prije generiranja, no na ispitima to znači da je korisnik osvojio 0 bodova.
 
-\subsection{Logika posluživanja pitanja}
+\subsection{Procjena za granule znanja}
+Procjena usvojenosti znanja granula temelji se na vezi zadatka i granule, složenosti zadatka i odnosima između granula. Točno odgovoreni zadatak korisnikovom znanju pojedine granule dodaje broj složenosti tog zadatka. Npr. prvim odgovaranjem na osnovno pitanje iz nekog pojma koje ima broj složenosti 1, korisnikovo znanje granule se povećava s 0 na 1. Ako je odgovor netočan, korisnikovo znanje smanjuje se za isti broj, tj. u ovom primjeru bilo bi -1.
+\par
+Nakon dodavanja znanja osnovnoj granuli zadataka algoritam iterativno prolazi po svim odnosima te granule na sljedeći način:
+\begin{itemize}
+	\item Ako je granula podskup neke druge granule, granuli koja je sadrži se na jednak način dodaje točnost/netočnost odgovora.
+	\item Ako granula koristi neku drugu prilikom rješavanja zadatka (npr. diskretnu vjerojatnost je nemoguće izračunati bez poznavanja osnova kombinatorike), korištenoj granuli dodaje se ili oduzima faktorKorištenja*složenost. Trenutni faktor korištenja postavljen je na 0.4, no postoji mogućnost promjene temeljem iskustva (promjena nije automatizirana).
+	\item Ako postoji granula čije je znanje analogno znanju trenutne granule, korisnikovo znanje analogne granule mijenjamo za faktorAnalognosti*složenost. Trenutni faktor analognosti je 0.2. Valja naglasiti da analognost nije dvosmjerna, tj. ako administrator želi dvosmjernu analognost, u bazi mora postaviti da je X analogno s Y i Y analogno s X.
+\end{itemize}
+
+Granule u bazi sadrže atribut ukupna složenost koji se računa kao suma složenosti zadataka te granule + ukupna složenost granula koje su njezini podskupovi.
+
+\subsubsection{Prednosti ovakvog pristupa}
+Razlozi za ovakav pristup procjeni znanja granula su: trajnost znanja, inkrementalni pristup i brzina izračuna.
+\par
+Trajnost znanja očituje se u tome da jedna pogreška u sustavu znači manje nego višestruki broj točnih odgovora, no istovremeno znači da se korisnika koji ne zna odgovoriti na teža pitanja, vraća na lakša. Znanje korisnika mapira se od minimalnog do maksimalnog \textit{double} broja.
+\par
+Inkrementalni pristup očituje se u algoritmu odabira pitanja koji procjenuje složenost trenutnog znanja korisnika te na temelju nje poslužuje pitanja najbliže složenosti. Nakon što korisnik odgovori na ta pitanja, točni odgovori povećavaju njegovo znanje te se nude pitanja više složenosti, a netočni odgovori ga vraćaju na nižu razinu (uz uvjet da je odgovorio na dovoljan broj pitanja jedne granule).
+\par
+Brzina izračuna nije bila presudni faktor projektiranja baš ovakvog algoritma, no ipak je izuzetno važno da sustavu ne treba previše vremena za aktualizaciju pa je ona ugodna nuspojava ovog pristupa.
+
+\subsection{Procjena za koncepte}
+Procjena znanja za koncepte slijedi tek nakon procjene znanja granula. Ona se računa na sljedeći način:
+1. Za sve granule koje pripadaju konceptu računa se postotak usvojenosti.
+2. Za granule koncepata koji su u odnosu s trenutnim također se računa postotak usvojenosti.
+3. Izračunava se težinski prosjek postotaka usvojenosti sljedećom formulom:
+\begin{center}
+	U = $\sum_{i=1}^{n} T\textsubscript{i}*G\textsubscript{i}$ / $\sum_{i=1}^{n} T\textsubscript{i}$
+\end{center}
+U - postotak usvojenosti, n = ukupni broj granula iz 1. i 2. korak, T\textsubscript{i} = težina, G\textsubscript{i} - postotak usvojenosti i-te granule.
+Težine pojedinih granula su:
+\begin{itemize}
+	\item T = faktorVažnosti ako granula pripada trenutnom konceptu ili konceptu koji je podskup trenutnog.
+	\item T = faktorKorištenja*faktorVažnosti ako koncept koristi neki drugi.
+	\item T = faktorAnalognosti*faktorVažnosti ako je koncept analogan nekom drugom konceptu
+\end{itemize}
+Trenutni faktor važnosti postavljen je na 5.
+
+\subsubsection{Prednosti ovakvog pristupa}
+Dvije najbitnije prednosti ovakvog pristupa su razumljivost prikaza i sigurnost točnog izračuna. Razumljivost prikaza napretka korisnika samom korisniku vrlo je značajna za točnu predstavku o vlastitome znanju. Postotni prikaz razumiju gotovo svi te je relevatniji od možda nepreglednih dijagrama. Težinskim prosjekom korisnik je lišen razmišljanja o implementacijskim detaljima odnosa koncepata u prikazu njegova znanja, no on te odnose može vidjeti ako želi.
+Sigurnost točnog izračuna postiže se izračunom znanja iz granula, a ne prijašnjih rezultata koncepata. Kada bi se znanje računalo i na razini granula znanja i na razini koncepata, postoji mogućnost previše međuovisnosti i pogrešnog izračuna.
+
+\subsection{Ocjena za predmete}
+Ocjene za predmete određuju se zbrajanjem ostvarenih bodova korisnika na svim ispitima te dijeljenjem tog broja s ukupnim mogućim brojem bodova.
+Ocjene su definirane sljedećim pragovima:
+\newline
+<50\%: 1, 
+50\% - 60\%: 2, 
+60\% - 70\%: 3, 
+70\% - 85\%: 4, 
+>85\%: 5
+
+\section{Logika posluživanja pitanja}
+Logika posluživanja pitanja vrlo je važan dio ovog sustava, a slijedi dva principa:
+1. Korisniku treba poslužiti pitanja koja će mu predstavljati rješivi izazov, tj. ne treba mu nuditi pitanja koja je već dokazano točno riješio niti pitanja koja ne može odgovoriti temeljem trenutnog znanja
+2. Svaka provjera treba sadržavati što veći broj različitih pitanja (osim ako drukčije ne postavi administrator) da ne bi naučio "kuharicu" i umjetno preskočio neke dijelove ili ako korisnik nešto ne zna, nema smisla ponuditi mu provjeru ispunjenu pitanjima te vrste.
+
+\subsection{Algoritam posluživanja pitanja}
 Logika posluživanja pitanja unutar ovog sustava zapravo je vrlo jednostavna i prikazana je sljedećim algoritmom:
 \newline
 1. Dohvati sve koncepte unutar predmeta koje korisnik može odgovarati (zadovoljio je preduvjete ili preduvjeti ne postoje).
 \newline
 2. Za svaki od koncepata uzmi dostupne granule, permutiraj listu svih granula.
 \newline
-3. Za svaki od granula uzmi po jedno pitanje prema 6. koraku.
+3. Za svaku od granula uzmi po jedno pitanje prema 6. koraku.
 \newline
 4. Ponavljaj 3. korak dok ne ispuniš broj pitanja. Ako nema dovoljno pitanja, uzimaj po dva pitanja za svaku od granula.
 \newline
@@ -500,13 +563,13 @@ b) nađi pitanje s najbližom složenošću koje nije već uzeto za  ovu provjer
 \newline
 7. Nakon završetka odabira pitanja, generiraj konkretnu provjeru sa konkretnim pitanjima.
 
-\subsection{Ocjenjivanje korisnika}
-
-\subsection{title}
-
 \section{Konkretna pitanja u sustavu}
-Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cijelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Tekstualni opis pitanja preuzet je iz udžbenika 1, 2, 3, no ona sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
+Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matematike, a njegovo je znanje dio dvaju predmeta na Fakultetu Elektrotehnike i Računarstva - Matematike 3R i Vjerojatnosti i statistike. Niti jedan od tih stvarnih predmeta nije u cijelosti sadržan unutar ovog sustava, on sadrži samo dijelove vezane uz diskretnu matematiku. Inspiracija za tekstualni opis preuzeta je iz udžbenika \cite{zubrinic} i \cite{elezovic}, no tamošnja sadržavaju konkretne brojke, a ovaj sustav sadrži formulama generalizirane verzije.
 
+\subsection{Test točnosti parametrizacije}
+Generiranje parametara i računanje rezultata testirano je na 10.000 različitih kombinacija parametara za pojedino pitanje te ta mogućnost i dalje postoji u sustavu. Tu se izuzetno korisnim pokazalo svojstvo mXparsera da svaku pogrešku u svom radu vraća kao NaN (nepostojeći broj) umjesto da baca grešku. Sve uočene pogreške riješene su te bi sustav generiranja parametara trebao raditi u potpunosti.
+
+\pagebreak
 \subsection{Znanje u sustavu}
 \begin{itemize}
 	\item Predmet: Diskretna matematika
@@ -545,9 +608,6 @@ Pitanja unutar sustava pitanja su jednog zamišljenog predmeta - diskretne matem
 	\end{itemize}
 \end{itemize}
 
-\subsection{Test točnosti parametrizacije}
-Generiranje parametara i računanje rezultata testirano je na 10.000 različitih kombinacija parametara te ta mogućnost i dalje postoji u sustavu. Tu se izuzetno korisnim pokazalo svojstvo mXparsera da svaku pogrešku u svom radu vraća kao NaN (nepostojeći broj) umjesto da baca grešku. Sve uočene pogreške riješene su te bi sustav generiranja parametara trebao raditi u potpunosti.
-
 \chapter{Zaključak}
 Edukacijski procesi značajan su i vrlo složen element ljudske civilizacije, a razvojem tehnologije i otklonom od manualnih djelatnosti, njihova važnost još više raste. Stoga je neizbježna potreba za unaprjeđenjem, olakšanjem i poboljšanjem procesa učenja, pogotovo u modernom svijetu u kojem je vrijeme pažnje čovjeka sve kraće.
 \par
@@ -567,17 +627,17 @@ Nakon podužeg vremena zapostavljanja sustava za (inteligentno) učenje u odnosu
 \bibliographystyle{fer}
 
 \begin{sazetak}
-	Ovaj završni rad opisuje modernizaciju procesa učenja sustavom za inteligentno učenje. Rad počinje uvodom u edukacijske procese, zatim prikazuje povijest ideje automatizacije učenja te suvremeni model sustava za inteligentno učenje (ITS). ITS je opisan svojim komponentama, očekivanim karakteristikama i algoritmima uz kritički pogled na nedostatke ITS-a. Slijedi opis slojeva aplikacije koje je potrebno implementirati te opis implementiranog rješenja. On sadrži popis korištenih tehnologija, ER dijagram baze te mogućnosti koje sustav nudi korisniku koji uči te administratoru. Opis završava logikom posluživanja pitanja. Posljednje poglavlje rada je zaključak o prethodno iznesenim idejama. 
-	
-	\kljucnerijeci{Učenje, inteligentno učenje, informacijski sustav, ITS, znanje, prikaz znanja, parametrizacija, posluživanje pitanja, podatkovni sloj, aplikacijski sloj}
+Ovaj završni rad opisuje modernizaciju procesa učenja sustavom za inteligentno učenje. Rad počinje uvodom u edukacijske procese, zatim prikazuje povijest ideje automatizacije učenja te suvremeni model sustava za inteligentno učenje (ITS). ITS je opisan svojim komponentama, očekivanim karakteristikama i algoritmima uz kritički pogled na nedostatke ITS-a. Slijedi opis slojeva aplikacije koje je potrebno implementirati te opis implementiranog rješenja. On sadrži popis korištenih tehnologija, ER dijagram baze te mogućnosti koje sustav nudi korisniku koji uči te administratoru. Opis završava logikom posluživanja pitanja. Posljednje poglavlje rada je zaključak o prethodno iznesenim idejama. 
+
+\kljucnerijeci{Učenje, inteligentno učenje, informacijski sustav, ITS, znanje, prikaz znanja, parametrizacija, posluživanje pitanja, podatkovni sloj, aplikacijski sloj}
 \end{sazetak}
 
 
 \engtitle{Application logic and data layer development for an e-learning system}
 \begin{abstract}
-	This paper describes modernization of the learning processes using intelligent tutoring system. It begins with introduction  to educational processes, it then describes the history of automated	 learning and contemporary model of an intelligent tutoring system (ITS). The paper then describes layers of the application to be implemented and the implemented solution. This description contains a list of used technologies, ER diagram of the database and all options the system offers to both learning user and an administrator. It is followed by the description of the logic of serving questions. The last chapter is a conclusion about aformentioned ideas.
-	
-	\keywords{Learning, intelligent learning, information system, ITS, knowledge, knowledge representation, parameterization,  question serving, data layer, application logic}
+This paper describes modernization of the learning processes using intelligent tutoring system. It begins with introduction  to educational processes, it then describes the history of automated	 learning and contemporary model of an intelligent tutoring system (ITS). The paper then describes layers of the application to be implemented and the implemented solution. This description contains a list of used technologies, ER diagram of the database and all options the system offers to both learning user and an administrator. It is followed by the description of the logic of serving questions. The last chapter is a conclusion about aforementioned ideas.
+
+\keywords{Learning, intelligent learning, information system, ITS, knowledge, knowledge representation, parameterization,  question serving, data layer, application logic}
 \end{abstract}
 
 \end{document}

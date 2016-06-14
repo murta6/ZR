@@ -1,4 +1,4 @@
-\begin{thebibliography}{39}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -109,6 +109,11 @@ eLearningNC.gov.
   \url{http://www.elearningnc.gov/about_elearning/methods_of_elearning/}.
 \newblock Preuzeto: 13. 6. 2016.
 
+\bibitem[Elezović(2014)]{elezovic}
+Neven Elezović.
+\newblock \emph{VJEROJATNOST I STATISTIKA: Diskretna vjerojatnost}.
+\newblock Element, Zagreb, 2014.
+
 \bibitem[ferko.fer.hr()]{ferko}
 ferko.fer.hr.
 \newblock Početna stranica - ferko.
@@ -196,6 +201,11 @@ Derek Stockley.
 \newblock E-learning definition (elearning, online training, online learning).
 \newblock \url{http://www.derekstockley.com.au/elearning-definition.html}.
 \newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Žubrinić(2014)]{zubrinic}
+Darko Žubrinić.
+\newblock \emph{Uvod u diskretnu matematiku}.
+\newblock Element, Zagreb, 2014.
 
 \bibitem[Urban-Lurain()]{markurban}
 Mark Urban-Lurain.

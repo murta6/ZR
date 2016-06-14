@@ -27,36 +27,39 @@
 \contentsline {subsubsection}{Procjena znanja}{14}
 \contentsline {subsection}{\numberline {2.1.5}Poznati sustavi}{15}
 \contentsline {subsubsection}{Neinteligentni sustavi}{16}
-\contentsline {subsubsection}{Inteligentni sustavi}{18}
-\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{19}
-\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{19}
-\contentsline {subsubsection}{Cijena izrade}{20}
-\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{22}
-\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{24}
-\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{24}
-\contentsline {section}{\numberline {4.2}ER dijagram}{24}
-\contentsline {subsection}{\numberline {4.2.1}Slika ER dijagrama i entiteta u bazi}{25}
-\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{27}
-\contentsline {subsection}{\numberline {4.3.1}Reprezentacija znanja}{27}
-\contentsline {subsubsection}{Granulacije znanja}{27}
-\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{28}
-\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{29}
-\contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{30}
-\contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{30}
-\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{30}
-\contentsline {subsubsection}{Registracija korisnika na predmet}{30}
-\contentsline {subsubsection}{Generiranje ispita}{31}
+\contentsline {subsubsection}{Inteligentni sustavi}{17}
+\contentsline {subsection}{\numberline {2.1.6}Nedostaci ITS-a}{20}
+\contentsline {subsubsection}{Podu\IeC {\v c}avanje i inteligencija}{20}
+\contentsline {subsubsection}{Cijena izrade}{21}
+\contentsline {chapter}{\numberline {3}Slojevi aplikacija}{23}
+\contentsline {chapter}{\numberline {4}Opis implementiranog rje\IeC {\v s}enja}{25}
+\contentsline {section}{\numberline {4.1}Kori\IeC {\v s}tene tehnologije}{25}
+\contentsline {section}{\numberline {4.2}ER dijagram}{25}
+\contentsline {section}{\numberline {4.3}Mogu\IeC {\'c}nosti sustava}{26}
+\contentsline {subsection}{\numberline {4.3.1}Reprezentacija znanja}{26}
+\contentsline {subsubsection}{Granulacije znanja}{26}
+\contentsline {subsubsection}{Odnosi izme\IeC {\dj }u granulacija}{27}
+\contentsline {subsection}{\numberline {4.3.2}Parametrizirani zadaci}{28}
+\contentsline {subsubsection}{Zapis u bazi podataka i generiranje}{29}
+\contentsline {subsubsection}{Izra\IeC {\v c}un rezultata}{29}
+\contentsline {subsection}{\numberline {4.3.3}Mogu\IeC {\'c}nosti administratora}{29}
+\contentsline {subsubsection}{Registracija korisnika na predmet}{29}
+\contentsline {subsubsection}{Generiranje ispita}{30}
+\contentsline {subsubsection}{Pregled rezultata}{30}
+\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{30}
+\contentsline {subsubsection}{Registracija}{30}
+\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{31}
 \contentsline {subsubsection}{Pregled rezultata}{31}
-\contentsline {subsection}{\numberline {4.3.4}Mogu\IeC {\'c}nosti korisnika}{31}
-\contentsline {subsubsection}{Registracija}{31}
-\contentsline {subsubsection}{Inteligentno u\IeC {\v c}enje}{32}
-\contentsline {subsubsection}{Pregled rezultata}{32}
-\contentsline {section}{\numberline {4.4}Logika poslu\IeC {\v z}ivanja pitanja}{33}
-\contentsline {subsection}{\numberline {4.4.1}Logika poslu\IeC {\v z}ivanja pitanja}{33}
-\contentsline {subsection}{\numberline {4.4.2}Ocjenjivanje korisnika}{33}
-\contentsline {subsection}{\numberline {4.4.3}title}{33}
-\contentsline {section}{\numberline {4.5}Konkretna pitanja u sustavu}{33}
-\contentsline {subsection}{\numberline {4.5.1}Znanje u sustavu}{34}
-\contentsline {subsection}{\numberline {4.5.2}Test to\IeC {\v c}nosti}{34}
-\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{35}
-\contentsline {chapter}{Literatura}{37}
+\contentsline {section}{\numberline {4.4}Procjena znanja korisnika}{32}
+\contentsline {subsection}{\numberline {4.4.1}Procjena za granule znanja}{32}
+\contentsline {subsubsection}{Prednosti ovakvog pristupa}{33}
+\contentsline {subsection}{\numberline {4.4.2}Procjena za koncepte}{33}
+\contentsline {subsubsection}{Prednosti ovakvog pristupa}{34}
+\contentsline {subsection}{\numberline {4.4.3}Ocjena za predmete}{34}
+\contentsline {section}{\numberline {4.5}Logika poslu\IeC {\v z}ivanja pitanja}{34}
+\contentsline {subsection}{\numberline {4.5.1}Algoritam poslu\IeC {\v z}ivanja pitanja}{34}
+\contentsline {section}{\numberline {4.6}Konkretna pitanja u sustavu}{35}
+\contentsline {subsection}{\numberline {4.6.1}Test to\IeC {\v c}nosti parametrizacije}{35}
+\contentsline {subsection}{\numberline {4.6.2}Znanje u sustavu}{36}
+\contentsline {chapter}{\numberline {5}Zaklju\IeC {\v c}ak}{39}
+\contentsline {chapter}{Literatura}{41}
