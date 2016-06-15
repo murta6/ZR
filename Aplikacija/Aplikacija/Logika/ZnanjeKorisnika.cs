@@ -13,46 +13,32 @@ namespace Aplikacija.Logika
         public static readonly int sifraPreduvjeta = 1;
 
 
-        /*public static Boolean dodajNovogKorisnika(String username, String password, String ime, String prezime)
+        public static Boolean dodajNovogKorisnika(String username, String password, String ime, String prezime)
         {
             Boolean dodan = KorisniciAdmini.dodajKorisnika(username, password, ime, prezime);
             if (!dodan)
             {
                 throw new ArgumentException("Već postoji korisnik s navedenim usernameom");
             }
-            int sifraKorisnika = KorisniciAdmini.sifraZaUsername(username);
-            dodajKorisnikePredmetima(sifraKorisnika);
             return true;
         }
 
-        public static void dodajKorisnikePredmetima(int sifraKorisnika)
+        public static void dodajKorisnikaPredmetu(int sifraKorisnika, int sifraPredmeta)
         {
-            foreach(Predmet predmet in Predmeti.vratiSvePredmete())
+            //dodaj Korisnik Predmet
+            foreach (var koncept in Koncepti.vratiSveKonceptePredmeta(sifraPredmeta))
             {
-                Predmeti.dodajKorisnikPredmet(predmet.sifraPredmeta, sifraKorisnika);
-                dodajKoncepteKorisniku(predmet.sifraPredmeta, sifraKorisnika);
+                //dodaj KorisnikKoncept
+                foreach (var granula in Granule.vratiSveGranuleKoncepta(koncept.sifraKoncepta))
+                {
+
+                }
             }
         }
 
-        public static void dodajKoncepteKorisniku(int sifraPredmeta, int sifraKorisnika)
-        {
-            foreach(Koncept kon in Koncepti.vratiSveKonceptePredmetaBezUvjeta(sifraPredmeta, sifraPreduvjeta))
-            {
-                Koncepti.dodajKorisnikaKonceptu(sifraKorisnika, kon.sifraKoncepta);
-            }
-        }
-
-        public static Boolean dozvolaOtvaranjaKoncepta(int sifraKorisnika, int sifraPredmeta)
+        public static void azurirajZnanjeKorisnika(KonkretnaProvjera provjera)
         {
 
         }
-
-        public static void otvoriKoncepte(int sifraKorisnika, int sifraPredmeta)
-        {
-            foreach(Koncept kon in Koncepti.vratiSveKonceptePredmeta(sifraPredmeta))
-            {
-                return false;
-            }
-        }*/
     }
 }

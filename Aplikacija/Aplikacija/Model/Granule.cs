@@ -87,6 +87,7 @@ namespace Aplikacija.Model
                 }
                 int brojDodanih = 0;
                 var sviZadaci = baza.Zadatak.Where(zad => zad.sifraGranule == sifraGranule);
+                //permutiraj
                 sviZadaci = sviZadaci.OrderBy(zad => Math.Abs(zad.Slozenost.brojSlozenosti - ocekivanaSlozenost));
                 foreach (var zad in sviZadaci){
                     if(brojDodanih == brojZadataka)
@@ -102,11 +103,13 @@ namespace Aplikacija.Model
                 return zadaci;
             }
         }
+
         private class GranAvg
         {
             public int sifraGranule;
             public double prosjecnaSlozenost;
         }
+
         public static double prosjecnaSLozenostGranule(int sifraGranule)
         {
             using(Baza baza = new Baza())
