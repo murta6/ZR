@@ -1,0 +1,17 @@
+﻿- osnove vjerojatnosti
+1. Prilikom bacanja kocke, kolika je vjerojatnost da je pao broj veći od n?
+Odgovor: 1/6*(6-n)*100, Složenost: 1
+2. Prilikom bacanja novčića n puta, kolika je vjerojatnost da niti jednom nije pala glava?
+Odgovor: (1/2)^n*100, Složenost: 1
+3. Kolika je vjerojatnost da je igrač zaokružio točnu kombinaciju u lotu m od n?
+Odgovor: 1/C(n,m)*100, Složenost: 2
+4. Kolika je vjerojatnost da je u m bacanja novčića n puta palo pismo?
+Odgovor: C(m,n)*(1/2)^n, Složenost: 3
+5. Računalo ispisuje n brojeva, koja je vjerojatnost da su svi različiti?
+Odgovor: n!/(10-n)!*100, Složenost: 3
+6. Računalo ispisuje n brojeva, koja je vjerojatnost da je ispisao tri znamenke 5?
+Odogovor: C(n,3)*9^(n-3)*100, Složenost: 3
+7. Računalo ispisuje n brojeva, koja je vjerojatnost da su se pojavile samo 4 različite znamenke?
+Odgovor: 4^n*C(10,4)*100, Složenost: 3
+
+n:>4&<8 m:>2&<11                                                                                                                                                                                                                                                                                             

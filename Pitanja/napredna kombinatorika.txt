@@ -1,21 +1,21 @@
 - kombinatorika
-1. Na koliko se naèina n putnika može ukrcati u m vagona ako u prvom moraju biti toèno 3?
-Odgovor: (n#3)*(m-1)^(n-3), Složenost: 4
-2. Koliko se n-slovnih rijeèi može napraviti od 15 slova, od èega su 5 samoglasnika ako znamo da mora sadržavati bar 4 samoglasnika i ne smije sadržavati ista slova?
-Odgovor: (5#4)*(10#(n-4))*n!+(5#5)*(10#(n-5))*n!, Složenost: 5
-3. Koliko ima kvadrata na šahovskoj ploèi n*n koji se mogu sastaviti od osnovnih?
+1. Na koliko se nacina n putnika može ukrcati u m vagona ako u prvom moraju biti tocno 3?
+Odgovor: C(n,3)*(m-1)^(n-3), Složenost: 4
+2. Koliko se n-slovnih rijeci može napraviti od 15 slova, od cega su 5 samoglasnika ako znamo da mora sadržavati bar 4 samoglasnika i ne smije sadržavati ista slova?
+Odgovor: C(5,4)*C(10,n-4)*n!+C(5,5)*C(10,n-5)*n!, Složenost: 5
+3. Koliko ima kvadrata na šahovskoj ploci n*n koji se mogu sastaviti od osnovnih?
 Odgovor: n*(n+1)*(2n+1)/6, Složenost: 5
-4. Na koliko se naèina m jabuka može podijeliti na n djece tako da barem 1 dijete ne dobije niti jednu jabuku?
-Odgovor: (m+n-1)#m-(m-n-1)#m, Složenost: 5
-5. Na koji naèin iz špila od 52 karte možemo odabrati n karata da meðu njima bude bar 1 crvena?
-Odgovor: 52#n - 26#n, Složenost: 3
+4. Na koliko se nacina m jabuka može podijeliti na n djece tako da barem 1 dijete ne dobije niti jednu jabuku?
+Odgovor: C(m+n-1,m)-C(m-1,m-n), Složenost: 5
+5. Na koji nacin iz špila od 52 karte možemo odabrati n karata da medu njima bude bar 1 crvena?
+Odgovor: C(52,n) - C(26,n), Složenost: 3
 
 - dirichlet
 1. Izmedu n ljudi za koliko možemo sa sigurnošcu reci da moraju biti rodeni u istom mjesecu?
-Odgovor: round((n-1)/12)+1, Složenost: 2
+Odgovor: round((n-1)/12, 0)+1, Složenost: 2
 2. Ako u nekoj državi ima n milijuna stanovnika, a ljudi imaju najviše 300 000 dlaka na glavi, koliko minimalno ljudi ima s jednakim brojem dlaka na glavi?
-Odgovor: round((n-1)*1000000/300001)+1, Složenost: 3
+Odgovor: round((n*1000000-1)/300001, 0)+1, Složenost: 3
 3. U gradu ima n zgrada s minimalno u njima živi m milijuna stanovnika. Koliko minimalno ljudi mora živjeti u jednoj od zgrada?
-Odgovor: round((m-1)*1000000/n)+1, Složenost: 2
+Odgovor: round((m*1000000-1)/n, 0)+1, Složenost: 2
 4. Koliko je minimalno ljudi rodeno u istom tjednu izmedu njih n tisuca?
-Odgovor: round((n-1)/7)+1, Složenost: 2
+Odgovor: round((n*1000-1)/7, 0)+1, Složenost: 2

@@ -1,0 +1,38 @@
+@ povrh = #
+- kombinacije
+1. Na koliko se naèina u razredu od m uèenika može odabradi n predstavnika?
+Odgovor: m#n, Složenost: 2
+2. Koliko kombinacija ima u LOTU n od m?
+Odgovor: m#n, Složenost: 2
+3. Od m muškaraca i n žena moramo odabrati 5-èlanu delegaciju da muškaraca ima 3, a žena 2. Na koliko naèina se to može postiæi?
+Odgovor: m#3 * n#2, Složenost: 3
+4. Od m muškaraca i n žena moramo odabrati 4-èlanu delegaciju da od svakih ima bar 1. Na koliko naèina?
+Odgovor: m#1*n#3 + m#2*n#2 + m#3*n#1, Složenost: 4
+5. Na koliko se nacina može od m muškaraca i n žena odabrati 5-clana delegacija da žena ima više?
+Odgovor: m#2*n#3+m#1*n#4+n#5, Složenost: 3
+5. Na koliko naèina možemo podijeliti n kovanica od 1 kune izmeðu m djece?
+Odgovor: (m+n-1)#m, Složenost: 2
+6. Na koliko naèina izmeðu m djece možemo podijeliti k krušaka i j jabuka?
+Odgovor: C(m+k-1,m)*C(m+j-1,m), Složenost: 3
+
+- varijacije
+7. Na koliko naèina n putnika možemo smjestiti u autobus s m sjedala?
+Odgovor: m!/(m-n)!, Složenost: 2
+8. Na koliko naèina n ljudi može sjesti za okrugli stol ako zarotirane rasporede smatramo jednakima?
+Odgovor: (n-1)!, Složenost: 3
+9. Na koliko se naèina m razlièitih voæaka može podijeliti izmeðu n ljudi ako svatko može dobiti samo 1?
+Odgovor: n!/(m-n)!, Složenost: 2
+10. Na koliko se nacina od m žutih, n plavih i k crvenih tocaka može napraviti trokut sa svim raznobojnim vrhovima?
+Odogovor: m*n+k*m+n*k, Složenost: 3
+11. Koliko je razlièitih bacanja moguæe s n razlièitih kocaka?
+Odgovor: 6^n, Složenost: 2
+12. Na koliko se naèina m razlièitih voæaka može podijeliti izmeðu n ljudi ako svatko može dobiti koliko god?
+Odgovor: n^m, Složenost: 2
+13. Koliko na šahovskoj ploci n*n ima pravokutnika?
+Odgovor: C(n+1,2)*C(n+1,2), Složenost: 4
+14. Na koliko nacina n muškaraca i n žena može sjediti za okruglim stolom da niti žene nikada ne sjede jedna pored druge?
+Odgovor: (n-1)!*n!, Složenost: 3
+15. Na koliko nacina možemo složiti rijec od n razlicitih suglasnika, ako od njih T i L uvijek moraju biti jedan pored drugog?
+Odgovor: 2!*(n-1)!, Složenost: 3
+16. Koliko se n-znamenskastih telefonskih brojeva može složiti ako prva znamenka mora biti razlicita od 0?
+Odgovor: 9*10^n, Složenost: 3
