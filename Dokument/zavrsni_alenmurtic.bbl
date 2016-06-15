@@ -63,12 +63,6 @@ activemath.org.
 \newblock \url{http://www.activemath.org/Software}.
 \newblock Preuzeto: 13. 6. 2016.
 
-\bibitem[Andrina~Granić(2002)]{interface}
-Vlado~Glavinić Andrina~Granić.
-\newblock User interface specification issues for computerized educational
-  systems.
-\newblock \emph{Journal of Computing and Information Technology}, 3, 2002.
-
 \bibitem[autora(2002)]{why2atlas}
 Grupa autora.
 \newblock The architecture of why2-atlas: A coach for qualitative physics essay
@@ -82,14 +76,21 @@ biometric solutions.com.
   \url{http://www.biometric-solutions.com//solutions/index.php?story=keystroke_dynamics}.
 \newblock Preuzeto: 14. 6. 2016.
 
+\bibitem[Budd()]{limitations}
+Best~T. Budd, S.
+\newblock 2008.
+\newblock
+  \url{http://etec.ctlt.ubc.ca/510wiki/Educational_Benefits_and_Limitations}.
+\newblock Preuzeto: 13. 6. 2016.
+
 \bibitem[Chew()]{pascal}
-Julia Chew.
+J.~Chew.
 \newblock Blaise pascal.
 \newblock \url{https://math.berkeley.edu/~robin/Pascal/}.
 \newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[Colton(2005)]{sematicknowledge}
-Simon Colton.
+S.~Colton.
 \newblock Knowledge representation.
 \newblock
   \url{http://www.doc.ic.ac.uk/~sgc/teaching/pre2012/v231/lecture4.html}, 2005.
@@ -104,6 +105,12 @@ B.J. Copeland.
 coursera.org.
 \newblock About | coursera.
 \newblock \url{https://www.coursera.org/about/}.
+\newblock Preuzeto: 13. 6. 2016.
+
+\bibitem[Davis(1993)]{knowledgerep}
+H.~Szolovits~P. Davis, R.~Shrobe.
+\newblock What is a knowledge representation?
+\newblock \url{http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html}, 1993.
 \newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[developer.apple.com /~Mac Developer~Library()]{mvc}
@@ -127,7 +134,7 @@ eLearningNC.gov.
 \newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[Elezović(2014)]{elezovic}
-Neven Elezović.
+N.~Elezović.
 \newblock \emph{VJEROJATNOST I STATISTIKA: Diskretna vjerojatnost}.
 \newblock Element, Zagreb, 2014.
 
@@ -143,8 +150,21 @@ The~Association for Educational~Communications i Technology.
 \newblock \url{http://www.aect.org/edtech/ed1/19/19-03.html}, 2001.
 \newblock Preuzeto: 13. 6. 2016.
 
+\bibitem[Granić(2002)]{interface}
+Glavinić~V. Granić, A.
+\newblock User interface specification issues for computerized educational
+  systems.
+\newblock \emph{Journal of Computing and Information Technology}, 3, 2002.
+
+\bibitem[Gross()]{feedback}
+Mokbel B. Hammer B. Pinkwart~N. Gross, S.
+\newblock Learning feedback in intelligent tutoring systems.
+\newblock
+  \url{https://cses.informatik.hu-berlin.de/pubs/2015/fit/learning_feedback_in_intelligent_tutoring_systems.pdf}.
+\newblock Preuzeto: 13. 6. 2016.
+
 \bibitem[Grubišić(2006)]{grubisic2006}
-Ani Grubišić.
+A.~Grubišić.
 \newblock Vrednovanje učinka inteligentnih sustava e-učenja.
 \newblock Magistarski rad, Sveučilište u zagrebu, Fakultet elektrotehnike i
   računarstva, 2006.
@@ -168,12 +188,26 @@ moodle.org.
 \newblock \url{https://docs.moodle.org/31/en/About_Moodle}.
 \newblock Preuzeto: 13. 6. 2016.
 
+\bibitem[Park~Woolf(2011)]{itspastpresentfuture}
+B.~Park~Woolf.
+\newblock Intelligent tutors: Past, present and future.
+\newblock
+  \url{http://www.adlnet.gov/wp-content/uploads/2011/08/woolf_intelligent_systems_part1_iFest2011.pdf},
+  2011.
+\newblock Preuzeto: 13. 6. 2016.
+
 \bibitem[Peters(2013)]{peters}
-Dorian Peters.
+D.~Peters.
 \newblock \emph{Interface Design for Learning: Design Strategies for Learning
   Experiences}.
 \newblock New Riders, 2013.
 \newblock str. 21-22.
+
+\bibitem[Phegade(2014)]{security}
+Oza T. H. Neve~K. Phegade, S.~G.
+\newblock Secure access of intelligent tutorial system on cloud using rsa
+  algorithm.
+\newblock \emph{IBMRD's Journal of Management and Research}, 3, 2014.
 
 \bibitem[philosophyfaculty.ucsd.edu()]{leibniz}
 philosophyfaculty.ucsd.edu.
@@ -181,56 +215,29 @@ philosophyfaculty.ucsd.edu.
 \newblock \url{http://philosophyfaculty.ucsd.edu/faculty/rutherford/Leibniz/}.
 \newblock Preuzeto: 13. 6. 2016.
 
-\bibitem[Pieter~Spronck()]{adaptiveai}
-Jaap van den~Herik Pieter~Spronck.
+\bibitem[Sosnovsky(2003)]{Sosnovsky03web-basedparameterized}
+Shcherbinina O. Brusilovsky~P. Sosnovsky, S.
+\newblock Web-based parameterized questions as a tool for learning, 2003.
+
+\bibitem[Spronck()]{adaptiveai}
+van den Herik~J. Spronck, P.
 \newblock Game artificial intelligence that adapts to the human player.
 \newblock \url{http://www.ercim.eu/publication/Ercim_News/enw57/spronck.html}.
 \newblock Preuzeto: 13. 6. 2016.
 
-\bibitem[Prof. Sweta G.~Phegade(2014)]{security}
-Prof. Kalyani~Neve Prof. Sweta G.~Phegade, Prof. Tejal H.~Oza.
-\newblock Secure access of intelligent tutorial system on cloud using rsa
-  algorithm.
-\newblock \emph{IBMRD's Journal of Management and Research}, 3, 2014.
-
-\bibitem[Randall~Davis(1993)]{knowledgerep}
-Peter~Szolovits Randall~Davis, Howard~Shrobe.
-\newblock What is a knowledge representation?
-\newblock \url{http://groups.csail.mit.edu/medg/ftp/psz/k-rep.html}, 1993.
-\newblock Preuzeto: 13. 6. 2016.
-
-\bibitem[Sebastian~Gross()]{feedback}
-Barbara Hammer Niels~Pinkwart Sebastian~Gross, Bassam~Mokbel.
-\newblock Learning feedback in intelligent tutoring systems.
-\newblock
-  \url{https://cses.informatik.hu-berlin.de/pubs/2015/fit/learning_feedback_in_intelligent_tutoring_systems.pdf}.
-\newblock Preuzeto: 13. 6. 2016.
-
-\bibitem[Shelby~Budd()]{limitations}
-Tracey~Best Shelby~Budd.
-\newblock 2008.
-\newblock
-  \url{http://etec.ctlt.ubc.ca/510wiki/Educational_Benefits_and_Limitations}.
-\newblock Preuzeto: 13. 6. 2016.
-
-\bibitem[Sosnovsky et~al.(2003)Sosnovsky, Shcherbinina, i
-  Brusilovsky]{Sosnovsky03web-basedparameterized}
-Sergey Sosnovsky, Olena Shcherbinina, i Peter Brusilovsky.
-\newblock Web-based parameterized questions as a tool for learning, 2003.
-
 \bibitem[Stockley()]{derekstock}
-Derek Stockley.
+D.~Stockley.
 \newblock E-learning definition (elearning, online training, online learning).
 \newblock \url{http://www.derekstockley.com.au/elearning-definition.html}.
 \newblock Preuzeto: 13. 6. 2016.
 
 \bibitem[Žubrinić(2014)]{zubrinic}
-Darko Žubrinić.
+D.~Žubrinić.
 \newblock \emph{Uvod u diskretnu matematiku}.
 \newblock Element, Zagreb, 2014.
 
 \bibitem[Urban-Lurain()]{markurban}
-Mark Urban-Lurain.
+M.~Urban-Lurain.
 \newblock Intelligent tutoring systems: An historic review in the context of
   the development of artificial intelligence and educational psychology.
 \newblock \url{http://www.cse.msu.edu/rgroups/cse101/ITS/its.htm}.
@@ -242,16 +249,8 @@ urbanjungle.dir.hr/.
 \newblock \url{http://urbanjungle.dir.hr/}.
 \newblock Preuzeto: 13. 6. 2016.
 
-\bibitem[Woolf(2011)]{itspastpresentfuture}
-Beverly~Park Woolf.
-\newblock Intelligent tutors: Past, present and future.
-\newblock
-  \url{http://www.adlnet.gov/wp-content/uploads/2011/08/woolf_intelligent_systems_part1_iFest2011.pdf},
-  2011.
-\newblock Preuzeto: 13. 6. 2016.
-
 \bibitem[Zhai(2015)]{zhenzhai}
-Zhen Zhai.
+Z.~Zhai.
 \newblock Intelligent tutoring system overview.
 \newblock
   \url{https://cseweb.ucsd.edu/~zzhai/blog/intelligent-tutoring-system-overview.html},
