@@ -95,6 +95,15 @@ namespace Aplikacija.Model
             }
         }
 
+        public static KorisnikKoncept vratiKorisnikovKoncept(int sifraKorisnika, int sifraKoncepta)
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.KorisnikKoncept.Where(kkp => kkp.sifraKoncepta == sifraKoncepta &&
+                    kkp.sifraKorisnika == sifraKorisnika).SingleOrDefault();
+            }
+        }
+
         public static List<KorisnikKoncept> vratiOtkljucaneKoncepteKorisnika(int sifraKorisnika)
         {
             using (Baza baza = new Baza())

@@ -44,8 +44,13 @@ namespace Aplikacija
                     }
                 }
                 Console.WriteLine("Prijava neuspješna! Pokušajte ponovno.");
-                Console.WriteLine("----------------------------------------------------------------------------------------------");
+                ispisiCrtu();
             }
+        }
+
+        public static void ispisiCrtu()
+        {
+            Console.WriteLine("----------------------------------------------------------------------------------------------");
         }
     }
 }

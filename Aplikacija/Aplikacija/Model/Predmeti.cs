@@ -139,6 +139,7 @@ namespace Aplikacija.Model
                     ukupno += (double)prov.ostvareniBrojBodova;
                     ostvareno += prov.SkaliraniUkupniBrojBodova;
                 }
+                if (ukupno == 0) return 0;
                 return ostvareno / ukupno * 100;
             }
         }

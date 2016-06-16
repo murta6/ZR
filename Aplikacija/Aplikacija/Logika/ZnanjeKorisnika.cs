@@ -100,6 +100,10 @@ namespace Aplikacija.Logika
             }
             public double izracunaj()
             {
+                if (nazivnik == 0)
+                {
+                    return 0;
+                }
                 return brojnik / nazivnik;
             }
         }

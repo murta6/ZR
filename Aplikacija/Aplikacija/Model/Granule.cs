@@ -105,6 +105,33 @@ namespace Aplikacija.Model
             }
         }
 
+        public static HashSet<Zadatak> zadaniZadaciGranule(int sifraKorisnika, int sifraGranule,
+    double ukupnaSlozenost, int brojZadataka, HashSet<Zadatak> zadaci, double ocekivanaSlozenost, double minSlozenost = 0, double maxSlozenost = 6)
+        {
+            using (Baza baza = new Baza())
+            {
+                double znanje = baza.KorisnikGranula.Where(kgr => kgr.sifraKorisnika == sifraKorisnika && kgr.sifraGranule == sifraGranule).First().znanje;
+                int brojDodanih = 0;
+                var sviZadaci = baza.Zadatak.Where(zad => zad.sifraGranule == sifraGranule && zad.sifraSlozenosti >= minSlozenost && zad.sifraSlozenosti <=maxSlozenost);
+                //permutiraj
+                sviZadaci = sviZadaci.OrderBy(a => Guid.NewGuid());
+                sviZadaci = sviZadaci.OrderBy(zad => Math.Abs(zad.Slozenost.brojSlozenosti - ocekivanaSlozenost));
+                foreach (var zad in sviZadaci)
+                {
+                    if (brojDodanih == brojZadataka)
+                    {
+                        break;
+                    }
+                    if (!zadaci.Contains(zad))
+                    {
+                        zadaci.Add(zad);
+                        brojDodanih++;
+                    }
+                }
+                return zadaci;
+            }
+        }
+
         private class GranAvg
         {
             public int sifraGranule;

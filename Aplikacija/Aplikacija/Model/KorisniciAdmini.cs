@@ -92,6 +92,14 @@ namespace Aplikacija.Model
             }
         }
 
+        public static Korisnik vratiKorisnikaZaSifru(int sifraKorisnika)
+        {
+            using(Baza db = new Baza())
+            {
+                return db.Korisnik.Where(kor => kor.sifraKorisnika == sifraKorisnika).SingleOrDefault();
+            }
+        }
+
         #endregion
 
         private static String hashPassword(String password)
