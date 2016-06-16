@@ -65,7 +65,7 @@ namespace Aplikacija.Logika
         {
             using(Baza baza = new Baza())
             {
-                var kon = Koncepti.vratiOtkljucaneKoncepteKorisnika(sifraKorisnika);
+                var kon = Koncepti.vratiKoncepteKorisnika(sifraKorisnika);
                 foreach(var koncept in kon)
                 {
                     double znanje = azurirajZnanjeKoncepta(baza, koncept.sifraKoncepta, sifraKorisnika);

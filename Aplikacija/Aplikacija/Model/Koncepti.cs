@@ -53,6 +53,15 @@ namespace Aplikacija.Model
             }
         }
 
+        public static List<KorisnikKoncept> vratiKoncepteKorisnika(int sifraKorisnika)
+        {
+            using (Baza baza = new Baza())
+            {
+                List<Koncept> list = new List<Koncept>();
+                return baza.KorisnikKoncept.Where(kor => kor.sifraKorisnika == sifraKorisnika).ToList();
+            }
+        }
+
         private static Boolean zadovoljenUvjet(int sifraKorisnika, int sifraKoncepta, Baza baza)
         {
             var preduvjeti = baza.OdnosKoncepata.
