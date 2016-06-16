@@ -71,6 +71,7 @@ namespace Aplikacija.Logika
                     double znanje = azurirajZnanjeKoncepta(baza, koncept.sifraKoncepta, sifraKorisnika);
                     Koncepti.azurirajZnanjeKoncepta(sifraKorisnika, koncept.sifraKoncepta, znanje);
                 }
+                baza.SaveChanges();
             }
         }
 
@@ -153,6 +154,7 @@ namespace Aplikacija.Logika
                     }
                     azurirajZnanjeGranule(baza, provjera.sifraKorisnika, zad.sifraGranule, brojSlozenosti);
                 }
+                baza.SaveChanges();
             }
         }
 

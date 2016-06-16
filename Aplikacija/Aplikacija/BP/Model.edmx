@@ -28,7 +28,7 @@
             <PropertyRef Name="sifraGranule" />
           </Key>
           <Property Name="sifraGranule" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nazivGranule" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="nazivGranule" Type="nchar" MaxLength="40" Nullable="false" />
           <Property Name="sifraKoncepta" Type="int" Nullable="false" />
           <Property Name="ukupnaSlozenost" Type="int" Nullable="false" />
         </EntityType>
@@ -37,7 +37,7 @@
             <PropertyRef Name="sifraKoncepta" />
           </Key>
           <Property Name="sifraKoncepta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nazivKoncepta" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="nazivKoncepta" Type="nchar" MaxLength="40" Nullable="false" />
           <Property Name="sifraPredmeta" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Korisnik">
@@ -46,7 +46,7 @@
           </Key>
           <Property Name="sifraKorisnika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="username" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="password" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="ime" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="prezime" Type="nchar" MaxLength="30" Nullable="false" />
         </EntityType>
@@ -54,7 +54,7 @@
           <Key>
             <PropertyRef Name="sifraKorisnikGranula" />
           </Key>
-          <Property Name="sifraKorisnikGranula" Type="int" Nullable="false" />
+          <Property Name="sifraKorisnikGranula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sifraKorisnika" Type="int" Nullable="false" />
           <Property Name="sifraGranule" Type="int" Nullable="false" />
           <Property Name="znanje" Type="float" Nullable="false" />
@@ -626,7 +626,7 @@
             <PropertyRef Name="sifraGranule" />
           </Key>
           <Property Name="sifraGranule" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nazivGranule" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="nazivGranule" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sifraKoncepta" Type="Int32" Nullable="false" />
           <Property Name="ukupnaSlozenost" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Koncept" Relationship="Self.FK_GranulaKoncept" FromRole="Granula" ToRole="Koncept" />
@@ -640,7 +640,7 @@
             <PropertyRef Name="sifraKoncepta" />
           </Key>
           <Property Name="sifraKoncepta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nazivKoncepta" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="nazivKoncepta" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="sifraPredmeta" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Granula" Relationship="Self.FK_GranulaKoncept" FromRole="Koncept" ToRole="Granula" />
           <NavigationProperty Name="Predmet" Relationship="Self.FK_KonceptPredmet" FromRole="Koncept" ToRole="Predmet" />
@@ -654,7 +654,7 @@
           </Key>
           <Property Name="sifraKorisnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="ime" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="prezime" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="KorisnikGranula" Relationship="Self.FK_KorisnikGranulaKorisnik" FromRole="Korisnik" ToRole="KorisnikGranula" />
@@ -666,7 +666,7 @@
           <Key>
             <PropertyRef Name="sifraKorisnikGranula" />
           </Key>
-          <Property Name="sifraKorisnikGranula" Type="Int32" Nullable="false" />
+          <Property Name="sifraKorisnikGranula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="sifraKorisnika" Type="Int32" Nullable="false" />
           <Property Name="sifraGranule" Type="Int32" Nullable="false" />
           <Property Name="znanje" Type="Double" Nullable="false" />

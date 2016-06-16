@@ -136,7 +136,7 @@ namespace Aplikacija.Logika
         {
             foreach(var kon in Koncepti.vratiSveKonceptePredmeta(sifraPredmeta)){
                 var kkp = Koncepti.vratiKorisnikovKoncept(sifraKorisnika, sifraPredmeta);
-                Console.WriteLine(kon.nazivKoncepta + " postotak {0:3}", kkp.sifraKorisnikKoncept * 100);
+                Console.WriteLine(kon.nazivKoncepta + " postotak {0}", kkp.znanje * 100);
             }
         }
 

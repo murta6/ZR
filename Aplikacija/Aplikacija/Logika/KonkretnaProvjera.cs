@@ -35,7 +35,7 @@ namespace Aplikacija.Logika
             {
                 var zad = Zadaci.vratiZadatak(rbrZad);
                 int brojSlozenostiZadatka = Zadaci.vratiBrojSlozenosti(zad.sifraSlozenosti);
-                var brojBodovaZadatka = brojBodova / kolicinaSlozenosti * brojSlozenostiZadatka;
+                var brojBodovaZadatka = brojBodova* 1.0/ kolicinaSlozenosti * brojSlozenostiZadatka;
                 KonkretanZadatak zadatak = new KonkretanZadatak(rbrZad, zad.pitanje, zad.izraz, zad.parametri, zad.slika, zad.sifraSlozenosti, brojBodovaZadatka);
                 provjera.zadaci.Add(zadatak);
             }
