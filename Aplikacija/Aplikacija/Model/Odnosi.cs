@@ -9,6 +9,11 @@ namespace Aplikacija.Model
 {
     public static class Odnosi
     {
+
+        public static readonly int Koristenje = 3;
+        public static readonly int Analogno = 4;
+        public static readonly int Podskup = 2;
+
         #region OdnosiZnanja
 
         public static List<OdnosZnanja> vratiSveOdnoseZnanja()
@@ -147,6 +152,14 @@ namespace Aplikacija.Model
             using (Baza baza = new Baza())
             {
                 return baza.OdnosKoncepata.Where(o => o.sifraNizegKon == sifraKoncepta || o.sifraVisegKon == sifraKoncepta).ToList();
+            }
+        }
+
+        public static List<OdnosKoncepata> vratiKoncepteSOdnosom(int sifraKoncepta, int sifraOdnosa)
+        {
+            using (Baza baza = new Baza())
+            {
+                return baza.OdnosKoncepata.Where(okp => okp.sifraNizegKon == sifraKoncepta && okp.sifraOdnosa == sifraOdnosa).ToList();
             }
         }
 

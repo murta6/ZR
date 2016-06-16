@@ -48,11 +48,11 @@ namespace Aplikacija.Logika
             return new OdabranaPitanja() { pitanja = list, kolicinaSlozenosti = kolicinaSlozenosti};
         }
 
-        public static KonkretnaProvjera generirajProvjeru(double brojBodova, int sifraKorisnika, int sifraPredmeta)
+        public static KonkretnaProvjera generirajProvjeru(int brojBodova, int sifraKorisnika, int sifraPredmeta, int sifraVrsteProvjere)
         {
             var odabir = OdabirPitanja.odabirPitanja(sifraPredmeta, sifraKorisnika);
             return KonkretnaProvjera.generirajProvjeru(odabir.pitanja,
-                brojBodova, sifraKorisnika, odabir.kolicinaSlozenosti);
+                brojBodova, sifraKorisnika, odabir.kolicinaSlozenosti, sifraVrsteProvjere, sifraPredmeta);
         }
 
     }

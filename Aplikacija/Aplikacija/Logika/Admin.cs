@@ -1,35 +1,29 @@
-﻿//using Aplikacija.Model;
-//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using Aplikacija.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace Aplikacija.Logika
-//{
-//    public static class Admin
-//    {
-//        public static void dodajKorisnikaNaPredmet(int sifraKorisnika, int sifraPredmeta)
-//        {
-//            if(!Predmeti.postojiKorisnikPredmet(sifraPredmeta, sifraKorisnika))
-//            {
-//                Predmeti.dodajKorisnikPredmet(sifraPredmeta, sifraKorisnika);
-//                foreach(var kon in Koncepti.vratiSveKonceptePredmeta(sifraPredmeta))
-//                {
-//                    Koncepti.dodajKorisnikKoncept(kon.sifraKoncepta, sifraKorisnika);
-//                    foreach(var gran in Granule.vratiSveGranuleKoncepta(kon.sifraKoncepta))
-//                    {
-//                        Granule.dodajKorisnikGranula(sifraKorisnika, gran.sifraGranule);
-//                    }
-//                }
-//            }
-//        }
+namespace Aplikacija.Logika
+{
+    public static class Admin
+    {
+        public static void dodajKorisnikaNaPredmet(int sifraKorisnika, int sifraPredmeta)
+        {
+            ZnanjeKorisnika.dodajKorisnikaPredmetu(sifraKorisnika, sifraPredmeta);
+        }
 
-//        public static ocijeniKorisnikaNaPredmetu(int sifraKorisnika, int sifraPredmeta)
-//        {
+        public static void ocijeniKorisnikaNaPredmetu(int sifraKorisnika, int sifraPredmeta)
+        {
+            ZnanjeKorisnika.zakljuciOcjenuKorisnika(sifraKorisnika, sifraPredmeta);
+        }
 
-//        }
+        public static int vratiTrenutnuOcjenuKorisnikaNaPredmetu(int sifraKorisnika, int sifraPredmeta)
+        {
+            return ZnanjeKorisnika.trenutnaZakljucnaOcjenaKorisnika(sifraKorisnika, sifraPredmeta);
+        }
 
-//        public static void pogledajRezultateKorisnika
-//    }
-//}
+        //public static void pogledajRezultateKorisnika
+    }
+}

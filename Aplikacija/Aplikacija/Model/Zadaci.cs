@@ -77,6 +77,14 @@ namespace Aplikacija.Model
                 return rez.ToList();
             }
         }
-            
+        
+
+        public static int vratiSifruGranuleZadatka(int sifraZadatka)
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.Zadatak.Where(zad => zad.sifraZadatka == sifraZadatka).Single().sifraGranule;
+            }
+        }
     }
 }

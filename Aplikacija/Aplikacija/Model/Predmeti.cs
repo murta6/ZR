@@ -128,6 +128,21 @@ namespace Aplikacija.Model
             }
         }
 
+        public static double vratiPostotakNaPredmetu(int sifraPredmeta, int sifraKorisnika)
+        {
+            using(Baza baza = new Baza())
+            {
+                var provjere = baza.Provjera.Where(prov => prov.sifraKorisnika == sifraKorisnika && prov.sifraPredmeta == sifraPredmeta && prov.sifraVrsteProvjere == Provjere.sifraIspita).ToList();
+                double ukupno = 0, ostvareno = 0;
+                foreach (var prov in provjere)
+                {
+                    ukupno += (double)prov.ostvareniBrojBodova;
+                    ostvareno += prov.SkaliraniUkupniBrojBodova;
+                }
+                return ostvareno / ukupno * 100;
+            }
+        }
+
         public static Boolean postojiKorisnikPredmet(int sifraPredmeta, int sifraKorisnika, Baza baza)
         {
             return baza.KorisnikPredmet.Where(kopr => kopr.sifraKorisnika == sifraKorisnika && kopr.sifraPredmeta == sifraPredmeta).Count() > 0;

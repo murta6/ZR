@@ -72,9 +72,35 @@ namespace Aplikacija.Model
             return baza.KorisnikKoncept.Where(korkon => korkon.sifraKoncepta == sifraKoncepta && korkon.sifraKorisnika == sifraKorisnika).First().znanje > 0.5;
         }
 
-        //public static Boolean dodajKorisnikKoncept(int sifraKoncepta, int sifraKorisnika)
-        //{
-            
-        //}
+        public static void dodajKorisnikKoncept(int sifraKorisnika, int sifraKoncepta)
+        {
+            using(Baza baza = new Baza())
+            {
+                KorisnikKoncept kkp = new KorisnikKoncept();
+                kkp.sifraKoncepta = sifraKoncepta;
+                kkp.sifraKorisnika = sifraKorisnika;
+                kkp.znanje = 0;
+                baza.KorisnikKoncept.Add(kkp);
+                baza.SaveChanges();
+            }
+        }
+
+        public static void azurirajZnanjeKoncepta(int sifraKorisnika, int sifraKoncepta, double znanje)
+        {
+            using(Baza baza = new Baza())
+            {
+                var kk = baza.KorisnikKoncept.Where(kkp => kkp.sifraKoncepta == sifraKoncepta && kkp.sifraKorisnika == sifraKorisnika).SingleOrDefault();
+                kk.znanje = znanje;
+                baza.SaveChanges();
+            }
+        }
+
+        public static List<KorisnikKoncept> vratiOtkljucaneKoncepteKorisnika(int sifraKorisnika)
+        {
+            using (Baza baza = new Baza())
+            {
+                return baza.KorisnikKoncept.Where(kkp => kkp.sifraKorisnika == sifraKorisnika).ToList();
+            }
+        }
     }
 }

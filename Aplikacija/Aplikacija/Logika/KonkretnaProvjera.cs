@@ -12,25 +12,27 @@ namespace Aplikacija.Logika
     public class KonkretnaProvjera
     {
         public List<KonkretanZadatak> zadaci;
-        public double brojBodova { get; }
+        public int brojBodova { get; }
         public double ostvareniBrojBodova { get; set; }
         public int sifraKorisnika { get; }
-
-        private KonkretnaProvjera(double brojBodova, int sifraKorisnika)
+        public int sifraVrsteProvjere { get; }
+        public int sifraPredmeta { get; }
+        private KonkretnaProvjera(int brojBodova, int sifraKorisnika, int sifraVrsteProvjere, int sifraPredmeta)
         {
             this.brojBodova = brojBodova;
             zadaci = new List<KonkretanZadatak>();
         }
 
-        public static KonkretnaProvjera generirajProvjeru(List<int> rbrZadataka, double brojBodova, int sifraKorisnika, int kolicinaSlozenosti)
+        public static KonkretnaProvjera generirajProvjeru(List<int> rbrZadataka, int brojBodova,
+            int sifraKorisnika, int kolicinaSlozenosti, int sifraVrsteProvjere, int sifraPredmeta)
         {
-            KonkretnaProvjera provjera = new KonkretnaProvjera(brojBodova, sifraKorisnika);
+            KonkretnaProvjera provjera = new KonkretnaProvjera(brojBodova, sifraKorisnika, sifraVrsteProvjere, sifraPredmeta);
             foreach(var rbrZad in rbrZadataka)
             {
                 var zad = Zadaci.vratiZadatak(rbrZad);
                 int brojSlozenostiZadatka = Zadaci.vratiBrojSlozenosti(zad.sifraSlozenosti);
                 var brojBodovaZadatka = brojBodova / kolicinaSlozenosti * brojSlozenostiZadatka;
-                KonkretanZadatak zadatak = new KonkretanZadatak(zad.pitanje, zad.izraz, zad.parametri, zad.slika, zad.sifraSlozenosti, brojBodovaZadatka);
+                KonkretanZadatak zadatak = new KonkretanZadatak(rbrZad, zad.pitanje, zad.izraz, zad.parametri, zad.slika, zad.sifraSlozenosti, brojBodovaZadatka);
                 provjera.zadaci.Add(zadatak);
             }
             return provjera;
@@ -75,9 +77,10 @@ namespace Aplikacija.Logika
         public double brojBodova { get; }
         public double negativni { get; }
         public String izraz { get; }
-        public double korisnikovOdgovor { get; set; }
-
-        public KonkretanZadatak(String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti, double brojBodova)
+        public double? korisnikovOdgovor { get; set; }
+        public int sifraZadatka { get; }
+        public int sifraGranule { get; }
+        public KonkretanZadatak(int sifraZadatka, String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti, double brojBodova)
         {
             this.pitanje = pitanje;
             this.parametri = generirajParametre(parametri);
@@ -86,7 +89,9 @@ namespace Aplikacija.Logika
             this.izraz = izraz;
             this.brojBodova = brojBodova;
             this.negativni = brojBodova / 4;
+            this.sifraGranule = Zadaci.vratiSifruGranuleZadatka(sifraZadatka);
             odgovor = izracunajOdgovor();
+            korisnikovOdgovor = null;
         }
 
         private String[] generirajParametre(String parametri)
@@ -146,7 +151,20 @@ namespace Aplikacija.Logika
 
         public void izracunajTocnost()
         {
+            if (korisnikovOdgovor == null) tocno = false;
             tocno = ((odgovor - tolereancija / 100 * odgovor) < korisnikovOdgovor) && ((odgovor + tolereancija / 100 * odgovor) > korisnikovOdgovor);
+        }
+
+        public void dodajKorisnikovOdgovor(String odgovor)
+        {
+            try
+            {
+                korisnikovOdgovor = Double.Parse(odgovor);
+            }
+            catch (Exception)
+            {
+                korisnikovOdgovor = null;
+            }
         }
     }
 }

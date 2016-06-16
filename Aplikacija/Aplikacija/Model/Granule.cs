@@ -88,6 +88,7 @@ namespace Aplikacija.Model
                 int brojDodanih = 0;
                 var sviZadaci = baza.Zadatak.Where(zad => zad.sifraGranule == sifraGranule);
                 //permutiraj
+                sviZadaci = sviZadaci.OrderBy(a => Guid.NewGuid());
                 sviZadaci = sviZadaci.OrderBy(zad => Math.Abs(zad.Slozenost.brojSlozenosti - ocekivanaSlozenost));
                 foreach (var zad in sviZadaci){
                     if(brojDodanih == brojZadataka)
@@ -151,9 +152,25 @@ namespace Aplikacija.Model
             return baza.KorisnikGranula.Where(korgran => korgran.sifraGranule == sifraGranule && korgran.sifraKorisnika == sifraKorisnika).First().znanje > ukupnaSlozenost/2;
         }
 
-        //public static Boolean dodajKorisnikGranula(int sifraKorisnika, int sifraGranule)
-        //{
+        public static void dodajKorisnikGranula(int sifraKorisnika, int sifraGranule)
+        {
+            using(Baza baza = new Baza())
+            {
+                KorisnikGranula kgr = new KorisnikGranula();
+                kgr.sifraGranule = sifraGranule;
+                kgr.sifraKorisnika = sifraKorisnika;
+                kgr.znanje = 0;
+                baza.KorisnikGranula.Add(kgr);
+                baza.SaveChanges();
+            }
+        }
 
-        //}
+        public static int vratiKonceptGranule(int sifraGranule)
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.Granula.Where(gr => gr.sifraGranule == sifraGranule).SingleOrDefault().sifraKoncepta;
+            }
+        }
     }
 }

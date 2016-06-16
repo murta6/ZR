@@ -21,7 +21,7 @@ namespace Aplikacija
                 {
                     foreach (var zadatak in Zadaci.vratiSveZadatkeKoncepta(kon.sifraKoncepta))
                     {
-                        KonkretanZadatak zad = new KonkretanZadatak(zadatak.pitanje, zadatak.izraz, zadatak.parametri, null, 1, 3);
+                        KonkretanZadatak zad = new KonkretanZadatak(1, zadatak.pitanje, zadatak.izraz, zadatak.parametri, null, 1, 3);
                         //Console.WriteLine(zadatak.sifraZadatka + ": " + zad.odgovor);
                         if (zad.odgovor == Double.NaN || zad.odgovor == 0)
                         {
