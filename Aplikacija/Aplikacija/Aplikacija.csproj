@@ -139,6 +139,7 @@
     <Compile Include="Model\Koncepti.cs" />
     <Compile Include="Model\KorisniciAdmini.cs" />
     <Compile Include="Model\Odnosi.cs" />
+    <Compile Include="Model\Partial.cs" />
     <Compile Include="Model\Predmeti.cs" />
     <Compile Include="Model\Provjere.cs" />
     <Compile Include="Model\Zadaci.cs" />

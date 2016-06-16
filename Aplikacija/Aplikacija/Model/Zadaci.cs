@@ -55,6 +55,7 @@ namespace Aplikacija.Model
         {
             if(slozenost == null)
             {
+                slozenost = new Dictionary<int, int>();
                 using (Baza baza = new Baza())
                 {
                     foreach(var sl in baza.Slozenost.ToList())

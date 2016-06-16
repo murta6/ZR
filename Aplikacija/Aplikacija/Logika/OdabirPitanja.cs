@@ -47,13 +47,14 @@ namespace Aplikacija.Logika
             var granuleKorisnika = Granule.vratiOtkljucaneGranuleKorisnika(sifraKorisnika, otkljucaniKoncepti, sifraPredmeta);
             granuleKorisnika.Permutate();
             HashSet<Zadatak> zadaci = new HashSet<Zadatak>();
+            HashSet<int> sifreZad = new HashSet<int>();
             int brojZadataka = zadaci.Count;
             while (zadaci.Count < brojPitanja)
             {
                 foreach (var granula in granuleKorisnika)
                 {
                     zadaci = Granule.zadaniZadaciGranule(sifraKorisnika, granula.sifraGranule,
-                        granula.ukupnaSlozenost, 1, zadaci, ocekivanaSlozenost, minSlozenost, maxSlozenost);
+                        granula.ukupnaSlozenost, 1, zadaci, sifreZad, ocekivanaSlozenost, minSlozenost, maxSlozenost);
                 }
                 if (brojZadataka == zadaci.Count)
                 {
@@ -83,13 +84,14 @@ namespace Aplikacija.Logika
             var granuleKorisnika = Granule.vratiOtkljucaneGranuleKorisnika(sifraKorisnika, otkljucaniKoncepti, sifraPredmeta);
             granuleKorisnika.Permutate();
             HashSet<Zadatak> zadaci = new HashSet<Zadatak>();
+            HashSet<int> sifreZad = new HashSet<int>();
             int brojZadataka = zadaci.Count;
             while (zadaci.Count < brojPitanja)
             {
                 foreach (var granula in granuleKorisnika)
                 {
                     zadaci = Granule.prikladniZadaciGranule(sifraKorisnika, granula.sifraGranule,
-                        granula.ukupnaSlozenost, 1, zadaci);
+                        granula.ukupnaSlozenost, 1, zadaci, sifreZad);
                 }
                 if (brojZadataka == zadaci.Count)
                 {
@@ -105,7 +107,7 @@ namespace Aplikacija.Logika
             foreach (var zad in zadaci)
             {
                 list.Add(zad.sifraZadatka);
-                kolicinaSlozenosti += zad.Slozenost.brojSlozenosti;
+                kolicinaSlozenosti += zad.sifraSlozenosti;
             }
             return new OdabranaPitanja() { pitanja = list, kolicinaSlozenosti = kolicinaSlozenosti };
         }

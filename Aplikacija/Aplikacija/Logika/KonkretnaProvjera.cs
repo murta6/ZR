@@ -13,13 +13,17 @@ namespace Aplikacija.Logika
     {
         public List<KonkretanZadatak> zadaci;
         public int brojBodova { get; }
-        public double ostvareniBrojBodova { get; set; }
+        public double ostvareniBrojBodova;
         public int sifraKorisnika { get; }
         public int sifraVrsteProvjere { get; }
         public int sifraPredmeta { get; }
         private KonkretnaProvjera(int brojBodova, int sifraKorisnika, int sifraVrsteProvjere, int sifraPredmeta)
         {
+            this.sifraKorisnika = sifraKorisnika;
+            this.sifraVrsteProvjere = sifraVrsteProvjere;
+            this.sifraPredmeta = sifraPredmeta;
             this.brojBodova = brojBodova;
+            ostvareniBrojBodova = 0;
             zadaci = new List<KonkretanZadatak>();
         }
 
@@ -57,6 +61,14 @@ namespace Aplikacija.Logika
             foreach (var zad in zadaci)
             {
                 zad.izracunajTocnost();
+                if (zad.tocno)
+                {
+                    ostvareniBrojBodova += zad.brojBodova;
+                }
+                else
+                {
+                    ostvareniBrojBodova += zad.negativni * -1;
+                }
             }
         }
     }
@@ -82,7 +94,7 @@ namespace Aplikacija.Logika
         public int sifraGranule { get; }
         public KonkretanZadatak(int sifraZadatka, String pitanje, String izraz, String parametri, byte[] slika, int sifraSlozenosti, double brojBodova)
         {
-            this.pitanje = pitanje;
+            this.pitanje = pitanje.Trim();
             this.parametri = generirajParametre(parametri);
             this.slika = slika;
             this.sifraSlozenosti = sifraSlozenosti;

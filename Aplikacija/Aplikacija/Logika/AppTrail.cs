@@ -44,11 +44,12 @@ namespace Aplikacija.Logika
                     }
                     else
                     {
-                        ispisi(korisnik.ime + " " + korisnik.prezime + " prep. ocjena = " + pred.ocjena);
+                        ispisi(korisnik.sifraKorisnika+" "+korisnik.ime + " " + korisnik.prezime + " prep. ocjena = " + pred.ocjena);
                     }
                 }
                 ispisi("Unesi sifru korisnika: ");
                 int sifraKorisnika;
+                line = Console.ReadLine();
                 try
                 {
                     sifraKorisnika = Int32.Parse(line);
@@ -98,6 +99,7 @@ namespace Aplikacija.Logika
                         }
                     }
                     ispisiKorisnikovuProvjeru(provjera);
+                    ispisi("Provjera ispisana u " + Directory.GetCurrentDirectory() + "\\provjera.txt");
                 }
                 Program.ispisiCrtu();
             }
@@ -119,7 +121,7 @@ namespace Aplikacija.Logika
         private static void ispisiUDatoteku(string s)
         {
             using (System.IO.StreamWriter file =
-                new System.IO.StreamWriter(Directory.GetCurrentDirectory(), true))
+                new System.IO.StreamWriter(Directory.GetCurrentDirectory()+"\\provjera.txt", true))
             {
                 file.WriteLine(s);
             }
@@ -180,7 +182,7 @@ namespace Aplikacija.Logika
                         zad.dodajKorisnikovOdgovor(line);
                     }
                     provjera.ocijeniProvjeru();
-                    ispisi("Ostvarili ste : " + provjera.ostvareniBrojBodova + "od " + provjera.brojBodova + ".");
+                    ispisi("Ostvarili ste : " + provjera.ostvareniBrojBodova + " od " + provjera.brojBodova + ".");
                     ZnanjeKorisnika.azurirajZnanjeKorisnika(provjera);
                 }
                 Program.ispisiCrtu();

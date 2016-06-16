@@ -75,7 +75,7 @@ namespace Aplikacija.Model
         }
 
         public static HashSet<Zadatak> prikladniZadaciGranule(int sifraKorisnika, int sifraGranule,
-            double ukupnaSlozenost, int brojZadataka, HashSet<Zadatak> zadaci)
+            double ukupnaSlozenost, int brojZadataka, HashSet<Zadatak> zadaci, HashSet<int> sifreZad)
         {
             using(Baza baza = new Baza())
             {
@@ -95,9 +95,10 @@ namespace Aplikacija.Model
                     {
                         break;
                     }
-                    if (!zadaci.Contains(zad))
+                    if (!sifreZad.Contains(zad.sifraZadatka))
                     {
                         zadaci.Add(zad);
+                        sifreZad.Add(zad.sifraZadatka);
                         brojDodanih++;
                     }
                 }
@@ -106,7 +107,7 @@ namespace Aplikacija.Model
         }
 
         public static HashSet<Zadatak> zadaniZadaciGranule(int sifraKorisnika, int sifraGranule,
-    double ukupnaSlozenost, int brojZadataka, HashSet<Zadatak> zadaci, double ocekivanaSlozenost, double minSlozenost = 0, double maxSlozenost = 6)
+    double ukupnaSlozenost, int brojZadataka, HashSet<Zadatak> zadaci, HashSet<int> sifreZad, double ocekivanaSlozenost, double minSlozenost = 0, double maxSlozenost = 6)
         {
             using (Baza baza = new Baza())
             {
@@ -122,9 +123,10 @@ namespace Aplikacija.Model
                     {
                         break;
                     }
-                    if (!zadaci.Contains(zad))
+                    if (!sifreZad.Contains(zad.sifraZadatka))
                     {
                         zadaci.Add(zad);
+                        sifreZad.Add(zad.sifraZadatka);
                         brojDodanih++;
                     }
                 }

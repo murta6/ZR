@@ -40,7 +40,7 @@ namespace Aplikacija.Logika
 
         public static void azurirajZnanjeKorisnika(KonkretnaProvjera provjera)
         {
-            Provjere.dodajProvjeru(provjera);
+            //Provjere.dodajProvjeru(provjera);
             azurirajZnanjeGranula(provjera);
             azurirajZnanjeKoncepata(provjera.sifraKorisnika);
         }
