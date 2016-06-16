@@ -83,7 +83,7 @@ namespace Aplikacija.Model
                 double ocekivanaSlozenost = 1;
                 if (znanje != 0)
                 {
-                    ocekivanaSlozenost = ukupnaSlozenost / prosjecnaSlozenost[sifraGranule] * znanje;
+                    ocekivanaSlozenost = ukupnaSlozenost / prosjecnaSLozenostGranule(sifraGranule) * znanje;
                 }
                 int brojDodanih = 0;
                 var sviZadaci = baza.Zadatak.Where(zad => zad.sifraGranule == sifraGranule);
@@ -146,6 +146,7 @@ namespace Aplikacija.Model
             {
                 if(prosjecnaSlozenost == null)
                 {
+                    prosjecnaSlozenost = new Dictionary<int, double>();
                     var dict = from gran in baza.Zadatak
                                group gran by new { gran.sifraGranule } into grp
                                select new GranAvg

@@ -161,7 +161,7 @@ namespace Aplikacija.Logika
         private static void azurirajZnanjeGranule(Baza baza, int sifraKorisnika, int sifraGranule, int promjena)
         {
             var gran = baza.KorisnikGranula.Where(kgr =>
-            kgr.sifraKorisnika == sifraKorisnika && kgr.sifraGranule == sifraGranule).SingleOrDefault();
+                kgr.sifraKorisnika == sifraKorisnika && kgr.sifraGranule == sifraGranule).SingleOrDefault();
             gran.znanje += promjena;
             azurirajPovezaneGranule(baza, sifraKorisnika, sifraGranule, promjena, Odnosi.Koristenje, faktorKoristenja);
             azurirajPovezaneGranule(baza, sifraKorisnika, sifraGranule, promjena, Odnosi.Analogno, faktorAnalognosti);

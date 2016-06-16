@@ -135,7 +135,7 @@ namespace Aplikacija.Logika
         private static void ispisiZnanjeKorisnikaPremaKonceptima(int sifraKorisnika, int sifraPredmeta)
         {
             foreach(var kon in Koncepti.vratiSveKonceptePredmeta(sifraPredmeta)){
-                var kkp = Koncepti.vratiKorisnikovKoncept(sifraKorisnika, sifraPredmeta);
+                var kkp = Koncepti.vratiKorisnikovKoncept(sifraKorisnika, kon.sifraKoncepta);
                 Console.WriteLine(kon.nazivKoncepta + " postotak {0}", kkp.znanje * 100);
             }
         }
