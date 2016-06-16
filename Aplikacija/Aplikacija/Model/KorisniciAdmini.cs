@@ -55,6 +55,7 @@ namespace Aplikacija.Model
                     return false;
                 }
                 Korisnik k = new Korisnik { username = username, password = hashPassword(password), ime = ime, prezime = prezime };
+                Console.WriteLine(hashPassword(password));
                 db.Korisnik.Add(k);
                 db.SaveChanges();
                 return true;
@@ -75,11 +76,19 @@ namespace Aplikacija.Model
             return db.Korisnik.Where(k => k.username == username).Count() > 0;
         }
 
-        public static int sifraZaUsername(String username)
+        public static int sifraKorisnikaZaUsername(String username)
         {
             using (Baza db = new Baza())
             {
                 return db.Korisnik.Where(k => k.username == username).First().sifraKorisnika;
+            }
+        }
+
+        public static int sifraAdminaZaUsername(String username)
+        {
+            using (Baza db = new Baza())
+            {
+                return db.Admin.Where(k => k.username == username).First().sifraAdmina;
             }
         }
 

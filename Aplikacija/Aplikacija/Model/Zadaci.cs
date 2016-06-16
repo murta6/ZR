@@ -77,6 +77,22 @@ namespace Aplikacija.Model
                 return rez.ToList();
             }
         }
+
+        public static List<VrstaZadatka> vratiSveVrsteZadatka()
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.VrstaZadatka.ToList();
+            }
+        }
+
+        public static List<Zadatak> vratiSveZadatke()
+        {
+            using(Baza baza = new Baza())
+            {
+                return baza.Zadatak.ToList();
+            }
+        }
         
 
         public static int vratiSifruGranuleZadatka(int sifraZadatka)

@@ -10,7 +10,7 @@ namespace Aplikacija.Model
 {
     public static class Provjere
     {
-        public static int sifraIspita = 2;
+        public static int sifraIspita = 1;
         public static void dodajProvjeru(KonkretnaProvjera provjera)
         {
             using(Baza baza = new Baza())

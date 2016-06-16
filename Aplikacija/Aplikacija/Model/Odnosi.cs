@@ -9,10 +9,11 @@ namespace Aplikacija.Model
 {
     public static class Odnosi
     {
-
+        public static readonly int Preduvjet = 1;
+        public static readonly int Podskup = 2;
         public static readonly int Koristenje = 3;
         public static readonly int Analogno = 4;
-        public static readonly int Podskup = 2;
+        public static readonly int Paralelno = 5;
 
         #region OdnosiZnanja
 
