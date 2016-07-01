@@ -1,0 +1,3 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Sustavi za elektroni\IeC {\v c}ko u\IeC {\v c}enje}{3}{0}{1}
+\beamer@sectionintoc {2}{Implementirano rje\IeC {\v s}enje}{4}{0}{2}
