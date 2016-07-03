@@ -1,3 +1,7 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Sustavi za elektroni\IeC {\v c}ko u\IeC {\v c}enje}{3}{0}{1}
-\beamer@sectionintoc {2}{Implementirano rje\IeC {\v s}enje}{4}{0}{2}
+\beamer@subsectionintoc {1}{1}{Inteligentni sustavi za u\IeC {\v c}enje (ITS)}{4}{0}{1}
+\beamer@sectionintoc {2}{Implementirano rje\IeC {\v s}enje}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Baza podataka}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Aplikacijska logika}{10}{0}{2}
+\beamer@sectionintoc {3}{Literatura}{13}{0}{3}
