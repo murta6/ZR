@@ -48,7 +48,7 @@
 		\item inteligentno posluživanje pitanja
 		\item reakcije i pomoć korisniku
 	\end{itemize}
-	\item reprezentacija znanje je iznimno važna za kvalitetu ITS-a
+	\item reprezentacija znanja iznimno je važna za kvalitetu ITS-a
 \end{itemize}
 \end{frame}
 
@@ -72,17 +72,25 @@
 		\item grafički ili tekstualni način komunikacije s korisnikom
 	\end{itemize}
 \end{itemize}
+		\begin{figure}[komp]
+			\centering
+			\includegraphics[width=0.5\textwidth,height=0.5\textheight,keepaspectratio]{img/ITS-components.jpg}
+			\caption{Komponente ITS-a}
+			\label{fig:its}
+		\end{figure}
 \end{frame}
 
 \section{Implementirano rješenje}
 \begin{frame}{Implementirano rješenje}
-zadatak završnog rada:
 \begin{itemize}
-	\item podatkovni sloj i aplikacijska logika ITS-a
-	\item procjena i reprezentacija stanja usvojenosti koncepata
-	\item baza parametriziranih zadataka
-	\item inteligentno posluživanje zadataka
-	\item sastavljanje ispita s obzirom na uvjete
+	\item zadatak završnog rada:
+	\begin{itemize}
+		\item podatkovni sloj i aplikacijska logika ITS-a
+		\item procjena i reprezentacija stanja usvojenosti koncepata
+		\item baza parametriziranih zadataka
+		\item inteligentno posluživanje zadataka
+		\item sastavljanje ispita s obzirom na uvjete
+	\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -103,7 +111,7 @@ zadatak završnog rada:
 	\begin{itemize}
 		\item \textbf{predmet}
 		\item \textbf{koncept} - pripada predmetu
-		\item \textbf{granula} znanja - pripada konceptu
+		\item \textbf{granula znanja} - pripada konceptu
 	\end{itemize}
 	\item između dvaju koncepata ili granula mogući su odnosi:
 	\begin{itemize}
@@ -121,12 +129,12 @@ zadatak završnog rada:
 \begin{itemize}
 	\item entitet zadatak u bazi opisuju atributi:
 	\begin{itemize}
-		\item pitanje - tekstualni opis
-		\item slika - dodatak opis, neobavezna
-		\item parametri - brojevi koji se generiraju prilikom stvaranja konkretnog pitanja, moguće definirati min. i max. vrijednost
-		\item izraz - matematička formula za izračun rezultata konkretnih parametara
-		\item složenost - težina pitanja (nije bitna za parametrizaciju)
-		\item granula kojoj pripada (nije bitno za parametrizaciju)
+		\item \textbf{pitanje} - tekstualni opis
+		\item \textbf{slika} - dodatak opisu, neobavezna
+		\item \textbf{parametri} - brojevi koji se generiraju prilikom stvaranja konkretnog pitanja, moguće definirati min. i max. vrijednost
+		\item \textbf{izraz} - matematička formula za izračun rezultata
+		\item \textbf{složenost} - težina pitanja
+		\item \textbf{granula} kojoj pripada
 	\end{itemize}
 	\item korisniku se prikazuju pitanje, slika i konkretni parametri
 	\item korisnikovo rješenje uspoređuje se s 5\% točnosti u odnosu na izračunato
@@ -140,15 +148,25 @@ zadatak završnog rada:
 	\begin{itemize}
 		\item korisnikovo znanje granule počinje od 0
 		\item granuli pitanja i granuli nadskupa dodaje se ili oduzima faktor važnosti * broj složenosti granule za svaki zadatak
-		\item granula ima upisanu svoju ukupnu bodovnu složenost u bazi
+		\item granula ima upisanu ukupnu bodovnu složenost u bazi
 		\item faktor važnosti granule kojoj zadatak pripada i granule podskupa je 1, korištene granule 0.4, a analogne 0.2
 	\end{itemize}
 	\item koncepti
 	\begin{itemize}
 		\item težinski prosjek usvojenosti granula koje pripadaju konceptu
 		\item težina granule je 5 * faktor važnosti
-		\item računa se samo usvojenost granula koje pripadaju konceptu i povezanim konceptima
-		\item težine su analogne težinama granula
+		\item Formula izračuna usvojenosti koncepata:
+		\begin{figure}[forum]
+			\centering
+			\includegraphics[width=0.5\textwidth,height=0.3\textheight,keepaspectratio]{img/formula.png}
+			%\caption{Formula izračuna usvojenosti koncepata}
+			\label{fig:form}
+		\end{figure}
+		\begin{itemize}
+		\item U - usvojenost koncepta
+		\item T - težina znanja
+		\item G - postotak usvojenosti granule
+		\end{itemize}
 	\end{itemize}
 \end{itemize}
 \end{frame}
@@ -182,7 +200,7 @@ zadatak završnog rada:
 \begin{itemize}
 	\item inteligentno učenje - algoritam:
 	\begin{enumerate}
-		\item odabir koncepata koje korisnik može odgovarati
+		\item odabir koncepata na koje korisnik može odgovarati
 		\item odabir svih dostupnih granula znanja unutar koncepata
 		\item permutacija liste granula i lista pitanja svake granule
 		\item pronalazak po jednog pitanja složenosti najsličnije korisnikovu znanju za svaku granulu
@@ -202,9 +220,9 @@ zadatak završnog rada:
 \begin{frame}{Pitanja}
 	\begin{figure}[pitanja]
 		\centering
-		\includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{img/pitanja.png}
+		\includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio]{img/pitanja.jpg}
 		%\caption{ER dijagram baze}
-		\label{fig:ER}
+		\label{fig:pit}
 	\end{figure}
 \end{frame}
 
