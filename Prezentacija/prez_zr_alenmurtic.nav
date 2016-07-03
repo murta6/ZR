@@ -32,13 +32,18 @@
 \headcommand {\beamer@framepages {11}{11}}
 \headcommand {\slideentry {2}{2}{3}{12/12}{Aplikacijska logika}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\sectionentry {3}{Literatura}{13}{Literatura}{0}}
+\headcommand {\sectionentry {3}{Pitanja}{13}{Pitanja}{0}}
 \headcommand {\beamer@sectionpages {6}{12}}
 \headcommand {\beamer@subsectionpages {10}{12}}
 \headcommand {\slideentry {3}{0}{4}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@partpages {1}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\sectionentry {4}{Literatura}{14}{Literatura}{0}}
 \headcommand {\beamer@sectionpages {13}{13}}
-\headcommand {\beamer@documentpages {13}}
-\headcommand {\def \inserttotalframenumber {13}}
+\headcommand {\beamer@subsectionpages {13}{13}}
+\headcommand {\slideentry {4}{0}{5}{14/14}{}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@partpages {1}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@sectionpages {14}{14}}
+\headcommand {\beamer@documentpages {14}}
+\headcommand {\def \inserttotalframenumber {14}}

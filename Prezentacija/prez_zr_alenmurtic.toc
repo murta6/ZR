@@ -4,4 +4,5 @@
 \beamer@sectionintoc {2}{Implementirano rje\IeC {\v s}enje}{6}{0}{2}
 \beamer@subsectionintoc {2}{1}{Baza podataka}{7}{0}{2}
 \beamer@subsectionintoc {2}{2}{Aplikacijska logika}{10}{0}{2}
-\beamer@sectionintoc {3}{Literatura}{13}{0}{3}
+\beamer@sectionintoc {3}{Pitanja}{13}{0}{3}
+\beamer@sectionintoc {4}{Literatura}{14}{0}{4}
